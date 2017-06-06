@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.ycnet.mirage:mirage-mvc:1.0.0.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/repo/repository/com/ycnet/mirage/mirage-mvc/1.0.0.RELEASE/mirage-mvc-1.0.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/repo/repository/com/ycnet/mirage/mirage-mvc/1.0.0.RELEASE/mirage-mvc-1.0.0.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/repo/repository/com/ycnet/mirage/mirage-mvc/1.0.0.RELEASE/mirage-mvc-1.0.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

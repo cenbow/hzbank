@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ZxMobileServer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ZxMobileServer-1.0.0.war">
+      <element id="artifact" artifact-name="ZxMobileServer:war exploded" />
+    </root>
+  </artifact>
+</component>
