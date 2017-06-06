@@ -1,0 +1,31 @@
+/*
+ *     Mall Pages Styles
+ *    Upadate 2016.03.17
+ *
+ */
+
+.mall .banner img{display:block; width:100%;} 
+.mall .border-r{position:relative;}
+.mall .border-r:after{content:''; display:block; height:100%; width:1px; position:absolute; right:0; top:0; background-color:#eee; transform:scale3d(.5,1,1); -webkit-transform:scale3d(.5,1,1);}
+.mall .border-b:before{content:''; display:block; height:1px; width:100%; position:absolute; left:0; bottom:0; background-color:#eee; transform:scale3d(1,.5,1); -webkit-transform:scale3d(1,.5,1); z-index:9;}
+.mall .flexbox{width:100%; text-align:left; display:-webkit-box; display:-o-box; display:-ms-flexbox; display:-webkit-flex; display:flex; -webkit-box-align:center; -webkit-align-items:center;}
+.mall .flexbox .flexbox-item{-webkit-box-flex:1; -o-box-flex:1; -ms-flex:1; -webkit-flex:1; flex:1; min-width:20px;}
+.mall .flexbox .flexbox-item:first-child{margin-left:0!important;}
+
+.mall .idxPage .menu{text-align:center; background-color:#fff;}
+.mall .idxPage .menu >div{padding:78px 0 18px; font-size:13px; position:relative;}
+.mall .idxPage .menu >div:after{content:''; display:block; height:50px; width:50px; position:absolute; left:50%; margin-left:-25px; top:15px; background:url(../images/malPro/mall.png) no-repeat; background-size:auto 100%;}
+.mall .idxPage .menu >div:active{background-color:#f8f8f8;}
+.mall .idxPage .menu >div.b:after{background-position:-50px 0;}
+.mall .idxPage .menu >div.c:after{background-position:-100px 0;}
+.mall .idxPage .menu >div.d:after{background-position:-150px 0;}
+.idxPage .proGrid{background-color:#fff;}
+.idxPage .proGrid *{position:relative;}
+.idxPage .proGrid img{display:block; width:100%;}
+.idxPage .proGrid .title{position:relative; padding:10px;}
+.idxPage .proGrid .title .cell{padding-left:22px; position:relative;}
+.idxPage .proGrid .title .cell:after{content:''; display:block; height:20px; width:20px; position:absolute; left:0; top:50%; margin-top:-10px; background:url(../images/malPro/mall_l.png) no-repeat; background-size:100% auto;}
+.idxPage .proGrid .title .cell.b:after{background-position:0 100%;}
+.idxPage .proGrid .dsc{position:absolute; left:0; top:0; padding:5px 10px; font-size:10px; word-break:break-all;}
+.idxPage .proGrid .dsc h2{margin-top:2px; color:#ff9140;}
+.idxPage .proGrid .dsc h2 b{font-size:12px; font-weight:normal;}

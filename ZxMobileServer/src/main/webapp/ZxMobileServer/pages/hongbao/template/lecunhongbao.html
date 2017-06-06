@@ -1,0 +1,34 @@
+<style type="text/css">
+.redBags{color:#fff4cc;}
+.redBags img{display:block; width:100%;}
+.redBags .cnt{width:100%; min-height: 400px; background:url(images/lecunhongbao/bg.jpg) no-repeat; background-size:100% 100%; position:relative;}
+.redBags .doit{width:300px; height:104px; background:url(images/lecunhongbao/btn.png) no-repeat center center; background-size:100%; margin:0 auto; position:relative;}
+.redBags .doit .btn{height:60px; width:60px; position:absolute; right:22px; top:22px;}
+.redBags .notice{font-size:13px; width:300px; margin:0 auto;}
+.redBags .notice i.zhu{height:20px; width:20px; background:url(images/lecunhongbao/zu.png) center center no-repeat; display:inline-block; vertical-align:middle; margin-top:-2px; background-size:16px;}
+.redBags .wall{width:310px; margin:0 auto;}
+.redBags .wall .tt{height:69px; width:100%; text-align:center; background:url(images/lecunhongbao/wall_t.png) no-repeat; background-size:100% 100%; box-sizing:border-box; padding-top:30px; font-size:20px; font-weight:bold;}
+.redBags .wall .midd{width:100%; min-height:190px; background:url(images/lecunhongbao/wall_m.png) center top; background-size:100% auto; box-sizing:border-box; padding:0 28px 50px;}
+.redBags .wall .midd p{padding:3px 0;}
+.redBags .cnt .ft{width:100%; height:48px; background:url(images/lecunhongbao/ft.png) center top; background-size:auto 100%; position:absolute; left:0; bottom:0;}
+</style>
+<div class="redBags">
+  <div class="banner" ><img src="images/lecunhongbao/ban.png" alt="banner"></div>
+  <div class="cnt">
+    <div class="doit">
+      <div class="btn" id="gotoLecun"></div>
+    </div>
+    <div class="notice"><i class="zhu"></i>1000元起存，单笔<%=controlAmt%>元以上可获红包，每账户限<%=controlCount%>次。</div>
+    <div class="wall">
+      <div class="tt">活动规则</div>
+      <div class="midd">
+        <p>1.活动时间：即日起至<%=activityEndDate%>。</p>
+        <p>2.活动期间，购买幸福乐存产品单笔金额超过<%=controlAmt%>元即可获赠红包，现金随机送，最高100元，人人有份。单账户当天限获1个红包，活动期间最多领取<%=controlCount%>个红包。</p>
+        <p>3.本活动红包数量有限，先到先得，送完为止。</p>
+        <p>4.请在活动截止日前拆开红包。</p>
+      </div>
+    </div>
+    <div class="ft"></div>
+  </div>
+</div>
+

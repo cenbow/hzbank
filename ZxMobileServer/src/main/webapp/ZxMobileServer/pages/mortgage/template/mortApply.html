@@ -1,0 +1,66 @@
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016">
+  	<div class="deEloan">
+    	<div class="resultPanel">
+        	<img id ="img" src="images/deloan/de_head_hz.jpg"/>
+            <div class="label" id="changeCity"><i class="local"></i><span id="cityName">杭州</span></div>
+            <div class="label right" id="loan">我的借款</div>
+            <div class="panel" style="display:none" id="mostMoney">
+            	<p class="pt10" style="opacity:.8">房产估值</p>
+                <p style="display:" id="moneyL1"><span class="ft32" id="money">900</span>万元</p>
+                <p style="display:none" id="moneyL2"><span class="ft32">暂无估价</span></p>
+                <p class="ft13" style="opacity:.8">最高可贷额度：<span id="loanMoney">700</span></p>
+            </div>
+        </div>
+        <div class="list nobd nomg">
+            <div class="list-item row disabled">
+            	<div class="curLocal" id='showUserPicker'><span id='userResult' >滨江开发区</span>
+            	<i class="fold"></i></div>
+            	<div class="searchPanel cell">
+                	<input type="text" value="" placeholder="输入楼盘" id="search"/>
+                    <i></i>
+                </div>
+            </div>
+        </div>
+        <div  id="queryProject"  style="display:none">
+			<ul class="zen-list-5 mt10" id="projectList">
+
+			</ul>
+        </div>
+        <div class="noResult" id="noResult" style="display:none">未搜索到与输入内容相关的楼盘，继续申请,请点击下一步</div>
+        <div class="list nomg" style="display:" id="queryProject1">
+            <div class="list-item row arr" id="showBuild">
+            	<div class="cell">楼栋</div>
+                <div class="fc-c" id="build" style="width:250px;text-align:right">请先输入楼盘</div>
+            </div>
+            <div class="list-item row arr" id="showFloor">
+            	<div class="cell">楼层</div>
+                <div class="fc-c" id="floor" style="width:250px;text-align:right">请选择</div>
+            </div>
+            <div class="list-item row arr" id="showHouse">
+            	<div class="cell">房号</div>
+                <div class="fc-c" id="house" style="width:250px;text-align:right">请选择</div>
+            </div>
+            <div class="list-item row disabled" style="display:none" id="address">
+            	<div class="cell">房产详情</div>
+                <div class="cell ipt pr10"><input type="text" value="" class="txt-r" placeholder="例：普金家园7幢2单元205室" id="houseAddress" /></div>
+            </div>
+            <div class="list-item row disabled">
+            	<div class="cell">面积</div>
+                <div class="cell ipt pr10"><input type="text" value="" maxlength="6" class="txt-r"  placeholder="请输入房屋面积" id="buildArea" onkeyup="value=this.value.replace(/[^\d^\.]/g,'')"/></div>
+                <div>㎡</div>
+            </div>
+        </div>
+        <div class="list nobd nomg">
+        <div class="list-item fc-blue txt-mid" id="next">开始评估</div>
+        </div>   
+        <div class="padded"><img src="images/deloan/de_0.png" width="100%" alt="" id="queryMore"></div>
+        <!-- <div class="btnGrp">
+           	<button class="zen-btn" style="display:" id="apply">我要申请</button>
+        </div> -->
+    </div>
+  </div>	
+</body> 
+
+

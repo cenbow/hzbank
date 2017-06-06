@@ -1,0 +1,111 @@
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016 Regs" id="part1">
+  	<!-- <div class="prgBar row">
+        <div class="cell active" data-label="1">额度测算</div>
+        <div class="cell active" data-label="2">完善申请</div>
+        <div class="" data-label="3">申请完成</div>
+    </div> -->
+  	<div class="deEloan">
+    	<div class="gap-box fc-9 ft12 pt15">请填写房屋信息</div>
+        <div class="list">
+        	<div class="list-item row disabled" id="price1" style="dispaly:">
+            	<div class="cell">房屋估值</div>
+                <div class="ipt cell"><input class="txt-r" id="totalPrice" type="text" value="" placeholder="" readOnly/></div>
+            </div>
+            <div class="list-item row disabled">
+            	<div class="cell">房屋所有权人</div>
+                <div class="ipt cell"><input class="txt-r" id="houseOwner" type="text" value="" placeholder="仅需填写申请人本人"/></div>
+            </div>
+            <div class="list-item arr row" id="list1">
+            	<div class="cell">房产性质</div>
+                <div class="fc-3" id="houseProperty">请选择房产性质</div>
+            </div>
+            <div class="list-item arr row" id="list2">
+            	<div class="cell">土地性质</div>
+                <div class="fc-3" id="landProperty">请选择土地性质</div>
+            </div>
+             <div class="list-item row disabled">
+            	<div class="cell">建成年份</div>
+                <div class="ipt cell"><input class="txt-r" id="buildYear" type="tel" maxlength="4" value="" placeholder="例:2016" onkeyup="value=this.value.replace(/[^\d^\.]/g,'')"/></div>
+            </div>
+            <div class="list-item row disabled">
+            	<div class="cell">购房日期</div>
+                <div class="ipt cell"><input class="txt-r"  id="contractTime" type="tel" maxlength="6" value="" placeholder="例:201609" onkeyup="value=this.value.replace(/[^\d^\.]/g,'')"/></div>
+            </div>
+        </div>
+        <div class="gap-box fc-9 ft12 pt15">借款信息</div>
+        <div class="list">
+        	<div class="list-item row disabled" id="price2" style="dispaly:">
+            	<div class="cell">最高可贷额度</div>
+                <div class="ipt cell" ><input class="txt-r" id="loanPrice" type="text" value="" placeholder="" readOnly/></div>
+            </div>
+        	<div class="list-item arr row" id="list3">
+            	<div class="cell">授信期限</div>
+                <div class="fc-3" id="creditLine">请选择授信期限</div>
+            </div>
+            <div class="list-item row disabled">
+            	<div class="cell">借款金额(万元)</div>
+                <div class="ipt cell"><input class="txt-r" id="applyAmount" type="tel" maxlength="3" value="" placeholder="单位万元" onkeyup="value=this.value.replace(/[^\d^\.]/g,'')"/></div>
+            </div>
+            <div class="list-item arr row" id="repayMethod">
+            	<div class="cell">还款方式</div>
+                <div class="fc-3" id="repayType">请选择还款方式</div>
+            </div>
+            <div class="list-item arr row" id="list4">
+            	<div class="cell">贷款用途</div>
+                <div class="fc-3" id="applyUse">请选择贷款用途</div>
+            </div>
+        </div>
+        <div class="gap-box fc-9 ft12 pt15">个人信息</div>
+        <div class="list">
+        	<!-- <div class="list-item row disabled">
+            	<div class="cell">工作单位</div>
+                <div class="ipt cell"><input class="txt-r" id="workAddr" type="text" value="" placeholder="请输入工作单位(可不输)"/></div>
+            </div>
+            <div class="list-item arr row" id="list5">
+            	<div class="cell">职务</div>
+                <div class="fc-blue" id="post">请选择职务(可不选)</div>
+            </div> -->
+            <div class="list-item arr row" id="list6">
+            	<div class="cell">婚姻状况</div>
+                <div class="fc-3" id="marriage">请选择婚姻状况</div>
+            </div>
+            <div class="list-item row disabled">
+            	<div class="cell">家庭年收入(万元)</div>
+                <div class="ipt cell"><input class="txt-r" id="homeIncome" type="tel" maxlength="6"  value="" placeholder="单位万元" onkeyup="value=this.value.replace(/[^\d^\.]/g,'')"/></div>
+            </div>
+            <div class="list-item row disabled">
+            	<div class="cell">企业年销售(万元)</div>
+                <div class="ipt cell"><input class="txt-r" id="yearPay" type="tel" maxlength="8"  value="" placeholder="单位万元(选填)" onkeyup="value=this.value.replace(/[^\d^\.]/g,'')"/></div>
+            </div>
+            <!-- <div class="list-item">
+            	<span>是否有客户经理</span>
+                <input id="manager" type="checkbox" value="" name="" class="zen-switch"/>
+            </div> -->
+            <div class="list-item row disabled" id="managerNum" style="display:">
+            	<div class="cell">客户经理编号</div>
+                <div class="ipt cell"><input class="txt-r" id="mgrNo" type="tel" maxlength="6" value="" placeholder="请输入客户经理编号(选填)"/></div>
+            </div>
+            <div class="list-item row disabled">
+            	<label>短信验证码：</label>
+          		<div class="cell"><input type="tel" id="phonePassInput" maxlength="6"  value="" placeholder="请输入验证码" /></div>
+          		<button data-value="发送验证码" id="btn_sendSMS" class="full-cash-btn ft13"></button>
+            </div>
+        </div>    
+        <label class="zen-ckbox ml10 pt10">
+          <input type="checkbox" id="checkbox" checked="checked">
+          <span class="fm-agr"><a href="javascript:;" id="agreement">《个人征信查询授权书》</a></span>
+        </label>
+        <div style="padding: 0 10px;color: gray;border-bottom: 1px solid #eee;">
+        	<div style="border:1px solid #F3F3F3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了保证您的合法权益，请您仔细阅读并同意本申请页面的《个人征信查询授权书》。提交申请代表您同意授权书的条款，同时您授权杭州银行合作方（包括但不限于芝麻信用、鹏元征信等）可基于征信目的，从各处采集、保存、分析您的各类信息，并向杭州银行提供。</div>
+        </div>
+         <div class="btn-double">
+           <input type="button" value="保存" class="zen-btn" style="background:white;color:#0094e8" id="save">
+           <input type="button" value="提交" class="zen-btn" id="submit">
+        </div>
+       
+    </div>
+  </div>	
+
+</body>

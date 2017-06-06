@@ -1,0 +1,39 @@
+<div class="specBuz">
+	<div class="pBar row" style="margin-bottom: 0px;">
+	 	<div class="cell active">① 身份认证</div>
+	    <div class="cell active">② 人脸检测</div>
+	    <div class="cell active">③ 填写实名信息</div>
+	</div>
+</div>
+  <div class="content">
+    <div class="gap-box">
+      <div class="pt15">
+        <h1 class="fm-tit-guide txt-mid">温馨提示：请妥善保管好您的交易密码</h1>
+        <div class="ipt-txt-2 fm-realname">
+          <% 
+            if(!MUI.isEmpty(customerAlias)){              
+		  %>  
+          <input id="input_alias" type="text" maxlength="20" value="<%=customerAlias%>" placeholder="请填写您的登录名称" readonly="readonly"/>
+          <%
+          	}else{
+          %>
+          <input id="input_alias" type="text" maxlength="20" value="" placeholder="请填写您的登录名称"/>
+          <%
+          	}
+          %>
+        </div>
+        <div class="ipt-txt-2 fm-email">
+          <input id="input_email" type="email" maxlength="30" value="" placeholder="请填写您的电子邮箱"/>
+        </div>
+        <div class="ipt-txt-2 fm-load-pswd" >
+          <input id="password1" type="password" value="" placeholder="请输入直销交易密码" readonly="readonly"/>
+        </div>
+        <div class="ipt-txt-2 fm-load-pswd">
+          <input id="password2" type="password" value="" placeholder="请确认直销交易密码" readonly="readonly"/>
+        </div>
+        <!--绑定弹框事件-->
+        <input id="submitBtn" type="button" value="提交" class="zen-btn mt20 disabled" disabled/>
+      </div>
+      
+    </div>
+  </div>

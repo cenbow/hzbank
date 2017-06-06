@@ -1,0 +1,32 @@
+  <div class="gap-box">
+    <div class="sign-tips pt15">
+      <style type="text/css">body.gray-bg{background:#FFF;}</style>
+      <%    yfdClass="card";
+      		thClass="card";
+      		financeName = "";
+      		if(Utils.getParamDisplay("PB_FINANCE_BALANCE","1")==financeNo){
+     		    yfdClass = "card no-sign";
+      			thClass = "card";
+      			financeName = Utils.getParamDisplay("PB_FINANCE_BALANCE","4");
+      			financeName2 = Utils.getParamDisplay("PB_FINANCE_BALANCE","2");
+      		}else{
+     		    yfdClass = "card";
+      			thClass = "card no-sign";
+      			financeName = Utils.getParamDisplay("PB_FINANCE_BALANCE","2");
+      			financeName2 = Utils.getParamDisplay("PB_FINANCE_BALANCE","4");
+      		}
+      %>
+      <div class="card-container">
+        <div class="<%=yfdClass%>">幸福添利 · 易方达</div>
+        <div class="<%=thClass%>">幸福添利 · 天 弘</div>
+      </div>
+      <div class="notice">
+        <p>您已签约 <i><%=financeName%></i>，两款产品不能同时签约。</p>
+        <p>如需购买<%=financeName2%>，请先解约</p>
+      </div>
+      <div class="btn-double pt10">
+         <input id="backBtn" type="button" value="我知道了" class="zen-btn"/>
+         <input id="cancelBtn" type="button" value="现在去解约" class="zen-btn btn-fn"/>
+      </div>
+    </div>  
+  </div>

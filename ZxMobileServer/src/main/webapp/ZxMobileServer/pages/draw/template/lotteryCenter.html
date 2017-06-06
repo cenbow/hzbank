@@ -1,0 +1,74 @@
+<div class="new2016 struDpst">
+	<!-- 局部样式，务必模板内引用 -->
+    <style type="text/css">
+    body,html{min-height:100%; width:100%;}
+    body,body.gray-bg{background-image:-webkit-gradient(linear,75% 0,45% 100%,from(#ffffe6),to(#ffdfb9));}
+	.drawRztPageWrap{width:100%; height:100%; position:fixed; z-index:999; top:0; background-color:rgba(0,0,0,.4); left:1000%;}
+	.drawRztPageWrap.show{left:0;}
+	.drawRztPageWrap.show .drawRztPage{-webkit-animation-duration:.75s; animation-duration:.75s; -webkit-animation-name:bounceIn; animation-name:bounceIn;}
+	@-webkit-keyframes bounceIn{0%,100%,20%,40%,60%,80%{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes bounceIn{0%,100%,20%,40%,60%,80%{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
+	
+	</style>
+    <!-- style end! -->
+    <div class="tab">
+    	<div class="active">我的礼品</div>
+        <div>我的红包</div>
+    </div>
+	
+	<!-- 红包弹出框 -->
+	<div class="new2016 drawRztPageWrap" id="finalPrize">
+		<div class="drawRztPage">
+			<div class="cash">
+				<span class="ft28" id="amt">1.88</span> 元
+			</div>
+			<div class="tip">说明：领取的红包可提现至绑定的银行卡或用于直销银行产品投资。</div>
+		</div>
+		<div class="drawRztClose"></div>
+	</div>
+	
+	<!-- 奖品详情弹出框 -->
+	<div class="new2016 drawRztPageWrap" id="lotteryDetailid">
+		<div class="drawRztPage">
+			<div class="jdCard">
+				<h1 id="lotteryTime"></h1>
+				<div class="ticket">
+					<h2 id="lotteryDescrible"></h2>
+					<h3 id="lotteryCode"></h3>
+				</div>
+			</div>
+			<div class="tip" id="lotteryTip">说明：可在京东商城购买京东自营商品，详细规则以京东官方声明为准。</div>
+		</div>
+		<div class="drawRztClose"></div>
+	</div>
+	
+	<!-- 博时黄金弹出框 -->
+	<div class="new2016 drawRztPageWrap" id="lecunGoldPrize">
+		<div class="drawRztPage long">
+			<div class="gold">
+				<span class="ft-big" id="prizePrice"></span> 毫克
+			</div>
+			<div class="tip">说明：将于<span id="goldActivityTime">2017年5月26日</span>前到账，由于金价实时波动，到账金额以发放时点的数据为准。</div>
+			<div class="rztBtn undo" id="goldPrizeStatus"></div>
+		</div>
+		<div class="drawRztClose"></div>
+	</div>
+	
+	<!-- 我的奖品部分 -->
+	<div class="subPage">
+        <div class="spoils type2" >
+            <h1 id="totoLottery"></h1>
+        </div>
+         <ul class="list" id="lotteryList">
+        </ul>
+    </div>
+    <!-- 我的红包部分 -->
+	<div class="subPage" style="display: none;">
+		<div class="spoils">
+			<h1 id="packetNum"></h1>
+			<h2 id="totalAmt"></h2>
+		</div>
+		<ul class="list" id="packetInfoList">
+		</ul>
+	</div>
+</div>	
+

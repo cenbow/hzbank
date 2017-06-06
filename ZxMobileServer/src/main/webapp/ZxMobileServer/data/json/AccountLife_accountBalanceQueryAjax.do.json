@@ -1,0 +1,14 @@
+{
+  "repServiceId" : "life_accountBalanceQueryAjax",
+  "repFlowNo" : "39971616",
+  "cd" : {
+    "balance" : "9445552.030000",
+    "balanceAvailable" : "9442550.030000",
+    "balanceFreeze" : "3002.000000",
+    "balanceReserve" : "0.000000",
+    "hostReturnCode" : "0",
+    "hostErrorMessage" : ""
+  },
+  "ec" : "0",
+  "em" : ""
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+</head>
+
+<body>
+	<div class="new2016 hapFud">
+    	<div class="filterNav row">
+        	<div class="cell">股票型</div>
+            <div class="cell">混合型</div>
+            <div class="cell">指数型</div>
+            <div class="cell active">债券型</div>
+            <div class="secNav">
+            	<div class="tit"></div>
+            	<div class="navList">
+                    <div class="itm">近一周</div>
+                    <div class="itm">近一月</div>
+                    <div class="itm">近三月</div>
+                    <div class="itm">近六月</div>
+                    <div class="itm">近一年</div>
+                    <div class="itm">近三年</div>
+                </div>
+            </div>
+        </div>
+        <div class="table mt10">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr class="filter">
+                    <th width="48%">基金名称</th>
+                    <th width="26%">单位净值</th>
+                    <th class="secNav">
+                        <span class="tt">日涨幅</span>
+                        <div class="navList">
+                            <div class="itm">近一周</div>
+                            <div class="itm">近一月</div>
+                            <div class="itm">近三月</div>
+                            <div class="itm">近六月</div>
+                            <div class="itm">近一年</div>
+                            <div class="itm">近三年</div>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    	<div class="table">
+        	<table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td width="48%">
+                        <h1>南方原油(QDII-FOF)</h1>
+                        <h2 class="ft13 fc-9">000948</h2>
+                    </td>
+                    <td  width="26%" class="ft16">
+                        <h1>1.0480</h1>
+                        <h2 class="ft13 fc-9">10-31</h2>
+                    </td>
+                    <td class="fc-orange">+4.22%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>汇富添恒生指数分级</h1>
+                        <h2 class="ft13 fc-9">000948</h2>
+                    </td>
+                    <td class="ft16">
+                        <h1>1.0480</h1>
+                        <h2 class="ft13 fc-9">10-31</h2>
+                    </td>
+                    <td class="fc-orange">+4.22%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>华夏大中华企业精选…</h1>
+                        <h2 class="ft13 fc-9">000948</h2>
+                    </td>
+                    <td class="ft16">
+                        <h1>1.0480</h1>
+                        <h2 class="ft13 fc-9">10-31</h2>
+                    </td>
+                    <td class="fc-green">-0.16%</td>
+                </tr>
+            </table>
+        </div>
+	</div> 
+    <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+	<script>
+	$(function(){	
+		var tableSecNavList = $('.table .secNav .navList');
+		var tableSecNavTt = $('.table .secNav .tt');
+		tableSecNavTt.on('click', function(){
+			var cur = $(this);
+			cur.hasClass('spr') ? cur.removeClass('spr') : cur.addClass('spr');
+			tableSecNavList.hasClass('show') ? tableSecNavList.removeClass('show') : tableSecNavList.addClass('show');
+		})
+		$('.table .navList .itm').on('click', function(){
+			alert($(this).text());
+			tableSecNavList.removeClass('show');
+			tableSecNavTt.removeClass('spr');
+		})
+		//////////////////////////////
+		$('.filterNav .cell').on('click', function(){
+			$(this).addClass('active').siblings('.cell').removeClass('active');
+		});
+		var tabSecNavList = $('.filterNav .secNav .navList');
+		var tabSecNavTt = $('.filterNav .secNav .tit');
+		tabSecNavTt.on('click', function(){
+			var cur = $(this);
+			cur.hasClass('spr') ? cur.removeClass('spr') : cur.addClass('spr');
+			tabSecNavList.hasClass('show') ? tabSecNavList.removeClass('show') : tabSecNavList.addClass('show');
+		})
+		$('.filterNav .navList .itm').on('click', function(){
+			alert($(this).text());
+			tabSecNavList.removeClass('show');
+			tabSecNavTt.removeClass('spr');
+		})
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="count-active-box">
+  <h1 class="t1">您的账户信息：</h1>
+  <div class="card">
+    <div class="hd">
+      <span>电子账户</span>
+      <span>未激活</span>
+    </div>
+    <div class="bar"><%=Utils.getEleCard().cardNo?Utils.getFmtAcc(Utils.getEleCard().cardNo):"**** **** **** ****"%></div>
+    <div class="user"><span><%=App.storage.get("UserInfo").customerNameCN%></span></div>
+  </div>
+  <div class="ifo">
+    <h2>请使用绑定卡（尾号 <span id="bindCardNoFoot">&nbsp;****&nbsp;&nbsp;</span>），通过以下方式往电子账户转入任意金额，来激活账户</h2>
+    <img src="images/c_a.png" width="100%"> 
+  </div>
+  <div class="ctl">
+    <h3>尊敬的客户，您完成以上操作后，将收到我行提示短信，再点击以下按钮，完成账户激活。</h3>
+    <a href="javascript:;" id="activateBtn">马上激活</a>
+  </div>
+</div>

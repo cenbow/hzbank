@@ -1,0 +1,37 @@
+  <div class="content">
+    <div class="gap-box">
+    <!--   <p class="zen-para-center pt15">已向您的<span><%=Utils.getFmtMobile(mobileNo)%></span>的号码发送了短信，<br/>请输入短信验证码完成注册</p> -->
+      <div class="pt10">
+       <!--  <div class="ipt-txt-2 fm-pswd"> -->
+        <div class="ipt-txt-2">
+          <input id="password1" type="password" value="" placeholder="设置登录密码" readonly="readonly"/>
+          <i></i>
+        </div>
+        <div class="ipt-txt-2">
+          <input id="password2" type="password" value="" placeholder="确认登录密码" readonly="readonly"/>
+          <i></i>
+        </div>
+<!--         <div class="ipt-txt-2 fm-sms-ver">
+          <input id="phonePassInput" type="tel" maxlength="6" value="" placeholder="短信验证码"/>
+          <label id="btn_sendSMS" class="ver-timeout">发送验证码</label>
+        </div> -->
+        <div class="zen-get-code">
+          <div class="ipt-txt-2">
+            <input id="phonePassInput" type="tel"  maxlength="6" value="" placeholder="请输入短信验证码" pattern="[0-9]*"/>
+          </div>
+          <input id="btn_sendSMS"  type="button" value="获取手机验证码" class="get-btn"/>
+        </div>
+        <%  var recommendNumClass = 'ipt-txt-2 fm-ivcode';
+            if(totalNum > 0){
+            	recommendNumClass = 'ipt-txt-2 fm-ivcode hidden';
+            }               
+		%>      
+        <div class="<%=recommendNumClass%>">
+          <input id="input_RecommendNum" type="tel" maxlength="8" value="<%=recommendNum%>" placeholder="请输入邀请码或员工号（可选）" pattern="[0-9]*"/>
+          <label class="fm-border-r">邀请码</label>
+        </div>
+        <input id="submitBtn" type="button" value="提交"  class="zen-btn mt20 disabled" disabled/>
+      </div>
+      
+    </div>
+  </div>

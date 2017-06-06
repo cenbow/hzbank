@@ -1,0 +1,54 @@
+<style type="text/css">
+.mask{width:100%; height:100%; position:absolute; left:0; top:0; background:url(images/market/arrow.png) right top no-repeat; background-size:140px auto; background-color:rgba(0,0,0,0.62); z-index:999;}
+</style>
+<div class="content" id="anymore"> 
+    <ul class="zen-list-2" style="display:none;">    
+      <li class="zen-fold-arr">
+        <div class="user-detail-ifo">
+          <div class="avatar photo"><img src="<%=Utils.checkSession()&&App.storage.get('UserInfo').photo?'data:image/png;base64,'+App.storage.get('UserInfo').photo:'images/defaultAvatar/1.png'%>" alt=""/></div>
+          <h1 id="pnum"><%=Utils.checkSession()?Utils.getFmtMobile(App.storage.get("UserInfo").regMobile):""%></h1>
+          <h2 id="account">电子账户：<%=Utils.getEleCard().cardNo?Utils.getFmtAcc(Utils.getEleCard().cardNo):"无"%></h2>
+          <div class="item-ico">
+            <i class="phone"></i>
+            <i class="user"></i>
+            <i class="card"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="zen-list">    
+      <li class="grid-ico message zen-fold-arr" id="message-center">消息中心</li>
+      <li class="grid-ico friend" id="share">邀请好友</li>
+      <li class="grid-ico guide zen-fold-arr" id="help-center">新手指引</li>
+    </ul>
+    <ul class="zen-list" style="display:none;">
+      <li class="grid-ico sign-in zen-fold-arr" style="display:none;">立即签到</li>
+    </ul>
+    <ul class="zen-list">
+      <!-- <li class="grid-ico update zen-fold-arr" >版本更新 <i class="am-version dftw">当前版本：<i id="vers" ></i></i></li> -->
+      <li class="grid-ico aboutus zen-fold-arr" id = "about-us">关于我们</li>
+      <li class="grid-ico mortgage zen-fold-arr" id="loancenter">房贷中心</li>
+      <%if(pubParam.clientVersion!="2.0.0"){%>
+      	<li class="grid-ico special zen-fold-arr">自助服务</li>
+      <%}%>
+    </ul>
+    <input type="button"  id="logout" value="退出当前登录" class="zen-btn" style="width:95%;margin:0 auto;display:none;"/>
+   
+    <!--2016.4.11新增登录按钮-->
+    <div class="gap-box mt15 mb30" style="display:none;" id="login">
+    	<a href="javascript:;" class="zen-btn white" >立即登录</a>
+    </div>
+   
+    <a href="javascript:;" val="400-8888-508" class="concat-phone">
+      <span>400-8888-508 或 95398</span>
+    </a>
+  </div>
+ <div id="spitboard" style="display:none;">
+  <div class="gap-box">
+    <h1 class="fm-tit-guide mt20">感谢您 使用杭银直销，欢迎您向我们反馈在使用过程中的任何意见和建议。</h1>
+    <div class="zen-feedback"><textarea rows="5" placeholder="请输入反馈信息" id="spitContent"></textarea></div> 
+    <p class="zen-tips txt-r" id="txt-words">您还可以输入150字</p>
+    <input type="button" value="提交" class="zen-btn mt20" id="spitSubmit"/>
+  </div>
+ </div>
+  <div class="mask" id="mask" style="display:none;"></div>

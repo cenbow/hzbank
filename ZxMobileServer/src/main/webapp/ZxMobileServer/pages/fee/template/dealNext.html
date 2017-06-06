@@ -1,0 +1,71 @@
+<div class="new2016 Pays">
+     <div class="list disabled mt10">
+        <div class="list-item row">
+            <label class="txt-l">缴费项目</label>
+            <div class="ipt" style="padding-left: 50px">杭州市小客车竞价成交款缴款</div>
+        </div>
+        <div class="list-item row">
+            <label class="txt-l">收费单位</label>
+            <div class="ipt" style="padding-left: 50px">杭州市财政局财政专户</div>
+        </div>
+<!--         <div class="list-item row arr">
+        	<label class="bit1">缴费卡号</label>
+            <div class="ipt" id="cardNo">6214**** ****3212(绑定卡)</div>
+        </div> -->
+        <div class="list-item row">
+            <label class="txt-l">缴款书编号</label>
+            <div class="ipt" style="padding-left: 35px" id="billkey">0127838</div>
+        </div>
+        <div class="list-item row">
+            <label class="txt-l">付款人全称</label>
+            <div class="ipt" style="padding-left: 35px" id="payName">江泽民</div>
+        </div>
+        <div class="list-item row">
+            <label class="txt-l">缴费金额(元)</label>
+            <div class="ipt" style="padding-left: 25px" id="payAmt">30,000.00元</div>
+        </div>
+        <div class="list-item row">
+            <label class="txt-l">金额大写</label>
+            <div class="ipt" style="padding-left: 50px" id="big">叁万圆整</div>
+        </div>
+     </div>
+     <div class="padded mt10">
+        <div class="mb5 fc-9 ft13 lh1_8">
+            <h1 class="fc-orange ft14">温馨提示：</h1>
+            <p>1. 银行卡的缴费限额由银行设定，无法提升，若提示超限，建议更换其他卡进行缴款。</p>
+            <p>2. 请认真核对缴款通知书编号、付款人全称及金额。</p>
+        </div>
+        <button class="zen-btn mt15" id="dealSubmit">提交</button>
+    </div>
+    <div class="dialog" style="display:none" id="cardList">
+        <div class="passwordBox">
+            <div class="head row">
+                <i class="back" id="back"></i>
+                <div class="cell fc-blue">选择缴费方式</div>
+            </div>
+            <div class="list" id="bankList">
+                <div class="list-item selected">
+                    <div class="selectPay">
+                        <i class="ico-bnk bnk-0002"></i>
+                        <h1>中国农业银行（9023）</h1>
+                        <p class="ft10 fc-9">单笔限额2千，日累计限额1万</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="selectPay">
+                        <i class="ico-bnk bnk-0001"></i>
+                        <h1>中国农业银行（9023）</h1>
+                        <p class="ft10 fc-9">单笔限额2千，日累计限额1万</p>
+                    </div>
+                </div>
+                <div class="list-item arr" id="addCard">
+                    <div class="selectPay">
+                        <i class="ico-bnk addCard"></i>
+                        <h1>使用新卡缴费</h1>
+                        <p class="ft10 fc-9">请输入本人储蓄卡号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,3555 @@
+/*
+ * Styles For Some Common Pages
+ *
+ *     产品购买、充值、提现、
+ * 实名认证绑卡、基金购买、风险测评
+ *   
+ *    Upadate 2017.03.30
+ * 
+ */
+
+.opr-box {
+  padding: 10px 14px;
+  line-height: 1.8;
+}
+
+.opr-box .row {
+  border-bottom: 1px dashed #DDD;
+}
+
+.opr-box .row:last-child {
+  border: none;
+}
+
+.opr-box .row:active {
+  background: #F7F7F7;
+}
+
+.ipt-opr,
+.ipt-opr-2 {
+  padding: 18px 15px;
+  line-height: 20px;
+  height: 20px;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
+
+.ipt-opr-2 {
+  padding: 15px 2px;
+}
+
+i.camera {
+  display: block;
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -22px;
+  background: url(../images/idCard/camera_2.png) center center no-repeat;
+  background-size: 24px auto;
+  z-index: 999;
+}
+
+.ipt-opr .ico-bnk {
+  margin: 0 0 0 5px;
+}
+
+.ipt-opr.fm-drop-down:after {
+  top: 50%;
+  right: 5px;
+  margin-top: -20px;
+}
+
+.ipt-opr label,
+.ipt-opr-2 label {
+  display: block;
+  padding-right: 5px;
+  border-right: 1px solid #E1E1E1;
+}
+
+.ipt-opr .cell,
+.ipt-opr-2 .cell {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  padding-left: 8px;
+}
+
+.ipt-opr .cell input,
+.ipt-opr-2 .cell input {
+  line-height: 20px;
+  width: 100%;
+  display: block;
+}
+
+.fw-lbl {
+  display: inline-block;
+  min-width: 100px;
+  text-align: right;
+}
+
+
+/* 转入结果提示 */
+
+.trs-rzt-success,
+.trs-rzt-fail {
+  margin: 10px auto;
+  text-align: center;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.trs-rzt-success:before,
+.trs-rzt-fail:before {
+  content: "";
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  background: url(../images/tr-rzt.png) no-repeat;
+  background-size: 26px auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.trs-rzt-fail:before {
+  background-position: 0 -26px;
+}
+
+.trs-rzn {
+  margin: 10px;
+  color: #ff6c00;
+}
+
+.pay-count .ico-bnk {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+/*带有银行图标账号专用*/
+
+.full-cash-btn {
+  display: block;
+  height: 20px;
+  width: 100px;
+  position: relative;
+}
+
+.full-cash-btn.simple {
+  width: 74px;
+  text-align: right;
+}
+
+.full-cash-btn.simple:after {
+  display: none;
+}
+
+.full-cash-btn.simple:before {
+  content: attr(data-value);
+  color: #0094e8;
+}
+
+.full-cash-btn:after {
+  content: attr(data-value);
+  display: block;
+  position: absolute;
+  height: 28px;
+  width: 100%;
+  background: #FFAE45;
+  text-align: center;
+  line-height: 28px;
+  left: 5px;
+  top: -4px;
+  color: #FFF;
+  border-radius: 2px;
+}
+
+.full-cash-btn:not(.disabled):not(.simple):active:after {
+  background: #E28000;
+}
+
+.full-cash-btn:not(.simple).disabled:after {
+  background: #CBCBCB;
+}
+
+
+/*= 实名认证绑卡 =*/
+
+.idt-progress {
+  text-align: center;
+  margin: 16px 10px;
+}
+
+.idt-progress span {
+  padding: 5px 12px 5px 14px;
+  background: #CBC9CA;
+  font-size: 13px;
+  color: #FFF;
+  position: relative;
+}
+
+.idt-progress span:first-child {
+  margin-left: 10px;
+}
+
+.idt-progress span:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.idt-progress span:after {
+  content: attr(data-step);
+  display: block;
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  margin: -14px 0 0;
+  height: 23px;
+  width: 23px;
+  text-align: center;
+  background: #FFF;
+  color: #FFAE45;
+  border: 2px solid #FFAE45;
+  border-radius: 50%;
+  line-height: 23px;
+}
+
+.idt-progress .active {
+  background: #FFAE45;
+}
+
+.bc-ifo {
+  font-size: 12px;
+  color: #ff6c00;
+  line-height: 42px;
+}
+
+.warn-item {
+  height: 21px;
+  padding: 11px 0;
+  min-height: 21px !important;
+}
+
+
+/*= 充值提现 =*/
+
+.drop-select {
+  position: relative;
+}
+
+.drop-select:after {
+  content: "";
+  display: block;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  background: url(../images/lr-icos.png) 0 -247px no-repeat;
+  background-size: 19px auto;
+}
+
+.single-radio {
+  padding: 10px 5px;
+}
+
+.single-radio label {
+  line-height: 30px;
+}
+
+.single-radio input[type="radio"] {
+  width: 78px;
+  height: 30px;
+  margin-right: 5px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.single-radio input[type="radio"]:after {
+  content: attr(data-title);
+  display: block;
+  width: 78px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #979797;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #EDEDED;
+  border-radius: 3px;
+}
+
+
+/* .single-radio input[type="radio"]:checked:after{color:#FFF; background:#FFBB63;} */
+
+.single-radio input.checked:after {
+  color: #FFF;
+  background: #FFBB63;
+}
+
+.single-radio .tips {
+  line-height: 28px;
+  padding-top: 5px;
+}
+
+
+/*= 基金购买 =*/
+
+.fundBuy .alien {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+
+/*= 风险测评 =*/
+
+.riskEval .itro-tit {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.riskEval .userTest {
+  border-bottom: 1px solid #eaeaea;
+  background: #FFF;
+  padding: 10px;
+}
+
+.riskEval .userTest h1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 7px 0;
+}
+
+.riskEval .userTest label {
+  color: #5f5f5f;
+  font-size: 14px;
+  display: block;
+  line-height: 22px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.riskEval .userTest label.chosen {
+  background: #FFECDE;
+  color: #ff7e00;
+}
+
+.riskEval .testResult {
+  padding: 20px;
+  text-align: center;
+}
+
+.testResult .btnGroup {
+  display: box;
+  display: -webkit-box;
+  padding: 20px 0 10px;
+}
+
+.testResult .btnGroup .zen-btn {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  margin: 0 10px;
+}
+
+
+/*= 基金签约 =*/
+
+.signProgress .count-ifo {
+  line-height: 26px;
+  padding: 10px;
+}
+
+.signProgress .user-fill-form {
+  padding: 10px;
+}
+
+.user-fill-form .row {
+  display: box;
+  display: -webkit-box;
+  margin: 10px 0;
+}
+
+.user-fill-form .row .ipt-txt-2 {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  margin: 0;
+  padding: 0 8px;
+}
+
+.user-fill-form .row .label {
+  width: 76px;
+  text-align: right;
+}
+
+.user-fill-form .single-radio {
+  padding: 0;
+}
+
+.user-fill-form h1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+
+/*= 基金解约 =*/
+
+.fundClause .zen-list-2>li,
+.my-fund .zen-list-2>li {
+  line-height: normal;
+}
+
+.fundClause .statePanel {
+  padding: 5px 0;
+}
+
+.statePanel .row {
+  border-bottom: 1px solid #EAEAEA;
+  margin: 0 10px;
+  padding: 10px 0;
+}
+
+.statePanel .row:last-child {
+  border: 0 none;
+}
+
+.statePanel .row h1 {
+  line-height: 28px;
+}
+
+.statePanel .row h2 {
+  line-height: 24px;
+}
+
+
+/*= 我的基金&&交易撤单 =*/
+
+.my-fund li .row {
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.my-fund li .row:last-child {
+  border: 0 none;
+}
+
+.my-fund li h1 {
+  border-bottom: 1px dashed #eaeaea;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.my-fund li h2 {
+  line-height: 28px;
+}
+
+.my-fund .control {
+  display: box;
+  display: -webkit-box;
+}
+
+.my-fund .control .cell {
+  margin: 10px 0;
+  text-indent: 5px;
+  box-flex: 3;
+  -webkit-box-flex: 3;
+}
+
+.control .cell:first-child {
+  border-right: 1px solid #eaeaea;
+}
+
+.control .cell:last-child {
+  width: auto;
+  box-flex: 8;
+  -webkit-box-flex: 8;
+}
+
+.control .cell:last-child .zen-btn {
+  width: 68px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  float: right;
+  margin: 6px 0;
+}
+
+.my-fund li .row.detailIfo {
+  font-size: 12px;
+  color: #999;
+  line-height: 18px;
+}
+
+.my-fund li .row.detailIfo h4 {
+  display: box;
+  display: -webkit-box;
+}
+
+.my-fund li .row.detailIfo h4>span {
+  display: block;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  width: 50%;
+}
+
+.fund-cancel .row .control .cell {
+  width: auto;
+  border: none;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+}
+
+
+/*= 卡密激活 =*/
+
+.idc-identify {
+  padding: 15px 0 5px;
+}
+
+.idc-identify .idc-area {
+  height: 124px;
+  width: 214px;
+  border: 1px solid #e4e4e3;
+  margin: 0 auto;
+  background: #f5f5f4 url(../images/idCard/camera.png) center 20px no-repeat;
+  background-size: auto 56px;
+  position: relative;
+}
+
+.idc-identify .idc-area:after {
+  content: attr(data-title);
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  top: 80px;
+  text-align: center;
+  color: #6c6c6c;
+}
+
+.idc-identify .idc-area:active {
+  background-color: #e4e4e3;
+}
+
+.idc-result {
+  padding: 50px 20px;
+}
+
+.idc-result .article {
+  padding: 10px;
+  margin-bottom: 30px;
+  background: #f4f4f4;
+  font-size: 14px;
+  color: #666;
+}
+
+.idc-result .article h1 {
+  font-size: 16px;
+  color: #ff7f00;
+}
+
+.idc-result .article p {
+  margin: 4px 0;
+}
+
+.idc-result .rzt:before {
+  content: "";
+  display: block;
+  height: 80px;
+  width: 100%;
+  background: url(../images/idCard/rzt-ico.png) center 0 no-repeat;
+  background-size: 80px auto;
+}
+
+.idc-result .rzt {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.idc-result .fail:before {
+  background-position: center -80px;
+}
+
+.idc-result .alrdy:before {
+  background-position: center -160px;
+}
+
+.idc-result .idfPass:before {
+  background-position: center -240px;
+}
+
+.idc-sign {
+  padding: 10px 0;
+}
+
+.idc-sign li {
+  line-height: 50px;
+  min-height: 50px;
+}
+
+.idc-sign .tit {
+  color: #999;
+  display: block;
+  width: 90px;
+  float: left;
+  text-align: right;
+}
+
+.idc-sign .btnGrp {
+  padding: 20px 10px;
+}
+
+.idc-sign .btnGrp .zen-btn {
+  margin-bottom: 10px;
+}
+
+.idc-sign .btnGrp .zen-btn span {
+  font-size: 16px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.idc-sign .btnGrp .zen-btn span:before {
+  content: "";
+  display: block;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  left: 0;
+  background: url(../images/idCard/sub.png) 0 0 no-repeat;
+  background-size: 22px auto;
+}
+
+.idc-sign .btnGrp .zen-btn.err {
+  background: #FFF;
+  color: #ff7f00;
+  border: 1px solid #ff7f00;
+  line-height: 42px;
+  height: 42px;
+}
+
+.idc-sign .btnGrp .zen-btn.err span:before {
+  background-position: 0 -47px;
+}
+
+.idc-sign .btnGrp .zen-btn.err:active {
+  background: #ff7f00;
+  color: #FFF;
+}
+
+
+/*== 特殊业务 && 人脸识别 ==*/
+
+.specBuz * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.specBuz .prog .cell {
+  width: 33.333%;
+  text-align: center;
+  color: #3cb1fe;
+}
+
+.specBuz .prog .cell:first-child {
+  color: #7fc6f4;
+}
+
+.specBuz .prog .cell:last-child {
+  color: #0c99f3;
+}
+
+.specBuz .ban img {
+  width: 100%;
+  display: block;
+}
+
+.specBuz .grid {
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+
+.specBuz .grid ul {
+  font-size: 0;
+}
+
+.specBuz .grid ul li {
+  font-size: 12px;
+  text-align: center;
+  width: 33.3333%;
+  display: inline-block;
+  height: 106px;
+  padding-top: 66px;
+  border: 1px solid #eee;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+  color: #41596c;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+}
+
+.specBuz .grid ul li:active {
+  background-color: #f8f8f8;
+}
+
+.specBuz .grid .a {
+  background-image: url(../images/face/i1.png);
+}
+
+.specBuz .grid .b {
+  background-image: url(../images/face/i2.png);
+}
+
+.specBuz .grid .c {
+  background-image: url(../images/face/i3.png);
+}
+
+.specBuz .grid .d {
+  background-image: url(../images/face/i4.png);
+}
+
+.specBuz .grid .e {
+  background-image: url(../images/face/i5.png);
+}
+
+.specBuz .grid .f {
+  background-image: url(../images/face/i6.png);
+}
+
+.specBuz .grid .g {
+  background-image: url(../images/face/i7.png);
+}
+
+.specBuz .grid .h {
+  background-image: url(../images/face/i8.png);
+}
+
+.specBuz .grid .h.disabled {
+  background-image: url(../images/face/i8disabled.png);
+  color: #9D9D9D;
+}
+
+.specBuz .grid .i {
+  background-image: url(../images/face/i9.png);
+}
+
+.specBuz .tip {
+  width: 100%;
+  border-bottom: 5px solid #3cb1fe;
+  background: #fff;
+  color: #b9b9b9;
+  padding: 20px 0;
+}
+
+.specBuz .tip p {
+  padding: 0 15px 20px;
+}
+
+.specBuz .tip img {
+  width: 100%;
+}
+
+.specBuz .row {
+  display: box;
+  display: -webkit-box;
+}
+
+.specBuz .cell {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.specBuz .pBar {
+  height: 52px;
+  width: 100%;
+  background: #FFF;
+  margin-bottom: 10px;
+  line-height: 52px;
+  text-align: center;
+  color: #a4a4a4;
+}
+
+.specBuz .pBar .cell {
+  background: url(../images/arrow-big.png) right center no-repeat;
+  background-size: auto 12px;
+}
+
+.specBuz .pBar .cell:last-child {
+  background: none;
+}
+
+.specBuz .pBar .cell.active {
+  color: #2a9eee;
+}
+
+.specBuz .cardArea {
+  width: 100%;
+  height: 182px;
+  background: #FFF;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+  background: #FFF url(../images/face/crd.gif) center center no-repeat;
+  background-size: 170px auto;
+}
+
+.specBuz .cardArea.b {
+  background-image: url(../images/face/crd_b.gif);
+}
+
+.specBuz .cardArea.ag {
+  background-image: url(../images/face/crd_ag.gif);
+}
+
+.specBuz .cardArea .idcard {
+  height: 100px;
+  width: 160px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -65px 0 0 -80px;
+  z-index: 9;
+}
+
+.specBuz .cardArea .idcard img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.specBuz .warm,
+.specBuz .liz.tp2 {
+  width: 100%;
+  padding: 10px 10px 15px;
+  background: #fefbf5 url(../images/face/bd_ln.png) 0 0 repeat-x;
+  background-size: auto 10px;
+}
+
+.specBuz .warm dt {
+  color: #ffae66;
+  padding-top: 10px;
+}
+
+.specBuz .warm dd {
+  font-size: 13px;
+  padding: 8px 0;
+  color: #7c7c7c;
+}
+
+.specBuz .warm dd+dd {
+  border-top: 1px dashed #f4e9d6;
+}
+
+.specBuz .liz {
+  margin: 10px 0;
+  color: #000;
+}
+
+.specBuz .liz.tp2 {
+  padding: 10px 0;
+  background-color: #FFF;
+  color: #a1a1a1;
+  background-size: auto 5px;
+}
+
+.specBuz .liz li {
+  padding: 14px 10px;
+  background: #FFF;
+}
+
+.specBuz .liz li+li {
+  border-top: 1px solid #E5E5E5;
+}
+
+.specBuz .liz li .tt {
+  width: 90px;
+  color: #999;
+  text-align: right;
+}
+
+.specBuz .liz.tp2 li .tt {
+  color: #a1a1a1;
+}
+
+.specBuz .ensure:before,
+.specBuz .again:before,
+.specBuz .sucState:before {
+  content: '';
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  vertical-align: middle;
+  background: url(../images/face/ok.png) no-repeat;
+  background-size: 100% auto;
+  margin-right: 6px;
+}
+
+.specBuz .ensure:after,
+.specBuz .again:after {
+  content: attr(data-label);
+  font-size: 15px;
+}
+
+.specBuz .again {
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  border: 1px solid #ff9140;
+  border-radius: 3px;
+  margin-top: 15px;
+  color: #ff9140;
+  text-align: center;
+}
+
+.specBuz .again:active {
+  background: #ff9140;
+  color: #FFF;
+}
+
+.specBuz .again:before {
+  background-image: url(../images/face/del.png);
+}
+
+.specBuz .again:active:before {
+  background-image: url(../images/face/del_act.png);
+}
+
+.specBuz .tip2 {
+  width: 100%;
+  padding: 15px 0;
+  background: #FFF;
+  text-align: center;
+  color: #ffae66;
+  line-height: 2;
+}
+
+.specBuz .tip2 img {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.specBuz .sucState {
+  line-height: 24px;
+  width: 100%;
+  padding: 10px;
+  background: #ff8820;
+  text-align: center;
+  color: #FFF;
+}
+
+.specBuz .sucState.disabled {
+  text-align: left;
+  padding-left: 40px;
+  background: #CBCBCB url(../images/face/suc.png) 8px center no-repeat;
+  background-size: 28px auto;
+}
+
+.specBuz .sucState:before {
+  background-image: url(../images/face/suc.png);
+  height: 28px;
+  width: 28px;
+}
+
+.specBuz .sucState.disabled:before {
+  display: none;
+}
+
+
+/*== 房贷 ==*/
+
+.bit1:before,
+.bit2:before,
+.bit3:before,
+.bit4:before {
+  content: "空";
+  visibility: hidden;
+}
+
+.bit2:before {
+  content: "空空";
+}
+
+.bit3:before {
+  content: "空空空";
+}
+
+.bit4:before {
+  content: "空空空空";
+}
+
+.list {
+  width: 100%;
+}
+
+.list:not(.disabled)>.list-item:not(.disabled):active {
+  background-color: #f8f8f8;
+}
+
+.list>.list-item+.list,
+.list+.list-item,
+.list>.list+.list {
+  border-width: 1px 0 0;
+}
+
+.list-item {
+  display: block;
+}
+
+.list-item+.list-item {
+  border-top: 1px solid #eee;
+}
+
+.list+.list,
+.zen-tab+.list {
+  margin-top: 3px;
+}
+
+.list>.list-item {
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10px;
+  background: #FFF;
+}
+
+.list>.list-item.arr,
+.list>.list-item.selected {
+  padding-right: 30px;
+}
+
+.list>.list-item.arr:after,
+.list>.list-item.selected:after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -10px;
+  background: url(../images/lr-icos.png) 0 -80px no-repeat;
+  background-size: 100% auto;
+}
+
+.list>.list-item.selected:after {
+  background: url(../images/checked.png) center center no-repeat;
+  background-size: 16px;
+  right: 10px;
+}
+
+.list>.list-item .zen-switch {
+  right: 10px;
+  position: absolute;
+}
+
+.motPage *,
+.indexPage *,
+.new2016 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.motPage .hide {
+  display: none;
+}
+
+.motPage .list:not(.houseTyp)>.list-item {
+  padding: 15px 10px;
+}
+
+.motPage .list>.list-item.arr {
+  padding-right: 30px;
+}
+
+.motPage .list>.list-item .zen-switch-tab {
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -16px;
+}
+
+.motPage .list>.list-item .zen-switch-tab a {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+}
+
+.motPage .ipt input {
+  width: 100%;
+}
+
+.new2016 .login-logo {
+  height: 59px;
+}
+
+.motPage .row,
+.new2016 .row {
+  display: box;
+  display: -webkit-box;
+}
+
+.motPage .cell,
+.new2016 .cell {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.motPage .imgr img {
+  display: block;
+  width: 100%;
+}
+
+.motPage .imgr .grid {
+  display: block;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../images/mortgage/grid.jpg);
+  background-size: 5px;
+  border-bottom: 1px solid #e3cfbd;
+  border-top: 1px solid #e9e9e9;
+}
+
+.motPage .imgr .grid .bar {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.motPage .imgr .grid .bar li {
+  width: 22px;
+  height: 100%;
+  position: absolute;
+  left: 14%;
+  top: 0;
+}
+
+.motPage .imgr .grid .bar li:nth-child(2) {
+  margin-left: -11px;
+  left: 50%;
+}
+
+.motPage .imgr .grid .bar li:nth-child(3) {
+  left: auto;
+  right: 10%;
+}
+
+.motPage .imgr .grid .bar li i {
+  display: block;
+  height: 0;
+  transition: height .6s;
+  -webkit-transition: height .6s;
+  width: 100%;
+  background-color: #ffac5c;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.motPage .imgr .grid .bar li i:after {
+  content: attr(data-label);
+  font-size: 8px;
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  color: #FFF;
+  background-color: #ffac5c;
+  padding: 1px 4px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transform: translate3d(-50%, -100%, 0);
+  -webkit-transform: translate3d(-50%, -100%, 0);
+  line-height: 1.2;
+}
+
+.motPage .imgr .grid .bar li:nth-child(2) i,
+.motPage .imgr .grid .bar li:nth-child(2) i:after {
+  background-color: #FF8E58;
+}
+
+.motPage .imgr .grid .bar li:nth-child(3) i,
+.motPage .imgr .grid .bar li:nth-child(3) i:after {
+  background-color: #8ceddc;
+}
+
+.motPage .menuGrid {
+  width: 100%;
+  font-size: 0;
+  background-color: #FFF;
+  margin: 10px 0;
+}
+
+.motPage .menuGrid li {
+  font-size: 14px;
+  display: inline-block;
+  width: 50%;
+  border: 1px solid #e9e9e9;
+  border-width: 0 1px 1px 0;
+  padding: 15px 0 15px 50px;
+}
+
+.motPage .menuGrid li:active {
+  background-color: #f8f8f8;
+}
+
+.motPage .menuGrid li:nth-last-child(1),
+.motPage .menuGrid li:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.motPage .menuGrid li h2 {
+  font-size: 12px;
+  color: #adadad;
+}
+
+.motPage .menuGrid li:after {
+  content: '';
+  display: block;
+  background: url(../images/mortgage/menu-ico.png) no-repeat;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -14px;
+  background-size: 100% auto;
+}
+
+.motPage .menuGrid li.b:after {
+  background-position: 0 -28px;
+}
+
+.motPage .menuGrid li.c:after {
+  background-position: 0 -56px;
+}
+
+.motPage .menuGrid li.d:after {
+  background-position: 0 -84px;
+}
+
+.motPage .currentRate {
+  background-color: #FFF;
+  margin: 10px 0;
+}
+
+.motPage .currentRate h1 {
+  padding: 10px;
+}
+
+.motPage .currentRate .cell {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 13px;
+  color: #0099db;
+}
+
+.motPage .currentRate .cell+.cell {
+  border-left: 1px solid #eee;
+}
+
+.motPage .currentRate .cell span {
+  padding-left: 18px;
+}
+
+.motPage .currentRate .cell span:after {
+  content: '';
+  display: block;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7.25px;
+  background: url(../images/mortgage/bank.png) center center no-repeat;
+  background-size: 100% auto;
+}
+
+.motPage .currentRate .cell.a {
+  color: #204184;
+}
+
+.motPage .currentRate .cell.a span:after {
+  background-image: url(../images/mortgage/gongjijin.png);
+  background-size: auto 100%;
+}
+
+.motPage .currentRate .cell.b span:after {
+  background-image: url(../images/mortgage/ji.png);
+  background-size: auto 100%;
+}
+
+.motPage .prog {
+  background-color: #FFF;
+  margin: 10px 0;
+}
+
+.motPage .prog h1 {
+  padding: 10px;
+}
+
+.motPage .prog .btn {
+  text-align: center;
+  color: #999;
+  padding: 10px;
+  display: block;
+}
+
+.motPage .switch-tab a {
+  padding: 8px 6px;
+  border: 1px solid #0094e8;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.motPage .switch-tab a+a {
+  margin-left: 5px;
+}
+
+.motPage .switch-tab a.active {
+  background-color: #0094e8;
+  color: #FFF;
+}
+
+.motPage .mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 99999;
+  display: none;
+}
+
+.motPage .mask .sbox {
+  width: 270px;
+  overflow: hidden;
+  background-color: #FFF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -135px;
+  border-radius: 6px;
+  transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+}
+
+.motPage .mask .sbox h1,
+.motPage .mask .sbox .list>.list-item {
+  padding: 10px 15px;
+}
+
+.motPage .mask .sbox h1 {
+  border-bottom: 1px solid #eee;
+}
+
+.motPage .mask .sbox .rdoGrp {
+  border-top: 1px solid #eee;
+}
+
+.motPage .rdoGrp {
+  padding: 10px 10px 5px;
+}
+
+.motPage .rdoGrp:last-child {
+  padding-bottom: 15px;
+}
+
+.motPage .rdoGrp ul {
+  font-size: 0;
+}
+
+.motPage .rdoGrp li {
+  font-size: 14px;
+  display: inline-block;
+  width: 49.9%;
+  padding: 4px;
+}
+
+.motPage .rdoGrp .itm {
+  width: 100%;
+  height: 100%;
+  padding: 6px 0;
+  text-align: center;
+  border: 1px solid #0094e8;
+  border-radius: 6px;
+  color: #0094e8;
+  font-size: 13px;
+}
+
+.motPage .rdoGrp li.active .itm {
+  color: #FFF;
+  background-color: #0094e8;
+}
+
+.motPage .buyProg {
+  padding-left: 30px;
+  background: #FFF;
+  border: 1px solid #eee;
+  margin: 10px 0;
+  border-width: 1px 0;
+}
+
+.motPage .buyProg .list {
+  border: none;
+}
+
+.motPage .buyProg .list>.list-item {
+  padding: 0;
+  overflow: visible;
+  font-size: 14px;
+}
+
+.motPage .buyProg .list>.list-item .tt {
+  padding: 10px 0;
+}
+
+.motPage .buyProg .list>.list-item .tt.impt span:after {
+  content: '重要';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  -webkit-transform: translate3d(100%, -50%, 0);
+  font-size: 10px;
+  color: #f19149;
+  border: 1px solid #f19149;
+  padding: 2px 4px;
+  line-height: 1;
+  border-radius: 3px;
+}
+
+.motPage .buyProg .list>.list-item:before {
+  content: attr(data-num);
+  display: block;
+  font-size: 10px;
+  height: 20px;
+  width: 20px;
+  line-height: 21px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #85d1fc;
+  position: absolute;
+  left: -26px;
+  top: 10.5px;
+  color: #FFF;
+  z-index: 99;
+}
+
+.motPage .buyProg .list>.list-item:after {
+  content: '';
+  display: block;
+  height: 12px;
+  width: 12px;
+  background: url(../images/mortgage/fold.png) center center no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  right: 14px;
+  top: 15px;
+}
+
+.motPage .buyProg .list>.list-item .detail {
+  font-size: 12px;
+  overflow: hidden;
+  padding-right: 10px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  opacity: 0;
+  height: 0;
+}
+
+.motPage .buyProg .list>.list-item .detail .inner>div {
+  padding-bottom: 12px;
+}
+
+.motPage .buyProg .list>.list-item.spr:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.motPage .buyProg .list>.list-item.spr .detail {
+  opacity: 1;
+}
+
+.motPage .buyProg i.line {
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  left: 13px;
+  top: 0;
+  display: block;
+  padding: 15px 0;
+}
+
+.motPage .buyProg i.line:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #85d1fc;
+}
+
+.motPage .houseTyp .row .cell {
+  width: 33.333%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.motPage .houseTyp .row .cell:after {
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -25px;
+  background: url(../images/mortgage/housetype.png) no-repeat;
+  background-size: 300% auto;
+}
+
+.motPage .houseTyp .row .cell+.cell {
+  border-left: 1px solid #e9e9e9;
+}
+
+.motPage .houseTyp .row .cell.active:before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 8px 6px;
+  border-color: transparent transparent #0094e8;
+  position: absolute;
+  left: 50%;
+  margin-left: -6px;
+  bottom: -10px;
+}
+
+.motPage .houseTyp .row .b:after {
+  background-position: 50% 0;
+}
+
+.motPage .houseTyp .row .c:after {
+  background-position: 100% 0;
+}
+
+.motPage .houseTyp .row .a.active:after {
+  background-position: 0 100%;
+}
+
+.motPage .houseTyp .row .b.active:after {
+  background-position: 50% 100%;
+}
+
+.motPage .houseTyp .row .c.active:after {
+  background-position: 100% 100%;
+}
+
+.motPage .selectCity {
+  position: relative;
+  padding-left: 42px;
+}
+
+.motPage .selectCity:after {
+  content: "";
+  display: block;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -16px;
+  background: #65c6f2 url(../images/deloan/local.png) center center no-repeat;
+  background-size: 16px auto;
+}
+
+.lgngstPage {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.lgngstPage .tab {
+  border: 1px solid #0094e8;
+  border-width: 1px 0;
+}
+
+.lgngstPage .tab .cell {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.lgngstPage .tab .cell.active {
+  background-color: #0094e8;
+  color: #fff;
+}
+
+.lgngstPage .tab+.swpage {
+  border-top: 10px solid #f1f1ef;
+}
+
+.lgngstPage .tab+.swpage li {
+  display: none;
+}
+
+.loanApp .progress {
+  width: 100%;
+  height: 64px;
+  background: #0094e8 url(../images/mortgage/dashe.png) center 22px no-repeat;
+  background-size: 84.4% 1px;
+}
+
+.loanApp .progress i {
+  display: block;
+  height: 22px;
+  width: 22px;
+  margin: 0 -11px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  line-height: 22px;
+  text-align: center;
+  color: #FFF;
+  position: absolute;
+  left: 10%;
+  top: 10px;
+  opacity: 0.8;
+}
+
+.loanApp .progress i:after {
+  content: attr(data-label);
+  color: #FFF;
+  font-size: 12px;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate3d(-50%, 0, 0);
+  white-space: nowrap;
+}
+
+.loanApp .progress i:nth-child(2) {
+  left: 37.2%;
+}
+
+.loanApp .progress i:nth-child(3) {
+  left: auto;
+  right: 37.2%;
+}
+
+.loanApp .progress i:nth-child(4) {
+  left: auto;
+  right: 10%;
+}
+
+.loanApp .progress i.active {
+  opacity: 1;
+  background-color: #FFF;
+  color: #0094e8;
+}
+
+.loanApp .specBuz .liz li .tt {
+  text-align: left;
+  color: #666;
+  width: auto;
+}
+
+.loanApp .specBuz .liz li .cell {
+  text-align: right;
+  color: #666;
+}
+
+.loanApp .specBuz .liz li .cell b {
+  font-weight: normal;
+  color: #bbb;
+  border-bottom: 1px solid #666;
+  padding: 0 3px;
+}
+
+.loanApp .specBuz .liz li .cell input {
+  width: 100%;
+  text-align: right;
+}
+
+.loanApp .specBuz .liz li .cell input::-webkit-input-placeholder {
+  color: #d3d3d3;
+}
+
+.loanApp .specBuz .liz li .tx {
+  padding-left: 5px;
+}
+
+.loanApp .specBuz .liz li.select {
+  padding-right: 38px;
+}
+
+.loanApp .specBuz .liz li.select:after {
+  content: '';
+  height: 24px;
+  width: 24px;
+  display: block;
+  background: url(../images/select.png) no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.loanApp .nodata {
+  height: 112px;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  background: #FFF;
+  line-height: 112px;
+  margin: 10px auto;
+}
+
+.loanApp .nodata:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  background: url(../images/house.png) center center no-repeat;
+  background-size: auto 100%;
+}
+
+.loanApp .tit {
+  padding-left: 10px;
+  color: #999;
+}
+
+.loanApp .tit+.liz {
+  margin-top: 4px;
+}
+
+.loanApp .specBuz .liz li.cright {
+  padding: 10px 5px;
+}
+
+.loanApp .specBuz .liz li.cright .itm {
+  border-style: solid;
+  border-color: #f2ccaa #f2e9d5 #f2e9d5;
+  border-width: 3px 1px 1px 1px;
+  background: url(../images/pagecorner.png) right bottom no-repeat;
+  background-size: 16px auto;
+  padding: 0 10px;
+  color: #a3a3a3;
+}
+
+.loanApp .specBuz .liz li.cright .itm+.itm {
+  margin-top: 10px;
+}
+
+.loanApp .specBuz .liz li.cright .itm .cell {
+  width: 50%;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.loanApp .specBuz .liz li.cright .itm .row+.row {
+  border-top: 1px solid #f2e9d5;
+}
+
+.loanApp .specBuz .liz li.cright .itm .row.mdfy {
+  padding: 10px 0;
+}
+
+.loanApp .specBuz .liz li.cright .itm .row.mdfy .btn {
+  padding: 4px 10px;
+  border: 1px solid #0094e8;
+  color: #0094e8;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.loanApp .specBuz .liz li.cright .itm .row.mdfy .btn:active {
+  color: #fff;
+  background-color: #0094e8;
+}
+
+.loanApp .specBuz .liz li.cright .itm:nth-child(even) {
+  border-top-color: #b3e5d3;
+}
+
+.loanApp .specBuz .liz li.add {
+  text-align: center;
+  color: #979797;
+}
+
+.loanApp .specBuz .liz li.add span {
+  padding: 0 16px 0 26px;
+  position: relative;
+}
+
+.loanApp .specBuz .liz li.add span:before,
+.loanApp .specBuz .liz li.add span:after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  position: absolute;
+  background: url(../images/add.png) center center no-repeat;
+  background-size: 100%;
+}
+
+.loanApp .specBuz .liz li.add span:after {
+  left: auto;
+  right: -4px;
+  background-image: url(../images/mortgage/to.png);
+  background-size: auto 14px;
+}
+
+.loanApp .ifo-box {
+  padding: 15px 10px;
+}
+
+.loanApp .ifo-box ul+ul {
+  margin-top: 15px;
+}
+
+.loanApp .ifo-box ul {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 0 7px;
+  color: #aaa;
+}
+
+.loanApp .ifo-box ul li {
+  padding: 10px 0;
+}
+
+.loanApp .ifo-box ul li.arr {
+  padding-right: 20px;
+  background: url(../images/fw_arr.png) right center no-repeat;
+  background-size: 20px;
+}
+
+.loanApp .ifo-box ul li+li {
+  border-top: 1px solid #eee;
+}
+
+.loanApp .ifo-box ul:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #0094e8;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.loanComitRzt .lcrBox {
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #FFF;
+  margin: 10px 0;
+}
+
+.loanComitRzt .lcrBox .rzt {
+  height: 74px;
+  width: 100%;
+  padding: 12px 0 0 84px;
+  background: url(../images/loanCommitRzt.png) 10px center no-repeat;
+  background-size: 64px auto;
+}
+
+.loanComitRzt .lcrBox .rzt h1 {
+  color: #ff9600;
+  font-size: 16px;
+}
+
+.loanComitRzt .lcrBox .rzt h2 {
+  color: #999;
+}
+
+.loanComitRzt .lcrBox .rzt.failed {
+  background-image: url(../images/loanCommitRzt2.png);
+}
+
+.loanComitRzt .lcrBox .rzt.ongoing {
+  background-image: url(../images/loanCommitRzt1.png);
+}
+
+.loanComitRzt .lcrBox .rzt.failed h1 {
+  color: #595959;
+}
+
+.loanComitRzt .lcrBox .rzt.failed h2 {
+  color: #9d9d9d;
+}
+
+.loanComitRzt .lcrBox .page {
+  padding: 10px 10px 20px;
+  width: 100%;
+  background: #fff6ea url(../images/sawtooth.png) 0 bottom repeat-x;
+  background-size: 8px auto;
+  box-shadow: 5px -3px 4px -4px rgba(0, 0, 0, .28);
+  -webkit-box-shadow: 5px -3px 4px -4px rgba(0, 0, 0, .28);
+  margin-top: 10px;
+}
+
+.loanComitRzt .lcrBox .page li {
+  padding: 8px;
+  color: #888;
+}
+
+.loanComitRzt .lcrBox .page li+li {
+  border-top: 1px dashed #ffd79f;
+}
+
+.loanApp.proQuery .progress {
+  background-image: url(../images/mortgage/dashe2.png);
+  background-size: 80% 1px;
+}
+
+.loanApp.proQuery .progress i:nth-child(1) {
+  left: 14%;
+}
+
+.loanApp.proQuery .progress i:nth-child(2) {
+  left: 50%;
+}
+
+.loanApp.proQuery .progress i:nth-child(3) {
+  left: auto;
+  right: 14%;
+}
+
+.invNow .ivbox {
+  width: 100%;
+  background: #FFF;
+  margin: 10px 0;
+}
+
+.invNow .ivbox .tit {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.invNow .ivbox .tit b {
+  color: #FFF;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 2px 4px;
+  font-weight: normal;
+}
+
+.invNow .ivbox .tbl {
+  padding: 10px;
+}
+
+.invNow .ivbox .tbl tr:last-child td {
+  padding-top: 10px;
+}
+
+.invNow .ivbox .tbl h1 {
+  font-size: 13px;
+  color: #999;
+}
+
+.invNow .ivbox .tbl h2 {
+  color: #ff6500;
+}
+
+.invNow .zen-list-5 .ivbtn {
+  padding: 7px 8px;
+  border-radius: 3px;
+  color: #FFF;
+  font-size: 12px;
+  background-color: #74C1EC;
+}
+
+.invNow .zen-list-5 .ivbtn:active {
+  background-color: #41A6DF;
+}
+
+.invNow .ivbox .drow+.drow {
+  border-top: 1px solid #e2e2e2;
+}
+
+.invNow .ivbox .drow h3 {
+  font-size: 12px;
+  color: #999;
+}
+
+.invNow .ivbox .drow h1 {
+  line-height: 33px;
+}
+
+.invNow .ivbox .drow h1 b {
+  font-size: 22px;
+  font-weight: normal;
+  margin-right: 3px;
+}
+
+.invNow .ivbox .drow .tbl {
+  padding: 5px 0;
+}
+
+.invNow .ivbox .drow .tbl tr td {
+  padding: 8px 0;
+  text-indent: 10px;
+}
+
+.invNow .ivbox .drow .tbl tr:last-child td {
+  border-top: 1px solid #eee;
+}
+
+.invNow .ivbox .drow .tbl h2 {
+  color: #666;
+}
+
+.invNow .ivbox .drow.circleState {
+  padding: 15px 0 15px 80px;
+  line-height: 2;
+}
+
+.invNow .ivbox .drow.circleState .state {
+  left: 0px;
+}
+
+.drow .state .myCircle {
+  width: 54px;
+  height: 54px;
+  margin: -27px 0 0 -27px;
+}
+
+.drow .state .myCircle:after {
+  height: 54px;
+  width: 54px;
+  line-height: 54px;
+}
+
+.drow .state .myCircle .left,
+.drow .state .myCircle .right,
+.drow .state .myCircle i {
+  width: 54px;
+  height: 54px;
+  clip: rect(0, 27px, 54px, 0);
+}
+
+.drow .state .myCircle .right,
+.drow .state .myCircle .right i {
+  clip: rect(0, 54px, 54px, 27px);
+}
+
+.drow .state .myCircle i:after {
+  height: 54px;
+  width: 54px;
+}
+
+.invNow .lbliz .itm {
+  background-color: #FFF;
+}
+
+.invNow .lbliz .itm+.itm {
+  margin-top: 10px;
+}
+
+.invNow .lbliz .itm .tit {
+  width: 100%;
+  padding: 10px;
+  background-color: #e2e2e2;
+  position: relative;
+}
+
+.invNow .lbliz .itm .tit:after {
+  content: '';
+  display: block;
+  height: 16px;
+  width: 16px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -8px;
+  background: url(../images/mortgage/to.png) center center no-repeat;
+  background-size: auto 100%;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+
+.invNow .lbliz .itm.spr .tit:after {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.invNow .lbliz .itm .cnt {
+  padding: 10px 10px 20px;
+  background-color: #FFF;
+}
+
+.invNow .lbliz .itm .rtn {
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #ededf0;
+  margin-left: 10px;
+}
+
+.invNow .lbliz .itm.pnl {
+  padding: 10px 0;
+}
+
+.invNow .lbliz .itm.pnl .cell {
+  width: 33.333%;
+  text-align: center;
+  color: #4c4c4c;
+  padding-top: 55px;
+}
+
+.invNow .lbliz .itm.pnl .cell:after {
+  content: '';
+  display: block;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  left: 50%;
+  margin-left: -17.5px;
+  top: 10px;
+  background: url(../images/tdl_ico.png) no-repeat;
+  background-size: 100% auto;
+}
+
+.invNow .lbliz .itm.pnl .cell.b:after {
+  background-position: 0 50%;
+}
+
+.invNow .lbliz .itm.pnl .cell.c:after {
+  background-position: 0 100%;
+}
+
+.invList .gap-tab {
+  padding: 10px;
+}
+
+.invList .gap-tab .inner {
+  background-color: #FFF;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+.invList .gap-tab .inner .cell {
+  width: 33.333%;
+  padding: 6px;
+  color: #0094e8;
+}
+
+.invList .gap-tab .inner .cell:not(.active)+.cell {
+  border-left: 1px solid #e5e5e5;
+}
+
+.invList .gap-tab .inner .cell.active {
+  background-color: #0094e8;
+  color: #FFF;
+}
+
+.invList .gap-tab .inner .cell i {
+  padding-left: 20px;
+  position: relative;
+}
+
+.invList .gap-tab .inner .cell i:after {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  background: url(../images/up.png) center center no-repeat;
+  background-size: auto 100%;
+}
+
+.invList .gap-tab .inner .cell i.down:after {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.invList .plist .box {
+  width: 100%;
+  background: #FFF;
+}
+
+.invList .plist .box+.box {
+  margin-top: 10px;
+}
+
+.invList .plist .box .tt {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.invList .plist .box .tt .label {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -14px;
+  padding: 5px 10px 5px 13px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #ff6c00;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+
+.invList .plist .box .tt .label.prev {
+  background-color: #0094e8;
+}
+
+.invList .plist .box .tt .label.done {
+  background-color: #dedede;
+  color: #999;
+}
+
+.invList .plist .box.disabled .tt {
+  color: #999;
+}
+
+.invList .plist .box.disabled .fc-orange,
+.invList .plist .box.disabled h1 {
+  color: #aaa;
+}
+
+.invList .plist .box.disabled .row p {
+  color: #bbb;
+}
+
+.invList .plist .box .tt+.row {
+  padding: 16px 80px 16px 10px;
+  line-height: 1.8;
+  position: relative;
+}
+
+.invList .plist .box h1,
+.invList .plist .box h2 {
+  line-height: 39px;
+}
+
+.invList .plist .box .row p {
+  font-size: 12px;
+  color: #999;
+}
+
+.invList .plist .box .row h1 b {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.invList .plist .box .row .state,
+.invNow .ivbox .drow .state {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -40px;
+}
+
+.plist .box .row .buyBtn {
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -27px;
+  background: url(../images/pr_btn.png) 0 100% no-repeat;
+  background-size: 100% auto;
+  line-height: 54px;
+  color: #fff;
+  text-align: center;
+}
+
+.plist .box .row .buyBtn.disabled {
+  background-position: 0 0;
+  color: #999;
+}
+
+
+/* Circle Progress */
+
+.myCircle {
+  width: 74px;
+  height: 74px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -37px 0 0 -37px;
+  box-shadow: 0 0 0 4px #E5E5E5 inset;
+  border-radius: 50%;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.myCircle:after {
+  content: attr(data-percent);
+  display: block;
+  height: 74px;
+  width: 74px;
+  line-height: 74px;
+  text-align: center;
+  color: #ff6500;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.myCircle .left,
+.myCircle .right,
+.myCircle i {
+  width: 74px;
+  height: 74px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  clip: rect(0, 37px, 74px, 0);
+}
+
+.myCircle .right,
+.myCircle .right i {
+  clip: rect(0, 74px, 74px, 37px);
+}
+
+.myCircle i:after {
+  content: "";
+  display: block;
+  box-shadow: 0 0 0 4px #FF6500 inset;
+  border-radius: 50%;
+  height: 74px;
+  width: 74px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.myCircle i {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+
+.myCircle.done i:after {
+  box-shadow: 0 0 0 4px #E5E5E5 inset;
+}
+
+.myCircle.done:after {
+  color: #999;
+}
+
+.myCircle.prev,
+.myCircle.prev i:after {
+  box-shadow: 0 0 0 4px #0094e8 inset;
+}
+
+.myCircle.prev:after {
+  color: #0094e8;
+}
+
+
+/* 持有资产 */
+
+.holdAst .scanView {
+  width: 100%;
+  background-color: #FFF;
+  padding: 10px 15px;
+  border: 1px solid #eaeaea;
+  border-width: 1px 0;
+  margin: 10px 0;
+}
+
+.holdAst .scanView .mid {
+  width: 100%;
+  height: 90px;
+  padding: 16px 0 0 113px;
+  position: relative;
+}
+
+.holdAst .scanView .mid h4 {
+  color: #666;
+  font-size: 12px;
+}
+
+.holdAst .scanView .mid h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.holdAst .scanView .mid .circle,
+.holdAst .scanView .mid .txt {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+
+.holdAst .scanView .mid .txt {
+  padding: 28px 0 0;
+  text-align: center;
+}
+
+.holdAst .scanView .mid .txt h1 {
+  font-size: 10px;
+  color: #bbb;
+}
+
+.holdAst .scanView .mid .txt h2 {
+  font-size: 13px;
+  color: #333;
+}
+
+.holdAst .scanView .types {
+  text-align: center;
+  color: #999;
+  padding-top: 8px;
+  font-size: 0;
+}
+
+.holdAst .scanView .types span {
+  position: relative;
+  padding-left: 16px;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.holdAst .scanView .types span i {
+  display: block;
+  width: 12px;
+  height: 10px;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+}
+
+.holdAst .scanView .types span+span {
+  margin-left: 8px;
+}
+
+.holdAst .fudCard .itm {
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid #eaeaea;
+  border-width: 1px 0;
+  margin: 10px 0;
+}
+
+.holdAst .fudCard .itm .tit {
+  height: 38px;
+  line-height: 38px;
+  color: #666;
+  padding-left: 15px;
+  border-left: 4px solid #2196f3;
+  position: relative;
+}
+
+.holdAst .fudCard .itm .tit i {
+  display: block;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -7px;
+  background: url(../images/mortgage/arr.png) center center no-repeat;
+  background-size: auto 100%;
+}
+
+.holdAst .fudCard .itm .cnt {
+  border: 1px solid #eee;
+  min-height: 100px;
+  border-width: 1px 0;
+}
+
+.fudCard .itm .cnt .sts {
+  width: 50%;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.fudCard .itm .cnt .sts h1 {
+  font-size: 12px;
+  color: #666;
+}
+
+.fudCard .itm .cnt .sts h1 b {
+  font-size: 22px;
+  color: #ff7f00;
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.fudCard .itm .cnt .sts h2 {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.fudCard .itm .cnt .cell {
+  color: #aaa;
+  line-height: 1.8;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.fudCard .itm .btnGrp .cell {
+  width: 50%;
+  display: block;
+  text-align: center;
+  padding: 12px;
+  color: #888;
+}
+
+.fudCard .itm .btnGrp .cell+.cell {
+  border-left: 1px solid #eee;
+}
+
+.fudCard .itm .btnGrp .cell:active,
+.holdAst .fudCard .itm .tit:active {
+  background-color: #f9f9f9;
+}
+
+.invRcd .zen-list-5 .row {
+  padding: 10px 10px 10px 40px;
+  background: #fff url(../images/Coins.png) 10px center no-repeat;
+  background-size: 24px auto;
+}
+
+
+/* 2016我的账户（1） */
+
+.myCount .countState {
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  background-color: #3387eb;
+}
+
+.myCount .countState:active {
+  background-color: #1F74D9;
+  transition: background-color .3s;
+  -webkit-transition: background-color .3s;
+}
+
+.myCount .countState h1 {
+  color: rgba(255, 255, 255, .8);
+  font-size: 13px;
+  line-height: 24px;
+  padding-left: 24px;
+  background: url(../images/mycount/yue.png) no-repeat 0 center;
+  background-size: 18px auto;
+}
+
+.myCount .countState h2 {
+  font-size: 28px;
+}
+
+.myCount .CTR {
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 10px;
+}
+
+.myCount .CTR .cell {
+  text-align: center;
+  color: #ff6000;
+  padding: 13px 10px;
+}
+
+.myCount .CTR .cell:active {
+  background-color: #f8f8f8;
+}
+
+.myCount .CTR .cell+.cell {
+  color: #3388eb;
+  border-left: 1px solid #eee;
+}
+
+.myCount .FIN {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-width: 1px 0;
+  font-size: 0;
+  margin-bottom: 10px;
+}
+
+.myCount .FIN li {
+  font-size: 14px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  border: 1px solid #eee;
+  border-width: 0 1px 1px 0;
+  padding-left: 44px;
+  position: relative;
+}
+
+.myCount .FIN li:not(.empty):active,
+.myCount .STR:active {
+  background-color: #f8f8f8;
+}
+
+.myCount .FIN li:not(.empty):after {
+  content: '';
+  display: block;
+  height: 24px;
+  width: 24px;
+  background: url(../images/mycount/icos.png) center 0 no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.myCount .FIN li.b:after {
+  background-position: center -24px;
+}
+
+.myCount .FIN li.c:after {
+  background-position: center -48px;
+}
+
+.myCount .FIN li.d:after {
+  background-position: center -72px;
+}
+
+.myCount .FIN li.e:after {
+  background-position: center -96px;
+}
+
+.myCount .FIN li.f:after {
+  background-position: center -120px;
+}
+
+.myCount .FIN li.g:after {
+  background-position: center -144px;
+}
+
+.myCount .FIN li h2 {
+  color: #999;
+  font-size: 12px;
+}
+
+.myCount .FIN li:nth-last-child(1),
+.myCount .FIN li:nth-last-child(2) {
+  border-bottom: 0;
+}
+
+.myCount .STR {
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  text-align: center;
+  border-width: 1px 0;
+  margin-bottom: 10px;
+}
+
+.myCount .STR .cell {
+  padding: 8px 0;
+}
+
+.myCount .STR .cell:first-child {
+  line-height: 40px;
+  padding-left: 28px;
+  background: url(../images/mycount/struc.png) 10px center no-repeat;
+  background-size: 20px auto;
+}
+
+.myCount .STR .cell+.cell {
+  border-left: 1px solid #eee;
+}
+
+.myCount .STR .cell h1 {
+  color: #ff6000;
+}
+
+.myCount .STR .cell h2 {
+  font-size: 12px;
+}
+
+
+/* 2016我的账户（2） */
+
+.myCount .hasMes {
+  display: inline-block;
+  vertical-align: middle;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #F00;
+  margin: -2px 0 0 4px;
+}
+
+.myCount.typ2 .FIN li:not(.empty):after {
+  background-image: url(../images/mycount/icos_b.png);
+}
+
+.myCount.typ2 .countState {
+  line-height: 1.1;
+}
+
+.myCount.typ2 .countState h1 {
+  padding-left: 0;
+  background: none;
+  font-size: 12px;
+}
+
+.myCount.typ2 .countState h2 {
+  font-size: 36px;
+  opacity: 0.9;
+}
+
+.myCount.typ2 .countState .info {
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(../images/info.png) center center no-repeat;
+  background-size: 18px auto;
+}
+
+.myCount .dialog {
+  background-color: rgba(0, 0, 0, .8)
+}
+
+.myCount .infoText {
+  padding: 10px 20px 50px;
+  color: #fff;
+  height: 100%;
+}
+
+.myCount .infoText h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.myCount .infoText p {
+  opacity: .8;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-top: 5px;
+}
+
+.myCount .infoText .close {
+  height: 40px;
+  width: 40px;
+  background: url(../images/x.png) no-repeat center center;
+  background-size: 26px auto;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.myCount .infoText .fullTxt {
+  height: 100%;
+  overflow: auto;
+}
+
+
+/* 累计收益 */
+
+.myCount.accIcm .tit {
+  padding: 10px 20px 5px;
+}
+
+.myCount.accIcm .zen-list-5>li {
+  padding: 14px 20px;
+}
+
+.myCount .zen-list-5 .red-dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #e5004f;
+}
+
+
+/* 2016新版结构性存款 && 奖品管理 */
+
+.struDpst .statePanel {
+  width: 100%;
+  padding: 28px 0;
+  background-color: #33bba8;
+}
+
+.struDpst .statePanel .cell {
+  width: 50%;
+  color: #fff;
+  text-align: center;
+}
+
+.struDpst .statePanel .cell+.cell {
+  border-left: 1px solid #e7f7f4;
+}
+
+.struDpst .statePanel .cell h1 {
+  opacity: 0.6;
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+.struDpst .tab {
+  width: 100%;
+  background-color: #fff;
+  display: box;
+  display: -webkit-box;
+  border: 1px solid #e4e4e4;
+  border-width: 1px 0;
+}
+
+.struDpst .tab>div {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.struDpst .tab>div.active {
+  color: #0094e8;
+}
+
+.struDpst .tab>div.active:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #0094e8;
+}
+
+.struDpst .zen-list-5 {
+  margin: 10px 0;
+}
+
+.struDpst .zen-list-5>li {
+  padding: 10px;
+}
+
+.struDpst .zen-list-5>li h1 {
+  line-height: 25px;
+}
+
+.struDpst .subPage .spoils {
+  min-height: 132px;
+  width: 100%;
+  background: #fee5c9 url(../images/rotate/get_num.png) center 0 no-repeat;
+  background-size: auto 100px;
+  padding-top: 68px;
+  text-align: center;
+}
+
+.struDpst .subPage .spoils.type2 {
+  background: #fed6c9 url(../images/rotate/get_hb.png) center 10px no-repeat;
+  background-size: 286px auto;
+  padding-top: 82px;
+}
+
+.struDpst .subPage .spoils h1 {
+  height: 32px;
+  line-height: 28px;
+  color: #fff;
+}
+
+.struDpst .subPage .spoils h2 {
+  font-size: 20px;
+  color: #ec5d01;
+  line-height: 50px;
+  height: 50px;
+}
+
+.struDpst .subPage .btn {
+  background: #fc3b3b;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.struDpst .subPage .btn.big {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.struDpst .subPage .list .list-item {
+  padding-left: 52px;
+  position: relative;
+}
+
+.struDpst .subPage .list .list-item>i {
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -15px;
+  background: url(../images/rotate/aw_lz.png) no-repeat;
+  background-size: 100% auto;
+}
+
+.struDpst .subPage .list .list-item>i.hongbao.outdated {
+  background-position: 0 -30px;
+}
+
+.struDpst .subPage .list .list-item>i.award {
+  background-position: 0 -60px;
+}
+
+.struDpst .subPage .noData {
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+  padding: 120px 0 30px;
+  background: url(../images/rotate/nodata.png) center 20px no-repeat;
+  background-size: auto 80px;
+}
+
+.drawRztPageWrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.drawRztPage {
+  width: 320px;
+  margin: 0 auto;
+  background: url(../images/rotate/rzt.png) center 0 no-repeat;
+  background-size: 375px auto;
+  height: 415px;
+  padding: 200px 66px 0 60px;
+  box-sizing: border-box;
+}
+
+.drawRztPage.long {
+  background-size: 375px 555px;
+  background-position: center -32px;
+  height: 444px;
+}
+
+.drawRztPage .tip {
+  color: #de3f3f;
+  font-size: 13px;
+}
+
+.drawRztPage .cash,
+.drawRztPage .gold {
+  width: 160px;
+  margin: 0 auto 5px;
+  height: 100px;
+  box-sizing: border-box;
+  background: url(../images/rotate/money.png) no-repeat;
+  background-size: 100% auto;
+  color: #ffde00;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 52px;
+}
+
+.drawRztPage .gold {
+  background-image: url(../images/rotate/golds.png);
+  width: 190px;
+  height: 130px;
+  margin-bottom: 0;
+}
+
+.drawRztPage .jdCard {
+  text-align: center;
+}
+
+.drawRztPage .rztBtn {
+  margin: 5px auto;
+  width: 70px;
+  height: 30px;
+  background: url(../images/rotate/billBtn.png) center 0 no-repeat;
+  background-size: 100% auto;
+}
+
+.drawRztPage .rztBtn.undo {
+  background-position: center 100%;
+}
+
+.drawRztPage .jdCard h1 {
+  color: #de3f3f;
+  ;
+  line-height: 28px;
+}
+
+.drawRztClose {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  background: url(../images/rotate/close_page.png) no-repeat;
+  background-size: 100%;
+}
+
+.drawRztPage .jdCard .ticket {
+  background: url(../images/rotate/tick.png) no-repeat center 0;
+  background-size: auto 100%;
+  height: 90px;
+  margin-bottom: 5px;
+}
+
+.drawRztPage .jdCard .ticket h2 {
+  font-size: 16px;
+  line-height: 44px;
+  color: #ffde00;
+}
+
+.drawRztPage .jdCard .ticket h3 {
+  color: #fff;
+  line-height: 43px;
+  font-size: 12px;
+}
+
+
+/* 2016新版幸福乐存 */
+
+.hpDpt .fudState,
+.addPft .fudState {
+  padding: 15px;
+  text-align: center;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBA15F), to(#fc8731));
+  background-color: #fb9448;
+  color: #fff;
+}
+
+.hpDpt .fudState h1,
+.addPft .fudState h1 {
+  opacity: .6;
+}
+
+.hpDpt .fudState h2,
+.addPft .fudState h2 {
+  font-size: 34px;
+}
+
+.hpDpt .ctr {
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  color: #ff6000;
+}
+
+.hpDpt .ctr .cell {
+  width: 50%;
+  padding: 15px;
+}
+
+.hpDpt .ctr .cell:not(.disabled):active {
+  background-color: #f8f8f8;
+}
+
+.hpDpt .ctr .cell+.cell.disabled {
+  color: #999;
+}
+
+.hpDpt .ctr .cell+.cell {
+  border-left: 1px solid #E4E4E4;
+  color: #3388eb;
+}
+
+.hpDpt .chart,
+.addPft .chart {
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-width: 1px 0;
+  margin: 10px 0;
+}
+
+.hpDpt .chart h1,
+.addPft .chart h1 {
+  padding: 5px 10px;
+}
+
+.hpDpt .chartArea {
+  height: 182px;
+}
+
+.hpDpt .tbList {
+  background-color: #fff;
+  border-top: 1px solid #e4e4e4;
+}
+
+.hpDpt .tbList th {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.hpDpt .tbList td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.hpDpt .tbList tr:last-child td {
+  border-color: #e4e4e4;
+}
+
+
+/* 2016新版幸福添利 */
+
+.addPft .fudState {
+  background-image: none;
+  background-color: #337feb;
+}
+
+.addPft .fudState .row {
+  padding-top: 15px;
+}
+
+.addPft .fudState .cell {
+  width: 50%;
+  line-height: 1.8;
+}
+
+.addPft .fudState .cell+.cell {
+  border-left: 1px solid #e7f0fd;
+}
+
+.addPft .chartArea {
+  height: 240px;
+}
+
+.addPft .fixCtlPanel {
+  height: 50px;
+  width: 100%;
+}
+
+.addPft .fixCtlPanel .inner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #e4e4e4;
+}
+
+.addPft .fixCtlPanel .inner .cell {
+  padding: 14px;
+  color: #ff6000;
+}
+
+.addPft .fixCtlPanel .inner .cell:active {
+  background-color: #f8f8f8;
+}
+
+.addPft .fixCtlPanel .inner .cell+.cell {
+  border-left: 1px solid #e4e4e4;
+  color: #3388eb;
+}
+
+
+/* 金禧理财 */
+
+.hpDpt.jxfud .fudState {
+  background-image: none;
+  background-color: #3a96e3;
+}
+
+.hpDpt.jxfud .zen-list-2 .row {
+  line-height: 1.6;
+  padding: 10px;
+}
+
+.hpDpt.jxfud .zen-list-2 li>.row+.row {
+  border-top: 1px solid #e8e8e8;
+}
+
+.hpDpt.jxfud .zen-list-2 .row.state {
+  font-size: 13px;
+  color: #999;
+  line-height: 2;
+}
+
+.hpDpt.jxfud .zen-list-2 .row.state span {
+  font-size: 16px;
+  color: #333;
+  margin-left: 3px;
+}
+
+.hpDpt.jxfud .zen-list-2 .row.ctrBtn {
+  padding: 0;
+}
+
+.hpDpt.jxfud .zen-list-2 .row.ctrBtn .cell {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.hpDpt.jxfud .zen-list-2 .row.ctrBtn .cell:active {
+  background: #f8f8f8;
+}
+
+.hpDpt.jxfud .zen-list-2 .row.ctrBtn .cell+.cell {
+  border-left: 1px solid #e8e8e8;
+}
+
+.hpDpt.jxfud .filterTab {
+  height: 46px;
+  text-align: center;
+  width: 100%;
+}
+
+.hpDpt.jxfud .fixed {
+  width: 100%;
+  z-index: 99;
+}
+
+.hpDpt.jxfud .filterTab .row {
+  border-bottom: 1px solid #e4e4e4;
+  background-color: #fff;
+}
+
+.hpDpt.jxfud .filterTab .cell {
+  padding: 11px 15px;
+}
+
+.hpDpt.jxfud .filterTab .cell.active {
+  position: relative;
+  color: #0094e8;
+}
+
+.hpDpt.jxfud .filterTab .cell.active:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #0094e8;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+.hpDpt.jxfud .total {
+  padding: 4px 10px;
+  background-color: #fff;
+  font-size: 12px;
+}
+
+.hpDpt.jxfud .could {
+  padding: 2px 4px;
+  color: #fff;
+  margin: 0 5px;
+  background-color: #FF6C00;
+  font-size: 12px;
+}
+
+.relOrder .zen-list-2>li {
+  line-height: 1.5;
+  padding: 10px 0 10px 20px;
+}
+
+.relOrder .zen-list-2>li .tt {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-left: 10px;
+  position: relative;
+}
+
+.relOrder .zen-list-2>li .tt:after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 13px;
+  background-color: #0094e8;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.relOrder .zen-list-2>li .cnt {
+  padding: 10px 20px 0 0;
+}
+
+.relOrder .zen-list-2>li .cnt.ft14 {
+  line-height: 1.8;
+}
+
+
+/* 申请结果查询 */
+
+.queryRzt .zen-list-2 li {
+  position: relative;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.queryRzt .zen-list-2 li .ifo {
+  padding: 5px 10px;
+  line-height: 2;
+}
+
+.queryRzt .zen-list-2 li .resetBtn {
+  padding: 10px;
+  text-align: center;
+  color: #0094e8;
+  border-top: 1px solid #e4e4e4;
+}
+
+.queryRzt .zen-list-2 li .resetBtn:active {
+  background-color: #f8f8f8;
+}
+
+.queryRzt .zen-list-2 li .state {
+  font-size: 11px;
+  background-color: #0094e8;
+  color: #fff;
+  width: 150px;
+  text-align: center;
+  padding: 40px 0 4px;
+  position: absolute;
+  right: -68px;
+  top: -25px;
+  transform: rotate(44deg);
+  -webkit-transform: rotate(44deg);
+}
+
+.queryRzt .zen-list-2 li .state.done {
+  background-color: #ccc;
+}
+
+.infoState {
+  padding: 5px 0;
+  color: #999;
+}
+
+.infoState>span {
+  padding-right: 5px;
+}
+
+.infoState>span i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: 18px;
+  background: url(../images/info_icon.png) no-repeat;
+  background-size: 100% auto;
+  margin-top: -2px;
+}
+
+.infoState>span i.like,
+.dolikeIcon.active {
+  background-position: 0 100%;
+}
+
+.dolikeIcon {
+  width: 50px;
+  height: 50px;
+  background: url(../images/dolike.png) no-repeat;
+  background-size: 100% auto;
+  margin: 15px auto;
+}
+
+.drawPage .drawCanvas {
+  padding: 10px 0;
+}
+
+.drawPage .drawCanvas+.drawCanvas {
+  padding-top: 0;
+}
+
+.drawPage .drawCanvas .tt {
+  width: 100%;
+  padding: 0 12px;
+  height: 42px;
+  background: url(../images/draw/head.png) no-repeat;
+  background-size: 100% 100%;
+  line-height: 42px;
+  font-size: 16px;
+  color: #fab751;
+}
+
+.drawPage .drawCanvas .tt.fold {
+  padding-right: 40px;
+  position: relative;
+}
+
+.drawPage .drawCanvas .tt.fold:after {
+  content: "";
+  display: block;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(../images/draw/arr.png) no-repeat center center;
+  background-size: 10px auto;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transition: all .3s;
+}
+
+.drawPage .drawCanvas .tt.fold.active:after {
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+}
+
+.drawPage .drawCanvas .tt i {
+  content: "";
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  vertical-align: middle;
+  background: url(../images/draw/brush.png) no-repeat;
+  background-size: 100%;
+  margin-right: 7px;
+}
+
+.drawPage .drawCanvas .tt i.radio {
+  background: url(../images/draw/check.png) no-repeat;
+  background-size: 100% auto;
+}
+
+.drawPage .drawCanvas .tt i.radio.checked {
+  background-position: 0 100%;
+}
+
+.drawPage .drawCanvas .cnt {
+  border: 1px solid #ffeaca;
+  border-width: 0 1px 1px;
+  overflow: hidden;
+  background-color: #fff;
+  color: #af9a79;
+  font-size: 13px;
+  transition: height .3s;
+  -webkit-transition: height .3s;
+}
+
+.Property .drawCanvas .cnt {
+  height: 0;
+}
+
+.drawPage .drawCanvas .cnt .row {
+  padding: 10px;
+}
+
+.drawPage .drawCanvas .cnt .row+.row {
+  border-top: 1px dashed #ffeaca;
+}
+
+.drawPage .info {
+  color: #fff;
+  background-color: #00a0e9;
+  line-height: 2;
+  padding: 5px 10px;
+}
+
+.drawPage .billCnt {
+  border: 1px solid #ffeaca;
+  background-color: #fff;
+  padding: 5px 10px 10px;
+  margin: 15px 0;
+  box-shadow: 2px 2px 6px -2px #fbedd8;
+}
+
+.drawPage .billCnt .row {
+  padding: 10px 5px;
+}
+
+.drawPage .billCnt .row.payFor {
+  padding: 10px 15px 10px 10px;
+  background-color: #fff6e7;
+}
+
+.drawPage .billCnt .row.payFor .lbl {
+  padding: 5px 10px 4px 0;
+}
+
+.drawPage .billCnt .row.payFor input {
+  background-color: #fff;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.drawPage .billCnt .row+.row:not(.payFor) {
+  border-top: 1px solid #fff2df;
+}
+
+.Property .position {
+  width: 100%;
+  height: 44px;
+}
+
+.Property .position .inner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
+  background: #00a0e9 url(../images/draw/build.png) 10px center no-repeat;
+  background-size: 24px auto;
+  color: #fff;
+  line-height: 44px;
+  padding-left: 44px;
+}
+
+.Property .position .inner.other {
+  background-image: none;
+  padding-left: 15px;
+}
+
+.Property .paied {
+  text-align: center;
+  color: #999;
+  padding: 130px 10px 60px;
+  background: url(../images/nopay.png) center 40px no-repeat;
+  background-size: auto 80px;
+}

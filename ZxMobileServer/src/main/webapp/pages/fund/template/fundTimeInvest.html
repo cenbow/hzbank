@@ -1,0 +1,90 @@
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016" id="fundSignPage1">
+  	<div class="deEloan">
+    	<div class="list">
+            <div class="list-item">
+            	<span>电子账户</span>
+            	<span class="pl10" id="cardNo">30  ****  ****  5656  50</span>
+            </div>
+            <div class="list-item row">
+            	<div>账号余额</div>
+                <div class="cell fc-yellow pl10" id="showBalanceSpan">0.00</div>
+                <div>元</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-item row disabled">
+            	<div>定投金额</div>
+                <div class="cell ipt pl10"><input type="number" id="inputMoney" value="" placeholder="请输入金额"/></div>
+            </div>
+            <div class="list-item">
+            	<span>参考费率</span>
+            	<span class="pl10">
+            		<span class="lineThrough" id="fundFee"></span>   
+                 	<span class="fc-orange ml5" id="fundFeeDisCount"></span>
+            	</span>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-item row arr" id="showInvestCycle">
+            	<div class="cell">定投周期</div>
+            	<div class="pl10 fc-blue"  id="investCycle">请选择</div>
+            </div>
+            <div class="list-item row arr" id="showTerminMode">
+            	<div class="cell">终止模式</div>
+            	<div class="pl10 fc-blue" id="terminMode">按结束日期终止</div>
+            </div>
+            <div class="list-item row arr" id="showDate1">
+            	<div class="cell" id="terminModeText1">结束日期</div>
+            	<div class="pl10 fc-9" id="date1">请选择</div>
+            </div>
+            <div class="list-item row arr" id="showDate2" style="display: none;">
+            	<div class="cell" id="terminModeText2">投资期数</div>
+            	<div class="pl10 fc-9" id="date2">请选择</div>
+            </div>
+            <div class="list-item row disabled">
+            	<span>交易密码</span>
+                <div class="cell ipt pl10"><input type="password" id="pwd" value="" placeholder="请输入交易密码" readOnly/></div>
+            </div>
+        </div>
+        <div class="gap-box pt10 fc-9">
+            <input type="button" value="确定" class="zen-btn mt10 mb10 disabled" id="sureInvest">
+        </div>
+    </div>
+  </div>
+     <!-----------------------------------定投成功----------------------------------------->
+	<div class="new2016" id="fundSignPage2" style="display: none;">
+	  	<div class="riskTest">
+	    	<div class="successTip" id="fundNameSucc"><i></i>国泰金龙混合基金 <span class="ft12 fc-9" >(130324)</span></div>
+	        <div class="list">
+	            <div class="list-item row">
+	            	<div class="cell">定投金额</div>
+	                <div class="fc-orange" id="fundAmtSucc">500,000.00</div>
+	                <div>元</div>
+	            </div>
+	            <div class="list-item row">
+	            	<div class="cell">定投周期</div>
+	                <div  id="investDaySucc"></div>
+	            </div>
+	            <div class="list-item row">
+	            	<div class="cell">扣款账户</div>
+	                <div id="cardNoSucc">6230  6100  0660  5656  50(电子账户)</div>
+	            </div>
+	        </div>
+	        <div class="padded">
+	        	<input id="successReturn"  type="button" value="立即查看" class="zen-btn mt20">
+	        </div>
+	    </div>
+	  </div>
+     <!-----------------------------------定投失败----------------------------------------->
+   <div class="new2016" id="fundSignPage3" style="display: none;">
+	  	<div class="riskTest">
+	    	<div class="error faild" id="investOpenError">很抱歉，您本次定投失败,请返回重试</div>
+	    	<div class="error faild" style="display: none;" id="investUpdateError">很抱歉，您本次修改失败,请返回重试</div>
+	        <div class="gap-box pt10">
+	            <input id="errorReturn" type="button" value="返回" class="zen-btn mt15">
+	        </div>
+	    </div>
+  </div>	
+  <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+</body>

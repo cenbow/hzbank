@@ -1,0 +1,31 @@
+<%_.each(iP2PRaisingList,function(temp, i){%>
+    	<li >
+        	<div class="row tit">
+            	<div class="cell"><%=temp.projectName%>
+            		<%if(temp.tranflag == "00"){%>
+                    	<i class="could-transfer-2">持有7天可转</i>
+                    <%}else{%>
+                    	
+                    <%}%>
+            	</div>
+               <!--  <div class="fc-blue">募集中</div> -->
+            </div>
+            <div class="row state">
+            	<div class="cell">
+                	<p>投资金额 <span><%=Utils.formatCurrency(parseFloat(temp.tranAmt),2)%>元</span></p>
+                    <p>起息日 <span><%=Utils.formatDate(temp.interestBeginDate, "yyyyMMdd", "yyyy-MM-dd")%></span></p>
+                </div>
+                <div class="txt-r">
+                	<p>预期收益率 <span><%=Utils.formatCurrency(parseFloat(temp.financePreInterestRate),2)%>%</span></p>
+                    <p>到期日 <span><%=Utils.formatDate(temp.interestEndDate, "yyyyMMdd", "yyyy-MM-dd")%></span></p>
+                </div>
+            </div>
+             <%if(temp.state == '2'||temp.state == '3'){%>
+	            <div class="row ctrBtn fc-blue">
+	            	<div class="cell addBuy" data-val="<%=temp.projectNo%>">追加</div>
+	                <div class="cell productCancel" data-val="<%=temp.orderFlowNo+'|'+temp.projectNo+'|'+temp.projectName+'|'+temp.tranAmt+'|'+temp.orderSubmitTime%>">撤回</div>
+	            </div>
+            <%}%>
+        </li>
+<%});%>
+	

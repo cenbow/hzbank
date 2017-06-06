@@ -1,0 +1,394 @@
+{
+    "turnPageTotalNum" : "78",
+    "iBoseraDetail" : [ {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-15"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.120000",
+      "tranTime" : "2016-08-15"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "0.100000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "1000.000000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "20.000000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "800.000000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "200.000000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "2.000000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.190000",
+      "tranTime" : "2016-08-12"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-05"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-05"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-05"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "0.200000",
+      "tranTime" : "2016-08-05"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-05"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "2.000000",
+      "tranTime" : "2016-08-05"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "2.000000",
+      "tranTime" : "2016-08-05"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.180000",
+      "tranTime" : "2016-08-03"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1.010000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "0.050000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "7.700000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1.100000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "0.100000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "0.010000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.180000",
+      "tranTime" : "2016-08-02"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.170000",
+      "tranTime" : "2016-08-01"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-31"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-07-31"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-31"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "51.000000",
+      "tranTime" : "2016-07-31"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-07-29"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-07-29"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "30.000000",
+      "tranTime" : "2016-07-29"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "30.000000",
+      "tranTime" : "2016-07-29"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "30.000000",
+      "tranTime" : "2016-07-29"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "10.000000",
+      "tranTime" : "2016-07-29"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.160000",
+      "tranTime" : "2016-07-29"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-28"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-28"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "10.000000",
+      "tranTime" : "2016-07-28"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "10.000000",
+      "tranTime" : "2016-07-28"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "300.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "1000.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "1",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "333.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.010000",
+      "tranTime" : "2016-07-26"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.010000",
+      "tranTime" : "2016-07-25"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.010000",
+      "tranTime" : "2016-07-24"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-23"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.010000",
+      "tranTime" : "2016-07-23"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-22"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-22"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-22"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "3.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "1.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "0.100000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "10.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "10.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "10.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "50.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "53.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "20.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "0.100000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "100.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "1",
+      "tranAmt" : "50.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000001",
+      "tranType" : "0",
+      "tranAmt" : "53.000000",
+      "tranTime" : "2016-07-21"
+    }, {
+      "financeNo" : "000730",
+      "tranType" : "2",
+      "tranAmt" : "0.000000",
+      "tranTime" : "2016-07-21"
+    } ]
+  }

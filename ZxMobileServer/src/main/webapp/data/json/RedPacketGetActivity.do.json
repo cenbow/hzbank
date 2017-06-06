@@ -1,0 +1,10 @@
+{
+  "repServiceId" : "life_getActivity",
+  "repFlowNo" : "",
+  "cd" : {
+    "activityBeginDate" : "20160802",
+    "activityEndDate" : "20160831"
+  },
+  "ec" : "0",
+  "em" : ""
+}

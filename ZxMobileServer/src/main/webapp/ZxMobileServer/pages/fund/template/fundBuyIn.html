@@ -1,0 +1,133 @@
+<body>
+<div class="new2016" id="fundSignPage1">
+  	<div class="deEloan">
+    	<div class="gap-box ft12 fc-9 mt10">付款账户</div>
+    	<div class="list">
+            <div class="list-item">
+            	<span>电子账户</span>
+            	<span class="pl10" id="cardNo"></span>
+            </div>
+            <div class="list-item row">
+            	<div>账号余额</div>
+                <div class="cell fc-yellow pl10" id="showBalanceSpan"></div>
+                <div>元</div>
+            </div>
+        </div>
+        <div class="gap-box ft12 fc-9 mt10">购买信息</div>
+        <div class="list">
+            <div class="list-item">
+            	<span>幸福基金</span>
+            	<span class="pl10 fc-yellow" id="fundlastnav" ></span>
+            </div>
+            <div class="list-item row disabled">
+            	<div>购买金额</div>
+                <div class="cell ipt pl10"><input type="number" id="inputMoney" value="" placeholder="起购<%=App.storage.get('iEFundBaseinfo').minbuyamt%>元,追加<%=App.storage.get('iEFundBaseinfo').toaddamt%>元"/></div>
+            </div>
+            <div class="list-item">
+            	<span>参考费率</span>
+            	<span class="pl10">
+            		<span class="lineThrough" id="fundFee"></span>   
+                 	<span class="fc-orange ml5" id="fundFeeDisCount"></span>
+            	</span>
+            </div>
+            <div class="list-item row disabled">
+            	<span>交易密码</span>
+                <div class="cell ipt pl10"><input type="password"  id="pwd" value="" placeholder="请输入交易密码" readOnly/></div>
+            </div>
+        </div>
+<!--         <label class="zen-ckbox ml10 pt10"> -->
+<!--           <input type="checkbox" checked=""> -->
+<!--           <span class="fm-agr">我已阅读并同意<a href="javascript:;">《幸福基金购买协议》</a></span> -->
+<!--         </label> -->
+        <div class="gap-box pt10 fc-9">
+            <input type="button" value="确定" class="zen-btn mt10 mb10 disabled" id="sureBuyIn">
+            <ul class="itemTips">
+                <li>交易日15:00前买入，按当日单位净值成交，下个交易日可查看持有基金份额。</li>
+				<li>交易日15:00后买入，按下个交易日单位净值成交，第二个交易日可查看持有基金份额。</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+   <!-----------------------------------购买成功----------------------------------------->
+     <div class="new2016" id="fundSignPage2" style="display: none;">
+  	<div class="riskTest">
+    	<div class="successTip" id="fundNameSucc"><i></i>国泰金龙混合基金 <span class="ft12 fc-9" >(130324)</span></div>
+        <div class="list">
+            <div class="list-item row">
+            	<div class="cell">买入金额</div>
+                <div class="fc-orange" id="fundAmtSucc">500,000.00</div>
+                <div>元</div>
+            </div>
+            <div class="list-item row">
+            	<div class="cell">付款账户</div>
+                <div id="cardNoSucc">6230  6100  0660  5656  50(电子账户)</div>
+            </div>
+            <div class="list-item row">
+            	<div class="progressState">
+                	<ul>
+                    	<li>
+                        	<div class="tit">申请受理</div>
+                            <div class="time"></div>
+                            <div class="bar"><i></i></div>
+                        </li>
+                        <li>
+                        	<div class="tit">份额确认</div>
+                        	<div class="time"></div>
+                        	<div class="bar"><i></i></div>
+                        </li>
+                        <li>
+                        	<div class="tit">查看收益</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="padded">
+        	<input id="successReturn"  type="button" value="立即查看" class="zen-btn mt20">
+        </div>
+        <div id="drawLottery" class="mt20" style="display: "><img src="images/rotate/get-change.png" width="100%" alt=""/></div>
+    </div>
+  </div>
+   <!-----------------------------------购买失败----------------------------------------->
+  <div class="new2016" id="fundSignPage3" style="display: none;">
+  	<div class="riskTest">
+    	<div class="error faild">很抱歉，您买入失败,请返回重试</div>
+        <div class="gap-box pt10">
+            <input id="errorReturn" type="button" value="返回" class="zen-btn mt15">
+        </div>
+    </div>
+  </div>
+   <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+	 function setProgress(step, num) {
+		var allLi = $('.progressState li');
+		var li_1 = allLi.eq(0);
+		var li_2 = allLi.eq(1);
+		var li_3 = allLi.eq(2);
+		var bar_1 = li_1.find('.bar i');
+		var bar_2 = li_2.find('.bar i');
+		if (step === 1) {
+			li_1.addClass('active');
+			bar_1.css('height', num + '%')
+		} else if (step === 2) {
+			li_1.addClass('active');
+			li_2.addClass('active');
+			bar_1.css('height', '100%');
+			bar_2.css('height', num + '%');
+			if (num === 100) {
+				li_3.addClass('active');
+			}
+		} else if (step === 3) {
+			allLi.addClass('active');
+			bar_1.css('height', '100%');
+			bar_2.css('height', '100%');
+		}
+	}
+  	setProgress(1, 45)
+// 	setProgress(2, 45)
+	// setProgress(2, 100)
+  })
+  	
+  </script>
+</body>		

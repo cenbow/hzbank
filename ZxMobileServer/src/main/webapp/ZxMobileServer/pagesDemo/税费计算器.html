@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="motPage">
+  	<div class="zen-tab">
+    	<ul class="zen-tab-nav">
+        	<li class="active">二手房</li>
+            <li>新房</li>
+        </ul>
+    </div>
+    
+    <div class="list disabled houseTyp">
+    	<div class="list-item">房屋类型</div>
+        <div class="list-item">
+        	<div class="row">
+            	<div class="cell a active">普通住宅</div>
+                <div class="cell b">非普通住宅</div>
+                <div class="cell c">经济适用房</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="list">
+        <div class="list-item row">
+        	<span>房屋建筑面积</span>
+        	<div class="ipt cell"><input type="text" value="" class="fc-blue txt-r"></div>
+            <span class="bit1">平米</span>
+        </div>
+        <div class="list-item row">
+        	<span>房屋总价</span>
+        	<div class="ipt cell"><input type="text" value="" class="fc-blue txt-r"></div>
+            <span class="bit1">万元</span>
+        </div> 
+    </div>
+    
+    <div class="list disabled">
+        <div class="list-item row">
+        	<span>房产证年限</span>
+        	<div class="cell">
+            	<div class="switch-tab txt-r">
+                	<a href="#" class="active">年限<2</a>
+                    <a href="#">年限<2</a>
+                    <a href="#">年限<2</a>
+                </div>
+            </div>
+        </div>
+        <div class="list-item row">
+        	<div class="cell">卖房家庭唯一住房</div>
+            <div class="zen-switch-tab">
+                <a href="#" class="active">是</a>
+                <a href="#">否</a>
+            </div>
+        </div>
+        <div class="list-item row">
+        	<div class="cell">买房家庭首次购房</div>
+            <div class="zen-switch-tab">
+                <a href="#" class="active">是</a>
+                <a href="#">否</a>
+            </div>
+        </div>
+    </div>    
+    
+    <div class="gap-box mt30">
+    	<button class="zen-btn">计算</button>
+    </div>
+  </div>	
+  <script type="text/javascript" src="../scripts/libs/zepto/zepto.js"></script>
+  <script>
+  Zepto(function($){
+	$('.zen-switch-tab a, .switch-tab a, .houseTyp .cell').on('click',function(){
+		$(this).addClass('active').siblings().removeClass('active');	
+	})
+  })
+  </script> 
+</body>
+</html>

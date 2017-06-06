@@ -1,0 +1,124 @@
+ <body>
+  <div class="new2016" id="fundSignPage1">
+  	<div class="deEloan">
+    	<div class="gap-box ft12 fc-9 mt10">收款账户</div>
+    	<div class="list">
+            <div class="list-item">
+            	<span>电子账户</span>
+            	<span class="pl10" id="cardNo">30  ****  ****  5656  50</span>
+            </div>
+            <div class="list-item row">
+            	<div>账号余额</div>
+                <div class="cell fc-yellow pl10" id="showBalanceSpan">0.00</div>
+                <div>元</div>
+            </div>
+        </div>
+        <div class="gap-box ft12 fc-9 mt10">卖出份额</div>
+        <div class="list">
+            <div class="list-item">
+            	<span>可卖份额</span>
+            	<span class="pl10 fc-yellow" id="fundVol">当前可卖13.45份</span>
+            </div>
+            <div class="list-item row disabled">
+            	<div>卖出份额</div>
+                <div class="cell ipt pl10"><input type="text"  id="inputShare" value="" placeholder="请输入卖出份额"/></div>
+                <div class="fc-blue" id="all">全部</div>
+            </div>
+            <div class="list-item">
+            	<span>参考费率</span>
+            	<span class="pl10 fc-orange" id="fundFee"></span>
+            </div>
+            <div class="list-item row disabled">
+            	<span>交易密码</span>
+                <div class="cell ipt pl10"><input type="text" id="pwd"  value="" placeholder="请输入交易密码" readOnly/></div>
+            </div>
+        </div>
+        <div class="gap-box pt10 fc-9">
+            <input type="button" value="确定" class="zen-btn mt10 mb10 disabled" id="sureSaleOut">
+            <ul class="itemTips">
+                <li>交易日15:00前卖出，按当日单位净值成交，下个交易日确认成交金额</li>
+                <li>交易日15:00后卖出，按下个交易日单位净值成交，第二个交易日确认成交金额。</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  
+   <!----------------------------------- 卖出成功----------------------------------------->
+     <div class="new2016" id="fundSignPage2" style="display: none;">
+  	<div class="riskTest">
+    	<div class="successTip" id="fundNameSucc"><i></i>国泰金龙混合基金 <span class="ft12 fc-9" >(130324)</span></div>
+        <div class="list">
+            <div class="list-item row">
+            	<div class="cell">卖出份额</div>
+                <div class="fc-orange" id="fundAmtSucc">500,000.00</div>
+                <div>份</div>
+            </div>
+            <div class="list-item row">
+            	<div class="cell">收款账户</div>
+                <div id="cardNoSucc">6230  6100  0660  5656  50(电子账户)</div>
+            </div>
+            <div class="list-item row">
+            	<div class="progressState">
+                	<ul>
+                    	<li>
+                        	<div class="tit">申请受理</div>
+                            <div class="bar"><i></i></div>
+                        </li>
+                        <li>
+                        	<div class="tit">卖出份额确认</div>
+                            <div class="bar"><i></i></div>
+                        </li>
+                        <li>
+                        	<div class="tit">卖出金额到账</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="padded">
+        	<input id="successReturn"  type="button" value="返回首页" class="zen-btn mt20">
+        </div>
+    </div>
+  </div>
+  <script>
+  $(function(){
+	 function setProgress(step, num) {
+		var allLi = $('.progressState li');
+		var li_1 = allLi.eq(0);
+		var li_2 = allLi.eq(1);
+		var li_3 = allLi.eq(2);
+		var bar_1 = li_1.find('.bar i');
+		var bar_2 = li_2.find('.bar i');
+		if (step === 1) {
+			li_1.addClass('active');
+			bar_1.css('height', num + '%')
+		} else if (step === 2) {
+			li_1.addClass('active');
+			li_2.addClass('active');
+			bar_1.css('height', '100%');
+			bar_2.css('height', num + '%');
+			if (num === 100) {
+				li_3.addClass('active');
+			}
+		} else if (step === 3) {
+			allLi.addClass('active');
+			bar_1.css('height', '100%');
+			bar_2.css('height', '100%');
+		}
+	}
+  	setProgress(1, 45)
+// 	setProgress(2, 45)
+	// setProgress(2, 100)
+  })
+  	
+  </script>
+   <!-----------------------------------卖出失败----------------------------------------->
+  <div class="new2016" id="fundSignPage3" style="display: none;">
+  	<div class="riskTest">
+    	<div class="error faild">很抱歉，您卖出失败,请返回重试</div>
+        <div class="gap-box pt10">
+            <input id="errorReturn" type="button" value="返回" class="zen-btn mt15">
+        </div>
+    </div>
+  </div>
+</body>

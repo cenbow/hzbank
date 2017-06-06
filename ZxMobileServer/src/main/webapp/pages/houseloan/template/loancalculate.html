@@ -1,0 +1,99 @@
+  <div class="motPage">
+  	<div class="zen-tab">
+    	<ul class="zen-tab-nav">
+        	<li id="commercialloan" class="active" val="1">商业贷款</li>
+            <li id="fundloan" val="2" >公积金贷款</li>
+            <li id="mixloan" val="3" >组合贷款</li>
+        </ul>
+    </div>
+    <div class="list">
+        <div id="shangyeloan" class="list-item row">
+        	<span>商贷金额</span>
+        	<div class="ipt cell"><input id="shangyeloan1"  type="number" maxlength="8" value="" class="fc-blue txt-r"/></div>
+            <span class="bit1">万</span>
+        </div>
+        <div id="gongjjingnum" class="list-item row" style="display: none">
+        	<span>公积金金额</span>
+        	<div class="ipt cell"><input id="gongjjingnum1"  type="number" maxlength="8" value="" class="fc-blue txt-r"/></div>
+            <span class="bit1">万</span>
+        </div>
+        <div class="list-item arr row" id="term">
+        	<span>贷款期限</span>
+        	<div class="cell fc-blue txt-r" id="chooseyear">请选择年限</div>
+        </div>
+        <div id="gongjijinglilv" class="list-item row" style="display: none">
+        	<span>公积金利率</span>
+        	<div class="cell">
+            	<div class="switch-tab txt-r">
+                	<a  class="active" val="0.0325">标准利率3.25%</a>
+                    <a val="0.0358" >1.1倍利率3.58%</a>
+                </div>
+            </div>
+        </div>
+        <div class="list-item arr row" id="bzlorate">
+        	<span>商贷利率</span>
+        	<div class="cell txt-r" data-value="fundmenrete">
+            	基准利率 × 
+                <input type="text" id="rate" class="fc-blue txt-r" style="width:50px"/>
+                <span class="mtpa hide fc-blue"> 倍</span>
+            	<span class="mtpb hide fc-blue"> 折</span>
+            </div>
+        </div>
+        <div class="fc-9 ft12 pl10 pt10">2015年10月24日最新商贷利率4.9%，公积金利率3.25%</div>
+    </div>
+    <!--遮罩-->
+    <div class="mask" id="stage">
+    	<div class="sbox">
+        	<h1>贷款年限</h1>
+            <div class="list fc-blue">
+            	<div class="list-item">10年(120期)</div>
+                <div class="list-item">15年(180期)</div>
+                <div class="list-item">20年(240期)</div>
+                <div class="list-item">25年(300期)</div>
+                <div class="list-item">30年(360期)</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mask" id="discount">
+    	<div class="sbox">
+        	<h1>商贷优惠利率</h1>
+            <div class="rdoGrp">
+            	<ul id="dizct">
+                	<li class="active" data-value="0.85">
+                    	<div class="itm">85折</div>
+                    </li>
+                    <li data-value="0.9">
+                    	<div class="itm" >90折</div>
+                    </li>
+                    <li data-value="0.95">
+                    	<div class="itm" >95折</div>
+                    </li>
+                    <li>
+                    	<div class="itm">手动输入优惠折扣</div>
+                    </li>
+                </ul>
+            </div>
+            <h1>商贷上浮利率</h1>
+            <div class="rdoGrp">
+            	<ul id="blrt">
+                	<li class="active" data-value="基准利率">
+                    	<div class="itm">基准利率</div>
+                    </li>
+                    <li data-value="1.1">
+                    	<div class="itm" >1.1倍</div>
+                    </li>
+                    <li data-value="1.2">
+                    	<div class="itm">1.2倍</div>
+                    </li>
+                    <li>
+                    	<div class="itm">手动输入上浮倍数</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="gap-box mt30">
+    	<button id="loancalResult" class="zen-btn">计算</button>
+    </div>
+  </div>

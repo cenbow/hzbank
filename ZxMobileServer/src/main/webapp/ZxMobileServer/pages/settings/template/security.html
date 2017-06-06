@@ -1,0 +1,84 @@
+<!-- <div class="content">
+	<ul class="zen-list">
+		<li class="uc-icos i-lock">
+			<ul>
+				<li class="zen-fold-arr" id="loginPwdChange">登录密码修改</li>
+			</ul>
+		</li>
+		<li class="uc-icos i-lock">
+			<ul>
+				<li class="zen-fold-arr" id="tranPwdManage">交易密码管理</li>
+			</ul>
+		</li>
+		<li class="uc-icos i-lock">
+			<ul>
+				<li class="zen-fold-arr" id="changePwd">修改交易密码</li>
+			</ul>
+		</li>
+		<li class="uc-icos i-lock">
+			<ul>
+				<li class="zen-fold-arr" id="resetPwd">重置交易密码</li>
+			</ul>
+		</li>
+		<li class="uc-icos i-hand" id="chageHandSwitch" style="display: none">开启手势
+			<input id="hand" type="checkbox" class="zen-switch" />
+		</li>
+		<li class="zen-fold-arr uc-icos i-changeGestures" id="chageHand"
+			style="display: none"><i id="setor">修改手势密码</i></li>
+	</ul>
+	<%if(Device.os=="iphone"&&pubParam.clientVersion > "2.0.0"){%>
+	<ul class="zen-list" id="fingerSwitch" style="display: none">
+		<li class="zen-fold-arr uc-icos i-fingerLock" id="finger"><i id="setor">指纹</i></li>
+	</ul>
+	<%}%>
+</div> -->
+
+  <div class="new2016">
+  	<div class="safeCenter">
+		<div class="list">
+            <div class="list-item row arr" id="safeGrade">
+                <div class="cell"><i class="safe-icos a"></i>安全等级</div>
+                <div class="fc-red" id="grade">中</div>
+            </div>
+           <!--  <div class="list-item row arr">
+                <div class="cell"><i class="safe-icos a"></i>安全等级</div>
+                <div class="fc-red">低</div>
+            </div> -->
+            <div class="list-item row" id="realName">
+                <div class="cell"><i class="safe-icos b"></i>实名认证</div>
+                <div class="ft12 fc-9" style="display: " id="certify1"><i class="authState do"></i>已认证</div>
+                <div class="ft12 fc-red" style="display: none" id="certify2">未认证</div>
+            </div>
+        <!--    <div class="list-item row arr">
+                <div class="cell"><i class="safe-icos b"></i>实名认证</div>
+                <div class="ft12 fc-9"><i class="authState undo"></i>未认证</div>
+            </div> -->
+            <div class="list-item row arr" id="faceDetect">
+                <div class="cell"><i class="safe-icos c"></i>人脸识别</div>
+                <div class="ft12 fc-9" style="display: none" id="certify3"><i class="authState do"></i>已认证</div>
+                <div class="ft12 fc-red" style="display: " id="certify4">未认证</div>
+            </div>
+        </div> 
+        <div class="list">
+            <div class="list-item arr" id="loginPwdChange">
+                <i class="safe-icos d" ></i>修改登录密码
+            </div>
+            <div class="list-item arr" id="tranPwdChange">
+                <i class="safe-icos d" ></i>修改交易密码
+            </div>
+            <div class="list-item arr" id="tranPwdFind">
+                <i class="safe-icos d" ></i>找回交易密码
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-item arr" id="HandPwdSet">
+                <i class="safe-icos e"></i>设置手势
+            </div>
+             <%if((Device.os=="iphone"&&pubParam.clientVersion > "2.0.0") || (Device.os=="android"&&pubParam.clientVersion > "3.0.9")){%>
+            <div class="list-item arr" id="fingerSwitch" >
+                <i class="safe-icos f" id="finger"></i>设置指纹
+            </div>
+            <%}%>
+        </div>       
+    </div>
+  </div>

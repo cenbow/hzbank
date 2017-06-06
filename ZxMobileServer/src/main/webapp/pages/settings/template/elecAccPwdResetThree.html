@@ -1,0 +1,67 @@
+<!-- <div class="content">
+  <div class="gap-box">
+      <div class="pt15">
+        <div class="ipt-txt-2">
+          <input type="text" id="certNoText" value="" maxlength="18" placeholder="请输入身份证号码"/>
+          <i></i>
+        </div>
+        <div class="ipt-txt-2">
+          <input type="password" id="password1" value="" maxlength="6" placeholder="请输入新交易密码" readOnly/>
+          <i></i>
+        </div>
+        <div class="ipt-txt-2">
+          <input type="password" id="password2" value="" maxlength="6" placeholder="请确认新交易密码" readOnly/>
+          <i></i>
+        </div>
+        <div class="zen-get-code">
+        	<input type="button" id="submitBtn" value="提交" class="zen-btn disabled mt20" disabled/>
+        </div>
+      </div>
+   </div>
+</div> -->
+
+
+
+  <div class="new2016 Regs">
+  	<div class="riskTest">
+    	<div class="passwordBox">
+    		<div class="deEloan Regs safeAuth">
+		    <div class="prgBar row">
+		    	<div class="cell active" data-label="1">短信验证</div>
+		        <div class="cell active" data-label="2">身份证原件</div>
+		        <div class="active" data-label="3">密码找回</div>
+		    </div>
+		    <div style="background:#f7f7f7;height:10px"></div>
+            <div class="pswdWrap">
+        	<div class="pswdAll">
+                <div class="tradePswd" id="tradePswd1">
+                	<h2 class="txt-mid">请设置交易密码</h2>
+                    <div class="row" >
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <input id="password1" type="password"  id="pwd" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" value=""  readOnly/>
+                    </div>
+                </div>
+                <div class="tradePswd" id="tradePswd2">
+                	<h2 class="txt-mid">请再次设置交易密码</h2>
+                    <div class="row" >
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <input id="password2" type="password"  id="pwd" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" value=""  readOnly/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:<%=Device.os=='android'?(pubParam.pwdHeight*0.8):(pubParam.pwdHeight+10)%>px;"></div>
+        </div>
+        </div>
+    </div>
+  </div>	

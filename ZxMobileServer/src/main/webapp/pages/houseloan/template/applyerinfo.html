@@ -1,0 +1,232 @@
+  <div class="loanApp new2016">
+  	<div class="progress">
+    	<i data-label="身份认证" class="active">1</i>
+        <i data-label="确认房屋信息" class="active">2</i>
+        <i data-label="申请人信息" class="active">3</i>
+        <i data-label="借款信息">4</i>
+    </div>
+    <!-- Progress 1 start! -->
+    <div class="specBuz">
+       <ul class="liz" id="common">
+       		<li class="row">
+            	<div class="tt">申请人姓名：</div>
+            	<div id="applyername" class="cell" style="color: gray;"></div>
+            </li>
+            <li class="row">
+            	<div class="tt">证件类型：</div>
+            	<div id="cardType" class="cell" style="color: gray;"></div>
+            </li>
+            <li class="row">
+            	<div class="tt">证件号码：</div>
+            	<div id="shenfenzhengNo" class="cell" style="color: gray;"></div>
+            </li>
+             <li class="row">
+            	<div class="tt">联系电话：</div>
+            	<div id="mobileNo" class="cell" style="color: gray;"></div>
+            </li>
+            <li class="row ">
+            	<div class="tt">电子邮箱：</div>
+            	<div class="cell"><input  id="emailaddress" type="email" value=""  maxlength="20" placeholder="请输入邮箱(选填)" /></div>
+            </li> 
+            <li class="row select" id="hjaddress">
+            	<div class="tt">户籍：</div>
+            	<div class="cell"><input type="text" value="请选择" readonly /></div>
+            	
+            </li> 
+            <li class="row ">
+            	<div class="tt">现住址：</div>
+            	<div class="cell"><input  id="nowaddress" type="text" value="" maxlength="25" placeholder="请输入现住址" /></div>
+            </li> 
+            <li class="row select" id="nowaddrstatus">
+            	<div class="tt">现住址状况：</div>
+            	<div class="cell"><input type="text" value="请选择" readonly /></div>
+            	
+            </li> 
+            <li class="row ">
+            	<div class="tt">邮政编码：</div>
+            	<div class="cell"><input  id="postaladdress" type="tel" maxlength="6" placeholder="请输入现邮政编码" /></div>
+            </li> 
+            <li class="row ">
+            	<div class="tt">工作单位：</div>
+            	<div class="cell"><input  id="workplace" type="text" value="" maxlength="25" placeholder="请输入单位名称(没有请填无)" /></div>
+            </li> 
+            <li class="row " id="applyerWorkAddr">
+            	<div class="tt">单位地址：</div>
+            	<div class="cell"><input  id="workAddr" type="text" value="" maxlength="25" placeholder="请输入单位地址" /></div>
+            </li> 
+            <li class="row ">
+            	<div class="tt">单位电话：</div>
+            	<div class="cell"><input  id="companyphone" type="text" value="" maxlength="13" placeholder="请输入单位电话(区号-号码)" /></div>
+            </li> 
+            <li class="row ">
+            	<div class="tt">单位邮编：</div>
+            	<div class="cell"><input  id="post2" type="tel" maxlength="6" placeholder="请输入单位邮编" /></div>
+            </li> 
+            <li class="row select"  id="topdiplomas">
+            	<div class="tt">最高学历：</div>
+            	<div class="cell"><input  type="text" value="请选择"  readonly /></div>
+            </li> 
+            <li class="row select" id="dutyposition">
+            	<div class="tt">行政职务：</div>
+            	<div class="cell"><input type="text" value="请选择" readonly /></div>
+            </li> 
+            <li class="row select"  id="technicalpost">
+            	<div class="tt">职称：</div>
+            	<div class="cell"><input  type="text" value="请选择" readonly/></div>
+            </li> 
+            <li class="row select" id="postAddr" >
+            	<div class="tt">通讯地址：</div>
+            	<div class="cell"><input type="text" value="请选择"  readonly  /></div>
+            </li> 
+          <!--    <li class="row ">
+            	<div class="tt">通讯地址邮编：</div>
+            	<div class="cell"><input  id="post3" type="tel" maxlength="6"  placeholder="请输入通讯地址邮编" /></div>
+            </li> --> 
+            <li class="row">
+            	<div class="tt">公积金缴存额：</div>
+            	<div class="cell"><input id="gongjijingnum" type="number" value=""  placeholder="请输入公积金缴存金额"/></div>
+                <div class="tx">元</div>
+            </li>
+            <li class="row">
+            	<div  class="tt">月收入：</div>
+            	<div class="cell"><input id="monthlyIncome" type="number" value="" placeholder="请输入每月收入金额"/></div>
+                <div class="tx">元</div>
+            </li>
+            <li class="row">
+            	<div class="tt">其他贷款月还款额：</div>
+            	<div class="cell"><input id="otherloannum" type="number" value=""  placeholder="请输入其他贷款月还款额"/></div>
+                <div class="tx">元</div>
+            </li>           
+            <li class="row select" id="maritalStatus">
+            	<div class="tt">婚姻状况：</div>
+            	<div class="cell"><input type="text" value="请选择" readonly/></div>
+            </li>    
+       </ul>
+       <div class="depart" id="spouseIfo" style="display:none">
+       	 <div class="tit">申请人配偶信息</div>
+         <ul class="liz">
+            <li class="row">
+                <div class="tt">姓名：</div>
+                <div class="cell"><input type="text" id="spouseName" placeholder="请输入配偶姓名"/></div>
+            </li>
+            <li class="row">
+                <div class="tt">身份证号码：</div>
+                <div class="cell"><input type="text" maxlength="18" id="spousecertNo" placeholder="请输入配偶身份证号码"/></div>
+            </li>
+            <li class="row">
+                <div class="tt">手机号码：</div>
+                <div class="cell"><input type="tel"  id="spouseMobilePhone" maxlength="11" placeholder="请输入配偶手机号码"/></div>
+            </li>
+            <li class="row">
+                <div class="tt">公积金缴存额：</div>
+                <div class="cell"><input type="number" value="" id="spouseFunderNo"  placeholder="请输入配偶公积金缴存额"/></div>
+                <div class="tt">元</div>
+            </li>
+            <li class="row">
+                <div class="tt">月收入：</div>
+                <div class="cell"><input type="number" value="" id="spouseIncome"  placeholder="请输入配偶月收入"/></div>
+                <div class="tt">元</div>
+            </li>
+            <li class="row select" id="suposehjaddress">
+            	<div class="tt">户籍：</div>
+            	<div class="cell"><input type="text" value="请选择" readonly /></div>
+            	
+            </li> 
+            <li class="row">
+                <div class="tt">出生日期：</div>
+                <div class="cell"><input type="text" id="spousebirth" value="" readonly="readonly"/></div>
+            </li>
+             <li class="row select"  id="suposetopdiplomas">
+            	<div class="tt">最高学历：</div>
+            	<div class="cell"><input  type="text" value="请选择"  readonly /></div>
+            </li> 
+            <li class="row select" id="suposedutyposition">
+            	<div class="tt">行政职务：</div>
+            	<div class="cell"><input type="text" value="请选择" readonly /></div>
+            </li> 
+            <li class="row select"  id="suposetechnicalpost">
+            	<div class="tt">职称：</div>
+            	<div class="cell"><input  type="text" value="请选择" readonly/></div>
+            </li> 
+            
+            <li class="row ">
+            	<div class="tt">工作单位：</div>
+            	<div class="cell"><input  id="suposeworkplace" type="text" value="" maxlength="25" placeholder="请输入单位名称" /></div>
+            </li>
+            
+            <li class="row ">
+            	<div class="tt">单位电话：</div>
+            	<div class="cell"><input  id="suposecompanyphone" type="text" value="" maxlength="13" placeholder="请输入单位电话(区号-号码)(选填)" /></div>
+            </li> 
+            
+             <li class="row select" id="comRightSign">
+                  <div class="tt">共有权人标识：</div>
+                  <div class="cell"><input type="text" value="" readonly/></div>
+              </li>
+         </ul>
+       </div>
+       
+       <div class="depart">
+       	 <ul class="liz">
+              <li class="cright"  id="crightBox">
+               
+             
+                
+              </li>
+              <li class="add" id="addComBtn" ><span>添加共有权人信息</span></li>    
+         </ul>
+       </div>
+       
+       <div class="gap-box mt20 mb20">
+       		<button id="applyercom" class="zen-btn">提交</button>
+       </div>
+	</div>
+    <!-- Progress 1 end! -->
+ 
+    <!--<div class="selectBox">
+    	<div class="box">
+        	<ul>
+            	<li class="itm">我是选项1</li>
+                <li class="itm">我是选项2</li>
+                <li class="itm">我是选项3</li>
+                <li class="itm">我是选项3</li>
+            </ul>
+            <button class="btn">取消</button>
+        </div>
+    </div>-->
+  </div>	
+   <!-- 添加共有权人信息 start! -->
+   <div class="loanApp new2016" style="display:none;"  id="comRightFill">
+   	 <div class="specBuz">
+       <ul class="liz">
+       		<li class="row">
+            	<div class="tt">共有权人姓名：</div>
+            	<div class="cell"><input type="text" value="" id="shareName"  placeholder="请输入共有权人姓名"/></div>
+            </li>
+            <li class="row">
+            	<div class="tt">共有权人身份证号：</div>
+            	<div class="cell"><input type="text" maxlength="18" id="shareCertNo" placeholder="请输入身份证号"/></div>
+            </li>
+            <li class="row">
+            	<div class="tt">共有权人工作单位：</div>
+            	<div class="cell"><input type="text" value="" id="shareWorkAddr" maxlength="25" placeholder="请输入单位名称"/></div>
+            </li>
+            <li class="row">
+            	<div class="tt">共有权人月收入：</div>
+            	<div class="cell"><input type="number" value=""  id="shareIncome"  placeholder="请输入月收入"/></div>
+                <div class="tx">元</div>
+            </li> 
+            <li class="row">
+            	<div class="tt">共有权人手机号码：</div>
+            	<div class="cell"><input type="tel" value="" id="shareMobileNO" maxlength="11" placeholder="请输入手机号码"/></div>
+            </li>
+            <li class="row select"  id="sharerelation">
+            	<div class="tt">共有权人与申请人关系：</div>
+            	<div class="cell"><input id="morenrelation"  type="text" value="请选择" readonly/></div>
+            </li> 
+       </ul>
+       <div class="gap-box mt20 mb20">
+       		<button id="shareinsert" class="zen-btn">保存</button>
+       </div>
+     </div>   
+   </div>

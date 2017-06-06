@@ -1,0 +1,27 @@
+{
+    "adList" : [ {
+      "adCode" : "ZX_HOMEAD",
+      "adOrder" : "1",
+      "adName" : "直销银行banner",
+      "adSize" : "222*22",
+      "adUrl" : "/images/advertise/home/top9.png",
+      "adIsPointTo" : "0",
+      "adPointTo" : ""
+    }, {
+      "adCode" : "ZX_HOMEAD",
+      "adOrder" : "2",
+      "adName" : "直销银行banner",
+      "adSize" : "222*22",
+      "adUrl" : "/images/advertise/home/top11.png",
+      "adIsPointTo" : "1",
+      "adPointTo" : "product/productCtl/saleProducts"
+    }, {
+      "adCode" : "ZX_HOMEAD",
+      "adOrder" : "3",
+      "adName" : "直销银行banner",
+      "adSize" : "222*22",
+      "adUrl" : "/images/advertise/home/top21.jpg",
+      "adIsPointTo" : "1",
+      "adPointTo" : "hongbao/hongbaoCtl/hongbao"
+    } ]
+  }

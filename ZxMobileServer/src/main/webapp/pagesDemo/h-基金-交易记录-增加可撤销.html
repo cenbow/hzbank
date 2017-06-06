@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016">
+  	<div class="fudDetail">
+    	<div class="tab row mb5">
+        	<div class="cell active">客户委托信息</div>
+            <div class="cell">基金历史成交信息</div>
+        </div>
+        <ul class="allCnt">
+            <!-- tab1对应 -->
+        	<li class="cnt">
+            	<h1 class="tt">本月</h1>
+            	<div class="list">
+                	<div class="list-item row">
+                    	<div class="cell">
+                        	<p><span class="sellout">卖出</span>万家稳健增利</p>
+                            <p class="fc-9">16-08-17</p>
+                        </div>
+                        <div class="cell txt-r">
+                        	<p>12345份</p>
+                            <p class="fc-orange">待确认</p>
+                        </div>
+                    </div>
+                    <div class="list-item row">
+                    	<div class="cell">
+                        	<p><span class="buyin">买入</span>南方稳健成长</p>
+                            <p class="fc-9">16-08-15</p>
+                        </div>
+                        <div class="cell txt-r">
+                        	<p>1,000.00元</p>
+                            <p class="fc-green">确认成功</p>
+                        </div>
+                    </div>
+                    <div class="list-item row">
+                    	<div class="cell">
+                        	<p><span class="sellout">卖出</span>万家稳健增利</p>
+                            <p class="fc-9">16-08-15</p>
+                        </div>
+                        <div class="cell txt-r">
+                        	<p>1,000.00元</p>
+                            <p class="fc-green">确认成功</p>
+                        </div>
+                    </div>
+                    <div class="list-item row">
+                    	<div class="cell">
+                        	<p><span class="cancel">可撤</span>万家稳健增利</p>
+                            <p class="fc-9">16-08-15</p>
+                        </div>
+                        <div class="cell txt-r">
+                        	<p>1,000.00元</p>
+                            <p class="fc-green">确认成功</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- tab2对应 -->
+            <li class="cnt" style="display:none">
+                <h1 class="tt">本月</h1>
+                <div class="list">
+                    <div class="list-item row">
+                        <div class="cell">
+                            <p><span class="sellout">卖出</span>万家稳健增利</p>
+                            <p class="fc-9">16-08-17</p>
+                        </div>
+                        <div class="cell txt-r">
+                            <p>12345份</p>
+                            <p class="fc-blue">手续费20.17元</p>
+                        </div>
+                    </div>
+                    <div class="list-item row">
+                        <div class="cell">
+                            <p><span class="buyin">买入</span>南方稳健成长</p>
+                            <p class="fc-9">16-08-15</p>
+                        </div>
+                        <div class="cell txt-r">
+                            <p>1,000.00元</p>
+                            <p class="fc-blue">手续费2.17元</p>
+                        </div>
+                    </div>
+                    <div class="list-item row">
+                        <div class="cell">
+                            <p><span class="sellout">卖出</span>万家稳健增利</p>
+                            <p class="fc-9">16-08-15</p>
+                        </div>
+                        <div class="cell txt-r">
+                            <p>1,000.00元</p>
+                            <p class="fc-blue">手续费1.17元</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>        
+    </div>
+  </div>	
+  <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+    var allTab = $('.fudDetail .tab .cell');
+    var allCnt = $('.allCnt .cnt');
+    allTab.on('click', function(){
+        var cur = $(this);
+        var curCnt = allCnt.eq(cur.index());
+        allTab.removeClass('active');
+        cur.addClass('active');
+        allCnt.hide();
+        curCnt.show();
+    })
+  })
+  </script>
+</body>
+</html>

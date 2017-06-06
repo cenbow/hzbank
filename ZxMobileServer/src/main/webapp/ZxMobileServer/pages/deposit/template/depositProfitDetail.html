@@ -1,0 +1,15 @@
+<div class="content">
+	<ul class="zen-list-2">
+		<li>
+			<div class="opr-box">
+				<p class="ft16">幸福乐存账户：<span class="ft16" id="accountNo"><%=accountNo%></span></p>
+				<p class="ft14 fc-9 ">支取金额：<span class="fc-9" id="balance"><%=Utils.formatCurrency(balance,2)%></span> 元</p>
+				<p class="ft14 fc-9 ">起息日：<span class="fc-9" id="interestBeginDate"><%=interestBeginDate%></span></p>
+				<p class="ft14 fc-9 ">支取日：<span class="fc-9" ><%=currentDate%></span></p>
+				<p class="ft14 fc-9 ">当前收益率：<span class="fc-9" id="interestRate"><%=Utils.toRetentionDigit(interestRate,4)%></span> %</p>
+				<p class="ft14 fc-9 mb10">当前收益金额：<span class="fc-9" id="fundIncome"><%=Utils.formatCurrency(fundIncome,2)%></span> 元</p>
+			</div>
+		</li>
+	</ul>
+	<div class="gap-box"><input type="button" value="返回" class="zen-btn mt10" id="backBtn"/></div>
+</div>

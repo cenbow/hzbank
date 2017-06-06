@@ -1,0 +1,26 @@
+<div class="specBuz">
+   <div class="pBar row">
+    	<div class="cell active">① 身份认证</div>
+        <div class="cell active">② 人脸检测</div>
+        <div class="cell active">③ 理财签约</div>
+   </div>
+</div>
+<div class="idc-sign" style="padding-top: 0;">
+  <ul class="zen-list-3">
+    <li><label class="tit">卡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label><span><%=cardNo%></span></li>
+    <li><label class="tit">有效月数：</label><span><%=deadline%>个月</span></li>
+    <li><label class="tit">风险等级：</label><span><%=Utils.getParamDisplay("PB_FUND_CUST_RISK",riskLevel)%></span></li>
+  </ul>
+</div>
+<div class="gap-box">
+  <label class="zen-ckbox mb20">
+    <input id="deel" type="checkbox" checked />
+    <span class="fm-agr">我已阅读并同意<a id="agreement" href="javascript:;">《杭州银行理财签约电子协议》</a></span>
+  </label>
+  <a href="javascript:;" id="submit" class="zen-btn">确认</a>
+</div>
+<div class="idc-result" style="display:none;">
+  <div class="rzt pass">理财签约成功！</div> 
+  <input type="button" class="zen-btn" id="back" value="返回"/>
+</div>
+  

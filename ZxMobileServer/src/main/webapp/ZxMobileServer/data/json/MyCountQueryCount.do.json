@@ -1,0 +1,184 @@
+{
+  "repServiceId" : "sendVerifySMS",
+  "repFlowNo" : "0",
+  "cd" : {
+    "balance" : "198218681.800000",
+    "balanceAvailable" : "194954359.800000",
+    "balanceFreeze" : "3264322.000000",
+    "balanceReserve" : "0.000000",
+    "scoreTotal" : "2535.04",
+    "state" : "2",
+    "financeNo" : "HZ000009",
+    "iBalanceTotal" : [ {
+      "cardNo" : "623061000990018454",
+      "financeName" : "易方达货币A",
+      "tranAmt" : "0.00",
+      "financeVol" : "",
+      "financeUseVol" : "",
+      "beginDate" : "2016-08-15",
+      "endDate" : "2016-08-15"
+    } ],
+    "iAccountDetail" : [ {
+      "accountNo" : "3301050160000213702",
+      "currencyType" : "00",
+      "cashFlag" : "99",
+      "depositType" : "01",
+      "savePeriod" : "0",
+      "interestBeginDate" : "          ",
+      "interestEndDate" : "          ",
+      "interestRate" : "    0.00",
+      "balance" : "198218681.80",
+      "balanceAvailable" : "    194954359.80",
+      "openDate" : "2016-03-29",
+      "openNode" : "7518",
+      "accountStatus" : ""
+    }, {
+      "accountNo" : "3301040160000158066",
+      "currencyType" : "00",
+      "cashFlag" : "99",
+      "depositType" : "29",
+      "savePeriod" : "0",
+      "interestBeginDate" : "          ",
+      "interestEndDate" : "          ",
+      "interestRate" : "    0.00",
+      "balance" : "1000.00",
+      "balanceAvailable" : "         1000.00",
+      "openDate" : "2016-07-26",
+      "openNode" : "7518",
+      "accountStatus" : ""
+    } ],
+    "iFinanceBalance" : [ {
+      "cardNo" : "623061000990018454",
+      "financeName" : "易方达货币A",
+      "financeVol" : "10900.00",
+      "financeUseVol" : "10900.00",
+      "sevenDayAmt" : "0.00",
+      "oneMonthAmt" : "0.00",
+      "totalAmt" : "0.00"
+    } ],
+    "designabilityVolInfo" : [ ],
+    "iP2PProList" : [ {
+      "projectNo" : "WYCSKF",
+      "projectName" : "网银测试开放",
+      "payInterestSum" : "",
+      "financePeriod" : "130",
+      "totalAmt" : "2416000",
+      "state" : "10",
+      "financePreInterestRate" : "6.45",
+      "interestBeginDate" : "20160520",
+      "interestEndDate" : "20160528"
+    }, {
+      "projectNo" : "HYJH06",
+      "projectName" : "杭银计划第06期",
+      "payInterestSum" : "",
+      "financePeriod" : "5",
+      "totalAmt" : "1000",
+      "state" : "10",
+      "financePreInterestRate" : "4.56",
+      "interestBeginDate" : "20160331",
+      "interestEndDate" : "20160404"
+    }, {
+      "projectNo" : "mao0330",
+      "projectName" : "直销0330",
+      "payInterestSum" : "",
+      "financePeriod" : "30",
+      "totalAmt" : "40",
+      "state" : "10",
+      "financePreInterestRate" : "10",
+      "interestBeginDate" : "20160330",
+      "interestEndDate" : "20160330"
+    }, {
+      "projectNo" : "mao033103",
+      "projectName" : "直销033103",
+      "payInterestSum" : "",
+      "financePeriod" : "5",
+      "totalAmt" : "2",
+      "state" : "10",
+      "financePreInterestRate" : "1",
+      "interestBeginDate" : "20160331",
+      "interestEndDate" : "20160331"
+    }, {
+      "projectNo" : "mao040101",
+      "projectName" : "直销040101",
+      "payInterestSum" : "3",
+      "financePeriod" : "1",
+      "totalAmt" : "6",
+      "state" : "60",
+      "financePreInterestRate" : "1",
+      "interestBeginDate" : "20160401",
+      "interestEndDate" : "20160401"
+    }, {
+      "projectNo" : "zx0004",
+      "projectName" : "产品名称004",
+      "payInterestSum" : "",
+      "financePeriod" : "90",
+      "totalAmt" : "1610",
+      "state" : "10",
+      "financePreInterestRate" : "10",
+      "interestBeginDate" : "20160402",
+      "interestEndDate" : "20160519"
+    }, {
+      "projectNo" : "HYJH05",
+      "projectName" : "杭银计划第05期",
+      "payInterestSum" : "",
+      "financePeriod" : "10",
+      "totalAmt" : "1120",
+      "state" : "10",
+      "financePreInterestRate" : "6.03",
+      "interestBeginDate" : "20160408",
+      "interestEndDate" : "20160508"
+    }, {
+      "projectNo" : "lrh003",
+      "projectName" : "003",
+      "payInterestSum" : "",
+      "financePeriod" : "60",
+      "totalAmt" : "10000",
+      "state" : "10",
+      "financePreInterestRate" : "1.3",
+      "interestBeginDate" : "20160531",
+      "interestEndDate" : "20160621"
+    }, {
+      "projectNo" : "bbb003",
+      "projectName" : "天使二号",
+      "payInterestSum" : "",
+      "financePeriod" : "3",
+      "totalAmt" : "8600",
+      "state" : "00",
+      "financePreInterestRate" : "6",
+      "interestBeginDate" : "20160614",
+      "interestEndDate" : "20160623"
+    }, {
+      "projectNo" : "kkk001",
+      "projectName" : "产品名称k001",
+      "payInterestSum" : "",
+      "financePeriod" : "40",
+      "totalAmt" : "9990",
+      "state" : "10",
+      "financePreInterestRate" : "4",
+      "interestBeginDate" : "20160602",
+      "interestEndDate" : "20160610"
+    }, {
+      "projectNo" : "yh-0001",
+      "projectName" : "品名称0001",
+      "payInterestSum" : "",
+      "financePeriod" : "90",
+      "totalAmt" : "1800",
+      "state" : "20",
+      "financePreInterestRate" : "3.6",
+      "interestBeginDate" : "20160428",
+      "interestEndDate" : "20160429"
+    }, {
+      "projectNo" : "lrh006",
+      "projectName" : "006",
+      "payInterestSum" : "",
+      "financePeriod" : "60",
+      "totalAmt" : "1000",
+      "state" : "10",
+      "financePreInterestRate" : "3.6",
+      "interestBeginDate" : "20160529",
+      "interestEndDate" : "20160608"
+    } ]
+  },
+  "ec" : "0",
+  "em" : ""
+}

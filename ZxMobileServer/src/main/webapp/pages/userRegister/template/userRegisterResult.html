@@ -1,0 +1,19 @@
+  <div class="new2016 padded Regs">
+  	<div class="regRzt"><i class="success"></i>恭喜您，电子账户已经开通</div>
+    <div class="countState">
+    	<div class="head" data-label="直销银行"></div>
+        <div class="gap"></div>
+        <div class="body">
+        	<h2 id="cardNo"><%=Utils.getFmtAcc(cardNo)%></h2>
+            <div class="row">
+            	<div class="cell">持卡人：<%=userName%></div>
+                <div>开始持卡日：<%=Utils.formatDate(subTime, "yyyyMMddhhmmss", "yyyy-MM-dd")%></div>
+            </div>
+        </div>
+    </div>
+  	<input type="button" value="进入主页" class="zen-btn mt30" id="gotoIndex">
+  	<%if(cardType == '04'){%>
+    	<input type="button" value="激活账户" class="zen-btn activeBtn mt10" id="active">
+  	<%}%>
+  	<div id="hongbao" class="mt20" style="display: none"><img src="images/hongbao2/cashRed.png" width="100%" alt=""/></div>
+  </div>

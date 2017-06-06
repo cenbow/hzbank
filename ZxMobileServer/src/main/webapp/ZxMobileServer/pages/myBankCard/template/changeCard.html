@@ -1,0 +1,38 @@
+ <div class="new2016 Regs">
+ <div class="step1">
+ 	<div class="fm vaild">
+   	<div class="fm-itm noCell">
+       	当前绑定账户：<%=no%>
+       </div>
+       <div class="fm-itm noCell">
+       	<div>绑定帐户户名：<%=userName%></div>
+       </div>
+       <div class="fm-itm noCell">
+           我的电子账户：<%=cardNo%>
+       </div>
+   </div>
+<div class="fm vaild mt10">
+       <div class="fm-itm">
+           <label>银行卡</label>
+           <div class="ipt"><input id="input_bindCardNo" type="tel" maxlength="20" value="" placeholder="请输入储蓄卡卡号"/></div>
+           <i class="i-card"></i>
+       </div>
+       <div class="fm-itm" id="bankList">
+           <label>开户行</label>
+           <i class="" id="input_bankUrl"></i>
+           <div class="ipt"><input id="input_bank" type="text" value="" data-value="" placeholder="开户行自动返显" readonly/></div>
+       </div>
+       <div class="fm-itm" id="tr_safeInput" style="display:none">
+       	  <label>取款密码</label>
+          <input id="password" type="password" value="" placeholder="请输入取款密码" readonly="readonly"/>
+       </div>
+       <div class="fm-itm">
+       	<label>验证码</label>
+           <div class="ipt"><input id="phonePassInput" type="tel"  maxlength="6" value="" placeholder="请输入短信验证码" pattern="[0-9]*"/></div>
+           <input id="btn_sendSMS" type="button" value="获取验证码" class="get"/>
+       </div>
+   </div>
+   <div class="padded">
+       <input id="submit" type="button" value="确定" class="zen-btn mt20 disabled" disabled>
+   </div>
+ </div>	

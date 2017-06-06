@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../../css/weixin/css/global.css">
+<link rel="stylesheet" href="../../css/weixin/css/banks.css">
+<link rel="stylesheet" href="../../css/allPicker.css">
+</head>
+
+<body>
+  <div class="assBankList">
+
+  </div>	
+ <script type="text/javascript" src="../views/device-initialize.js"></script>
+<script src="../../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="../../scripts/libs/jquery/jquery.finger.min.js"></script>
+<script src="../../scripts/weixin/util.js"></script>
+<script type="text/javascript" src="../views/wxAccountAddBankCard.js"></script>
+<script type="text/javascript" src="../views/wx_ajax.js"></script>
+<script src="../../scripts/components/allPicker.js"></script>
+<script type="text/javascript">
+$(function(){
+//获取后台银行列表/queryBankInfo
+	var params = {
+			actionFlag:"00"
+	};
+ajax({ 
+	url: "../../weixin/queryBankInfo", 
+	data:params,
+	success: function(data1){
+		if(Utils.isEmpty(data1.errorCode)){
+			var data = data1.iBankInfo;
+			
+		//alert("22222"+data.length);
+	    	var arr = [];
+	    	for(var i=0;i<data.length;i++){
+				var obj = {key:"",list:[]};
+				var flag = true;
+				data[i].key = data[i].initial.substring(0,1);
+				for(var j=0;j<arr.length;j++){
+					if(arr[j].key == data[i].key){
+						arr[j].list.push(data[i]);
+						flag = false;
+						break;
+					}
+				}
+				
+				if(flag){
+					obj.key = data[i].key;
+					obj.list.push(data[i]);
+					if(arr.length==0)
+						arr.push(obj);
+					else
+						//首字母排序#-Z
+						for(var j=0;j<arr.length;j++){
+							if(obj.key < arr[0].key){
+								arr.unshift(obj);
+								break;
+							}else if((!arr[j+1] || arr[j+1].key > obj.key) && obj.key> arr[j].key){
+								arr.splice(j+1, 0, obj);
+								break;
+							}
+						}
+				}
+		
+			}
+			
+			var i=0;
+			for(;i<arr.length;i++){
+				
+				$('.assBankList').append('<div class="grpLabel">'+arr[i].key+'</div>')
+				var j=0;
+			//	if(arr[i].list.length>0){
+				    $('.assBankList').append('<div class="list type'+i+'"></div>');
+					for(;j<arr[i].list.length;j++){
+						 $('.assBankList .type'+i).append('<div class="itm"><i class="ico-bnk bnk-'+arr[i].list[j].bankIconUrl.substr(2)+'"></i>'+arr[i].list[j].bankName+'</div>');
+					}
+			//	}
+				
+			}
+			
+			
+		 }
+	   }
+	});
+});
+</script>
+</body>
+</html>

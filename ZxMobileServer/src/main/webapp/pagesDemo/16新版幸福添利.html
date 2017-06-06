@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016 addPft">
+ 	<div class="fudState">
+    	<h1>总资产(元)</h1>
+        <h2>2,3123.08</h2>
+        <div class="row">
+        	<div class="cell">
+            	<h1>总资产(元)</h1>
+                <h3>102.45</h3>
+            </div>
+            <div class="cell">
+            	<h1>累计收益</h1>
+                <h3>102.45</h3>
+            </div>
+        </div>
+    </div>
+    <div class="chart">
+    	<h1 class="ft12 fc-9">幸福乐存利率（％）</h1>
+    	<div class="chartArea" id="lineChart"></div>
+    </div>
+    <div class="fixCtlPanel">
+    	<div class="inner row">
+        	<div class="cell">转入</div>
+            <div class="cell">转出</div>
+        </div>
+    </div>
+  </div>	
+  <script  src="../scripts/libs/zepto/zepto.js"></script>
+  <script src="../scripts/libs/echarts-all.js"></script>
+  <script>
+  Zepto(function($){
+	var myLine = echarts.init(document.getElementById('lineChart'));  
+	var opt = {
+	  tooltip: {
+		  show :true,
+		  formatter: '{c}'
+	  },
+	  calculable : false,
+	  xAxis : [
+		  {
+			  boundaryGap : false,
+			  axisTick : {show:false},
+			  axisLine :{
+				  lineStyle:{
+					 color: '#E5E5E5', 
+					 width: 1, 
+					 type: 'solid'
+				  }
+			  },
+			  splitLine : {
+				  show:true,
+				  lineStyle:{
+					 color: '#F5F5F5', 
+					 width: 1, 
+					 type: 'solid'
+				  }
+			  },
+			  axisLabel : {
+				  textStyle: { 
+					color: '#979797',
+					fontSize: 8
+				  }
+			  },
+			  data : ['03-11','03-12','03-13','03-14','03-15','03-16','03-17']
+		  }
+	  ],
+	  yAxis : [
+		  {
+			  axisTick : {show:false},
+			  axisLine :{
+				  lineStyle:{
+					 color: '#E5E5E5', 
+					 width: 1, 
+					 type: 'solid'
+				  }
+			  },
+			  splitLine : {
+				  show:true,
+				  lineStyle:{
+					 color: '#F5F5F5', 
+					 width: 1, 
+					 type: 'solid'
+				  }
+			  },
+			  type : 'value',
+			  axisLabel : {
+				  margin : 5,
+				  textStyle: { 
+					color: '#979797',
+					fontSize: 8
+				  },
+				  formatter: function(value){
+					  return (value + '.00');
+				  }
+			  }
+		  }
+	  ],
+	  grid : {
+		borderWidth:0,
+		x:35,
+		y:10,
+		x2:20,
+		y2:30
+	  },
+	  series : [
+		  {
+			  itemStyle: {
+				  normal: {
+					  lineStyle: {
+						width: 1,
+						type:'solid'
+					  },
+					  label : {  
+						  textStyle : {
+							  fontSize : '10',
+							  fontWeight : 'normal'
+						  }
+					  },         
+					  color : '#FF6C00',
+					  areaStyle: {
+						 type: 'default', 
+						color: 'rgba(255,108,0,0.2)'
+					  }
+				  }
+			  },
+			  symbol: 'emptyCircle', // 拐点图形类型
+			  symbolSize: 4, //拐点大小,
+			  type: 'line',
+		  	  data:[4.542, 4.682, 4.324, 4.122, 4.512, 5.523, 5.321],
+			  markPoint : {
+				symbol: 'pin',
+				symbolSize: 8,
+                data : [
+                    {type : 'max', name: '最高收益'}
+                ],
+				itemStyle: {
+				  normal: { 
+					color: 'rgba(0,0,0,0)',
+					label : {
+						textStyle: { 
+							  color: '#FF6C00',
+							  baseline: 'top'
+							}
+						}
+					}
+				 }
+            }
+		  }
+	  ]
+	};			
+	myLine.setOption(opt);
+  })
+  </script> 
+</body>
+</html>

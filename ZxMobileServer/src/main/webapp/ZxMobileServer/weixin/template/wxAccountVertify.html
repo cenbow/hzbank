@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>直销银行</title>
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+
+<link rel="stylesheet" href="../../css/weixin/css/global.css">
+</head>
+<script type="text/javascript">
+document.addEventListener('WeixinJSBridgeReady',function onBridgeReady(){
+	WeixinJSBridge.call('hideOptionMenu');  
+  });
+  
+function is_weixn(){  
+    var ua = navigator.userAgent.toLowerCase();  
+    if(ua.match(/MicroMessenger/i)=="micromessenger"&&(  device.os == 'android'|| device.os == 'ios')) {  
+        return true;  
+    } else {  
+        return false;  
+    }  
+}
+
+if(!is_weixn()){
+	location.href="wxAccountErro.html";
+}
+
+</script>
+<body>
+	<div   id="wxAccountId" >
+		<div class="guideBar row">
+	       <div class="cell active">
+	           <i class="ico">1</i>身份验证
+	       </div>
+	       <div class="ar"></div>
+	       <div class="cell">
+	           <i class="ico">2</i>银行卡绑定
+	       </div>
+	   </div>
+	   <div class="list">
+	     <div class="itm">
+	       <label>姓<i class="bit1"></i>名  &nbsp</label>
+	         <span>
+	                <input type="text" id="input_userName" placeholder="请输入您的姓名" maxlength="15">
+	         </span>
+	     </div>
+	     <div class="itm">
+	       <label>身份证 &nbsp</label>
+	         <span>
+	                <input type="text" id="input_certNo" placeholder="请输入您的身份证号" maxlength="18">
+	         </span>
+	     </div>
+	   </div>  
+	   <div class="list">
+	       <div class="itm fmRow">
+	           <label>手机号</label>
+	            <div class="ipt">
+	                <input type="tel" id="mobileNoText" placeholder="请输入您的手机号码" maxlength="11">
+	            </div>
+	       </div>
+	
+	       <div class="itm fmRow">
+	           <label>验证码</label>
+	            <div class="ipt">
+	                <input type="tel" id="vCodeId" placeholder="请输入手机验证码" maxlength="6">
+	            </div>
+	            <span class="getCode disabled" id="btn_sendSMS" >获取验证码</span>
+	       </div>
+	   </div>  
+	   <div class="list">
+	       <div class="itm fmRow">
+	           <label>邀请码或工号</label>
+	            <div class="ipt">
+	                <input type="tel" id="input_RecommendNum" placeholder="请输入邀请码或工号(选填)">
+	            </div>
+	       </div>
+	   </div>
+	   <div class="gapped">
+	       <div class="rule">
+	           <i class="checkbox checked" id="checkReg"></i>我已阅读并同意<a href="javascript:void(0);" id="showAgreement">《注册协议》</a>
+	       </div>
+	       <button class="btn disabled" id="nextButton1">下一步</button>
+	   </div>
+	   
+	   <div class="dialog" id="dialogInfo" style="display:none">
+	    <div class="dialogBox">
+	      <div class="title">提示</div>
+	      <div class="content">该手机号已经注册！</div>
+	      <div class="btnGrp">
+	        <button class="bn cancel" id="loginZX">登录直销银行</button>
+	        <button class="bn ok" id="cancle">取消</button>
+	      </div>
+	    </div>
+	  </div>
+	  	<div id="userRegPage2" style="display:none ">
+			<div class="mb10"></div>
+			<div class="mb10" style="text-align:center">
+				《杭州银行电子账户服务协议》
+			</div>
+			<div class="ml10 mr5" style="padding-bottom:70px;">
+				<p>甲方：客户</p>
+				<p>乙方：杭州银行股份有限公司</p>
+				<p>为明确双方的权利和义务，规范双方业务行为，甲方(客户)、乙方(杭州银行)本着平等互利的原则，就电子账户相关事宜达成本协议。</p>
+				<p>第一条 定义</p>
+				<p>下列用语在本协议中的含义为：</p>
+					<p>“电子账户”指甲方通过乙方官方网站、网上银行、手机银行等非柜面渠道自助申请，经乙方实名身份认证之后，仅供甲方通过乙方的电子银行渠道办理金融业务的个人人民币银行结算账户。乙方根据甲方电子账户认证方式不同，对电子账户的资金划转受到不同的控制。</p>
+				<p>“密码”指乙方用以识别甲方身份与指令要求甲方提供的口令。包括登录密码、交易密码、动态密码等多个种类，具体业务中使用的密码类别以乙方要求为准。动态密码包括但不限于短信验证码，短信验证码指在甲方使用电子账户过程中，乙方通过乙方指定客服号码以手机短信息方式发送到绑定手机号码的特定代码。</p>
+				<p>“绑定手机号码”是指甲方在申请开立电子账户时，指定的关联电子账户的手机号码。绑定的手机号码用于接收乙方发送的授权码、短信验证码以及交易提示短信等的手机号码。</p>
+				<p>第二条 申请</p>
+				<p>1．甲方在申请我行电子账户时，甲方应当是具备完全民事权利能力和完全民事行为能力的自然人，并符合我行规定的其他用户注册条件。</p>
+				<p>2．用户在申请电子账户时应由本人自行输入注册信息和设置电子账户的密码，用户有义务在申请时提供完整的信息及相关注册资料，保证该信息及资料内容的完整性、真实性、有效性和合法性，并同意我行通过必要方式对其身份和资质进行审核。用户的信息及相关资料发生变更时，用户有义务及时在我行电子渠道更新。</p>
+				<p>3．用户设置的手机号码不得侵犯或涉嫌侵犯他人合法权益。因用户的信息或其他注册资料不完整、不真实、不准确、失效或违法而导致我行无法提供本服务或提供本服务时发生错误，用户不得将此作为取消交易、拒绝付款的理由，由此产生的全部法律后果由用户承担，因此给我行或其他第三方造成损失的，用户应予以赔偿。</p>
+					<p>第三条 使用</p>
+				<p>1．甲方申请的电子账户，需按照乙方的要求激活后方可正常使用。</p>
+				<p>2．甲方可以通过银行账户向电子账户划入资金，但只能通过甲方用以开立账户验证身份的同名银行账户划出资金。</p>
+				<p>3．甲方只能用该电子账户享受乙方已开通与电子账户相应的金融服务。</p>
+				<p>4．电子账户只限甲方本人使用，不得出借、转让或出租。否则，由此产生的损失由甲方自行承担。</p>
+				<p>5．甲方应按乙方的规定进行操作，因操作不当造成的损失，乙方不承担任何责任。</p>
+				<p>第四条 法律适用条款</p>
+				<p>本协议的成立、生效、履行和解释，均适用中华人民共和国法律；法律无明文规定的，可适用通行的金融惯例。</p>
+				<p>本协议是乙方的其他既有协议和约定的补充而非替代文件，如本协议与其他既有协议和约定有冲突，涉及电子渠道业务内容的，应以本协议为准。</p>
+			</div>
+		</div> 
+		<div class="buy-btn-wrap" style="display:none;" id="btn-wrap">
+	        <div class="btn-double">
+	           <input type="button" value="同意" class="zen-btn" id="agreeBtn"/>
+	           <input type="button" value="关闭" class="zen-btn btn-fn" id="closeBtn"/>
+	        </div>
+		</div>
+	</div>
+</body>
+
+<script src="../../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="../../scripts/weixin/util.js"></script>
+<script type="text/javascript" src="../views/device-initialize.js"></script>
+<script type="text/javascript" src="../views/wxAccountVertify.js"></script>
+<script type="text/javascript" src="../views/wx_ajax.js"></script>
+
+
+</html>

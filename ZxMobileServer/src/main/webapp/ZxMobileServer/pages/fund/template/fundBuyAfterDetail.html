@@ -1,0 +1,153 @@
+<body>
+	<div class="new2016 fdDtlPage hapFud">
+		<div class="state">
+        	<div class="row">
+            	<div class="cell"><%=fundName%><span class="fc-9 ft12">(<%=fundCode%>)</span></div>
+                <div class="fc-blue" id="fundTranRecord">交易记录</div>
+            </div>
+            <h1 class="fc-9 txt-mid mt10">总金额(元)</h1>
+            <p class="txt-mid ft-bigger fc-orange"><%=Utils.formatCurrency(fundNav,2)%></p>
+			<div class="row txt-mid pl30 pr30 pt10 pb10">
+            	<div class="cell">
+                	<h1 class="ft12 fc-9">持有份额(份)</h1>
+                    <h2><%=Utils.formatCurrency(fundVol,2)%></h2>
+                </div>
+                <div class="cell bl-e">
+                	<h1 class="ft12 fc-9">累计盈亏(元)</h1>
+                    <h2 class="fc-orange"><%=Utils.formatCurrency(totIncome,2)%></h2>
+                </div>
+            </div>
+        </div>
+        <div class="padded txt-mid mt5 mb5" id="confirm">
+        </div>
+        <div class="list bd mb10">
+        	<div class="list-item row txt-mid">
+                <div class="cell">
+                    <h1 class="fc-9 ft12" >最新净值</h1>
+                    <h2 id="fundlastnav"></h2>
+                </div>
+                <div class="cell" style="border:1px solid #f2f2f2; border-width:0 1px;">
+                    <h1 class="fc-9 ft12">涨跌幅</h1>
+                    <h2 class="fc-green" id="dayRisePer"></h2>
+                </div>
+                <div class="cell">
+                    <h1 class="fc-9 ft12" >更新日期</h1>
+                    <h2 id="fundlastnavdate"></h2>
+                </div>
+            </div>
+        </div>
+         <div class="fudDetail mt10">
+        </div>
+		<div class="tabPoint">
+			<div class="chartBox">
+				<div class="filter">
+					<span class="active" data-value="22" id="monthActive">近一月</span> <span data-value="66">近三月</span> <span data-value="132">近六月</span> <span data-value="264">近一年</span>
+				</div>
+				<div class="chartArea">
+					<div class="row pl15 pr15 pt10 pb10 ft13">
+						<div class="cell">
+							<span style="color:#f3a2ee">●</span> 本基金：<span class="fc-orange fundlastnav" id="gains">0.00</span>
+						</div>
+						<div class="cell">
+							<span class="fc-blue">●</span> 沪深300：<span class="fc-blue" id="csi">0.00</span>
+						</div>
+					</div>
+					<div style="width: 100%; height: 150px;" id="linechart"></div>
+				</div>
+			</div>
+		</div>
+        <div class="director">
+        	<div class="list bd">
+            	<div class="list-item arr" id="rule">交易规则</div>
+                <div class="cnt" id="cnt">
+                	<div class="para">
+                      <div class="grid mb10">	
+	                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		                         <thead>
+									<tr >
+										<td>买入或卖出的时间点</td>
+										<td>计算份额的净值日期</td>
+										<td>买入或卖出确认</td>
+									</tr>
+						  		</thead>
+						  		<tbody>
+						  			<tr >
+										<td>T日15:00前买入</td>
+										<td>T日</td>
+										<td>T+1日</td>
+									</tr>
+									<tr >
+										<td>T日15:00后买入</td>
+										<td>T+1日</td>
+										<td>T+2日</td>
+									</tr>
+									<tr >
+										<td>T日15:00前卖出</td>
+										<td>T日</td>
+										<td>T+1日</td>
+									</tr>
+									<tr >
+										<td>T日15:00后卖出</td>
+										<td>T+1日</td>
+										<td>T+2日</td>
+									</tr>
+						  		</tbody>
+					  		</table>
+				  		</div>
+                    </div>
+                </div>
+            </div>
+        	<div class="list bd">
+            	<div class="list-item arr">风险提示</div>
+                <div class="cnt">
+                	<div class="para">
+                     	 基金是一种风险较高的投资产品，投资前请认真阅读基金合同、招募说明书等公开法律文件，请认真评估自己承受风险的能力，谨慎做出买卖决定。
+					本页面所有展示均非法律文件。基金的过往业绩不预示未来业绩。市场有风险，投资需谨慎。<br/>
+					免责声明<br/>
+					投资人通过杭州银行直销银行发起的基金操作，包括但不限于买入、卖出均使用基金方提供的交易系统，与杭州银行无关。杭银直销幸福基金仅向客户展示信息，
+					并向注册用户提供操作入口引导以实现基金开户、交易和查询功能。购买基金之前请认真阅读基金合同等相关法律文件。<br/>
+                    </div>
+                </div>
+            </div>
+             <div class="list bd" id="shareBonus">
+            	<div class="list-item  arr">分红</div>
+            </div>
+            <div class="list bd" id="fundDetailPage">
+            	<div class="list-item arr">基金详情</div>
+<!--                 <div class="cnt"> -->
+<!--                 	<div class="para"> -->
+                       
+<!--                     </div> -->
+<!--                 </div> -->
+            </div> 
+        </div>
+        
+        <div class="fixBtn">
+        	<div class="btnGrp">
+            	<button class="zen-btn white" id="sale">卖出</button>
+                <button class="zen-btn" id="buyIn">买入</button>
+            </div>
+        </div>
+	</div> 
+    <script type="text/javascript" src="../scripts/libs/echarts-all.js"></script>
+    <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+	<script>
+    $(function(){
+    	$('.director .list-item').on('click', function(){
+			var me = $(this), 
+			    cnt = me.next(), 
+			    setH = cnt.find('.para').get(0).offsetHeight,
+				offsetTop = me.offset().top - 1;
+			me.hasClass('spr') ? 
+			me.removeClass('spr') && cnt.css('height',0) : 
+			me.addClass('spr') && cnt.css('height',setH);
+			
+			me.parent().siblings().find(".list-item").hasClass('spr') ? me.parent().siblings().find(".list-item").removeClass('spr')
+					&& me.parent().siblings().find(".list-item").next().css('height', 0) : null;
+			setTimeout(function() {
+				window.scrollTo(0, offsetTop);
+			}, 200);
+		})
+    })
+    </script> 
+</body>

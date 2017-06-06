@@ -1,0 +1,18 @@
+{
+  "repServiceId" : "life_queryRedPacketList",
+  "repFlowNo" : "",
+  "cd" : {
+    "iRedPacketList" : [ {
+      "redPacketId" : "RD1000000463",
+      "redPacketType" : "1",
+      "tranAmt" : "1.68",
+      "state" : "02",
+      "getTime" : "20160816090433",
+      "openTime" : "20160816090713",
+      "inviteCode" : "",
+      "photo" : null
+    } ]
+  },
+  "ec" : "0",
+  "em" : ""
+}

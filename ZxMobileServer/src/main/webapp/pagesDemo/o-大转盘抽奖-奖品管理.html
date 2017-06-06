@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016 struDpst">
+    <div class="tab">
+    	<div class="active">我的礼品</div>
+        <div>我的红包</div>
+    </div>
+    <div class="subPage">
+        <div class="spoils">
+            <h1>共收到100个红包</h1>
+            <h2>共100.45元</h2>
+        </div>
+        <ul class="list">
+            <li class="list-item row">
+                <i class="hongbao"></i>
+     			<div class="cell">
+                	<h1>新手注册红包<span class="ft13">(11-24)</span></h1>
+                    <h2 class="fc-9 mt10 ft12">来自153******77</h2>
+                </div>
+                <div class="txt-r">
+                	<h1 class="ft16 pt15">1.26元</h1>
+                </div>
+            </li>
+            <li class="list-item row">
+                <i class="hongbao"></i>
+     			<div class="cell">
+                	<h1>新手投资红包<span class="ft13">(11-24)</span></h1>
+                    <h2 class="fc-9 mt10 ft12">来自153******77</h2>
+                </div>
+                <div class="txt-r">
+                    <button class="btn">拆开</button>
+                	<h2 class="ft12 fc-9">还有2天过期</h2>
+                </div>
+            </li>
+            <li class="list-item row">
+                <i class="hongbao"></i>
+                <div class="cell">
+                    <h1>邀请投资红包<span class="ft13">(11-24)</span></h1>
+                    <h2 class="fc-9 mt10 ft12">来自153******77</h2>
+                </div>
+                <div class="txt-r">
+                    <h1 class="mb10 fc-orange">冻结</h1>
+                    <h2 class="ft12 fc-9">还有5天解冻</h2>
+                </div>
+            </li>
+            <li class="list-item row">
+                <i class="hongbao outdated"></i>
+                <div class="cell">
+                    <h1>邀请投资红包<span class="ft13">(11-24)</span></h1>
+                    <h2 class="fc-9 mt10 ft12">来自153******77</h2>
+                </div>
+                <div class="txt-r">
+                    <h1 class="mb10">188元</h1>
+                    <h2 class="ft12 fc-9">已过期</h2>
+                </div>
+            </li>
+            <li class="noData">暂时没有相关数据</li>
+        </ul>
+    </div>
+    <!-- 撤单部分 -->
+    <div class="subPage" style="display: none;">
+        <div class="spoils type2">
+            <h1>共收到100个礼品</h1>
+        </div>
+        <ul class="list">
+            <li class="list-item row">
+                <i class="award"></i>
+                <div class="cell">
+                    <h1>500元京东E卡<span class="ft13">(11-24)</span></h1>
+                    <h2 class="fc-9 mt10 ft12">来自幸运转转赚</h2>
+                </div>
+                <div class="txt-r">
+                    <button class="btn big mt10">查看详情</button>
+                </div>
+            </li>
+            <li class="list-item row">
+                <i class="award"></i>
+                <div class="cell">
+                    <h1>500元京东E卡<span class="ft13">(11-24)</span></h1>
+                    <h2 class="fc-9 mt10 ft12">来自幸运转转赚</h2>
+                </div>
+                <div class="txt-r">
+                    <button class="btn big mt10">查看详情</button>
+                </div>
+            </li>
+            <li class="list-item row">
+                <i class="award"></i>
+                <div class="cell">
+                    <h1>500元京东E卡<span class="ft13">(11-24)</span></h1>
+                    <h2 class="fc-9 mt10 ft12">来自幸运转转赚</h2>
+                </div>
+                <div class="txt-r">
+                    <button class="btn big mt10">查看详情</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../scripts/libs/zepto/zepto.js"></script>
+  <script>
+  Zepto(function($){
+	$('.tab div').on('click', function(){
+		var idx = $(this).index();
+		var cur = $('.subPage').eq(idx);
+		$(this).addClass('active').siblings().removeClass('active');
+		cur.show().siblings('.subPage').hide();
+	})
+  })
+  </script> 
+</body>
+</html>

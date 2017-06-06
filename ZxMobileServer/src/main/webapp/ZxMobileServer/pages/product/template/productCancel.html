@@ -1,0 +1,22 @@
+<div>
+	<ul class="zen-list-2">
+		<li>
+			<div class="opr-box">
+				<p class="ft14">产品名称：<span class="ft16"><%=projectName%></span></p>
+				<p class="ft14">交易时间：<span class="ft14"><%=Utils.formatDate(orderSubmitTime, "yyyyMMddhhmmss", "yyyy-MM-dd hh:mm:ss")%></span></p>
+				<p class="ft14">交易金额：<span class="fc-orange"><%=Utils.formatCurrency(tranAmt,2)%></span> 元</p>
+			</div>
+		</li>
+		<li>
+			<div class="ipt-opr">
+				<label>交易密码：</label>
+				<div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+			</div>
+		</li>
+	</ul>
+    <div class="padded">
+      <h1  class="fc-orange">温馨提示：</h1>
+      <p class="fc-9 ft13">募集满额及募集期结束当日不可撤单！</p>
+    </div>
+	<div class="gap-box"><input type="button" value="提交" class="zen-btn mt10 disabled" id="cancelBtn" disabled="disabled"/></div>
+</div>

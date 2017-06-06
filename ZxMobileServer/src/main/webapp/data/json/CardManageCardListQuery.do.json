@@ -1,0 +1,13 @@
+{
+    "iCardList" : [ {
+      "certNo" : "511702198304257904",
+      "cardNo" : "6228480228215073274",
+      "bankName" : "中国农业银行",
+      "orgCode" : "01030000",
+      "cardType" : "04",
+      "subTime" : "20160815153715",
+      "bandFlag" : "1",
+      "bankIconUrl" : "b_0002",
+      "mobileNo" : "18606618389"
+    } ]
+  }

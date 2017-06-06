@@ -1,0 +1,66 @@
+<%
+   var realnameClass="real-ver-off";
+   var eleCardClass = "hidden";
+   if(Utils.checkRealUser("1")){
+      realnameClass="real-ver-on";
+      eleCardClass = "uc-icos i-eleCard";
+   }
+%>
+<div class="content">
+    <ul class="zen-list setAvatar">
+      <li class="uc-icos i-avatar zen-fold-arr">
+        <span>设置头像</span>
+        <div class="avatarArea"><img src="<%=Utils.checkSession()&&App.storage.get('UserInfo').photo?'data:image/png;base64,'+App.storage.get('UserInfo').photo:'images/defaultAvatar/1.png'%>"/></div>
+      </li>
+    </ul>
+    
+    <ul class="zen-list" >
+      <li class="uc-icos i-count" id="eleActivate">
+        <span>我的账户</span>
+        <span class="active-state" id="activate" style="display: none;">未激活</span>
+        <span class="fr pr15 fc-9 dftw" id="mobileNo"></span>
+      </li>
+      <li class="<%=eleCardClass%>">
+        <span>电子账号</span>
+        <span class="fr pr15 fc-9 dftw" id="eleCard"></span>
+      </li>
+    </ul>
+<!--     <ul class="zen-list">
+      <li class="uc-icos i-recommend">
+        <span>我的邀请码</span>
+        <span class="fr pr15 fc-9 dftw" id="RecommendNum"></span>
+      </li>
+    </ul> -->
+    <!-- <ul class="zen-list">
+      <li class="uc-icos i-realname zen-fold-arr" id="identityUpload">
+        <span>实名认证</span>
+        <span class="real-ver-on" id="hasImg" style="display: none;"></span>
+      </li>
+      <li class="uc-icos i-occupatuion zen-fold-arr" id="showJobPicker">
+          	<span>职业</span>
+          	<span  class="fr pr15 fc-9 dftw" id="jobInfo"></span>
+      </li>
+    </ul> -->
+    <ul class="zen-list" id="balanceUnSignUl" style="display: none">
+      <li class="uc-icos i-unsign zen-fold-arr" id="balanceUnSign">幸福添利解约</li>
+    </ul>
+    <!-- <ul class="zen-list">
+      <li class="zen-has-child uc-icos i-lock"> 
+      	<ul>
+         <li class="zen-fold-arr" id="changeLoginPwd">修改登录密码</li>
+        </ul>
+      </li>
+      <li class="zen-has-child uc-icos i-lock">
+        <ul>
+          <li class="zen-fold-arr" id="changePwd">修改交易密码</li>
+        </ul>
+      </li>
+      <li class="uc-icos i-hand" id="chageHandSwitch" style="display: none">开启手势 <input id="hand" type="checkbox" class="zen-switch"/></li>
+      <li class="zen-fold-arr uc-icos i-changeGestures" id="chageHand" style="display: none"><i id="setor">修改手势密码</i></li>
+    </ul>
+    <%if(Device.os=="iphone"&&pubParam.clientVersion > "2.0.0"){%>
+    <ul class="zen-list"  id="fingerSwitch" style="display: none">
+      <li class="zen-fold-arr uc-icos i-fingerLock" id="finger"><i id="setor">指纹</i></li>
+    </ul>
+     <%}%>  -->
+</div> 

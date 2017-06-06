@@ -1,0 +1,34 @@
+<div class="gray-bg" ontouchstart="">
+  <div id ="page1" class="content">
+    <ul class="zen-list-3 mt10 mb10">
+    	 <li id="nameDiv" >
+        <div  class="ipt-opr">
+          <label style="width:90px;">中文姓名：</label>
+          <div class="cell"><input type="text" id="input_name" value="" placeholder="真实姓名 " readonly/></div>
+        </div>
+      </li>
+      <li id="certNoDiv" >
+        <div  class="ipt-opr">
+          <label style="width:90px;">证件号码：</label>
+          <div class="cell"><input type="text" id="input_certNo" maxlength="18" value="" placeholder="请输入您的身份证号 "/></div>
+        </div>
+      </li>
+     <!--  <li>
+        <div class="ipt-opr">
+          <label>手机号码：</label>
+          <div class="cell"><input type="tel" id="input_mobileNo" maxlength="11" value="" placeholder="请输入您注册时使用的手机号码" /></div>
+        </div>
+      </li> -->
+      <li>
+        <div class="ipt-opr">
+          <label style="width:90px;">短信验证码：</label>
+          <div class="cell"><input type="tel" id="phonePassInput" maxlength="6"  value="" placeholder="请输入验证码" /></div>
+          <button data-value="发送验证码" id="btn_sendSMS" class="full-cash-btn ft13"></button>
+        </div>
+      </li>
+    </ul>
+    <div class="gap-box">
+    	<button id="nextButton1" class="zen-btn disabled" disabled>下一步</button>
+   	</div>
+  </div>
+ </div>

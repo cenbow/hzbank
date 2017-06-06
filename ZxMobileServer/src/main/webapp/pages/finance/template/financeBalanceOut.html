@@ -1,0 +1,105 @@
+<div class="content">
+	<div id="financeOutPage1" style="display: ">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+					<p class="ft14">产品名称：<span class="ft16"><%=financeName%></span><span class="ft12 fc-9"><%="("+financeNo+")"%></span></p>
+					<p class="ft14">签约账号：<span class="ft16" id="cardNo"><%=Utils.formatAcc(cardNo)%></span><span class="ft12 fc-9" id="custName"><%="("+custName+")"%></span></p>
+					<p class="ft14 fc-9 ">账户余额：<span class="fc-orange" id="showBalanceSpan"></span> 元</p>
+					<p class="ft14 fc-9 ">持有份额：<span class="fc-orange" id="financeTotalVol"><%=Utils.formatCurrency(financeTotalVol)%></span> 元</p>
+					<p class="ft14 fc-9 " id="fundUseVolDiv" style="display:none">最大赎回份额：<span class="fc-orange" id="redeem_fundBal"></span> 元</p>
+					<!-- <p class="ft14 fc-9 mb10">产品代码：<span class="fc-9" id="financeNo"></span></p> -->
+					<!-- <a href="javascript:;" class="zen-btn btn-ctr btn-small" id="toIncome">充值</a> -->
+				</div>
+			</li>
+			<li>
+				<div class="ipt-opr">
+					<label>赎回金额：</label>
+					<div class="cell"><input type="number" value="" maxlength="16" placeholder="请输入金额" id="tranAmtText" /></div>
+				</div>
+			</li>
+			<li id="mgrNoTr" style="display:none">
+				<div class="ipt-opr">
+					<label>客户经理：</label>
+					<div class="cell"><input type="text" value="" maxlength="12" placeholder="请输入客户经理编号（选填项）" id="mgrNoText" /></div>
+				</div>
+			</li>
+			<li id="largRedFlagTr" style="display:none">
+				<div class="ipt-opr">
+					<label>遇到大额赎回是否顺延：</label>
+					<div class="cell">
+						<select id = "largRedFlag" style="width: 100%; display:block;">
+							<option value="0">否</option>
+							<option value="1">是</option>
+						</select>
+					</div>
+				</div>
+			</li>		
+			<li>
+				<div class="ipt-opr">
+					<label>交易密码：</label>
+					<div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+				</div>
+			</li>
+			<div class="fm-remind pl10 pr10" style="display: none">
+				<div class="err-rzt" id="errorPWD" style = "display:none">您输入的密码有误</div>
+				<a href="javascript:;">忘记密码?</a>
+			</div>
+			<div class="gap-box"><input type="button" value="提交" class="zen-btn mt10 mb20 disabled" id="buyBtn" disabled="disabled"/></div>
+		</ul>
+	</div>
+	<!-------------------------------------------------------------------------->
+	<div id="financeOutPage2" style="display: none">
+		<div class="trs-rzt-success">赎回成功！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_suc">赎回账户：</span> <span id="recAccName_suc"></span></p>
+					<p>赎回金额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_suc"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" id="succBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+		<!-------------------------------------------------------------------------->
+	<div id="financeOutPage3" style="display:none ">
+		<div class="trs-rzt-fail">赎回失败！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_err">赎回账户：</span> <span id="recAccName_err"></span></p>
+					<p>赎回金额：<span class="fc-orange" id="recAmt_err"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_err"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<p class="trs-rzn" id="errorMessageText"></p>
+		<div class="gap-box"><input type="button" id="errorBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+	<div id="financeOutPage4" style="display:none ">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_dub">赎回账户：</span> <span id="recAccName_dub"></span></p>
+					<p>赎回金额：<span class="fc-orange" id="recAmt_dub"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_dub"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<p class="trs-rzn" id="errorMessageText">您的交易本行已经受理，稍后请查询交易结果！</p>
+		<div class="gap-box"><input type="button" id="dubBackButton" value="返回" class="zen-btn"/></div>
+	</div>	
+</div>

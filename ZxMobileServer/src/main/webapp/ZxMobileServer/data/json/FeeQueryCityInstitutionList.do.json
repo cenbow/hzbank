@@ -1,0 +1,12 @@
+{
+    "iChannelFeeList" : [ {
+      "projectCode" : "XF01016",
+      "paramType" : "PM901",
+      "cityCode" : "3302",
+      "cityName" : "宁波",
+      "feeBusinessCode" : "330108011016",
+      "feeBusinessName" : "慈溪市宗汉街道实验幼儿园",
+      "feeTypeCode" : "0801",
+      "feeTypeName" : "幼儿园学费"
+    } ]
+  }

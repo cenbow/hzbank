@@ -1,0 +1,128 @@
+
+<div class="new2016 fdDtlPage">
+	<div class="view loaded2 mb5">
+		<h2 id="goldGuide">新手指南</h2>
+		<div class="rate">
+			<p>持有总克数(克)</p>
+			<h1>
+				<b id="kg">0.0000</b>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="cell">
+				<h2>总金额(元)</h2>
+				<p class="ft16" id="amount">0.00</p>
+			</div>
+			<div class="cell">
+				<h2>昨日收益(元)</h2>
+				<p class="ft16" id="yesterdayIncome">0.00</p>
+			</div>
+			<div class="cell">
+				<h2>累计收益(元)</h2>
+				<p class="ft16" id="accumulateIncome">0.00</p>
+			</div>
+		</div>
+		<a href="javascript:;" class="dtl" id="goldRecods">交易记录</a>
+	</div>
+	<div class="padded mb5 txt-mid ft12 row">
+		<div class="cell" id="buyList"><span id="bNum">0</span>笔买入待确认</div>
+		<div class="cell bl-e4" id="saleList"><span  id="sNum">0</span>笔卖出待确认</div>
+	</div>
+	<div class="fudDetail">
+		<div class="tab row">
+			<div class="cell active">金价走势</div>
+			<div class="cell">历史业绩</div>
+		</div>
+	</div>
+
+	<div class="tabPoint">
+		<div class="chartBox">
+			<div class="filter">
+				<span class="active" data-value="22">近一月</span> <span data-value="66">近三月</span> <span data-value="132">近六月</span> <span data-value="264">近一年</span>
+			</div>
+			<div class="chartArea">
+				<div class="row pl15 pr15 pt10 pb10 ft13">
+					<div class="cell">
+						<span class="fc-orange">●</span> 幸福如金：<span class="fc-orange fundlastnav">0.00</span>
+					</div>
+					<div class="cell">
+						<span class="fc-blue">●</span> 国内金价：<span class="fc-blue" id="goldPrice">0.00</span>
+					</div>
+				</div>
+				<div style="width: 100%; height: 150px;" id="linechart"></div>
+				<h2 class="txt-l">幸福如金是博时基金提供的一款基金产品，购买幸福如金就是购买博时黄金D场外类（000929），幸福如金的价格是博时黄金D场外类单位净值的100倍。国内金价是上海黄金交易所提供的AU99.99价格，仅供参考。</h2>
+			</div>
+		</div>
+		<div class="pgn mb10 history" style="display: none">
+        	<div class="table double">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <thead class="filter fc-9">
+                        <th width="50%">日期区间</th>
+                        <th>涨跌幅</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td width="50%">近一周</td>
+                            <td class="fc-orange"><span id="latelySevenyield" style="border-bottom:0;">0.00</span>%</td>
+                        </tr>
+                       <tr>
+                            <td>近一月</td>
+                            <td class="fc-orange"><span id="thirtyYield" style="border-bottom:0;">0.00</span>%</td>
+                        </tr>
+                        <tr>
+                            <td>近三月</td>
+                            <td class="fc-orange"><span id="threeMonthYield" style="border-bottom:0;">0.00</span>%</td>
+                        </tr>
+                        <tr>
+                            <td>近六月</td>
+                            <td class="fc-orange"><span id="halfYearYield" style="border-bottom:0;">0.00</span>%</td>
+                        </tr>
+                        <tr>
+                            <td>近一年</td>
+                            <td class="fc-orange"><span id="nearestYearYield" style="border-bottom:0;">0.00</span>%</td>
+                        </tr>
+                        <tr>
+                            <td>今年来</td>
+                            <td class="fc-orange"><span id="thisYeayYield" style="border-bottom:0;">0.00</span>%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</div>
+
+	<div class="director">
+		<div class="list">
+			<div class="list-item arr">交易规则</div>
+			<div class="cnt">
+				<div class="para">
+					幸福如金最小买入量为10元，最小追加量10元。<br/>
+					T日15:00前买入，按照T日金价成交，T+1个工作日可以查看持有黄金克数；<br/>
+					T日15:00后买入，按照T+1个工作日金价成交，T+2个工作日可以查看持有黄金克数；<br/>
+					T日15:00前卖出，按照T日金价成交，T+2个工作日电子账户可以收到资金；<br/>
+					T日15:00后卖出，按照T+1个工作日金价成交，T+3个工作日电子账户可以收到资金.<br/>
+					注：幸福如金买入份额确认后才能卖出。
+				</div>
+			</div>
+		</div>
+		<div class="list">
+			<div class="list-item arr">风险提示</div>
+			<div class="cnt">
+				<div class="para">
+					幸福如金是博时基金提供的博时黄金D场外类，主要投资于黄金交易所的黄金现货合约，基金价格随着黄金价格波动，收益率较高，风险也较高，投资需谨慎。该黄金基金不能兑换黄金实物。<br/>
+					免责声明:<br/>
+					本基金由博时基金管理有限公司负责管理和销售，杭州银行仅向注册用户提供信息展示，并向注册用户提供操作入口引导以实现基金开户、交易和查询功能。投资人通过杭州银行直销银行发起的基金操作，包括但不限于买入、卖出均使用基金方提供的交易系统，与杭州银行无关。“幸福如金”仅是平台系列产品的品牌，而不代表杭州银行对该基金承担相关责任。注册用户通过平台从事基金投资相关交易的权利义务，以注册用户与博时基金签订的相应协议约定为准。
+				</div>
+			</div>
+		</div>
+		<div class="list coin">
+			<div class="list-item arr">基金详情</div>
+		</div>
+	</div>
+	<div class="fixBtn">
+		<div class="btnGrp">
+			<button class="zen-btn white" id="payback">卖出</button>
+			<button class="zen-btn" id="buy">买入</button>
+		</div>
+	</div>
+</div>

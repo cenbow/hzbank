@@ -1,0 +1,11 @@
+{
+    "showNum" : "1",
+    "iCardBinInfo" : [ {
+      "cardBin" : "622848",
+      "orgName" : "中国农业银行",
+      "orgCode" : "01030000",
+      "cardType" : "0",
+      "unionBankNo" : null,
+      "bankIconUrl" : "b_0002"
+    } ]
+  }

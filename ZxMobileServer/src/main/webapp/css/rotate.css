@@ -1,0 +1,60 @@
+﻿#awardRotate *, #awardRule *{position:relative;}
+#awardRotate, #awardRule{height:100%; width:100%; overflow:auto; -webkit-overflow-scrolling:touch; background:url(../images/rotate/bg.png) no-repeat; background-size:100% 100%;}
+#awardRotate .horn{font-size:12px; height:28px; line-height:28px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding-left:24px; background:#fff url(../images/rotate/kn.png) no-repeat 5px center; background-size:auto 16px;}
+#awardRotate .horn span{margin-right:5px;}
+#awardRotate .logo{height:50px; width:100%; background:url(../images/rotate/logo.png) 15px center no-repeat; background-size:auto 32px;}
+#awardRotate .tt{width:100%; height:124px; background:url(../images/rotate/tt.png) center center no-repeat; background-size:320px auto;}
+#awardRotate .t2{width:90%; height:44px; margin:0 auto; line-height:44px; text-align:center; color:#fff; background:url(../images/rotate/t2.png) center center no-repeat; background-size:100% 100%; font-size:15px;}
+#awardRotate .mid{width:90%; height:0.66em; background-color:#fff; margin:0.08em auto 0.06em; border-radius:0.04em; position:relative;}
+#awardRotate .mid .t3{font-size:12px; color:#ff9501; width:86%; text-align:center; padding:5px 0 5px 12px; background-color:#fff; position:absolute; left:7%; top:-12px; border-radius:8px;font-weight: bold;}
+#awardRotate .mid .t3:after{content:""; display:block; height:36px; width:30px; background:url(../images/rotate/prz.png) center center no-repeat; background-size:100% auto; position:absolute; left:-10px; top:-8px;}
+#awardRotate .mid ul{padding:0.08em 0.03em 0.02em; height:0.4em;}
+#awardRotate .mid li:nth-child(1){width:0.26em; height:0.1em; padding-top:0.3em; background:url(../images/rotate/info_1.png) no-repeat; background-size:100% 100%; display:block; float:left;}
+#awardRotate .mid li:nth-child(2){width:0.26em; height:0.1em; padding-top:0.3em; background:url(../images/rotate/info_2.png) no-repeat; background-size:100% 100%; display:block; float:left;}
+#awardRotate .mid li:nth-child(3){width:0.26em; height:0.1em; padding-top:0.3em; background:url(../images/rotate/info_3.png) no-repeat; background-size:100% 100%; display:block; float:left;}
+#awardRotate .mid li + li{margin-left:0.026em;}
+#awardRotate .mid li button{font-size:12px; height:22px; width:60px; color:#e94e1e; background:#FFF79D -webkit-gradient(linear, 0 0, 0 bottom, from(#FFF79D), to(#FED54C));  border-radius:5px; background-size:100% 100%; text-align:center; display:block; margin:0 auto;}
+#awardRotate .mid .tip{font-size:12px; color:#e45f58; width:90%; margin:0 auto;font-weight: bold;}
+#awardRotate .mid .tip:before{content:""; display:inline-block; height:20px; width:20px; background:url(../images/rotate/bubble.png) center center no-repeat; background-size:100% auto; vertical-align:top; margin-right:4px;}
+#awardRotate .btnGrp{width:70%; margin:0 auto; font-size:18px;}
+#awardRotate .btnGrp .doBtn{height:44px; width:100%; line-height:44px; background:#ff5b61 -webkit-gradient(linear, 0 0, 0 bottom, from(#ff9e8b), to(#ff5b61)); background-size:100% 100%; color:#fff; border-radius:12px;} 
+#awardRotate .btnGrp .ctrBtn{color:#fff; font-size:12px; height:30px; width:70px; background:#fe8260 -webkit-gradient(linear, 0 0, 0 bottom, from(#ffa18d), to(#fe8260)); background-size:100% 100%; border-radius:5px;}
+
+#awardRotate.draw{background-image:url(../images/rotate/bg_2.png);}
+#awardRotate.draw .tt{background-image:url(../images/rotate/tt2.png); height:98px;}
+#awardRotate .hide,#awardRotate.hide,#awardRule.hide{display:none;}
+#awardRotate .myPrize{width:100%; height:46px; line-height:46px; text-align:center; position:absolute; left:0; bottom:0;}
+#awardRotate .myPrize a{color:#EB6102; text-decoration:underline;}
+
+#awardRotate .noChange{width:220px; height:180px; background:#fff url(../images/rotate/empty.png) no-repeat center 10px; background-size:60px auto; position:absolute; left:50%; top:44%; margin:-90px 0 0 -110px; border-radius:18px; text-align:center; box-sizing:border-box; padding-top:65px;}
+#awardRotate .noChange .getBtn{padding:8px 30px; font-size:16px; background:#ffdd84; margin-top:10px; color:#ea5514; border-radius:30px; box-shadow:0 2px 0 #ff9141;}
+#awardRotate .noChange .closeBtn{height:32px; width:32px; position:absolute; right:-12px; top:-12px; background:url(../images/rotate/close.png) no-repeat; background-size:100% 100%;}
+
+#awardRotate .wonPrize{width:320px; height:300px; position:absolute; margin:-150px 0 0 -160px; left:50%; top:44%; background:url(../images/rotate/succ.png) no-repeat; background-size:100% auto; text-align:center;}
+#awardRotate .wonPrize.fail{background-image:url(../images/rotate/fail.png)}
+#awardRotate .wonPrize .txt2, #awardRotate .wonPrize .txt1{height:40px; line-height:40px; width:100%; position:absolute; left:0; bottom:48px; font-size:18px; color:#ee3d13; font-weight:700;}
+#awardRotate .wonPrize .txt1{bottom:auto; top:88px; padding:0 84px; box-sizing:border-box; color:#FFFAD4; font-size:17px; line-height:28px; height:auto;}
+#awardRotate .wonPrize .prz{height:58px; width:100%; position:absolute; left:0; bottom:88px; background:url(../images/rotate/prz_2.png) center top no-repeat; background-size:100px auto;}
+#awardRotate .wonPrize.fail .prz{display:none;}
+#awardRotate .wonPrize .closeRztBtn{height:32px; width:32px; background:url(../images/rotate/close_2.png) no-repeat; background-size:auto 100%; position:absolute; right:20px; top:60px;}
+
+/* 大转盘样式 */
+#awardRotate .banner{display:block; width:94%; position:absolute; left:3%; bottom:10%;}
+#awardRotate .banner .turnplate{display:block; width:100%; position:relative; background-image:url(../images/rotate/panel.png); background-size:100% 100%; z-index:9;}
+#awardRotate .banner .turnplate canvas.item{width:100%;}
+#awardRotate .banner .turnplate .pointer{position:absolute; width:23.5%; height:32.5%; left:37.7%; top:30.2%; background:url(../images/rotate/pointer.png) no-repeat; background-size:100% auto;}
+#awardRotate .banner .rzt{position:absolute; right:0; top:-32px; height:52px; width:70px; background:url(../images/rotate/words.png) no-repeat; background-size:100% 100%; text-align:center; font-size:12px; color:#00B1ED; padding-top:13px;}
+#awardRotate .banner:before{content:""; display:block; height:20px; width:100%; background:url(../images/rotate/sha_1.png) no-repeat; background-size:100% 100%; position:absolute; left:0; bottom:-5px;}
+#awardRotate .banner:after{content:""; display:block; height:16%; width:20%; background:url(../images/rotate/prz_2.png) no-repeat; background-size:100% 100%; position:absolute; right:30px; bottom:0; z-index:18;}
+#awardRotate .banner .od{width:64px; height:70px; background:url(../images/rotate/od.png) no-repeat; background-size:100% 100%; position:absolute; left:0; bottom:0; z-index:27;}
+#awardRotate .mask{height:100%; width:100%; position:fixed; left:0; top:0; background-color:rgba(0, 0, 0, .6); z-index:999;}
+#awardRotate .mask .later{width:256px; height:248px; position:absolute; left:50%; top:48%; margin:-124px 0 0 -128px; background:url(../images/rotate/later.png) no-repeat; background-size:100% auto; box-sizing:border-box; padding-top:170px; text-align:center; font-size:16px; color:#666;}
+
+#awardRule{background:#fbcc7e -webkit-gradient(linear, 0 0, 0 bottom, from(#fff1a4), to(#fbcc7e));}
+#awardRule .head{height:140px; width:100%; background:url(../images/rotate/r_h.png) center bottom no-repeat; background-size:100% 100%;}
+#awardRule .head .text{width:100%; height:100%; background:url(../images/rotate/r_h_t.png) center center no-repeat; background-size:auto 100%;}
+#awardRule .ruleCnt{min-height:400px; background:url(../images/rotate/aw_bg.png); background-size:100% auto; padding:0 15px; color:#b1432c;}
+#awardRule .ruleCnt p{margin-bottom:5px;}
+#awardRule .prize{width:320px; height:204px; margin:0 auto; background:url(../images/rotate/aw_l.png) no-repeat; background-size:100% auto; box-sizing:border-box; padding:49px 35px 0 33px; color:#ef7041;}
+#awardRule .prize table{width:100%; font-size:13px; line-height:1.9;}
+#awardRule .prize table td:last-child{text-align:right;}

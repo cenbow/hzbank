@@ -1,0 +1,51 @@
+
+<div class="loanApp proQuery new2016" id="info">
+	<div class="progress">
+		<i data-label="身份认证" class="active">1</i> <i data-label="人脸识别" class="active">2</i> <i data-label="进度查询"
+			class="active">3</i>
+	</div>
+	<!-- Progress 1 start! -->
+	<div class="loanComitRzt">
+		<div class="lcrBox">
+			<div class="rzt">
+				<!--失败则挂载 faild 样式,正在进行则挂载 ongoing-->
+				<h1 id="loanmsg"></h1>
+				 <h2>正在审核，感谢您的支持！</h2> 
+			</div>
+			<div class="page" id="applyerinfo">
+				<ul>
+                	<li class="row">
+                    	<div class="cell">户名</div>
+                        <div id="resusername"></div>
+                    </li>
+                    <li class="row">
+                    	<div class="cell">身份证号</div>
+                        <div id="resCertNo"></div>
+                    </li>
+                    <li class="row">
+                    	<div class="cell">贷款金额</div>
+                        <div id="loannum"></div>
+                        <div class="tt">元</div>
+                    </li>
+                    <li class="row">
+                    	<div class="cell">还款期限</div>
+                        <div id="repayyear"></div>
+                    </li>
+                   
+                </ul>
+			</div>
+		</div>
+		<div class="gap-box mt20 mb20">
+			<button id="queryresult" class="zen-btn">确认</button>
+		</div>
+	</div>
+	<!-- Progress 1 end! -->
+</div>
+
+<div class="loanApp new2016" id="error" style="display: none">
+	<div id="nodata" class="nodata">您好，暂时没有查询到您的贷款信息</div>
+	<div class="gap-box mt20 mb20">
+		<button id="houseconfirm2" class="zen-btn">确认</button>
+	</div>
+</div>
+

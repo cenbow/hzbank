@@ -1,0 +1,68 @@
+  <div class="fundClause">
+	  <div id="fundCancelPage1">
+	     <ul class="zen-list-2">
+	       <li>
+	         <div class="statePanel">
+	           <div class="row">
+	             <h1>
+	               <span class="ft18"><%=fundName%></span>	               
+	             </h1>
+	             <h2 class="ft13">
+	               <span class="fc-9">签约账号：</span>
+	               <span><%=Utils.formatAcc(cardNo)%></span>
+	             </h2>
+	             <h2 class="ft13">
+	               <span class="fc-9">交易状态：</span>
+	               <span class="fc-orange"><%=tradeStatusName%></span>
+	             </h2>
+	           </div>
+	           <div class="row">
+	             <h2 class="ft13"><span class="fc-9">交易名称：</span><span><%=transName%></span></h2>
+	             <h2 class="ft13"><span class="fc-9">交易日期：</span><span><%=Utils.formatDate(transferDate,"yyyyMMdd","yyyy-MM-dd")%></span></h2>
+	             <h2 class="ft13"><span class="fc-9">份额：</span><span><%=Utils.formatCurrency(fundVol,2)%></span></h2>
+	             <h2 class="ft13"><span class="fc-9">金额：</span><span><%=Utils.formatCurrency(fundAmt,2)%></span></h2>
+	           </div>
+	         </div>
+	       </li>
+	       <li>
+	          <div class="ipt-opr">
+	            <label>交易密码：</label>
+			  	<div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+	          </div>
+	        </li>
+	      </ul>
+	      <div class="gap-box"><input id="cancelBtn" type="button" value="提交" class="zen-btn mt10 mb10 disabled" disabled/></div>    
+    </div>
+    <!----------------------------------------------------------------------------------->
+	<div id="fundCancelPage2" style="display: none;">
+	    <div class="trs-rzt-success">撤单成功！</div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-8 pt10 pb10 cl">
+	           <p>产品名称：<span ><%=fundName%></span></p>
+	           <p>产品代码：<span ><%=fundCode%></span></p>
+	         </div>
+	         <div class="row pt10 pb10">
+	           <p>账户基金：<%=Utils.formatAcc(cardNo)%></p>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+    	<div class="gap-box"><input id="successReturn" type="button" value="确定" class="zen-btn mb10"/></div>
+	</div>
+    <!-----------------------------------购买结果----------------------------------------->
+	<div id="fundCancelPage3" style="display: none;">
+	    <div class="trs-rzt-fail">撤单失败！</div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-8 pt10 pb10 cl">
+	           <p>失败原因：<span id="errorMessage"></span></p>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+	    <div class="gap-box"><input id="errorReturn" type="button" value="确定" class="zen-btn mb10"/></div>
+    </div>
+  </div>  

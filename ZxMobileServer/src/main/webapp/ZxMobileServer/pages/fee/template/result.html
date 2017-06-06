@@ -1,0 +1,27 @@
+<div class="new2016 Pays">
+<style>
+	body,body.gray-bg {
+		background-color: #fff;
+	}
+</style>
+	<div class="paySuccess" id="paySuccess" style="display: none">
+		<span class="fc-blue">恭喜您，缴费成功</span>
+		<div class="btnWrp">
+			<button class="zen-btn" id="submit">完成</button>
+		</div>
+	</div>
+	
+	<div class="payFaild" id="payFaild" style="display: none">
+     	<p class="fc-orange">非常抱歉，缴费失败</p>
+        <p class="fc-9 mt10" id="ErrMsg">由于银行卡账户余额不足，导致无法正常缴费</p>
+        <div class="btnWrp"><button class="zen-btn" id="submit1">完成</button></div>
+     </div>
+     
+     <div class="paySuccess" id="wait" style="display: none">
+		<span class="fc-blue">订单正在处理中，请暂时不要重复提交！<br>
+		可前往<a style="color: rgb(255, 107, 0);font-size: 15px;margin: 0 2px;" id="detail">缴费明细</a>查看最新支付状态</span>
+		<div class="btnWrp">
+			<button class="zen-btn" id="submit">完成</button>
+		</div>
+	</div>
+</div>

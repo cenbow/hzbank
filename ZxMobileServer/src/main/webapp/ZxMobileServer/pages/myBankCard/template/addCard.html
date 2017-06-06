@@ -1,0 +1,32 @@
+  <div class="new2016 Regs">
+  	<div class="padded mt10 fc-9">请绑定本人借记卡</div>
+    <div class="fm vaild">
+    	<div class="fm-itm">
+        	<label>姓<span class="bit2"></span>名</label>
+            <div class="ipt" id="userName"></div>
+        </div>
+        <div class="fm-itm">
+        	<label>银行卡号</label>
+            <div class="ipt"><input id="input_cardNo" type="tel" maxlength="30" value="" placeholder="请输入您的借记卡卡号"/></div>
+            <i class="i-card"></i>
+        </div>
+         <div class="fm-itm">
+        	<label>银<span class="bit2"></span>行</label>
+            <i id="input_bankUrl"></i><div class="ipt"><input id="input_bank" type="text" value="" data-value="" placeholder="所属开户行" readonly/></div>
+        </div>
+        <div class="fm-itm" id="mobileDiv" style="display:none">
+        	<label>预留手机</label>
+            <div class="ipt">
+            	<input id="input_mobileNo" type="tel" maxlength="11" value="" placeholder="请输入预留手机号码"/>
+            	<i id="delMob" class="del"></i>
+            </div>
+        </div>
+	    <div class="fm-itm" id="passwordDiv" style="display:none">
+	    	<label>取款密码</label>
+	        <div class="ipt"><input id="password" type="password" value="" placeholder="请输入您的取款密码" readonly="readonly"/></div>
+	    </div>   	
+    </div>
+	<div class="padded">
+        <input id="submitBtn" type="button" value="添  加" class="zen-btn mt20 disabled" disabled/>
+    </div>
+  </div>

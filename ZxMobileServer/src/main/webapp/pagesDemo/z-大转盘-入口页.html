@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大转盘</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+<link type="text/css" rel="stylesheet" href="../css/rotate.css">
+<script src="../scripts/libs/zepto/zepto.js"></script>
+<script type="text/javascript">
+$(function() {
+  var awardRotate = $('#awardRotate');
+	var awardRule = $('#awardRule');
+  var init = function () {
+		var clientHeight = document.documentElement.clientHeight;
+		var clientWidth = document.documentElement.clientWidth;
+    awardRotate.css({
+      height: clientHeight + 'px',
+      fontSize: clientWidth + 'px'
+    })
+		awardRule.css({
+      height: clientHeight + 'px'
+    })
+	}
+	$(window).on('resize', init)
+	init()
+
+  // 查看规则
+  $('#ruleBtn').on('click', function(){
+    awardRotate.addClass('hide');
+    awardRule.removeClass('hide');
+  })
+
+  // 显示活动结束
+  var showLater = function () {
+    $('#later').removeClass('hide');
+  }
+
+  showLater()
+
+})
+</script>
+</head>
+
+<body>
+  <div id="awardRotate">
+  	<div class="logo"></div>
+  	<div class="tt"></div>
+  	<div class="t2">首次认购指定产品，可获得抽奖机会</div>
+  	<div class="mid">
+  		<div class="t3">活动时间：2017年4月20日—6月30日</div>
+  		<ul>
+  			<li>
+  				<button>立即投资</button>
+  			</li>
+  			<li>
+  				<button>立即存入</button>
+  			</li>
+  			<li>
+  				<button>立即存入</button>
+  			</li>
+  		</ul>
+  		<div class="tip">首次申购单笔2000元以上可获抽奖机会   ，每款产品限赠1次获奖机会。</div>
+  	</div>
+  	<div class="btnGrp">
+  		<button class="doBtn">立即抽奖</button>
+  		<div class="new2016 pt15 pb20">
+  			<div class="row">
+  				<div class="cell">
+  					<button class="ctrBtn" id="ruleBtn">活动细则</button>
+  				</div>
+  				<div>
+  					<button class="ctrBtn">我的奖品</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+    <div class="mask hide" id="later">
+      <div class="later">来晚了！<br/>活动已结束！</div>
+    </div>
+  </div>
+  <div id="awardRule" class="hide">
+    <div class="head">
+      <div class="text"></div>
+    </div>
+    <div class="ruleCnt">
+      <p>1. 活动时间：2017年4月20日-2017年6月30日。</p>
+      <p>2. 活动内容：在杭银直销APP，自注册以来首次成功申购任意一款指定产品、单笔申购金额满2000元及以上的客户，可以获得1次免费抽奖机会，指定产品包括：幸福如金、幸福乐存、结构性存款产品，每款产品限赠1次抽奖机会。</p>
+      <p>3. 抽奖说明：奖品包括10000份1.88元现金红包、1000份爱奇艺视频券、50份500元京东卡和2份iPad，综合中奖概率分别为80%、10%、5%和0.001%，非100%中奖，奖品数量有限，先到先得，送完即止。中奖商品不开具相应的发票，不可折现；如无质量问题，不支持退换货。</p>
+      <p>4. 抽奖机会获得以申购成功为准，每天抽奖次数不限，机会用完为止。</p>
+      <p>5. 抽中实物奖品，工作人员将在5个工作日内联系您，并在7个工作日内邮寄。</p>
+      <p>6. 抽中卡券，将直接发放至您的杭银直销注册账户，请在活动页面“我的奖品”中查看。</p>
+      <p>7. 抽奖过程中，如果发现违规行为（如恶意注册大量账号，使用作弊程序等），杭银直销将取消您的中奖资格。</p>
+      <p>8. 中奖结果以系统弹出的文字公告为准，活动结束仍未使用的抽奖机会视为自动放弃。</p>
+      <p>9. 奖品价值：</p>
+    </div>
+    <div class="prize">
+      <table>
+        <tr>
+          <td>iPad Pro 9.7英寸 32GB</td>
+          <td>4388元</td>
+        </tr>
+        <tr>
+          <td>500元京东E卡</td>
+          <td>500元</td>
+        </tr>
+        <tr>
+          <td>爱奇艺视频1个月会员电子券</td>
+          <td>25元</td>
+        </tr>
+        <tr>
+          <td>1.88元现金红包</td>
+          <td>1.88元</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

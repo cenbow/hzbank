@@ -1,0 +1,12 @@
+{
+  "repServiceId" : "elecAccBindQuery",
+  "repFlowNo" : "39970566",
+  "cd" : {
+    "bindCardNo" : "6228480228215073274",
+    "cardType" : "04",
+    "bankName" : "中国农业银行",
+    "bankType" : "01030000"
+  },
+  "ec" : "0",
+  "em" : ""
+}

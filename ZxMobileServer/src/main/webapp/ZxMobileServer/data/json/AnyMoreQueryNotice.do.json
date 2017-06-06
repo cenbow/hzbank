@@ -1,0 +1,9 @@
+{
+  "repServiceId" : "sendVerifySMS",
+  "repFlowNo" : "",
+  "cd" : {
+    "iBankNotice" : [ ]
+  },
+  "ec" : "0",
+  "em" : ""
+}

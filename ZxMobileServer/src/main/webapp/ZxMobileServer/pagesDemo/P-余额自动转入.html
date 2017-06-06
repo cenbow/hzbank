@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>余额自动转入</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link type="text/css" rel="stylesheet" href="../css/reset.css">
+  <link type="text/css" rel="stylesheet" href="../css/global.css">
+  <link type="text/css" rel="stylesheet" href="../css/common_1.css">
+  <link type="text/css" rel="stylesheet" href="../css/common_2.css">
+  <link type="text/css" rel="stylesheet" href="../css/layouts.css">
+  <link type="text/css" rel="stylesheet" href="../css/index.css">
+  <link type="text/css" rel="stylesheet" href="../css/banks.css">
+  <link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body ontouchstart="">
+  <div class="balancepage-container">
+    <div class="box-t">
+      余额自动转入
+      <input id="isShow" type="checkbox" class="zen-switch">
+    </div>
+    <p class="content-t">开启后余额将于每日凌晨自动转入幸福添利</p>
+    <div class="gap-box isShowBox">
+      <div class="box-m zen-ckbox">
+        <input id="confirm" type="checkbox" checked="">
+        <span class="fm-agr">我已阅读并同意<a href="javascript:;">《余额自动转入服务协议》</a></span>
+      </div>
+      <input type="button" value="确定" class="zen-btn"></div>
+  </div>
+</body>
+<script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script>
+  $(function() {
+    var showFlag = false;
+    $(".isShowBox").hide();
+    $("#isShow").click(function() {
+      if (!showFlag) {
+        $(".isShowBox").show();
+        showFlag = true;
+      } else {
+        $(".isShowBox").hide();
+        showFlag = false;
+      }
+    });
+  })
+</script>
+
+</html>

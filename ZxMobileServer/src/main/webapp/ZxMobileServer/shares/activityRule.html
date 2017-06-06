@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script src="../css/weixin/css/device-initialize.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<style type="text/css">
+body{min-height:100%; width:100%;}
+body{background:url(../images/weixin/share_bg.png) center top; background-size:100% auto;}
+.invitepage *{box-sizing:border-box;}
+.logo{width:100%; height:1.22rem; background:url(../images/weixin/logo.png) 0 center no-repeat; background-size:auto 1rem; position:relative;}
+.logo .rule{width:1.5rem; height:0.52rem; position:absolute; right:0.38rem; top:50%; margin-top:-0.26rem; background:url(../images/weixin/more_rule.png) no-repeat; background-size:100% 100%;}
+.vol{width:100%; height:5.2rem; background:url(../images/weixin/vol.png) no-repeat; background-size:100% auto; position:relative;}
+.invTxt{height:0.94rem; width:4.5rem; line-height:0.94rem; color:#fff; text-align:center; font-size:0.32rem; background:url(../images/weixin/hb_btn.png) no-repeat; background-size:100% 100%; position:absolute; left:50%; margin-left:-2.25rem; bottom:1rem;}
+.phoneInput{width:4.6rem; height:0.64rem; position:absolute; left:50%; margin-left:-2.3rem; bottom:0; background:url(../images/weixin/phone_input.png) no-repeat; background-size:100% 100%; padding:0.1rem 0 0 1.24rem;}
+.phoneInput input::-webkit-input-placeholder{color:#aaa; font-size:0.26rem;}
+.dwBtn{margin:0.4rem auto; width:4.12rem; height:1.02rem; text-align:center; line-height:1.02rem; color:#fff; background:url(../images/weixin/dw_btn.png) no-repeat; background-size:100% 100%;}
+.dwBtn.disabled{background-image:url(../images/weixin/dw_btn_disabled.png);}
+.slogan{text-align:center; font-size:0.26rem; margin-bottom:0.4rem;}
+
+.rulePage{padding:20px 10px;}
+.rulePage .mainContent{background-color:#e94e1b; min-height:300px; border:3px solid #ffbd91; border-radius:12px; padding:8px 10px; position:relative;}
+.rulePage i.close{height:32px; width:32px; display:block; background:url(../images/weixin/close_btn.png) no-repeat; background-size:100% auto; position:absolute; right:-10px; top:-10px; z-index:999;}
+.rulePage .headerTitle{width:178px; height:44px; text-align:center; line-height:44px; background:url(../images/weixin/tit_bg.png) no-repeat; background-size:100% auto; z-index:99; position:absolute; left:50%; margin-left:-89px; top:-24px; color:#fff;}
+.rulePage .allPackage{height:120px; background:url(../images/weixin/hd_tt.png) no-repeat center 0; background-size:auto 100%; margin-bottom:10px; padding:88px 0 5px; line-height:24px; color:#fff;}
+.rulePage .boxCell{background-color:#fef8f3; border-radius:4px; min-height:50px; padding:10px 0;}
+.rulePage .boxCell + .boxCell{margin-top:4px;}
+.rulePage .yel{color:#fee302;}
+.rulePage .depYel{color:#ec5d01;}
+.rulePage .depOrg{color:#e94e1b;}
+.rulePage .invTit{height:28px; line-height:28px; text-align:center; color:#e94e1b; font-size:16px; position:relative;}
+.rulePage .invTit:after{content:""; display:block; height:1px; width:94%; background-color:#e94e1b; position:absolute; left:3%; top:50%;}
+.rulePage .invTit .inner{height:28px; width:100%; position:absolute; left:0; top:0; position:absolute; z-index:9;}
+.rulePage .invTit .inner span{background-color:#fef8f3; padding:0 10px; position:relative;}
+.rulePage .invTit .inner span:after,
+.rulePage .invTit .inner span:before{content:""; display:block; height:4px; width:4px; border-radius:50%; background-color:#e94e1b; position:absolute; left:0; top:50%; margin-top:-2px;}
+.rulePage .invTit .inner span:after{left:auto; right:0;}
+.rulePage .params{padding:0 8px;}
+.rulePage .barTit span{color:#fff; background:url(../images/weixin/bar.png) no-repeat right center; background-size:auto 100%; padding:5px 10px 5px 20px; font-size:12px; position:relative; line-height:34px;}
+.rulePage .barTit span:after{content:""; display:block; height:100%; width:20px; position:absolute; left:0; top:0; background:url(../images/weixin/bar.png) no-repeat; background-size:auto 100%; z-index:9;}
+.rulePage .parg{font-size:13px; line-height:1.6; margin-bottom:5px;}
+.rulePage .explain{color:#ffffc9; padding:10px 0 0;}
+.rulePage .explain dt{font-size:16px; line-height:2;}
+.rulePage .explain dd{font-size:13px; margin-bottom:5px;}
+.rulePage .explain dd i.num{display:inline-block; vertical-align:middle; height:20px; width:20px; background:url(../images/weixin/num.png) no-repeat center center; background-size:auto 100%; color:#e94e1b; text-align:center; line-height:20px; margin:-2px 5px 0 0;}
+.rulePage .tbl{padding:5px 8px;}
+.rulePage .tbl table{width:100%; text-align:center;}
+.rulePage .tbl tr >*{font-weight:normal; font-size:13px; border:1px solid #fdb782; padding:5px 0; background-color:#fef2e8; box-shadow:0 1px 0 #fff inset;}
+.rulePage .tbl table img.num{display:inline-block; vertical-align:middle; width:16px;}
+.rulePage .timeout{padding:5px 8px; font-size:13px;}
+.rulePage .timeout b{font-weight:normal; color:#fff; background-color:#e94e1b; padding:3px 4px; margin:0 3px; border-radius:4px;}
+</style>
+</head>
+
+<body>
+<div class="rulePage">
+  <div class="mainContent">
+    <i class="close" id="closeRule"></i>
+    <div class="boxCell txt-mid depOrg">
+      <div class="headerTitle">活动规则</div>
+      <p class="pt10" style="padding-top: 8px;text-align: center">杭银直销红包大放送</p>
+      <p class="ft13" style="font-size: 11px; text-align: center">活动时间：<span id="begainDate"></span>-<span id="endDate"></span></p>
+    </div>
+    <div class="boxCell">
+      <div class="invTit">
+        <div class="inner"><span>邀请人奖励</span></div>
+      </div>
+      <div class="params">
+        <div class="barTit"><span> 一重礼：邀请新手注册送红包</span></div>
+        <p class="parg">通过活动分享页面，成功邀请好友新注册、绑卡并激活杭银直销账户的客户，可获得最高188元随机不等的红包一个，上不封顶。</p>
+        <div class="barTit"><span>二重礼：邀请新手注册后投资送红包</span></div>
+        <p class="parg">通过活动分享页面，成功邀请好友激活杭银直销客户后，被邀请好友若在活动期内成功申购幸福金禧或幸福如金，推荐人可再得一个最高188元随机不等的红包，推荐人邀请投资抽红包机会不设上限。</p>
+        <div class="barTit"><span>三重礼：邀请周周排行送红包</span></div>
+        <p class="parg">每周对推荐人的邀请好友激活数进行排名，当期邀请好友激活数相等的用户根据累计（从注册起到当前）好友激活数排名，若当期激活数与累计激活数均相同的用户，则按最后一位被邀请人的激活时间先后排序。排行榜前20名的，每人可获得188元现金红包一个，邀请好友激活数的统计时间以周为单位（活动期间每周一至周日，隔周的邀请好友激活数不做累加）。邀请周周排行送红包活动时间为2017年4月3日-5月28日。</p>
+      </div>
+    </div>
+    <div class="boxCell">
+      <div class="invTit">
+        <div class="inner"><span>新手奖励</span></div>
+      </div>
+      <div class="params">
+        <div class="barTit"><span> 一重礼：新手注册送红包</span></div>
+        <p class="parg">新注册、绑卡并成功激活杭银直销账户的客户，可获得最高188元随机不等的红包一个。</p>
+        <div class="barTit"><span>二重礼：首次投资送红包</span></div>
+        <p class="parg">首次成功申购幸福金禧或幸福如金的客户，可得一个最高188元随机不等的红包，客户首次投资抽红包机会限1次。</p>
+      </div>
+    </div>
+    <dl class="explain">
+      <dt>活动说明</dt>
+      <dd><i class="num">1</i>本次活动只面向杭银直销APP的客户，暂不面向网页版客户。</dd>
+      <dd><i class="num">2</i>普通红包发放后，用户需在发放日的7天内拆开，逾期视为自动放弃。处于冻结状态的红包，暂时不能领取，需待解冻后进行领取。</dd>
+      <dd><i class="num">3</i>红包属性：活动红包为现金红包，领取后直接充值到用户的直销银行活期账户。红包数量有限，先到先得，送完即止。</dd>
+      <dd><i class="num">4</i>投资幸福金禧产品赠送的红包，在当期产品募集期结束前将处于冻结状态，待产品募集期结束后将自动解冻，用户需在解冻后的7天内拆开，逾期视为自动放弃。</dd>
+      <dd><i class="num">5</i>邀请好友方式：短信、微信好友、朋友圈、QQ好友。</dd>
+      <dd><i class="num">6</i>活动过程中如发现有碍其他用户公平参与本活动或违反活动目的的行为，杭州银行有权取消有此行为的用户参与本次活动的资格或因参加活动所获得的奖励。</dd>
+    </dl>
+  </div>
+</div>
+<script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../scripts/components/base64.js"></script>
+<script type="text/javascript">
+/* $(function(){
+  var invitepage = $('.invitepage')
+  var rulePage = $('.rulePage')
+  $('#openRule').click(function(){
+    rulePage.show()
+    invitepage.hide()
+  })
+  $('#closeRule').click(function(){
+    rulePage.hide()
+    invitepage.show()
+  })
+}) */
+
+function search(){
+	var params = {};
+	var b = location.href.split("?")[1];
+	if(!b)return "";
+	var p = b.split('&');
+	if(b.indexOf("begainDate")<0){
+		if(p.length>=1){
+			b = p[0];
+		}
+		b = Base64.decode(b);
+		p = b.split('&');
+	}
+	for(var i=0;i<p.length;i++){
+		var a = p[i].split('=');
+		params[a[0]] = a[1];
+	}
+	return params;
+};
+
+var begainDate = search().begainDate;
+var endDate = search().endDate;
+/* var userName = search().name;
+if(userName==null||userName==''||userName=='undefined'){
+	userName="杭州银行";
+}; */
+if(begainDate==null||begainDate==''||begainDate=='undefined'){
+	begainDate = '2017年01月01日';
+	endDate = '2017年05月01日';
+};
+document.getElementById("begainDate").innerHTML = begainDate;
+document.getElementById("endDate").innerHTML = endDate;
+//document.getElementById("invaite").innerHTML = userName;
+
+
+$('#closeRule').click(function(){
+    history.back();
+  });
+/* var checkBtn = false;
+function checkMobileNum(mobile){
+	var mobileReg = /^(13[0-9]|147|15[0-3]|15[5-9]|170|17[6-8]|173|18[0-9])\d{8}$/;
+	return mobileReg.test(mobile);
+};
+
+function keyup(){
+	var mobile = document.getElementById("mobile").value;
+	if(checkMobileNum(mobile)){
+		checkBtn = true;
+		$('.invitepage .dwBtn').removeClass('disabled');
+	}else{
+		$('.invitepage .dwBtn').addClass('disabled');
+		checkBtn = false;
+	}
+};
+
+
+function download(){
+	if(checkBtn){
+		var mobile = document.getElementById("mobile").value;
+		sendJson(mobile);
+	}
+
+};
+
+function sendJson(mobile) {  
+    var request = {   
+   		        	"mobileNo": mobile,
+   		            "inviteCode": search().code
+    };  
+    var jsonStr = JSON.stringify(request);
+    
+    $.ajax({  //创建邀请关系的接口还得加上
+        url : "../redPacket/createInviterelation",  
+        type : 'POST',  
+        data : jsonStr,  
+        dataType : 'json',  
+        contentType : 'application/json;charset=UTF-8',  
+        success : function(data, status, xhr) { 
+        	if(!data.errorCode){
+        		//alert("seccess");
+        		appDownload();
+        	}
+        },
+        Error : function(xhr, error, exception) {  
+            alert(exception.toString());  
+        }  
+    });  
+};
+
+function appDownload(){
+	
+	location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.yt.hz.financial#rd";
+	
+};
+
+
+var Terminal = {
+		
+		platform:function()
+		{
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {
+				android:u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+				iPhone:u.indexOf('iPhone') > -1
+			};
+		}()
+}; */
+
+</script>
+</body>
+</html>

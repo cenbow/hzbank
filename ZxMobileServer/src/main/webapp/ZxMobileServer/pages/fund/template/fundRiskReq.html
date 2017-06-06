@@ -1,0 +1,87 @@
+
+<div class="riskEval">
+	<div id="riskLevelPage1">
+		<div class="itro-tit">只需30秒，即可获得专业指导</div>
+		<div class="userTest">
+			<h1>1、您的年龄是？</h1>
+			<label data-value="1|A#">A: 18-30岁</label> <label data-value="1|B#">B:
+				31-50岁</label> <label data-value="1|C#">C: 51-60岁</label> <label
+				data-value="1|D#">D: 高于60岁</label>
+		</div>
+		<div class="userTest">
+			<h1>2、您的家庭年收入为（折合人民币）？</h1>
+			<label data-value="2|A#">A:5万元以下</label> <label data-value="2|B#">B:5-20万元</label>
+			<label data-value="2|C#">C:20-50万元</label> <label data-value="2|D#">D:50-100万元</label>
+			<label data-value="2|E#">E:100万元以上</label>
+		</div>
+		<div class="userTest">
+			<h1>3、在您每年的家庭收入中，可用于金融投资（储蓄存款除外）的比例为？</h1>
+			<label data-value="3|A#">A: 小于10%</label> <label data-value="3|B#">B:
+				10%—25%</label> <label data-value="3|C#">C: 25%—50%</label> <label
+				data-value="3|D#">D: 大于50%</label>
+		</div>
+		<div class="userTest">
+			<h1>4、以下哪项最能说明您的投资经验？</h1>
+			<label data-value="4|A#">A: 除存款、国债外，我几乎不投资其他金融产品</label> <label
+				data-value="4|B#">B: 大部分投资与存款、国债等，较少投资于股票、基金等风险产品产品</label> <label
+				data-value="4|C#">C: 资产均衡地分布于存款、国债、银行理财产品、信托产品、 股票、基金等 </label> <label
+				data-value="4|D#">D: 大部分投资于股票、基金、外汇等高风险产品，较少投资于存款、国债 </label>
+		</div>
+		<div class="userTest">
+			<h1>5、您有多少年投资股票、基金、外汇、金融衍生产品等风险投资品经验？</h1>
+			<label data-value="5|A#">A: 无经验</label> <label data-value="5|B#">B:
+				少于两年</label> <label data-value="5|C#">C: 2年-5年</label> <label
+				data-value="5|D#">D: 5年-8年</label> <label data-value="5|E#">E:
+				8年以上</label>
+		</div>
+		<div class="userTest">
+			<h1>6、以下哪种描述最符合您的投资态度？</h1>
+			<label data-value="6|A#">A: 风险厌恶，不希望本金损失，希望获得稳定回报</label> <label
+				data-value="6|B#">B: 保守投资，不希望本金损失，愿意承担一定幅度的收益波动</label> <label
+				data-value="6|C#">C: 寻求资金的较高收益和成长性，愿意为此承担有限本金损失</label> <label
+				data-value="6|D#">D: 希望赚取高回报，愿意为此承担较大本金损失</label>
+		</div>
+		<div class="userTest">
+			<h1>7、以下情况，您会选择哪一种？</h1>
+			<label data-value="7|A#">A: 有100％的机会赢取1000元现金</label> <label
+				data-value="7|B#">B: 有50％的机会赢取5万元现金</label> <label data-value="7|C#">C:
+				有25％的机会赢取50万元现金</label> <label data-value="7|D#">D: 有10％的机会赢取100万元现金</label>
+		</div>
+		<div class="userTest">
+			<h1>8、您计划投资期限是多久？</h1>
+			<label data-value="8|A#">A: 1年以下</label> <label data-value="8|B#">B:
+				1-3年</label> <label data-value="8|C#">C: 3-5年</label> <label
+				data-value="8|D#">D: 5年以上</label>
+		</div>
+		<div class="userTest">
+			<h1>9、您投资目的是</h1>
+			<label data-value="9|A#">A: 资产保值</label> <label data-value="9|B#">B:
+				资产稳健增长</label> <label data-value="9|C#">C: 资产迅速增长</label>
+		</div>
+		<div class="userTest">
+			<h1>10、您的投资出现何种程度的波动时，您会呈现明显的焦虑？</h1>
+			<label data-value="10|A#">A: 本金无损失，但收益未达预期</label> <label
+				data-value="10|B#">B: 出现轻微本金损失</label> <label data-value="10|C#">C:
+				本金10％以内的损失</label> <label data-value="10|D#">D: 本金20％-50％以内的损失</label> <label
+				data-value="10|E#">E: 本金50％以上的损失</label>
+		</div>
+		<div class="gap-box">
+			<input id="submitBtn" type="button" value="完成"
+				class="zen-btn mt10 mb10 disabled" disabled />
+		</div>
+	</div>
+	<!--------------------------------测评结果  style="display: none;"---------------------------------->
+	   <div class="new2016" id="riskLevelPage2" style="display:none;">
+ 		  	<div class="riskTest padded">
+		        <i  id="img" class="ico-eval f"></i>
+		        <p class="ft12 txt-mid">您的投资类型是</p>
+		        <p class="txt-mid ft-bigger" id="result_riskLevel"></p>
+		        <input type="button" value=""  id="fundSign" class="zen-btn mt10"/>
+		        <input type="button" value="默默返回"  id="back" class="zen-btn hollow mt20"/>
+		        <p class="ft12 fc-blue txt-mid mt30" id="riskAgain" >重新测试</p>
+		        <p class="fc-b mt5">投资类型根据风险承受能力从低到高依次是：保守型，稳健型，平衡型，成长型，进取型。请根据自己的类型谨慎决定。</p>
+		    </div>
+		</div>	
+
+	<!------------------------------------------------------------------------->
+</div>

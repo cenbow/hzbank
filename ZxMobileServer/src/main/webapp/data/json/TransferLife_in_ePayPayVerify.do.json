@@ -1,0 +1,13 @@
+{
+    "orderNo" : "PB1010344393",
+    "orderState" : "20",
+    "tranState" : "20",
+    "retCode" : "000000",
+    "retMsg" : "success",
+    "scoreCurr" : "5",
+    "scoreTotal" : "2535.04",
+    "orderSubmitTime" : "20160816143658",
+    "tranAmt" : "100",
+    "errorCode" : "",
+    "errorMessage" : ""
+  }

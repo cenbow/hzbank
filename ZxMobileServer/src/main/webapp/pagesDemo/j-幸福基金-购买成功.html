@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016">
+  	<div class="riskTest">
+    	<div class="successTip"><i></i>国泰金龙混合基金 <span class="ft12 fc-9">(130324)</span></div>
+        <div class="list">
+            <div class="list-item row">
+            	<div class="cell">申购金额</div>
+                <div class="fc-orange">500,000.00</div>
+                <div>元</div>
+            </div>
+            <div class="list-item row">
+            	<div class="cell">付款账号</div>
+                <div>6230  6100  0660  5656  50(电子账户)</div>
+            </div>
+            <div class="list-item row">
+            	<div class="progressState">
+                	<ul>
+                    	<li>
+                        	<div class="tit">申请受理</div>
+                            <div class="time">11月08日</div>
+                            <div class="bar"><i></i></div>
+                        </li>
+                        <li>
+                        	<div class="tit">份额确认</div>
+                            <div class="time">11月09日</div>
+                            <div class="bar"><i></i></div>
+                        </li>
+                        <li>
+                        	<div class="tit">查看收益</div>
+                            <div class="time">11月10日</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="padded">
+        	<input type="button" value="返回首页" class="zen-btn mt20">
+        </div>
+    </div>
+  </div>	
+  <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+	 function setProgress(step, num) {
+		var allLi = $('.progressState li');
+		var li_1 = allLi.eq(0);
+		var li_2 = allLi.eq(1);
+		var li_3 = allLi.eq(2);
+		var bar_1 = li_1.find('.bar i');
+		var bar_2 = li_2.find('.bar i');
+		if (step === 1) {
+			li_1.addClass('active');
+			bar_1.css('height', num + '%')
+		} else if (step === 2) {
+			li_1.addClass('active');
+			li_2.addClass('active');
+			bar_1.css('height', '100%');
+			bar_2.css('height', num + '%');
+			if (num === 100) {
+				li_3.addClass('active');
+			}
+		} else if (step === 3) {
+			allLi.addClass('active');
+			bar_1.css('height', '100%');
+			bar_2.css('height', '100%');
+		}
+	}
+  	// setProgress(1, 45)
+	setProgress(2, 45)
+	// setProgress(2, 100)
+  })
+  	
+  </script>
+</body>
+</html>

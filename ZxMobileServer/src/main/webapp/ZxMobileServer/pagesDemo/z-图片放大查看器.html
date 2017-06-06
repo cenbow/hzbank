@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片放大查看</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/viewer.min.css">
+</head>
+
+<body>
+  <div id="imgContainer">
+  	<style type="text/css">.viewer-footer{display:none;}</style>
+    <img data-original="../images/index/banner.jpg" width="100%" src="../images/index/banner.jpg" alt="banner">
+  </div>
+  <script src="../scripts/libs/viewer.min.js"></script>
+  <script type="text/javascript">
+      var viewer = new Viewer(document.getElementById('imgContainer'), {
+        url: 'data-original'
+      });
+  </script>
+</body>
+</html>

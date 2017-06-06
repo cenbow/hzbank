@@ -1,0 +1,29 @@
+<%_.each(iP2PProTradeList,function(temp, i){%>
+<li class="hapAdd" >
+	<i class="tran-li"></i>
+	<h3>
+		<span class="fl"><%=temp.projectName%></span>
+		<span class="fr fc-orange"><%=Utils.formatCurrency(parseFloat(temp.tranAmt),2)+'元'%></span>
+	</h3>
+	<h4>
+		<span class="fl"><%=Utils.formatDate(temp.orderSubmitTime.substring(0,8),'yyyyMMdd','yyyy-MM-dd')+' '+temp.orderSubmitTime.substring(8,10)+':'+temp.orderSubmitTime.substring(10,12)+':'+temp.orderSubmitTime.substring(12,14)%></span>
+		<%if(temp.state == '20'){%>
+			<%if(temp.tradeStatus == '00'){%>
+				<span class="fr">购买成功</span>
+			<%}else if(temp.tradeStatus == '20'){%>
+				<span class="fr">交易成功</span>
+			<%}else if(temp.tradeStatus == '40'){%>
+				<span class="fr">退款成功</span>
+			<%}else if(temp.tradeStatus == '50'){%>
+				<span class="fr">退款失败</span>
+			<%}else{%>
+				<span class="fr">交易失败</span>
+			<%}%>
+		<%}else if(temp.state == '10'){%>
+			<span class="fr">处理中</span>
+		<%}else{%>
+			<span class="fr">购买失败</span>
+		<%}%>
+	</h4>
+</li>
+<%});%>

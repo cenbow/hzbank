@@ -1,0 +1,51 @@
+{
+    "iApparList" : [ {
+      "aprName" : "一天",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "0.88",
+      "aprLanguage" : null
+    }, {
+      "aprName" : "三个月",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "1.43",
+      "aprLanguage" : null
+    }, {
+      "aprName" : "七天",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "1.485",
+      "aprLanguage" : null
+    }, {
+      "aprName" : "六个月",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "1.69",
+      "aprLanguage" : null
+    }, {
+      "aprName" : "一年",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "2.03",
+      "aprLanguage" : null
+    }, {
+      "aprName" : "两年",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "2.52",
+      "aprLanguage" : null
+    }, {
+      "aprName" : "三年",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "3.08",
+      "aprLanguage" : null
+    }, {
+      "aprName" : "五年",
+      "aprCode" : null,
+      "aprValue" : null,
+      "aprShowMsg" : "3.25",
+      "aprLanguage" : null
+    } ]
+  }

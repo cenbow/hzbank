@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.boot:spring-boot-starter-aop:1.0.0.RC5">
+    <CLASSES>
+      <root url="jar://D:/repo/repository/org/springframework/boot/spring-boot-starter-aop/1.0.0.RC5/spring-boot-starter-aop-1.0.0.RC5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/repo/repository/org/springframework/boot/spring-boot-starter-aop/1.0.0.RC5/spring-boot-starter-aop-1.0.0.RC5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/repo/repository/org/springframework/boot/spring-boot-starter-aop/1.0.0.RC5/spring-boot-starter-aop-1.0.0.RC5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

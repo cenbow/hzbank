@@ -1,0 +1,14 @@
+{
+  "turnPageTotalNum" : "2",
+  "iBoseraQuery" : [ {
+    "productId" : "HZ000009",
+    "totalVol" : "1.900000",
+    "fundIncome" : "0.000000",
+    "incomeNew" : "0.000000"
+  }, {
+    "productId" : "000730",
+    "totalVol" : "215620.320000",
+    "fundIncome" : "37.310000",
+    "incomeNew" : "14.260000"
+  } ]
+}

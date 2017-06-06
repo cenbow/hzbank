@@ -1,0 +1,21 @@
+<div class="new2016 struDpst">
+  	<div class="statePanel row">
+    	<div class="cell">
+        	<h1>当前市值</h1>
+            <h2><%=Utils.formatCurrency(parseFloat(designSum), 2)%></h2>
+        </div>
+        <div class="cell">
+        	<h1>当前持有</h1>
+            <h2>（<%=designCount%>支）</h2>
+        </div>
+    </div>
+    <div class="tab">
+    	<div class="active" id="tapCurrentHave">当前持有</div>
+        <div id="tapCunCancel">存款撤单</div>
+        <div id="tapHistoryDetail">历史查询</div>
+    </div>
+    <ul class="zen-list-5" id="currentHave">
+        
+    </ul>
+ </div>
+ <div class="zen-noData" style="display:none;" id="noData">暂无申购产品，赶快申购吧!</div>

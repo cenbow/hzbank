@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>“幸福添利”体验季</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no"/>
+<style type="text/css">
+*{margin:0;padding:0;outline:0; -webkit-appearance:none; outline:0;}
+h1,h2,h3,h4,h5{font-weight:normal;}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;line-height:1.5;color:#000;background-color:#fff; font-size:14px;}
+em,i{font-style:normal}i,b{font-style:normal; font-weight:normal;}
+/*== 以上为REST无需复制 ==*/
+body,body.gray-bg{background:#FFF url(images/market/a.gif) center 0 no-repeat; min-height:100%; background-size:100% auto;}
+.title{font-size:24px; font-weight:bold; color:#FFF; position:relative;}
+.title span{position:absolute; width:100%; height:40px; left:0; top:50%; margin-top:-20px; text-align:center; display:block;}
+
+.actWrp{position:relative;}
+.actWrp img{display:block; width:100%;}
+.actWrp .action{padding:0 0 10px; box-sizing:border-box; -webkit-box-sizing:border-box; position:absolute; left:0; top:0; width:100%; height:100%;}
+
+.view img{display:block;}
+
+.joinBtn{width:180px; height:44px; border-radius:24px; color:#FFF; text-align:center; text-decoration:none; display:block; line-height:44px; margin:10px auto; font-size:16px; background:#fd8900; border:2px solid #E2D9B1;}
+.code p{padding:0 15px;}
+.code p .name{font-size:16px;font-weight: bold;color:#ff6c00;}
+.code h3{text-align:center;}
+.code h3 .sp{color:#ff7100;width:70px;}
+
+.wrap{width:100%; background:url(images/market/dot2.png) repeat-x; padding-top:8px;}
+.wrap .ifo{background:#00A0E9; color:#FFF; padding:5px 10px 5px;}
+.wrap .ifo h1{font-size:16px; text-align:center; line-height:30px;}
+.wrap .time{text-align:center; padding:8px 10px; background:#1aaaeb; color:#FFF;}
+@media screen and (min-height:657px) and (max-width:440px) {
+  .wrap{position:absolute; left:0; bottom:0;}
+}
+.mask{width:100%; height:100%; position:fixed; left:0; top:0; background:url(images/market/arrow2.png) right top no-repeat; background-size:100px auto; background-color:rgba(0,0,0,0.34); z-index:9999;}
+</style>
+</head>
+
+<body>
+  <div class="title">
+    <img src="images/market/_t.gif" width="100%"> 
+    <span>“幸福添利”体验季</span>
+  </div>
+  <div class="actWrp">
+    <img src="images/market/_action.gif" width="100%">
+    <div class="action">
+      <div class="code">
+        <img src="images/market/_t2.gif" width="100%"> 
+     <!--    <p>您的好友<b id="name" class="name"></b>，邀请您注册杭银直销，注册成功并购买5000元及以上“幸福添利”产品，您和您的好友均可获得10元话费。</p> -->
+        <p>您的好友<b id="name" class="name"></b>，邀请您注册杭银直销，赶快来参加吧。</p>
+        <h3>邀请码：<span id="share" class="sp"></span></h3>
+      </div>
+      <a href="javascript:void(0);" class="joinBtn" onclick="showMask();">立即参加</a>
+    </div>
+  </div>
+  
+  <div class="view"><img src="images/market/b.gif" width="100%"></div>
+<div class="wrap">
+    <div class="ifo">
+      <h1>杭银直销“幸福添利”体验季</h1>
+<!--       <p>感谢您注册成为杭州银行直销银行客户，您还可以邀请朋
+友一同体验我行方便、快捷、高收益线上产品和服务，赶
+快加入我们吧！</p> -->
+    </div>
+    <div class="time">具体活动时间：敬请期待！</div>
+  </div>
+  <div class="mask" id="mask" style="display:none;"></div>
+  <div class="waitlayer" id="waitlayer" style="display:none;"></div>
+</body>
+ <script type="text/javascript">
+
+ function setcopy(){
+
+ }
+ 	function getDate(s,t) {
+		//s Y-m-d H:i:s
+		//t new Date()
+		t=t || new Date();
+		var re=/Y|m|d|H|i|s/g;
+		return s.replace(re,function($1) {
+			switch($1) {
+				case "Y":return t.getFullYear();
+				case "m":return t.getMonth()+1;
+				case "d":return t.getDate();
+				case "H":return t.getHours();
+				case "i":return t.getMinutes();
+				case "s":return t.getSeconds();
+			}
+			return $1;
+		});
+	};
+	
+	function showMask() {
+		if(isWeiXin() || isQQ()){
+			document.getElementById("mask").style.display="";
+		}else{
+			init();
+		}
+	};
+	
+	var Terminal = {
+		platform:function()
+		{
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {
+				android:u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+				iPhone:u.indexOf('iPhone') > -1
+			};
+		}()
+	}
+	
+	var isWeiXin = function(){
+		var ua = window.navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	var isQQ = function(){
+		var ua = window.navigator.userAgent.toLowerCase();
+		if(ua.match(/qq/i) == 'qq'){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	function search(){
+		var params = {};
+		var b = location.search.substring(1,location.search.length);
+		if(!b)return "";
+		var p = b.split('&');
+		for(var i=0;i<p.length;i++){
+			var a = p[i].split('=');
+			params[a[0]] = a[1];
+		}
+		
+		return params;
+	}
+	function init(){
+		if(!(isWeiXin() || isQQ())){
+			document.getElementById("waitlayer").style.display="";
+			var url = "HZBankDirect://openwith?code="+(search().code||"");
+			var timeout, t = 1000, hasApp = true;  
+			   setTimeout(function () {
+				   document.getElementById("waitlayer").style.display="none";
+			       if (hasApp) {  
+			       	//location.href = url;
+			       } else {  
+			    	   if(Terminal.platform.android){
+			    		   location.href = "https://dn-ebank.qbox.me/zxbank_android.apk?v="+getDate("YmdHis");
+			    	   }else if(Terminal.platform.iPhone){
+			    		   location.href = "itms-services://?action=download-manifest&url=https://dn-ebank.qbox.me/zxbank.plist&v="+getDate("YmdHis");
+			    	   }
+			       }  
+			       document.body.removeChild(ifr);  
+			   }, 1000)  
+			 
+			   var t1 = Date.now();  
+			   var ifr = document.createElement("iframe");  
+			   ifr.setAttribute('src', url);  
+			   ifr.setAttribute('style', 'display:none');  
+			   document.body.appendChild(ifr);  
+		        var t2 = Date.now();  
+		        if (!t1 || t2 - t1 < 50) {  
+		            hasApp = false;  
+		        }  
+		}
+	}
+	document.getElementById("share").innerHTML = search().code;
+	document.getElementById("name").innerHTML = decodeURIComponent(search().name);
+	
+	init();	
+ </script>
+</html>

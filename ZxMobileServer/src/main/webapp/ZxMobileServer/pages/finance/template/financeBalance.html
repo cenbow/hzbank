@@ -1,0 +1,61 @@
+<div class="gray-bg" ontouchstart="">
+	<p class="zen-loading"><span class="zen-loading-animate"></span></p>
+	<div class="content">
+		<div class="ifo-tit">
+			<!-- <h1><%=financeName%><i class="<%=financeClass%>"></i></h1>	 -->	
+			<h1><%=financeName%></h1>	
+			<h2>随时提现，实时到账</h2>
+		</div>
+		<div class="main_cm1">
+			<ul class="zen-list-2">
+			<!----------------------------------------------------------------->
+			<li>
+				<div class="chart-tab">
+			      <span class="active" index="1">七日年化收益率</span>
+			      <span index="2">万份收益</span>
+			    </div>
+				<!-- <h1 class="pt-tit line-chart">七日年化收益率</h1> -->
+				<div id="sevenDay">
+					<div class="num-tag">
+						<h2><b id="sevenDayAmt">0.0000</b> %</h2>
+					</div>
+					<div id="hs_chart_line"></div>
+				</div>
+				<div id="finance" style="display:none;">
+					<div class="num-tag">
+						<h2><b id="financeVol">0.0000</b> 元</h2>
+					</div>
+					<div id="hs_chart_bar"></div>
+				</div>
+			</li>
+			<!----------------------------------------------------------------->
+			<!-- <li>
+				<h1 class="pt-tit bar-chart">万份收益</h1>
+				<div class="num-tag">
+					<h2><b id="financeVol">0.0000</b> 元</h2>
+				</div>
+				<div id="hs_chart_bar"></div>
+			</li> -->
+			<!----------------------------------------------------------------->
+			<li>
+				<h1 class="pt-tit calculator">预期收益</h1>
+				<div class="exp-box">
+				<div class="exp-rzt">
+					<h2><b id="expectAmt">0.000</b>元</h2>
+					<h3>本行活期收益：<span id="expectBankAmt"></span>元</h3>
+				</div>
+				<div class="exp-ipt">
+					<div class="ipt-cell"><label>投资金额（元）</label><input type="tel" id="inputAmt" value="10000" /></div>
+					<div class="ipt-cell"><label>期限（天）</label><input type="tel" id="inputDayNum" value="365" /></div>
+				</div>
+				</div>
+			</li>
+			<!----------------------------------------------------------------->
+			</ul>
+		</div>
+		
+		<div class="buy-btn-wrap">
+			<div class="fillbox"><input type="button" value="立即购买" class="zen-btn btn-fn" id="goToBuy"/></div>
+		</div>
+	</div>
+</div>

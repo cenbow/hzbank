@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  	
+  <div class="holdAst new2016">
+  	<div class="scanView">
+    	<div class="mid">
+        	<h4>我的持有总资产</h4>
+            <h2>84372.00</h2>
+            <div class="circle" id="chartCircle"></div>
+            <div class="txt">
+            	<h1>理财资金</h1>
+                <h2>84372.00</h2>
+            </div>
+        </div>
+        <div class="types">
+            <span><i style="background-color:#2196f3"></i>幸福添利</span>
+            <span><i style="background-color:#fb6e52"></i>幸福乐存</span>
+            <span><i style="background-color:#ffc107"></i>我的基金</span>
+            <span><i style="background-color:#4caf50"></i>我的产品</span>
+        </div>
+    </div>
+    <div class="fudCard">
+    	<div class="itm">
+        	<div class="tit">幸福添利<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b>46,988.00</b>元</h1>
+                    <h2>本金加收益</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产58%</h2>
+                    <h2>七日年化收益率5.78%</h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell">转入</button>
+                <button class="cell">转出</button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#fb6e52">幸福乐存<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b>46,988.00</b>元</h1>
+                    <h2>本金加收益</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产58%</h2>
+                    <h2>七日年化收益率5.78%</h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell">转入</button>
+                <button class="cell">转出</button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#ffc107">我的基金<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b>46,988.00</b>元</h1>
+                    <h2>本金加收益</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产58%</h2>
+                    <h2>七日年化收益率5.78%</h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell">转入</button>
+                <button class="cell">转出</button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#4caf50">我的产品<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b>46,988.00</b>元</h1>
+                    <h2>本金加收益</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产58%</h2>
+                    <h2>七日年化收益率5.78%</h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell">转入</button>
+                <button class="cell">转出</button>
+            </div>
+        </div>
+    </div>
+  </div>	
+  <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script src="../scripts/libs/echarts-all.js"></script>
+  <script>
+  $(function(){
+	var payment=[
+		{value:9236, name:'幸福添利'},
+		{value:2345, name:'幸福乐存'},
+		{value:910, name:'我的基金'},
+		{value:6120, name:'我的产品'}
+	];
+	echarts.init(document.getElementById('chartCircle')).setOption({
+		color: ['#2196f3','#fb6e52','#ffc107','#4caf50'],
+		series : [
+			{
+				startAngle:0,
+				name:'投入统计',
+				type:'pie',
+				radius : ['72%', '100%'],
+				itemStyle : {
+					normal : {
+						label : {
+							show : false
+						},
+						labelLine : {
+							show : false
+						}
+					}
+				},
+				data: payment
+			}
+		]
+	});
+  })
+  </script> 
+</body>
+</html>

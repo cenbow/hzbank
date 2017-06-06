@@ -1,0 +1,85 @@
+<div class="new2016">
+  	<div class="deEloan" id="productInPage1">
+    	<div class="gap-box ft12 fc-9 mt10">付款账户</div>
+    	<div class="list">
+            <div class="list-item row">
+            	<div>电子账户</div>
+            	<div class="pl10 cell" id="cardNo">**  ****  ****  **  **</div>
+            </div>
+            <div class="list-item row">
+            	<div>账户余额</div>
+                <div class="cell pl10"><span class="fc-yellow" id="showBalanceSpan">0.00</span> 元</div>
+                <span class="hidden" id="financeUseVol">0.00</span>
+            </div>
+        </div>
+        <div class="gap-box ft12 fc-9 mt10">购买信息</div>
+        <div class="list">
+        	<div class="list-item row disabled">
+            	<div>购买金额</div>
+                <div class="cell ipt pl10"><input  type="number" id="inputMoney" maxlength="10"  placeholder="购买限额50万元"/></div>
+                <span>元</span>
+            </div>
+            <div class="list-item row disabled">
+            	<div>交易密码</div>
+                <div class="cell ipt pl10"><input id="pwd" type="password" value=""  placeholder="请输入交易密码" readOnly/></div>
+            </div>
+            <div class="list-item row">
+            	<div>预期收益</div>
+            	<div class="pl10 cell"><span class="fc-yellow" id="prospectiveYield">0.00</span>元</div>
+            </div>
+        </div>
+        <label class="zen-ckbox ml10 pt10">
+          <input type="checkbox" id="checkbox" checked="checked">
+          <span class="fm-agr">我已阅读并同意<a href="javascript:;" id="agreement1">《相关协议》</a></span>
+        </label>
+        <div class="gap-box pt10 fc-9">
+            <input type="button" value="确定" id="makesure" class="zen-btn mt10 mb10">
+        </div>
+    </div>
+  
+    <!-------------------------------------------------------------------------->
+	<div class="riskTest" id="productInPage2" style="display: none">
+    	<div class="successTip"><i></i>您已成功购买幸福满溢</div>
+        <div class="list">
+            <div class="list-item row">
+            	<div class="cell">申购金额</div>
+                <div class="fc-orange"  id="recAmt_suc">0.00</div>
+                <div>元</div>
+            </div>
+            <div class="list-item row">
+            	<div class="cell">付款账号</div>
+                <div><span id="recAccName_suc">****  ****  ****  ****  **</span>(电子账户)</div>
+            </div>
+        </div>
+        <div class="padded">
+        	<div class="pt10">
+            	<h1 class="fc-yellow">温馨提示：</h1>
+                <p class="fc-9 ft12 lh2">1.<span id="raiseenddate"></span>24:00前，如未募集满额可以撤销；</p>
+                <p class="fc-9 ft12 lh2">2.募集完成后，<span id="interestBeginDate"></span>开始计息。</p>
+            </div>
+        	<input type="button" id="tradeBanner" value="立即查看" class="zen-btn mt20">
+        </div>
+        <div id="hongbao" class="mt20" style="display:none"><img src="images/hongbao2/cashRed.png" width="100%" alt=""/></div>
+    </div>
+		<!-------------------------------------------------------------------------->
+	<div id="productInPage3" style="display:none ">
+		<div class="trs-rzt-fail">购买失败！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_err">购买账户：</span> <span id="recAccName_err"></span></p>
+				</div>
+				<div class="row fc-6 pt10 pb10">
+					<p>购买金额：<span class="fc-orange" id="recAmt_err"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_err"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<p>错误信息:<span class="trs-rzn" id="errorMessageText"></span></p>
+		<div class="gap-box"><input type="button" id="errorBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+  </div>	

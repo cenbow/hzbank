@@ -1,0 +1,49 @@
+<body>
+   <div class="new2016 deEloan">
+	 <div class="gap-box mt10" >转让产品: <span id="financeName">幸福金禧第X期</span></div>
+     <div class="list disabled">
+        <div class="list-item row txt-mid">
+            <div class="cell">
+            	<h1 class="fc-9 ft12">购买本金</h1>
+                <h2 ><span id="transferCapital">300,000.00</span>元</h2>
+            </div>
+            <div class="cell" style="border:1px solid #f2f2f2; border-width:0 1px;">
+            	<h1 class="fc-9 ft12">预期收益率</h1>
+                <h2><span id="tranRate">4.50</span>%</h2>
+            </div>
+            <div class="cell">
+            	<h1 class="fc-9 ft12">已持有天数</h1>
+                <h2 ><span id="tranHoldDays">365</span>天</h2>
+            </div>
+        </div>
+     </div>   
+     <div class="list disabled">
+        <div class="list-item row">
+            <span class="fc-blue">买方收益率:</span>
+            <div class="cell ipt pl10" style="width:121px"><input id="buyRate" type="text" value="" maxlength="5" placeholder="请设置买方收益率"/></div>
+            <span class="fc-blue">%</span>
+           <!--  <i class="help"></i> -->
+        </div>
+        <div class="list-item ft12 fc-9">请输入<span class="fc-orange" id="tranRateMin">3.9</span>---<span class="fc-orange" id="tranRateMax">8.5</span>之间的数值<br/>数值越高，越容易快速转出，但您的实际收益将越少</div>
+        <div class="list-item row ft13">
+            <div class="cell">您的本金: <span class="fc-orange" id="principal">3,200.00</span>元；</div>
+            <div class="cell">您的收益: <span class="fc-orange" id="income">0.00</span>元；</div>
+        </div>
+     </div>
+     <div class="list disabled">
+        <div class="list-item">
+            <span>收款账户</span>
+            <span class="pl10" id="cardNo">6230  ****  ****  5656  505</span>
+        </div>
+        <div class="list-item row disabled">
+            <span>交易密码</span>
+            <div class="cell ipt pl10"><input id="pwd" type="password" value="" placeholder="请输入交易密码" readOnly/></div>
+        </div>
+     </div>
+     <label class="zen-ckbox pl15 mt10">
+        <input type="checkbox" id="checkbox" checked="checked">
+        <span class="fm-agr" id="agree">我已阅读并同意<a href="javascript:;">《转让受让协议》</a></span>
+     </label>
+     <div class="padded mt20" ><button class="zen-btn" id="makesure">发布转让</button></div>
+   </div> 
+</body>

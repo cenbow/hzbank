@@ -1,0 +1,18 @@
+<%if(arr){
+   _.each(arr,function(temp){%>
+     <h1 class="<%=temp.key=='#'?'1':temp.key%>"><%=temp.key%></h1>
+     <ul class="<%=temp.key=='#'?'1':temp.key%>">
+     <%_.each(temp.list,function(temp){%>
+       <li>
+         <div class="avatar"><%=temp.photo?'<img src="data:image/png;base64,'+temp.photo+'">':''%></div>
+         <h3><%=temp.name%></h3>
+         <h2><%=temp.phone%></h2>
+         <%if(temp.state=="1"){%>
+         	<div class="zen-btn disabled" style="padding:0">已开通</div>
+         <%}else{%>
+         	<div class="zen-btn share" data="<%=temp.phone%>" style="padding:0">邀请</div>
+         <%}%>
+       </li>
+       <%})%>
+     </ul>
+   <%})}%>

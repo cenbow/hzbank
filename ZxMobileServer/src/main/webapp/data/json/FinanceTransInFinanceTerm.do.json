@@ -1,0 +1,16 @@
+{
+    "orderFlowNo" : "PB1010344330",
+    "noticeDepositAccount" : "3301040160000158306",
+    "hostErrorMessage" : "",
+    "hostReturnCode" : "0",
+    "orderState" : "20",
+    "cardNo" : "623061000990001047",
+    "activityIsStart" : "0",
+    "activityName" : "",
+    "expiryState" : "",
+    "haveSurvey" : "0",
+    "scoreCurr" : "1000",
+    "scoreTotal" : "100077949.29",
+    "orderSubmitTime" : "20160815202953",
+    "isExist" : "0"
+  }

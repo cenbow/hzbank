@@ -1,0 +1,87 @@
+  <div class="fundBuy">
+	  <div id="fundPage1">
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box">
+	          <p class="ft16">
+	           	 账户基金：<span><%=Utils.formatAcc(cardNo)%></span>
+	          </p>
+	          <p class="ft14 fc-9 mb10">账户余额：<span class="fc-orange" id="showBalanceSpan"></span> 元</p>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="ipt-opr">
+	          <label>购买金额：</label>
+	          <div class="cell"><input id="tranAmtText" type="number" value="" maxlength="10" placeholder="请输入购买金额"/></div>
+	        </div>
+	      </li>
+	      <li class="alien"><a href="javascript:void(0);" id="profit">费率折扣说明</a></li>
+	    </ul>
+	    <div class="gap-box"><input id="nextBtn" type="button" value="下一步" class="zen-btn mt10 disabled" disabled/></div>	    
+    </div>
+    <!----------------------------------------------------------------------------------->
+	<div id="fundPage2" style="display: none;">
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box">
+	         <div class="row pt10 pb10"> 
+	            <%  var fundNameClass = 'ft16';
+		            var fundNameLen = fundName.length;
+		            if(fundNameLen > 12){
+		            	fundNameClass = 'ft14';
+		            }               
+				%>   
+	           <p class="ft16">产品名称：<span class="<%=fundNameClass%>"><%=fundName%></span></p>
+	           <p class="fc-8">购买金额：<span class="fc-orange" id="tranAmtSub"></span> 元</p>
+	         </div>
+	         <div class="row fc-8 pt10 pb10">
+	           <p>付款账户：<%=Utils.formatAcc(cardNo)%></p>
+	           <p>姓名：<%=custName%></p>
+	           <p>账户余额：<span class="fc-orange" id="balanceSpan"></span>元</p>
+	         </div>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="ipt-opr">
+	          <label>交易密码：</label>
+			  <div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+	        </div>
+	      </li> 
+	    </ul>
+	    <div class="gap-box"><input id="submitBtn" type="button" value="确认购买" class="zen-btn mt10 disabled" disabled/></div>	    
+    </div>
+    <!----------------------------------------------------------------------------------->
+	<div id="fundPage3" style="display: none;">
+	    <div class="trs-rzt-success">购买成功！</div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-8 pt10 pb10 cl">
+	           <p>产品名称：<span class="<%=fundNameClass%>"><%=fundName%></span></p>
+	           <p>转入金额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+	         </div>
+	         <div class="row pt10 pb10">
+	           <p>付款账户：<%=Utils.formatAcc(cardNo)%></p>
+	           <p>姓名：<%=custName%></p>
+	        <!--    <p>账户余额：230.00元</p> -->
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+    	<div class="gap-box"><input id="successReturn" type="button" value="确定" class="zen-btn mb10"/></div>
+	</div>
+    <!-----------------------------------购买结果----------------------------------------->
+	<div id="fundPage4" style="display: none;">
+	    <div class="trs-rzt-fail">购买失败！</div>
+   	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-8 pt10 pb10 cl">
+	           <p>失败原因：<span id="errorMessage"></span></p>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+	    <div class="gap-box"><input id="errorReturn" type="button" value="确定" class="zen-btn mb10"/></div>
+    </div>
+  </div>  

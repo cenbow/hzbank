@@ -1,0 +1,27 @@
+<div class="specBuz">
+   <div class="pBar row">
+    	<div class="cell active">① 身份认证</div>
+        <div class="cell active">② 人脸检测</div>
+        <div class="cell active">③ 同卡号换卡</div>
+   </div>
+</div>
+<ul class="zen-list-2 busi">
+   <li>
+     <div class="opr-box">
+        <div class="row ipt-opr-2">
+          <label>卡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+          <div class="cell "><input type="text" id="cardNo" value="" placeholder="请输入您的卡号" /></div>
+          <i class="camera"></i>
+        </div> 
+        <div class="row ipt-opr-2">
+          <label>取款密码：</label>
+          <div class="cell"><input type="password" id="pwd" value="" placeholder="请输入取款密码" readOnly/></div>
+        </div>
+     </div> 
+   </li>
+</ul> 
+<div class="gap-box busi"><input type="button" id="submit" value="卡号密码验证" class="zen-btn mt20"/></div> 
+<div class="idc-result" style="display:none;">
+     <div class="rzt pass">您的卡密验证已通过</div> 
+     <input type="button" class="zen-btn" id="next" value="进入选择领卡网点"/>
+</div>

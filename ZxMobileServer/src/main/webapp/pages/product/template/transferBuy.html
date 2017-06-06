@@ -1,0 +1,81 @@
+<body>
+   <div class="new2016 deEloan" style="display:" id="product">
+	 <div class="gap-box row mt10">
+     	<div class="cell">购买产品: <span id="financeName"></span></div>
+        <!-- <div class="fc-9 ft12" id="detail">原标详情 ›</div> -->
+     </div>
+     <div class="list disabled">
+        <div class="list-item row txt-mid">
+            <div class="cell">
+            	<h1 class="fc-9 ft12">购买金额</h1>
+                <h2><span id="transferAMT">...</span>元</h2>
+            </div>
+            <div class="cell" style="border:1px solid #f2f2f2; border-width:0 1px;">
+            	<h1 class="fc-9 ft12">预期收益率</h1>
+                <h2 ><span id="tranRate">...</span>%</h2>
+            </div>
+            <div class="cell">
+            	<h1 class="fc-9 ft12">产品期限</h1>
+                <h2><span id="fundRestDay">...</span>天</h2>
+            </div>
+        </div>
+    </div>   
+    <div class="list disabled">
+        <div class="list-item">
+            <span>预期收益</span>
+            <span class="pl10"><span class="fc-orange" id="buyIncome">500,000.00</span>元</span>
+        </div>
+     </div>
+     <div class="list disabled">
+        <div class="list-item">
+            <span>电子账户</span>
+            <span class="pl10" id="cardNo">6230  ****  ****  5656  505</span>
+        </div>
+        <div class="list-item">
+            <span>账户余额</span>
+            <span class="pl10"><span class="fc-orange" id="showBalanceSpan">500,000.00</span>元</span>
+        </div>
+        <div class="list-item row disabled">
+            <span>交易密码</span>
+            <div class="cell ipt pl10"><input id="pwd" type="password" value="" placeholder="请输入交易密码" readOnly/></div>
+        </div>
+     </div>
+     <label class="zen-ckbox pl15 mt10">
+        <input type="checkbox" id="checkbox" checked="checked">
+        <span class="fm-agr">我已阅读并同意<a href="javascript:;"  id="agreement">《相关协议》</a></span><br/>
+        <span class="fc-9 ft12">※幸福满溢系列产品可能提前到期，以实际期限计算收益</span>
+     </label>
+     <div class="padded mt20"><button class="zen-btn" id="makesure">确定</button></div>
+   </div>
+    
+   <div class="new2016" style="display:none" id="success">
+  	<div class="riskTest">
+    	<div class="successTip"><i></i>你已成功购买幸福满溢转让产品</div>
+        <div class="list">
+            <div class="list-item row">
+            	<div class="cell">购买金额</div>
+                <div class="fc-orange" id="applyMoney">500,000.00</div>
+                <div>元</div>
+            </div>
+            <div class="list-item row">
+            	<div class="cell">付款账号</div>
+                <div ><span id="cardNo1">6230  6100  0660  5656  50</span>(电子账户)</div>
+            </div>
+        </div>
+        <div class="padded">
+        	<input id="look" type="button" value="立即查看" class="zen-btn mt20">
+        </div>
+        <div id="hongbao" class="mt20" style="display:none"><img src="images/hongbao2/cashRed.png" width="100%" alt=""/></div>
+    </div>
+   </div>
+    <div class="new2016" style="display:none" id="fail">
+  	<div class="deEloan loanResult">
+    	<div class="error faild">很抱歉，您本次购买失败，请返回重试</div>
+        <div class="gap-box pt10">
+            <input type="button" value="返回" class="zen-btn mt15" id="bank">
+        </div>
+    </div>
+  	</div>
+   
+   
+</body>

@@ -1,0 +1,61 @@
+<div class="new2016 Pays Regs">
+     <div class="list mt10">
+     	<div class="list-item row">
+            <div class="cell ft-big fc-blue">缴费信息确认</div>
+        </div>
+        <div class="list mt10">
+        	<div class="list-item row">
+            	<label class="txt-l" style="color: #000;">缴款账号</label>
+                <div class="ipt" style="color: #000;padding-left: 30px;" id="cardNo">6230********5620(电子账户)</div>
+            </div>
+            <div class="list-item row ">
+            	<label class="txt-l" style="color: #000;">账号户名</label>
+                <div class="ipt" style="color: #000;padding-left: 30px;" id="name">sah</div>
+            </div>
+            <div class="list-item row">
+            	<label class="txt-l" style="color: #000;">申请编号</label>
+                <div class="ipt" style="color: #000;padding-left: 30px;" id="billKey">123456789</div>
+            </div>
+            <div class="list-item row">
+            	<div class="txt-l" style="color: #000;">缴费金额</div>
+                <div class="ipt" style="color: #000;padding-left: 30px;">2,000.00</div>
+            </div>
+            <div class="list-item row">
+            	<div class="txt-l" style="color: #000;">金额大写</div>
+                <div class="ipt" style="color: #000;padding-left: 30px;">貳仟圆整</div>
+            </div>
+            <div class="list-item row">
+            	<div class="txt-l" style="color: #000;">手机号码</div>
+                <div class="ipt" style="color: #000;padding-left: 30px;" id="mobileNo">1325400145</div>
+            </div>
+        </div>
+        
+        <div class="dialog" style="display: none;" id="pwdText">
+	    	<div class="passwordBox">
+	        	<div class="head row">
+	            	<i class="back" id="hidePwdBox"></i>
+	                <div class="cell">请输入您的杭银直销交易密码</div>
+	            </div>
+	            <div class="pswdWrap">
+	        	<div class="pswdAll">
+	                <div class="tradePswd">
+	                    <div class="row" >
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                         <input type="password"  id="pwd" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" value=""  readOnly/>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div style="height:<%=Device.os=='android'?(pubParam.pwdHeight*0.8):(pubParam.pwdHeight+10)%>px;"></div>
+	        </div>
+    	</div> 
+	</div>
+     <div class="padded mt20" id="ensuerSubmit">
+     	<button class="zen-btn">确认</button>
+     </div>
+</div> 

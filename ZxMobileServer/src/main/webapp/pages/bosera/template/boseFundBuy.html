@@ -1,0 +1,42 @@
+<div class="new2016 Apply">
+	<h1 class="title">付款账户</h1>
+	<div class="list">
+		<div class="list-item">
+			电子账户：<span class="fc-9" id="cardNo"><%=Utils.formatAcc(cardNo)%></span>
+		</div>
+		<div class="list-item">
+			账户余额：<span class="fc-orange"><span id="showBalanceSpan">0.00</span>元</span>
+		</div>
+	</div>
+	<h1 class="title">购买金额</h1>
+	<div class="list">
+		<div class="list-item">
+			幸福添利 <span class="fc-orange">(七日年化收益率  <%=boseSevRate%>%)</span>
+		</div>
+		<div class="list-item">
+			<div class="row">
+				<label>申购份额(元)：</label>
+				<div class="ipt">
+					<input type="number" value="" id="purchaseAmt" placeholder="请输入申购份额" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="list">
+		<div class="list-item">
+			<div class="row">
+				<label>交易密码：</label>
+				<div class="ipt">
+					<input type="password" id="pwd" value="" placeholder="请输入交易密码" readOnly/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<label class="zen-ckbox pl15 mt5 hidden" id="sign">
+      <input type="checkbox" id="checkbox" checked="checked">
+      <span class="fm-agr">我已阅读并同意<a href="javascript:;" type="button" id="agreement">《幸福添利申购协议》</a></span>
+    </label>
+	<div class="padded">
+		<input type="button" value="确定" class="zen-btn mt20 disabled" id="submit">
+	</div>
+</div>

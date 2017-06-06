@@ -1,0 +1,137 @@
+<div class="new2016 fdDtlPage hapFud">
+        <div class="director">
+        	<div class="list bd">
+            	<div class="list-item arr" id="base">基本信息</div>
+                <div class="cnt" id="cnt">
+                	<div class="para">
+                        <div class="grid mb10" >	
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td>基金名称</td>
+                                <td><span class="fc-blue"><%=fundName%></span></td>
+                              </tr>
+                              <tr>
+                                <td>基金简称</td>
+                                <td><%=shortName%></td>
+                              </tr>
+                              <tr>
+                                <td>基金代码</td>
+                                <td><%=fundCode%></td>
+                              </tr>
+                              <tr>
+                                <td>基金类型</td>
+                                <td><%=fundType%></td>
+                              </tr>
+                              <tr>
+                                <td>发行日期</td>
+                                <td><%=issueDate%></td>
+                              </tr>
+<!--                               <tr> -->
+<!--                                 <td>基金经理</td> -->
+<!--                                 <td></td> -->
+<!--                               </tr> -->
+                              <tr>
+                                <td>管理人</td>
+                                <td><%=TAName%></td>
+                              </tr>
+                              <tr>
+                                <td>托管人</td>
+                                <td> <%=custodianBank%></td>
+                              </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        	<div class="list bd">
+            	<div class="list-item arr">投资目标</div>
+                <div class="cnt">
+                	<div class="para">
+                       <%=investObject%>
+                    </div>
+                </div>
+            </div>
+            <div class="list bd">
+            	<div class="list-item arr">投资风格</div>
+                <div class="cnt">
+                	<div class="para">
+                        <%=firstinvestStyle%>
+                    </div>
+                </div>
+            </div> 
+            <div class="list bd">
+            	<div class="list-item arr">投资范围</div>
+                <div class="cnt">
+                	<div class="para">
+                       <%=investScope%>
+                    </div>
+                </div>
+            </div>
+            <div class="list bd">
+            	<div class="list-item arr">决策依据</div>
+                <div class="cnt">
+                	<div class="para">
+                      <%=decisionBasis%>
+                    </div>
+                </div>
+            </div>
+<!--             <div class="list bd"> -->
+<!--             	<div class="list-item arr">投资策略</div> -->
+<!--                 <div class="cnt"> -->
+<!--                 	<div class="para"> -->
+                        
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--             <div class="list bd"> -->
+<!--             	<div class="list-item arr">基金经理</div> -->
+<!--                 <div class="cnt"> -->
+<!--                 	<div class="para"> -->
+                       
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--             <div class="list bd"> -->
+<!--             	<div class="list-item arr">基金公司</div> -->
+<!--                 <div class="cnt"> -->
+<!--                 	<div class="para"> -->
+                        
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--             <div class="list bd" id="shareBonus"> -->
+<!--             	<div class="list-item arr">分红</div> -->
+<!--                 <div class="cnt"> -->
+<!--                 	<div class="para"> -->
+<!--                        <%=navDivaccumulated%>  -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+            <div class="list bd"  id="fundFeeQuery">
+            	<div class="list-item arr">费率</div>
+                <div class="cnt">
+                	<div class="para" >
+                        <div class="grid mb10" id="feePara">	
+	                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		                         <thead>
+									<tr >
+										<td>交易名称</td>
+										<td>费率区间</td>
+										<td>费率（比率）</td>
+										<td >费率（每笔）</td>
+									</tr>
+						  		</thead>
+						  		<tbody id="fundFeeList">
+						  		
+						  		</tbody>
+					  		</table>
+					  		<div class="itemTips" style="text-align:right">以上费率申购6折优惠,定投8折优惠</div>
+				  		</div>
+				  		<div id="feePro" style="display: none;">暂无费率信息!</div>
+                    </div>
+<!-- 				  <div class="zen-noData" id="noData"  box-sizing:border-box;">更多产品正在上架，先去其他地方逛逛吧</div> -->
+                </div>
+            </div>
+        </div>
+        
+	</div> 

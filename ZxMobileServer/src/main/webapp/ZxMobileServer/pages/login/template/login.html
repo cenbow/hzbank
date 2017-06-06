@@ -1,0 +1,47 @@
+<style type="text/css">
+    html,body,.ui-view,.ui-view >div,.content{height:100%;}
+    body.gray-bg .ui-view{background:#FFF; overflow:hidden;}
+    .content{
+      overflow:hidden;
+      position:relative;
+      min-height:420px;
+      -webkit-animation-duration:400ms;
+      animation-duration:400ms;
+      -webkit-animation-fill-mode:both;
+      animation-fill-mode:both;
+      -webkit-animation-name:fadeInUp;
+      animation-name:fadeInUp;
+    }
+    .focusState{border-color:#3388FF;}
+    .regist-import{position:absolute;}
+    .zen-btn.reg-btn{box-sizing:border-box; -webkit-box-sizing:border-box; background:none; border:1px solid #0194E8; color:#0194E8;}
+    .zen-btn.reg-btn:not(.disabled):not(:disabled):active{color:#FFF; background:#0194E8;}
+</style>
+<div class="content">
+	<div class="login-logo"></div>
+	<div class="gap-box">
+		<div class="pt15">
+			<div class="ipt-txt login-user fm-del">
+				<input type="text" value="" id="userId" placeholder="用户名/身份证/手机号"/>
+			</div>
+			<div class="ipt-txt login-pswd fm-del" id="login-pswd">
+				<input type="password" id="pwd" value="" placeholder="登录密码" readOnly/>
+			</div>
+    		<div class="valid-code hidden" id="codeImgDiv">
+	        	<div class="ipt-txt">
+	              <input type="tel" id="validCode" value="" maxlength="4" placeholder="请输入验证码"/>
+	            </div>
+	            <div class="code" id="getCodeImg"><img src="" id="verifyImg"/></div>
+        	</div>
+			<div class="fm-remind zen-ckbox login-remind">
+				<input id="remember" type="checkbox" checked />
+				<label class="fm-agr" for="remember">记住用户名</label>
+				<a href="javascript:;" id="forget">忘记密码?</a>
+			</div>
+			<!--绑定弹框事件-->
+			<input type="button" id="login" value="登  录" class="zen-btn mt20"/>
+			<input type="button" id="register" value="注  册" class="zen-btn reg-btn mt20"/>
+		</div>  
+	</div>
+	<div class="regist-import">微信注册用户？首次登录请<a href="javascript:;" id="reg">点击这里</a></div>
+</div>

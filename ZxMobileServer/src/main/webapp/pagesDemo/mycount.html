@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+</head>
+
+<body>
+
+
+
+  <div class="gray-bg" ontouchstart="">
+  <div class="content" >
+    <div class="rate-box">
+      <h1 class="tit">昨日收益（元）</h1>
+      <h2 class="data" ><b id="yesterdayPro"><%=yesterTranAmt%></b></h2>
+    </div>
+    <ul class="zen-list-4 ctrl">
+    	<li class="ui-row txt-mid disabled">
+        	<div class="cell fc-orange">充值</div>
+            <div class="cell fc-blue">提现</div>
+        </li>
+    </ul>
+    
+    <div class="main_mc">
+      <ul class="zen-list-4">
+        <li class="pt10 pb10">
+          <h1 class="mc-t1" >累计收益（元）<span>目前收益计算只支持幸福添利</span></h1>
+          <h2 class="mc-c1" id="accPro"><%=accTranAmt%></h2>
+        </li>
+        <li class="mc-ext disabled">
+          <div class="mc-tap">
+            <span class="fl" >总资产（元）</span>
+            <span class="fr" id="totalProperty"><%=totalProperty%></span>
+          </div>
+          <div class="row-cell">
+            <div class="cell" id="ownPropertyDiv">
+              <h2>持有资产（元）</h2>
+              <h3 class="ft12 fc-9">不含未结算收益</h3>
+              <h4 class="ft16 fc-orange" id="ownProperty"><%=ownAmt%></h4>
+            </div>
+            <div class="cell" id="account_balance">
+              <h2>账户余额（元）</h2>
+              <h3 class="ft12 fc-9">不含未结算收益</h3>
+              <h4 class="ft16 fc-9" id="balance"><%=balance%></h4>
+            </div>
+          </div>
+        </li>
+        <!---------------------------------新增---------------------------------->
+        <li class="mc-ext disabled">
+          <div class="mc-tap">
+            <span class="fl" >我的基金 <span class="ft14 fc-orange">（3支）</span></span>
+          </div>
+          <div class="row-cell">
+            <div class="cell">
+              <h2>当前市值（元）</h2>
+              <h3 class="fc-green ft18">2.35</h3>
+            </div>
+            <div class="cell">
+              <h2>浮动盈亏（元）</h2>
+              <h3 class="fc-green ft18">+1.35</h3>
+            </div>
+          </div>
+          <div class="btn-grp fud-ctl">
+            <input type="button" value="我的基金" class="zen-btn" />
+            <input type="button" value="基金撤单" class="zen-btn" />
+          </div>
+        </li>
+        <!---------------------------------------------------------------------->
+        <li class="mc-tap" id="list-detail">
+          <span class="fl">交易记录</span>
+          <span class="fr">查看记录</span>
+        </li>
+        <li class="mc-tap" id="totalScorediv">
+          <span class="fl">总积分</span>
+          <span class="fr" id="totalScore"><%=totalScore%>分</span>
+        </li>
+      </ul>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

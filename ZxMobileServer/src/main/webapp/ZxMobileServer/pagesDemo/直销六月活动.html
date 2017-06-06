@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>直销六月活动</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link type="text/css" rel="stylesheet" href="../css/reset.css">
+  <link type="text/css" rel="stylesheet" href="../css/common_1.css">
+
+</head>
+
+<body ontouchstart="">
+  <div class="remFoundation">
+    <div class="june-login-bg">
+      <div class="june-actBegin ">
+        <div class="head-container">
+          <img src="../images/june_activity/hzbank.png" />
+          <div class="rule-btn">活动规则</div>
+        </div>
+        <div><img src="../images/june_activity/banner.png" width="100%"></div>
+        <div class="act-giftBox">
+          <div class="act-inputBox">
+            <input type="text" placeholder="请输入手机号码" class="telnum">
+            <div class="btn-login">登录领取礼包</div>
+            <h3 class="login-plus">礼包将发放至您填写的杭银直销注册手机号</h3>
+          </div>
+        </div>
+        <div class="advanListContainer">
+          <img src="../images/june_activity/choice.png" class="middleImg" />
+          <div class="advanListBox">
+            <div class="listBox">
+              <img src="../images/june_activity/listBox1.png" />
+              <div class="right">
+                <h2 class="a">够便捷</h2>
+                <p class="b">纯手机操作 纯线上开户</p>
+                <p>7&times;24小时服务</p>
+              </div>
+            </div>
+            <div class="listBox">
+              <img src="../images/june_activity/listBox2.png" />
+              <div class="right">
+                <h2 class="a">够专业</h2>
+                <p class="b">多产品矩阵 低门槛高收益</p>
+              </div>
+            </div>
+            <div class="listBox">
+              <img src="../images/june_activity/listBox3.png" />
+              <div class="right">
+                <h2 class="a">强兼容</h2>
+                <p class="b">支持19家银行卡绑定、开户</p>
+                <p> 放心存 随心取</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rule_container">
+      <div class="head_img"><img src="../images/june_activity/hzbank2.png"></div>
+      <div class="body_container">
+        <h2 class="title">活动规则</h2>
+        <div class="rulesDetails">
+          <ul>
+            <li><i>1</i>活动时间：2017年6月1日-6月30日</li>
+            <li><i>2</i>活动仅面向2017年6月1日及以后注册杭银直销账户的新客户</li>
+            <li><i>3</i>新客专享大礼包，包括1个金额随机最高188元的现金红包和1个份额随机最高2g的黄金礼包，共10000份，先到先得，送完为止。</li>
+            <li><i>4</i>赠送的专享大礼包可在登录杭银直销APP后的“首页”-“我的账户”-“奖品中心”查看和领取</li>
+            <li><i>5</i>现金红包属性：新注册、绑卡并成功激活杭银直销账户后立即发放，需要发放日的7天内拆开，逾期视为自动放弃。拆开后直接充值到用户的杭银直销活期账户，每个用户限获一次新客现金红包，不与杭银直销开展的其他新客优惠同时享受。</li>
+            <li><i>6</i>黄金礼包属性：在达成“活动期间申购1000元及以上幸福如金份额，且连续持有七天及以上”任务以前，处于冻结状态，待达成任务后将自动放弃，用户需在解冻后的7天内拆开，逾期视为自动放弃。拆开后实时发放至用户的杭银直销幸福如金账户。由于金价实时波动，到账金额以发放时点的数据为准。请充分阅读解冻规则，确保在活动结束前完成解冻。</li>
+            <li><i>7</i>杭银直销幸福如金对接博时黄金交易型开放式证券投资基金，基金非存款，产品有风险，投资须谨慎。</li>
+            <li><i>8</i>请确保您在活动结束前已开通杭银直销账户，且杭银直销账户注册号码和活动填写手机号码一致，否则视为自动放弃。</li>
+            <li><i>9</i>活动过程中如发现有碍其他用户公平参与本活动或违反活动目的的行为，杭州银行有权取消有此行为的用户参与本次活动的资格或因参加活动所获得的奖励。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script>
+  $(function() {
+    console.log(123);
+    var ruleBtn = document.getElementsByClassName("rule-btn")[0];
+    var rulesDetail = document.getElementsByClassName("rule_container")[0];
+
+    ruleBtn.onclick = function() {
+      window.scrollTo(0, rulesDetail.offsetTop);
+    }
+
+    var doc = document.documentElement;
+    var remFoundation = document.getElementsByClassName("remFoundation")[0];
+
+    function reset() {
+      var {
+        clientWidth
+      } = doc;
+      //var str = '<style>html{font-size:' + (clientWidth / 750) * 100 + 'px;}</style>';
+      var str = 'html{font-size:' + (clientWidth / 750) * 100 + 'px;}';
+      var remSet = document.createElement("style");
+      remSet.innerHTML = str;
+      var firstChild = remFoundation.firstChild;
+      remFoundation.insertBefore(remSet, firstChild);
+    }
+
+    window.onresize = reset;
+    reset();
+  })
+</script>
+
+</html>

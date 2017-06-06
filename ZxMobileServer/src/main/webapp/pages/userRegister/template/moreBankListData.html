@@ -1,0 +1,9 @@
+<%if(arr){
+   _.each(arr,function(temp){%>
+      <div class="fc-8 gap-box pb5 pt10 ft16"><%=temp.key%></div>
+      <div class="list">
+     <%_.each(temp.list,function(temp){%>
+		 <div class="list-item"><i class="ico-bnk bnk-<%=temp.bankIconUrl%>"></i><%=temp.bankName%></div>
+       <%})%>
+     </div>
+   <%})}%>

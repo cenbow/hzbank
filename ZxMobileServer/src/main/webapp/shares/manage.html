@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>杭银直销下载</title>
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<style>
+*{margin:0; padding:0; border:0; outline:0; box-sizing:border-box; position:relative;}
+body{background:url(../images/download/bg.gif) center top no-repeat; background-size:100% auto;}
+.wrap{width:100%; height:100%;}
+#inner{width:100%; height:100%; background:url(../images/download/cn.png) center center no-repeat; background-size:auto 100%;}
+.btn{height:160px; width:100%; padding:0 35px 0;}
+.btn a{display:block; height:42px; width:100%; background-color:#009fe8; line-height:42px; text-align:center; color:#fff; font-size:18px; text-decoration:none; font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif; border-radius:10px; box-shadow:0 3px 0 0 #007ac5;}
+.btn a.disabled{color:#666; background-color:#ccc; box-shadow:0 3px 0 0 #808080;}
+.btn h1{font-size:16px; color:#53bdee; padding-bottom:8px; font-weight:normal;}
+.btn .ipt{padding:10px 10px 10px 10px; border:1px solid #53bdee; font-size:14px; margin-bottom:8px; border-radius:5px; overflow:hidden; position:relative; background-color:#fff;}
+.btn .ipt input{font-size:14px;}
+/* .btn .ipt:after{content:attr(data-area); color:#fff; height:40px; line-height:40px; text-align:center; width:55px; position:absolute; left:0; top:0; bottom:0; background:#53bdee url(../images/download/arr.png) right center no-repeat; background-size:auto 16px; padding-right:5px;} */
+.tip{text-align:center; font-size:13px; color:#FF5500; height:0.6rem; line-height:0.6rem; margin-bottom:8px;}
+.tip.hide{visibility:hidden;}
+.tip i{display:inline-block; vertical-align:middle; height:16px; width:16px; background:url(../images/download/i.png) no-repeat; background-size:100% 100%; margin-top:-2px; margin-right:5px;}
+.mask{width:100%; height:100%; position:absolute; left:0; top:0; background:url(../images/market/arrow.png) right top no-repeat; background-size:140px auto; background-color:rgba(0,0,0,0.62); z-index:999;}
+.waitlayer{position:fixed; left:0; top:0; height:100%; width:100%; background:url(../images/market/waitlayer.gif) center center no-repeat; background-size:20px auto;}
+.Invite .shareCode{width:100%; height:100%; background-color:rgba(0,0,0,.5); position:fixed; z-index:999; left:0; top:0;}
+.Invite .shareCode .code{width:260px; height:260px; position:absolute; left:50%; top:50%; margin:-160px 0 0 -130px;}
+.Invite .shareCode .code img{width:100%; height:100%; display:block;}
+.Invite .shareCode .code:after{content:attr(data-label); display:block; height:40px; width:100%; line-height:40px; position:absolute; left:0; bottom:-40px; text-align:center; color:#fff;}
+</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div id="inner"></div>
+		<div class="btn">
+			<div class="ipt"><input type="tel" id="mrgNo" value="" maxlength="11" value="" placeholder="请输入您的客户经理编号" /></div>
+			<div class="tip hide" id="resuletTip"><i></i><span id="tipData"></span></div>
+			<div style="display: inline-flex;width: 100%;padding: 0;">
+				<a id="getCode" style="margin-right: 10px;">二维码分享</a>
+				<a id="link">页面分享</a>
+			</div>
+		</div>
+	</div>
+	<div class="Invite">
+		<div class="shareCode" id="shareCode" style="display: none">
+	  	  <div class="code" data-label="扫描二维码或者截屏分享" style="padding:15px; background-color:#fff;"><div id="code"></div></div>
+	  	</div>
+  	</div>
+<script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../scripts/libs/jquery/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var clientHeight = document.documentElement.clientHeight;
+	document.getElementById('inner').style.height = clientHeight - 160 + 'px';
+	
+	//获取当前网址，如：http://www.hzbank.com.cn:80/perbank/index.html
+    var curWwwPath = window.document.location.href;
+    
+    //获取主机地址之后的目录，如：perbank/index.html
+    var pathName = window.document.location.pathname;
+    var pos = curWwwPath.indexOf(pathName); 
+    
+    //获取主机地址，如： http://www.hzbank.com.cn:80  
+    var localhostPath = curWwwPath.substring(0,pos);
+    
+    //获取带"/"的项目名，如：/perbank
+    var projectName = pathName.substring(0,pathName.substr(1).indexOf('/')+1); 
+    
+    //获取项目路径
+    window.basePath = localhostPath + projectName;
+    
+	$("#getCode").on("click",function(){
+		var code = document.getElementById('mrgNo').value;
+		if(!code){
+			alert("请输入您的经理号");
+			return;
+		}
+		var link = basePath+"/shares/song.html?code="+code;
+		if($("#code").find("canvas")){
+			$("canvas").remove();
+		}
+		$("#code").qrcode({         
+         	render : "canvas",    	
+          	text : link,    	
+         	width : "230",         
+            height : "230",        
+            background : "#ffffff",
+            foreground : "#000000",
+            src: 'logo_bmm.png'
+		});
+		$("#shareCode").show();
+	});
+	
+	$("#link").on("click",function(){
+		var code = document.getElementById('mrgNo').value;
+		if(!code){
+			alert("请输入您的经理号");
+			return;
+		}
+		setTimeout(function(){
+			location.href = "song.html?code="+code+"&type=mask";
+		},1500)
+	});
+	
+	$("#shareCode").on("click",function(){
+		if($(this).css("display")=="none"){	
+			$(this).show();
+		}else{
+			$(this).hide();
+		}
+	});
+	
+})	
+</script>
+</body>
+</html>

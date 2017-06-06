@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="motPage">
+  	<div class="zen-tab">
+    	<ul class="zen-tab-nav">
+        	<li class="active">商业贷款</li>
+            <li>公积金贷款</li>
+            <li>组合贷款</li>
+        </ul>
+    </div>
+    <div class="list">
+        <div class="list-item row">
+        	<span>商业贷款</span>
+        	<div class="ipt cell"><input type="text" value="" class="fc-blue txt-r"/></div>
+            <span class="bit1">万</span>
+        </div>
+        <div class="list-item row">
+        	<span>公积金金额</span>
+        	<div class="ipt cell"><input type="text" value="" class="fc-blue txt-r"/></div>
+            <span class="bit1">万</span>
+        </div>
+        <div class="list-item arr row" id="term">
+        	<span>贷款期限</span>
+        	<div class="cell fc-blue txt-r">10年(120期）</div>
+        </div>
+        <div class="list-item row">
+        	<span>公积金利率</span>
+        	<div class="cell">
+            	<div class="switch-tab txt-r">
+                	<a href="#" class="active">标准利率3.58%</a>
+                    <a href="#">1.1倍利率3.58%</a>
+                </div>
+            </div>
+        </div>
+        <div class="list-item arr row" id="bzlorate">
+        	<span>商贷利率</span>
+        	<div class="cell txt-r">
+            	基准利率 × 
+                <input type="text" value="无折扣" readonly class="fc-blue txt-r" style="width:50px"/>
+                <span class="mtpa hide fc-blue"> 倍</span>
+            	<span class="mtpb hide fc-blue"> 折</span>
+            </div>
+        </div>
+        <div class="fc-9 ft12 pl10 pt10">2015年10月24日最新商贷利率4.9%，公积金利率3.25%</div>
+    </div>
+    <!--遮罩-->
+    <div class="mask" id="stage">
+    	<div class="sbox">
+        	<h1>贷款年限</h1>
+            <div class="list fc-blue">
+            	<div class="list-item">10年(120期）</div>
+                <div class="list-item">15年(180期）</div>
+                <div class="list-item">20年(240期）</div>
+                <div class="list-item">25年(300期）</div>
+                <div class="list-item">30年(360期）</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mask" id="discount">
+    	<div class="sbox">
+        	<h1>贷款年限</h1>
+            <div class="rdoGrp">
+            	<ul id="dizct">
+                	<li class="active">
+                    	<div class="itm">85折</div>
+                    </li>
+                    <li>
+                    	<div class="itm">9折</div>
+                    </li>
+                    <li>
+                    	<div class="itm">95折</div>
+                    </li>
+                    <li>
+                    	<div class="itm">手动输入优惠折扣</div>
+                    </li>
+                </ul>
+            </div>
+            <h1>商贷上浮利率</h1>
+            <div class="rdoGrp">
+            	<ul id="blrt">
+                	<li class="active">
+                    	<div class="itm">基准利率</div>
+                    </li>
+                    <li>
+                    	<div class="itm">1.1倍</div>
+                    </li>
+                    <li>
+                    	<div class="itm">1.2倍</div>
+                    </li>
+                    <li>
+                    	<div class="itm">手动输入上浮倍数</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="gap-box mt30">
+    	<button class="zen-btn">计算</button>
+    </div>
+  </div>	
+  <script type="text/javascript" src="../scripts/libs/zepto/zepto.js"></script>
+  <script>
+  Zepto(function($){
+	var term = $('#term');
+	term.on('click', function(){
+		var stage = $('#stage');
+		stage.show();
+		var opts = stage.find('.list-item');
+		opts.on('click',function(){
+			var txt = $(this).text();
+			term.find('.cell').text(txt);
+			stage.hide();
+		})
+	})
+	
+	//////////////////////////////////////////
+	$('.switch-tab a').on('click', function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	})
+	
+	//////////////////////////////////////////
+	var bzl = $('#bzlorate');
+	var bzlIpt = bzl.find('input');
+	var mtpa = bzl.find('.mtpa');
+	var mtpb = bzl.find('.mtpb');
+	bzl.on('click', function(){
+		var discount = $('#discount');
+		discount.show();
+		
+		var dzOpts = discount.find('#dizct li');
+		var rtOpts = discount.find('#blrt li');
+		
+		function setParam(cur){
+			mtpa.hide();
+			mtpb.hide();
+			var txt = cur.find('.itm').text();
+			if(txt != '手动输入优惠折扣' && txt != '手动输入上浮倍数'){
+				if(txt == '基准利率') txt = '无折扣';
+				cur.addClass('active').siblings().removeClass('active');
+				bzlIpt.attr('readonly', true);
+				bzlIpt.val(txt);
+			}else{
+				txt == '手动输入上浮倍数' ? mtpa.show() : mtpa.hide();
+				txt == '手动输入优惠折扣' ? mtpb.show() : mtpb.hide();
+				bzlIpt.removeAttr('readonly');
+				bzlIpt.val('').focus();
+			}
+			discount.hide();
+		}
+		
+		dzOpts.on('click', function(){
+			setParam($(this));
+		})
+		
+		rtOpts.on('click', function(){
+			setParam($(this));
+		})
+		
+	})
+  })
+  </script> 
+</body>
+</html>

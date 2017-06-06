@@ -1,0 +1,36 @@
+{
+    "iCityInfo" : [ {
+      "cityCode" : "3310",
+      "cityName" : "杭州市"
+    }, {
+      "cityCode" : "3320",
+      "cityName" : "宁波市"
+    }, {
+      "cityCode" : "3330",
+      "cityName" : "温州市"
+    }, {
+      "cityCode" : "3350",
+      "cityName" : "嘉兴市"
+    }, {
+      "cityCode" : "3360",
+      "cityName" : "湖州市"
+    }, {
+      "cityCode" : "3370",
+      "cityName" : "绍兴市"
+    }, {
+      "cityCode" : "3380",
+      "cityName" : "金华市"
+    }, {
+      "cityCode" : "3410",
+      "cityName" : "衢州市"
+    }, {
+      "cityCode" : "3420",
+      "cityName" : "舟山市"
+    }, {
+      "cityCode" : "3430",
+      "cityName" : "丽水市"
+    }, {
+      "cityCode" : "3450",
+      "cityName" : "台州市"
+    } ]
+  }

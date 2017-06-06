@@ -1,0 +1,187 @@
+<div class="list" >
+<%_.each(iElecDetailInfo,function(temp, i){
+	var nowDate = new Date();
+	var year = nowDate.getFullYear();
+	var nowMonth = nowDate.getMonth() + 1 < 10 ? "0"+(nowDate.getMonth() + 1):nowDate.getMonth() + 1;
+	var nowDay = nowDate.getDate() < 10 ? "0"+nowDate.getDate() : nowDate.getDate();
+	var taday = year+nowMonth+nowDay+"000000";
+	
+	var date =temp.transferDate.substring(5,7);
+	var mydate = temp.transferDate.replace(/\-/g,"")+"000000";
+	var week ;
+	var time ;
+	var month;
+	
+	var nowDate1 = Utils.parseDate(taday,'yyyyMMddhhmmss').getTime();
+	var myDate1 = Utils.parseDate(mydate,'yyyyMMddhhmmss').getTime();
+	var subTime = Math.floor((nowDate1 - myDate1)/(24*3600*1000));
+	
+	var myMonth = temp.transferDate.substring(0,7).replace(/\-/g,"");
+	var nowMonth1 = year+nowMonth;
+	if(myMonth == nowMonth1){
+		month = "本";
+	}else{
+		month=temp.transferDate.substring(0,4)+"年"+temp.transferDate.substring(5,7);
+	}
+	
+	if(subTime == 0){
+		week = "今天";
+		time = temp.transferTime.substring(0,5);
+	}else if(subTime == 1){
+		week = "昨天";
+		time = temp.transferTime.substring(0,5);
+	}else{
+		week = Utils.getWeek(Utils.parseDate(mydate,'yyyyMMddhhmmss').getDay());
+		time = temp.transferDate.substring(5,10);
+	}
+	var classType="",
+		message="",
+		sum="",
+		inSum=temp.inTransferSum,
+		type=temp.hostBusCode,
+		remarkNum = temp.remarkNum,
+		remark = temp.remark,
+		summary = temp.summary,
+		payAccountName = temp.payAccountName,
+		idType;
+	
+	if(type=='FSSB1003'||type=='FSSB8003'||type=='ZXFDC004'){
+		classType="tran-add";
+		message="幸福添利购买";
+		sum="-"+temp.outTransferSum;
+		idType="a";
+	}else if(type=='FSSB1004'||type=='FSSB8004'||type=='ZXFDC005'){
+		classType="tran-add";
+		message="幸福添利赎回";
+		sum="+"+temp.inTransferSum;
+		idType="a";
+	}else if(type=='EBKP2010'){
+		classType="tran-save";
+		message="幸福乐存购买";
+		sum="-"+temp.outTransferSum;
+		idType="b";
+	}else if(type=='EBKP2011'||type=='EBKP2012'){
+		classType="tran-save";
+		message="幸福乐存赎回";
+		sum="+"+temp.inTransferSum;
+		idType="b";
+	}else if(type=='FSS00200'){
+		classType="tran-fund";
+		message="基金购买";
+		sum="-"+temp.outTransferSum;
+		idType="f";
+	}else if(type=='BATH0130'){
+		idType="f";
+		if(MUI.isEmpty(inSum)||inSum <= 0){
+			classType="tran-fund";
+			message="基金购买";
+			sum="-"+temp.outTransferSum;
+		}else{
+			classType="tran-fund";
+			message="基金赎回";
+			sum="+"+temp.inTransferSum;
+		}
+	}else if(type=='BATH1005'){
+		classType="tran-cun";
+		message="结构性存款购买";
+		sum="-"+temp.outTransferSum;
+		idType="d";
+	}else if(type=='BATH1007'){
+		classType="tran-cun";
+		message="结构性存款到期";
+		sum="+"+temp.inTransferSum;
+		idType="d";
+	}else if(type=='ZXFD0010'){
+		classType="tran-gold";
+		message="幸福如金购买";
+		sum="-"+temp.outTransferSum;
+		idType="e";
+	}else if(type=='ZXFD0011'){
+		classType="tran-gold";
+		message="幸福如金撤单";
+		outSum = temp.outTransferSum;
+		if(outSum.substring(0,1)=='-'){
+			sum = "+"+outSum.substring(1,outSum.length);
+		}else{
+			sum=temp.outTransferSum;
+		}
+		idType="e";
+	}else if(type=='BATH0142'){
+		classType="tran-gold";
+		message="我的账户转入-利息";
+		sum="+"+temp.inTransferSum;
+		idType="g";
+	}else if(remarkNum=='608'&& remark=='金禧计划'){
+			if(MUI.isEmpty(inSum)||inSum <= 0){
+				message="幸福金禧买入";
+				sum="-"+temp.outTransferSum;
+			}else{
+				message="幸福金禧还款";
+				sum="+"+temp.inTransferSum;
+			}
+		idType="c";
+	}else if((summary.substring(0,2)=='项目' && summary.substring(summary.length-2,summary.length)=='还款')||payAccountName.substring(0,4)=='金禧计划'||summary=='直销银行债权转让'){
+		
+		if(MUI.isEmpty(inSum)||inSum <= 0){
+				message="幸福金禧买入";
+				sum="-"+temp.outTransferSum;
+			}else{
+				message="幸福金禧还款";
+				sum="+"+temp.inTransferSum;
+			}
+		idType="c";
+	}
+	else if(type=='EBKP1048'){
+		message="红包入账";
+		sum="+"+temp.inTransferSum;
+		idType="h";
+	}else if(type=='EBKP0128'||type=='IBPSE101'||type=='EBKP2028'||type=='EBKP2035'||type=='EBKP2002'||type=='EBKP0127'||type=='EBKP2004'){
+		
+		if(MUI.isEmpty(inSum)||inSum <= 0){
+			message="提现";
+			sum="-"+temp.outTransferSum;
+		}else{
+			message="充值";
+			sum="+"+temp.inTransferSum;
+		}
+		
+		idType="g";
+	}else{
+		idType="g";
+		if(MUI.isEmpty(inSum)||inSum <= 0){
+			classType="tran-out";
+			outSum = temp.outTransferSum;
+			if(outSum.substring(0,1)=='-'){
+			message="我的账户转入";
+				sum = "+"+outSum.substring(1,outSum.length);
+			}else{
+				message="我的账户转出";
+				sum="-"+temp.outTransferSum;
+			}
+		}else{
+			classType="tran-in";
+			message="我的账户转入";
+			sum="+"+temp.inTransferSum;
+		}
+	}
+	if((i==0&&pageFlag=="0")||(i!=0&&date!=iElecDetailInfo[i-1].transferDate.substring(5,7))){
+	
+%>
+<h1 class="tt"><%=month+'月'%></h1>
+<%}%>
+     <div class="list-item row">
+           <div class="fc-9 ml5">
+                <h1 class="ft16"><%=week%></h1>
+                <p class="ft12"><%=time%></p>
+           </div>
+           <div class="iconBox"><i class="<%=idType%>"></i></div>
+           <div class="cell">
+                <h1 class="ft20"><%=sum%></h1>
+                <p class="fc-9 ft12"><%=message%></p>
+           </div>
+           <div>
+              <h1 class="ft12 fc-9">交易成功</h1>
+           </div>
+     </div>
+<%});%>
+</div>

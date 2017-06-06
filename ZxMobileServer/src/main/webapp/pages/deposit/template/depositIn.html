@@ -1,0 +1,105 @@
+<div class="content">
+	
+	<div id="depositInPage1" style="display: ">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+					<p class="ft14">我的账户：<span id="cardNo"></span><span class="ft12 fc-9" id="custName"></span></p>
+					<p class="ft14 fc-9 mb10">账户余额：<span class="fc-orange" id="showBalanceSpan"></span> 元</p>
+					<a href="javascript:;"  class="zen-btn btn-ctr btn-small" id="toIncome">充值</a>
+				</div>
+			</li>
+			<li>
+				<div class="ipt-opr">
+					<label>购买金额：</label>
+					<div class="cell"><input type="number" value="" maxlength="16" placeholder="购买金额最低1000.00元起"  id="tranAmt"/></div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" value="下一步" class="zen-btn mt10 disabled" id="nextBtn" disabled/></div>
+	</div>
+	<!-------------------------------------------------------------------------->
+
+	<div id="depositInPage2" style="display:none">
+		<!-------------------------------------------------------------------------->
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+				<div class="row pt10 pb10">
+					<p class="ft16">产品名称：幸福乐存</p>
+					<p class="fc-8">付款账户：<span id="cardNo2"></span></p>
+					<p class="fc-8">客户姓名：<span id="custName2"></span></p>
+					<p class="fc-8">账户余额：<span class="fc-orange" id="showBalanceSpan2"></span> 元</p>
+				</div>
+				<div class="row fc-8 pt10 pb10">
+					<p class="fc-8">购买金额：<span class="fc-orange" id="tranAmt2"></span> 元</p>
+<!-- 					<p class="cl">
+						<span class="fl">付款账户：<span id="cardNo2"></span></span>
+						<span class="fl">姓名：<span id="custName2"></span></span>
+					</p>
+					<p>账户余额：<span class="fc-orange" id="showBalanceSpan2"></span>元</p> -->
+				</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" value="确认购买" class="zen-btn" id="buyBtn"/></div>
+		<!-------------------------------------------------------------------------->
+	</div>
+	<!-------------------------------------------------------------------------->
+	<div id="depositInPage3" style="display: none">
+		<div class="trs-rzt-success">购买成功！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_suc">购买账户：</span> <span id="recAccName_suc"></span></p>
+					<p>购买金额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_suc"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" id="succBackButton" value="返回" class="zen-btn"/></div>
+    	<div id="hongbao" class="mt20" style="display: "><img src="images/hongbao/lecunhongbao.png" width="100%" alt=""/></div>
+    	<div id="drawLottery" class="mt20" style="display: "><img src="images/rotate/get-change.png" width="100%" alt=""/></div>
+	</div>
+		<!-------------------------------------------------------------------------->
+	<div id="depositInPage4" style="display:none ">
+		<div class="trs-rzt-fail">购买失败！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_err">购买账户：</span> <span id="recAccName_err"></span></p>
+					<p>购买金额：<span class="fc-orange" id="recAmt_err"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_err"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<p class="trs-rzn" id="errorMessageText"></p>
+		<div class="gap-box"><input type="button" id="errorBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+	<div id="depositInPage5" style="display:none ">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_dub">购买账户：</span> <span id="recAccName_dub"></span></p>
+					<p>购买金额：<span class="fc-orange" id="recAmt_dub"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_dub"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<p class="trs-rzn" id="errorMessageText">您的交易本行已经受理，稍后请查询交易结果！</p>
+		<div class="gap-box"><input type="button" id="dubBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+	<!-------------------------------------------------------------------------->
+</div>

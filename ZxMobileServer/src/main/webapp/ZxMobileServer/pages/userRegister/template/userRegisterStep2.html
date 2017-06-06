@@ -1,0 +1,59 @@
+  <div class="new2016 Regs">
+  	<div class="prgBar row">
+    	<div class="cell active" data-label="1">手机验证</div>
+        <div class="cell active" data-label="2">身份验证</div>
+        <div data-label="3">密码设置</div>
+    </div>
+    <div class="fm vaild">
+    	<div class="fm-itm">
+        	<label>姓<span class="bit1"></span>名</label>
+            <div class="ipt"><input id="input_userName" type="text" maxlength="15" value="<%=userName%>" placeholder="请输入您的姓名"/></div>
+            <i class="i-name"></i>
+        </div>
+        <div class="fm-itm">
+        	<label>身份证</label>
+            <div class="ipt"><input id="input_certNo" type="text" maxlength="18" value="<%=certNo%>" placeholder="请输入您的身份证号"/></div>
+        </div>
+        <div class="fm-itm">
+        	<label>银行卡</label>
+            <div class="ipt"><input id="input_bindCardNo" type="tel" maxlength="30" value="<%=bindCardNo%>" placeholder="请输入您的借记卡卡号"/></div>
+            <i class="i-card"></i>
+        </div>
+         <div class="fm-itm">
+        	<label>银<span class="bit1"></span>行</label>
+            <i class="<%=bankUrlClass%>" id="input_bankUrl"></i><div class="ipt"><input id="input_bank" type="text" value="<%=bankName%>" data-value="<%=bankType%>" placeholder="所属开户行" readonly/></div>
+        </div>
+        <div id="tr_safeInput" class="fm-itm" style="display:none">
+        	<label>密<span class="bit1"></span>码</label>
+            <div class="ipt"><input id="password" type="password" value="" placeholder="请输入取款密码" readonly="readonly"/></div>
+        </div>
+    </div>
+   	
+	<div class="padded">
+    	<div class="warnNotice">
+        	<h2>温馨提示：</h2>
+            <h3>以下银行可以绑卡后直接支付：</h3>
+            <ul>
+            <%
+            	if(iBankInfo.length>0){
+            	$.each(iBankInfo,function(index,info){
+            %>
+				<li><%=info.bankName%></li>
+			<%});}else{%>
+            	<li>工商银行</li>
+                <!-- <li>农业银行</li> -->
+                <li>中国银行</li>
+                <li>建设银行</li>
+                <li>交通银行</li>
+                <li>中信银行</li>
+                <li>光大银行</li>
+                <li>浦发银行</li>
+                <li>上海银行</li>
+                <!-- <li>平安银行</li> -->
+                <li>杭州银行</li>
+                <%}%>
+            </ul>
+        </div>
+        <input id="nextButton2" type="button" value="下一步" class="zen-btn mt20 disabled" disabled/>
+    </div>
+  </div>	

@@ -1,0 +1,44 @@
+<div class="specBuz">
+	<div class="pBar row" style="margin-bottom: 0px;">
+	 	<div class="cell active">① 身份认证</div>
+	    <div class="cell">② 绑定银行卡</div>
+	    <div class="cell">③ 填写实名信息</div>
+	</div>
+	<div class="content" id="userReg">
+	    <div class="gap-box">
+			 <div class="pt15">
+		        <h1 class="fm-tit-guide txt-mid">为了您的权益,请先进行实名认证</h1>
+		     </div>
+	     </div>
+	</div>
+    <ul class="liz">
+    	 <li class="row">
+         	<div class="tt">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</div>
+         	<input id="userName" value="<%=userName%>" class="cell" style="height:22px;"/>
+         </li>
+         <li class="row">
+         	<div class="tt">身份证号：</div>
+         	<div class="cell" id="certNo"><%=certNo%></div>
+         </li>
+         <li class="row">
+         	<div class="tt">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族：</div>
+         	<input id="people" value="<%=people%>" class="cell" style="height:22px;"/>
+         </li> 
+         <li class="row">
+         	<div class="tt">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</div>
+         	<input id="gender" value="<%=gender%>" class="cell" style="height:22px;"/>
+         </li> 
+         <li class="row">
+         	<div class="tt">出生日期：</div>
+         	<input id="birth" value="<%=birth%>" class="cell" style="height:22px;"/>
+         </li>
+         <li class="row">
+         	<div class="tt">住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</div>
+         	<textarea id="address" class="cell" style="width:200px;"><%=address%></textarea>
+         </li>
+     </ul>
+     <div class="gap-box mt20">
+     		<button id="nextButton1" data-label="识别无误，下一步" id="sure" class="zen-btn ensure"></button>
+          <button data-label="识别错误，重新扫描" id="cancel" class="again"></button>
+     </div>
+</div>

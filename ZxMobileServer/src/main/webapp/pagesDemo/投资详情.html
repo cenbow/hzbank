@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  	
+  <div class="invNow new2016">
+  	<div class="ivbox">
+    	<div class="tit">
+        	<span>安盈计划第32期</span>
+            <b class="bg-yellow">中低风险</b>
+        </div>
+        <div class="drow pl15 pt10 pb10">
+        	<div class="row">
+            	<div class="cell">
+                    <h1 class="fc-orange"><b>5.62</b>%</h1>
+                    <h3>预期收益率</h3>
+                </div>
+                <div class="cell">
+                    <h1><b>1000</b>元</h1>
+                    <h3>起投金额</h3>
+                </div>
+                <div class="cell">
+                    <h1><b>52</b>天</h1>
+                    <h3>投资期限</h3>
+                </div>
+            </div>
+        </div>
+        <div class="drow">
+        	<div class="tbl">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                        <h1>最小追加单位</h1>
+                        <h2>1.000元</h2>
+                    </td>
+                    <td>
+                        <h1>募集开始日</h1>
+                        <h2>2016-01-12</h2>
+                    </td>
+                    <td>
+                        <h1>募集结束日</h1>
+                        <h2>2016-02-03</h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <h1>还款方式</h1>
+                        <h2>到期还本付息</h2>
+                    </td>
+                    <td>
+                        <h1>起息日</h1>
+                        <h2>2016-01-12</h2>
+                    </td>
+                    <td>
+                        <h1>到期日</h1>
+                        <h2>2016-02-03</h2>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+        <div class="drow circleState">
+        	<div class="fc-9">剩余本金：<span class="fc-6">310，000.00元</span></div>
+            <div class="fc-9">投资总额：<span class="fc-6">30，000，000.00元</span></div>
+            <div class="state">
+                <div class="myCircle" data-percent="66%">
+                    <div class="left"><i></i></div>
+                    <div class="right"><i></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lbliz">
+    	<div class="itm spr">
+        	<div class="tit">费率</div>
+            <div class="cnt">
+            	<div class="row">
+                	<div class="cell">投标费率  <span class="fc-orange">0%</span></div>
+                    <div class="cell">转让费率  <span class="fc-orange">0%</span></div>
+                	<div class="cell">报销费率  <span class="fc-orange">0%</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit">费率</div>
+            <div class="cnt">
+            	<a href="#">《杭州银行直销银行安盈计划金融资产收益权转让协议》</a>
+            </div>
+        </div>
+        <div class="itm pt10">
+            <button class="rtn">费率</button>
+            <div class="cnt">
+            	<div class="row">
+                	<div class="cell">投标费率  <span class="fc-orange">0%</span></div>
+                    <div class="cell">转让费率  <span class="fc-orange">0%</span></div>
+                	<div class="cell">报销费率  <span class="fc-orange">0%</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="itm row pnl">
+        	<div class="cell a">协议范本</div>
+            <div class="cell b">项目信息</div>
+            <div class="cell c">投资记录</div>
+        </div>
+    </div>
+    <div class="gap-box mt20 mb20">
+    	<input type="button" value="立即购买" class="zen-btn"/>
+    </div>
+  </div>	
+  <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+	//circle
+	function setCircle(elem, x){
+	   var lcir = elem.querySelector('.left i');
+	   var rcir = elem.querySelector('.right i'); 
+	   if(x == 100){
+		  elem.className = 'myCircle done';
+	   }else if(x<=50){
+		 var deg = 3.6*x - 180;
+		 lcir.style.transform = lcir.style.webkitTransform = 'rotate('+deg+'deg)';
+		 lcir.style.transition = lcir.style.webkitTransition = 'transform '+(x/125)+'s ease-in-out';
+	   }else{
+		 var deg = 3.6*(x-50) - 180;
+		 lcir.style.transform = lcir.style.webkitTransform = 'rotate(0deg)';
+		 lcir.style.transition = lcir.style.webkitTransition = 'transform .4s ease-in';
+		 rcir.style.transform = rcir.style.webkitTransform = 'rotate('+deg+'deg)';
+		 rcir.style.transition = rcir.style.webkitTransition = 'transform '+(x/125-0.4)+'s ease-out .4s';
+	   }
+	}
+	$('.myCircle').each(function(){
+		var per = $(this).attr('data-percent').replace(/%/, '')*1;
+		setCircle(this, per);
+	})
+  })
+  </script> 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<div class="content">
+	<div id="depositCancel1">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+ 					<p class="ft16">产品名称：<span class="ft16" id="financeName"><%=financeName%></span></p>
+					<p class="ft14 fc-9">产品代码：<span class="fc-9" id="financeNo"><%=financeNo%></span></p>
+					<p class="ft14 fc-9">交易金额：<span class="fc-9" id="financeAmt"><%=Utils.formatCurrency(financeAmt)%></span> 元</p>
+					<p class="ft14 fc-9 mb10">交易日期：<span class="fc-9" id="transDate"><%=transDate%></span></p>
+				</div>
+			</li>
+			<li>
+				<div class="ipt-opr">
+					<label>交易密码：</label>
+					<div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" value="确认撤单" class="zen-btn mt10 disabled" id="doSubmit" disabled="disabled"/></div>
+	</div>
+	<div id="depositCancel2" style="display: none">
+		<div class="trs-rzt-success">撤单成功！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_suc">认购账户：</span> <span id="recAccName_suc"></span></p>
+					<p>撤单金额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_suc"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" id="succBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+</div>

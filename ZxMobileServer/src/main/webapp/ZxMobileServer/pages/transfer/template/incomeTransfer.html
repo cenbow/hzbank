@@ -1,0 +1,170 @@
+<div class="content">
+  	 <div id="incomePage1" style="display: ">
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box">
+	          <p class="ft16">
+	                          我的账户：<span id="recAccountText"></span>
+	            <span class="ft12 fc-9" id="userNameText"></span>
+	          </p>
+	          <p class="ft14 fc-9">账户余额：<span class="fc-orange" id="showBalanceSpan"></span> 元</p>
+	        </div>
+	      </li>
+	    </ul>  
+	    <div class="fm-remind pl10 pr10">
+          <span class="fr fc-blue" id="toHistory">历史充值账户</span>
+        </div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box">
+	           <div class="row ipt-opr-2" >
+	             <label>充值卡号：</label>
+	             <div class="cell">
+	             	<input type="tel" id="cardNoText" maxlength="19" value="" placeholder="请输入您的账号" />
+	             	<i class="camera"></i>
+	             </div>
+	           </div>
+	           <div class="row ipt-opr-2">
+	             <label>充值银行：</label>
+	             <div class="cell"><i id="bankIconUrlText" class="" style="display: none"></i><input type="text" id="bankNameText" value="" readonly/></div>
+	           </div> 
+	           <div class="row ipt-opr-2" id="ta_mobileDiv" style="display:none">
+	             <label>手机号码：</label>
+	             <div class="cell"><input type="tel" id="ta_mobileText" value="" maxlength="11" placeholder="请输入手机号码"/></div>
+	           </div>
+	           <div class="row ipt-opr-2">
+	             <label>充值金额：</label>
+	             <div class="cell"><input type="number" class="Money" id="tranAmtText" maxlength="13" value="" placeholder="请输入充值金额"/></div>
+	           </div>
+	           <div class="row ipt-opr-2" style="display: none">
+	             <input type="text" id="tranAmt" maxlength="16" value=""/>
+	           </div>
+	           <div class="row ipt-opr-2" style="display: none">
+	             <label>大写金额：</label>
+	             <div class="cell"><input type="text" id="tranAmtChineseSpan" maxlength="16" value="" readonly="readonly"/></div>
+	           </div>
+	        </div>
+	      </li>
+	      <li id="inputPasswd" style="display:none">
+	        <div class="ipt-opr" >
+	          <label>取款密码：</label>
+	          <div class="cell"><input id="pwd" type="password" value="" readonly="readonly" placeholder="请输入取款密码"/></div>
+	        </div>
+	      </li>
+	    </ul>  
+	    <div class="fm-remind pl10 pr10" id="remindDiv" style="display: none">
+	      <div class="err-rzt" id="input_errNotice" style="display: none">您输入的密码有误</div>
+	      <a href="javascript:;" id="forgetPwd">忘记密码?</a>
+	    </div>
+	    <div class="gap-box" id="inputSubDiv" ><input type="button" id="inputSubButton" value="确认" class="zen-btn mt10"/></div>
+	    <div class="gap-box" id="inputKamiSubDiv" style="display: none"><input type="button" id="inputKamiSubButton" value="确认" class="zen-btn mt10"/></div>
+	    <div class="gap-box" id="ta_nextStepDiv" style="display: none"><input type="button" id="ta_nextStep" value="下一步" class="zen-btn mt10"/></div>
+	</div>
+	
+    <!-------------------------------------------------------------------------->
+    <div id="incomePage2" style="display:none ">
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box">
+	         <div class="row">
+	           <p class="ft16">
+	                             转入账户：<span id="confim_recAcc"></span>
+	             <span class="ft12 fc-9" id="confim_recAccName"></span>
+	           </p>
+	         </div>
+	         <div class="row fc-8 pt10">
+	           <p class="pay-count"><span>充值卡号：</span><i id="confim_payAcc_class" class="ico-bnk bnk-zs"></i><span id="confim_payAcc"></span></p>
+	           <p class="pay-count"><span>充值金额：</span><span id="confim_tranAmt"></span></p>
+	         </div>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="opr-box">
+	           <div class="row ipt-opr-2">
+	             <label>短信验证码：</label>
+	             <div class="cell"><input type="tel" value="" id="ta_confim_code" maxlength="6"  placeholder="请输入短信验证码"/></div>
+	             <a href="javascript:;" id="sendSMSBtn" data-value="获取验证码" class="full-cash-btn"></a>
+	           </div>
+	        </div>
+	      </li>
+	    </ul> 
+	    <div class="gap-box"><input type="button" id="ta_submit" value="确认" class="zen-btn mt10"/></div> 
+	</div>
+	
+	<!-------------------------------------------------------------------------->
+	<div id="incomePage3" style="display: none">
+	    <div class="trs-rzt-success">充值成功！</div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-6 pt10 pb10">
+	           <p><span id="recAcc_suc">充值账户：</span> <span id="recAccName_suc"></span></p>
+	           <p>充值金额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+	         </div>
+	         <div class="row pt10 pb10">
+	           <span id="payAcc_suc"></span>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+	    <div class="gap-box"><input type="button" id="succBackButton" value="返回" class="zen-btn"/></div>
+    </div>
+    <!-------------------------------------------------------------------------->
+	<div id="incomePage4" style="display:none ">
+	    <div class="trs-rzt-fail">充值失败！</div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-6 pt10 pb10">
+	           <p><span id="recAcc_err">充值账户：</span> <span id="recAccName_err"></span></p>
+	           <p>充值金额：<span class="fc-orange" id="recAmt_err"></span> 元</p>
+	         </div>
+	         <div class="row pt10 pb10">
+	           <span id="payAcc_err"></span>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+	    <p class="trs-rzn" id="errorMessageText"></p>
+	    <div class="gap-box"><input type="button" id="errorBackButton" value="返回" class="zen-btn"/></div>
+    </div>
+    <div id="incomePage5" style="display:none ">
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-6 pt10 pb10">
+	           <p><span id="recAcc_dub">充值账户：</span> <span id="recAccName_dub"></span></p>
+	           <p>充值金额：<span class="fc-orange" id="recAmt_dub"></span> 元</p>
+	         </div>
+	         <div class="row pt10 pb10">
+	           <span id="payAcc_dub"></span>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+	    <p class="trs-rzn" id="errorMessageText">您的交易本行已经受理，稍后请查询交易结果！</p>
+	    <div class="gap-box"><input type="button" id="dubBackButton" value="返回" class="zen-btn"/></div>
+    </div>
+    <!-------------------------------------------------------------------------->
+    
+    <div id="incomePage6" style="display:none ">
+	    <div class="zen-search-panel fix">
+	      <div class="zen-search-bar">
+	        <input type="text" value="" placeholder="请输入关键字" id="queryBankInput"/>
+	      </div>
+	    </div>
+	      <div class="zen-search-list" id="zen-iscroll-wrapper">
+	        <ul class="zen-list-3 nobd" id="bankSelect">
+	          <!-- <li><i class="ico-bnk bnk-0110"></i>杭州银行</li>-->
+	        </ul>
+	      </div>
+	    
+	</div>
+	<div id="incomePage7" style="display: none">
+		<div class="zen-search-list" id="zen-iscroll-wrapper">
+			<ul class="zen-list-3 nobd" id="proviceList">
+			</ul>
+		</div>
+		<div class="zen-noData"  id="noData">暂无充值账户记录</div>	
+	</div>
+</div>

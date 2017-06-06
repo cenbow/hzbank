@@ -1,0 +1,103 @@
+  <div class="new2016 Regs" id="incomePage1">
+  	<div class="padded mt20 mb20">
+        <div class="add-card area ar-0110" id="cardClass">
+            <div id="card-ifo" class="card-ifo arr">
+              <div class="bank-wrap"><i class="ico-bnk-x2"></i></div>
+              <h1 id="bankName">杭州银行</h1>
+              <h2 id="cardNo">**** **** **** ****</h2>
+            </div>
+        </div>
+    </div>
+    <div class="fm vaild">
+        <div class="fm-itm">
+        	<label>充值金额</label>
+            <div class="ipt"><input id="input_tranAmt" type="number" value="" maxlength="12" placeholder="请输入充值金额"/></div>
+            <span>元</span>
+        </div>
+    </div>  	
+    <div class="fm vaild" id="inputPasswd" style="display:none">
+        <div class="fm-itm">
+        	<label>取款密码</label>
+            <div class="ipt"><input id="pwd" type="password" value="" readonly="readonly" placeholder="请输入取款密码"/></div>
+        </div>
+    </div>  	
+	<div class="padded">
+    	<div class="warnNotice" id="warnNotice1" style="display:none">
+        	<h2>温馨提示：</h2>
+            <h3>您也可以通过手机银行、网上银行等方式，向您的电子账户转入资金。</h3>
+        </div>
+        <div class="warnNotice" id="warnNotice2" style="display:none">
+        	<h2>温馨提示：</h2>
+            <h3>可充值任意金额激活账户!</h3>
+        </div>
+        <input id="submitBtn" type="button" value="提  交" class="zen-btn mt20 disabled" disabled/>
+    </div>
+  </div>
+  
+   <div class="new2016 Regs" id="incomePage2" style="display: none">
+  	<div class="fm vaild">
+    	<div class="fm-itm noCell">
+        	转入账户：<span id="confim_recAcc"></span>（<span class="fc-9" id="confim_recAccName"></span>）
+        </div>
+        <div class="fm-itm noCell fc-8 lh2">
+        	<div class="cardNum">充值卡号：<i id="confim_payAcc_class" class="ico-bnk bnk-zs"></i><span id="confim_payAcc"></span></div>
+            <p>充值金额：<span id="confim_tranAmt" class="fc-orange"></span> 元</p>
+        </div>
+    </div>
+	<div class="fm mt10">
+        <div class="fm-itm">
+        	<label>短信验证码</label>
+            <div class="ipt"><input id="ta_confim_code" type="tel" value="" maxlength="6" placeholder="请输入短信验证码"/></div>
+            <input type="button" value="发送验证码" class="get" id="sendSMSBtn"/>
+        </div>
+    </div>
+    <div class="padded">
+        <input id="submitBtn2" type="button" value="提  交" class="zen-btn mt20 disabled" disabled/>
+    </div>
+  </div>
+   
+  <div class="new2016 padded Regs" id="incomePage3" style="display: none">
+	<div class="atvSuc" id="resultTitle">恭喜您，充值成功！</div>
+    <div class="atvRzt">
+        <div class="itm">
+        	<h1>充值账户：<span id="recAccName_suc"></span></h1>
+            <h1>充值金额：<span class="fc-orange" id="recAmt_suc"></span>元</h1>
+        </div>
+        <div class="itm">
+        	<h1 class="fc-9">转出账户：<span id="payAcc_suc"></span></h1>
+        </div>
+    </div>
+    <input id="succBackButton" type="button" value="返回" class="zen-btn mt20">
+    <!-- <div id="hongbao" class="mt20" style="display: none"><img src="images/hongbao/rednotice.png" width="100%" alt=""/></div> -->
+    <div id="hongbao" class="mt20" style="display: none"><img src="images/hongbao2/cashRed.png" width="100%" alt=""/></div>
+  </div>
+  <div class="new2016 padded" id="incomePage4" style="display: none">
+	<!-- <style>body,body.gray-bg{background-color:#fff;}</style> -->
+    <div class="rechargeFail">
+    	<p class="fc-3">充值失败</p>
+        <p class="fc-9" id="errorMessageText"></p>
+    </div>
+    <input id="errorBackButton" type="button" value="返回" class="zen-btn mt30">
+
+  </div>
+    
+  <div class="new2016 Regs" id="incomePage6" style="display: none">
+  	<div class="padded mt10 mb5 fc-9">请选择付款账号</div>
+    <div class="bankCountList" id="bankList">
+    </div>
+   	
+	<div class="padded">
+        <button id="addCard" class="zen-btn addItm mt20">添加</button>
+    </div>
+  </div>
+  
+  <div class="new2016" id="incomePage7" style="display: none">
+  	<div class="transing">
+    	<div class="circle"></div>
+        <div class="time"><b id="waitTime">6</b>秒</div>
+    </div>
+    <div class="txt-mid">
+    	<p>正等待对方银行返回结果…</p>
+        <p class="fc-orange mt10">温馨提示：结果返回前，请不要重复转账</p>
+    </div>
+  </div>	

@@ -1,0 +1,41 @@
+<div class="specBuz">
+  <div class="loanApp new2016">
+  	<div class="progress">
+    	<i data-label="身份认证" class="active">1</i>
+        <i data-label="确认房屋信息">2</i>
+        <i data-label="申请人信息">3</i>
+        <i data-label="借款信息">4</i>
+    </div>
+    <!-- Progress 1 start! -->
+ 
+       <ul class="liz">
+       		<li class="row">
+            	<div class="tt">姓名：</div>
+            	<div class="cell"><%=userName%></div>
+            </li>
+            <li class="row">
+            	<div class="tt">身份证号：</div>
+            	<div class="cell"><%=certNo%></div>
+            </li>
+            <li class="row">
+            	<div class="tt">性别：</div>
+            	<div class="cell"><%=gender%></div>
+            </li>
+            <li class="row">
+            	<div class="tt">出生日期：</div>
+            	<div class="cell"><%=birth%></div>
+            </li>
+            <li class="row">
+            	<div class="tt">身份证住址：</div>
+            	<div class="cell"><%=address%></div>
+            </li> 
+       </ul>
+       <div class="gap-box mt20 mb20">
+       		<button data-label="识别无误，马上检测" id="sure" class="zen-btn ensure"></button>
+            <button data-label="识别错误，重新扫描" id="cancel" class="again"></button>
+       </div>
+	</div>
+    <!-- Progress 1 end! -->
+ 
+  </div>	
+  

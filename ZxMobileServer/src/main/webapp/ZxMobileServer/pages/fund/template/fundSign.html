@@ -1,0 +1,29 @@
+  <div class="signProgress">
+  <div id="fundSignPage1" >
+  	<div style="background-color:#fff; padding:10px; border-bottom:1px solid #e4e4e4;">
+  	    <span class="bold mb5">我已仔细阅读并认同以下内容：</span><br/>
+		<span class="ft12 fc-9 zen-prgh">1、该产品是杭州银行代销的产品，我知道其基本特征、交易规则和投资风险；<br/>
+		2、我知道交易中可能发生的各类费用，愿意承担并支付该费用；<br/>
+		3、我已阅读产品协议、风险揭示书、客户权益须知等相关材料，并不再存疑；<br/>
+		4、我知道银行作为代销方的责任范围，并接受其声明的免责条款；<br/>
+		5、我知道自己承受风险的能力，并愿意承担购买该产品带来的各项风险。<br/>
+		</span>
+    </div>
+    <ul class="zen-list-2">
+      <li>
+        <div class="count-ifo">
+          <p>签约账户：<span><%=Utils.formatAcc(cardNo)%></span></p>
+           <p>风险等级：<span class="fc-green" id="riskLevel"></span></p>
+        </div>
+      </li>
+      <li>
+        <div class="ipt-opr">
+          <label>交易密码</label>
+		  <div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+        </div>
+      </li>
+    </ul>
+    <div class="gap-box"><input id="submitBtn" type="button" value="确认签约" class="zen-btn mt10 mb10  disabled" disabled/></div>
+  </div>
+  	
+  </div>  

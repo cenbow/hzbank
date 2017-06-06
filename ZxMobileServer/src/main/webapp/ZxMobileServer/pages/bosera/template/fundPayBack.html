@@ -1,0 +1,42 @@
+<div class="new2016 Apply">
+	<h1 class="title">收款账户</h1>
+	<div class="list">
+		<div class="list-item">
+			电子账户：<span class="fc-9">(<%=Utils.formatAcc(cardNo)%>)</span>
+		</div>
+		<div class="list-item">
+			账户余额：<span class="fc-orange"><span id="showBalanceSpan">0.00</span>元</span>
+		</div>
+	</div>
+	<h1 class="title">赎回份额</h1>
+	<div class="list">
+		<div class="list-item">
+			幸福添利 <span class="fc-orange">(持有份额<span id="totalVol">0.00</span>元)</span>
+		</div>
+		<div class="list-item">
+			<div class="row">
+				<label>赎回份额(元)：</label>
+				<div class="ipt">
+					<input type="number" value="" placeholder="请输入赎回份额" id="purchaseAmt"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="list" style="margin-bottom: 10px;">
+		<div class="list-item">
+			<div class="row">
+				<label>交易密码：</label>
+				<div class="ipt">
+					<input type="password" id="pwd" placeholder="请输入交易密码" readOnly/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="padded">
+      <h1  class="fc-orange">温馨提示：</h1>
+      <p class="fc-9 ft13">单笔赎回限额20万，日累计赎回限额100万！</p>
+    </div>
+	<div class="padded">
+		<input type="button" value="赎回" class="zen-btn mt20 disabled" id="submit">
+	</div>
+</div>

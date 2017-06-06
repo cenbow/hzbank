@@ -1,0 +1,19 @@
+{
+    "projectNo" : null,
+    "projectName" : "",
+    "financePreInterestRate" : "",
+    "financePeriod" : "",
+    "minbuyamt" : "",
+    "toaddamt" : "",
+    "raisebegindate" : "",
+    "raiseenddate" : "",
+    "financeTotalAmt" : "",
+    "interestBeginDate" : "",
+    "interestEndDate" : "",
+    "projectNumber" : "",
+    "targetCustomer" : "",
+    "investment" : "",
+    "honourDate" : "",
+    "transferSubject" : "",
+    "usufructName" : ""
+  }

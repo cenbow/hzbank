@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="invList struDpst new2016">
+  	<div class="tab">
+    	<div class="active">新品区</div>
+        <div>转让区</div>
+    </div>
+  	<div class="gap-tab">
+    	<div class="inner row">
+            <div class="cell active">默认</div>
+            <div class="cell"><i class="up">收益率</i></div>
+            <div class="cell"><i class="up">期限</i></div>
+        </div>
+    </div>
+    <div class="plist">
+        <div class="box">
+            <div class="tt">
+            	<span>幸福满溢1999期32期</span>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <h1 class="fc-orange"><b>5.62</b>%</h1>
+                    <p>预期收益率</p>
+                </div>
+                <div class="cell">
+                    <h1><b>1000</b>元</h1>
+                    <p>起投金额</p>
+                </div>
+                <div class="cell">
+                    <h2 class="ft16"><span>303245.13</span>元</h2>
+                    <p>转让价格</p>
+                </div>
+                <div class="state">
+                	<div class="buyBtn">购买</div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="tt">
+            	<span>幸福满溢1999期32期</span>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <h1 class="fc-orange"><b>5.62</b>%</h1>
+                    <p>预期收益率</p>
+                </div>
+                <div class="cell">
+                    <h1><b>1000</b>元</h1>
+                    <p>起投金额</p>
+                </div>
+                <div class="cell">
+                    <h2 class="ft16"><span>303245.13</span>元</h2>
+                    <p>转让价格</p>
+                </div>
+                <div class="state">
+                	<div class="buyBtn disabled">购买</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+  </div>	
+  <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+	$('.gap-tab .cell').on('click', function(){
+		var cur = $(this);
+		var ch = cur.find('i');
+		if(cur.hasClass('active')){
+			ch.hasClass('down')? ch.removeClass('down') : ch.addClass('down');
+		}else{
+			cur.addClass('active').siblings().removeClass('active');
+		}
+	})
+	
+  })
+  </script> 
+</body>
+</html>

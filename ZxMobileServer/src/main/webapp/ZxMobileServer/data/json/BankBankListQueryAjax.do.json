@@ -1,0 +1,324 @@
+{
+    "iBankInfo" : [ {
+      "unionBankNo" : "104331000010",
+      "bankName" : "中国银行股份有限公司杭州中大支行"
+    }, {
+      "unionBankNo" : "104331000028",
+      "bankName" : "中国银行杭州市萧山支行河庄支行"
+    }, {
+      "unionBankNo" : "104331000036",
+      "bankName" : "中国银行股份有限公司杭州钱江路支行"
+    }, {
+      "unionBankNo" : "104331000044",
+      "bankName" : "中国银行杭州双菱支行"
+    }, {
+      "unionBankNo" : "104331000069",
+      "bankName" : "中国银行股份有限公司杭州秋涛支行"
+    }, {
+      "unionBankNo" : "104331000077",
+      "bankName" : "中国银行股份有限公司杭州东方支行"
+    }, {
+      "unionBankNo" : "104331000085",
+      "bankName" : "中国银行股份有限公司杭州新中国支行"
+    }, {
+      "unionBankNo" : "104331000093",
+      "bankName" : "中国银行股份有限公司杭州望江支行"
+    }, {
+      "unionBankNo" : "104331000108",
+      "bankName" : "中国银行股份有限公司杭州浙大支行"
+    }, {
+      "unionBankNo" : "104331000116",
+      "bankName" : "中国银行股份有限公司杭州钱江新城支行"
+    }, {
+      "unionBankNo" : "104331000124",
+      "bankName" : "中国银行股份有限公司杭州教工路支行"
+    }, {
+      "unionBankNo" : "104331000132",
+      "bankName" : "中国银行股份有限公司杭州杭大支行"
+    }, {
+      "unionBankNo" : "104331000149",
+      "bankName" : "中国银行杭州现代城支行"
+    }, {
+      "unionBankNo" : "104331000157",
+      "bankName" : "中国银行股份有限公司杭州建中支行"
+    }, {
+      "unionBankNo" : "104331000165",
+      "bankName" : "中国银行股份有限公司杭州文晖支行"
+    }, {
+      "unionBankNo" : "104331000173",
+      "bankName" : "中国银行股份有限公司杭州仙林桥支行"
+    }, {
+      "unionBankNo" : "104331000181",
+      "bankName" : "中国银行股份有限公司杭州潮王支行"
+    }, {
+      "unionBankNo" : "104331000190",
+      "bankName" : "中国银行杭州东站支行"
+    }, {
+      "unionBankNo" : "104331000204",
+      "bankName" : "中国银行杭州濮家支行"
+    }, {
+      "unionBankNo" : "104331000212",
+      "bankName" : "中国银行股份有限公司杭州和平支行"
+    }, {
+      "unionBankNo" : "104331000229",
+      "bankName" : "中国银行股份有限公司杭州拱北支行"
+    }, {
+      "unionBankNo" : "104331000237",
+      "bankName" : "中国银行股份有限公司杭州信义坊支行"
+    }, {
+      "unionBankNo" : "104331000245",
+      "bankName" : "中国银行股份有限公司杭州体育场路支行"
+    }, {
+      "unionBankNo" : "104331000253",
+      "bankName" : "中国银行股份有限公司杭州市庆春支行飞云江路分理处"
+    }, {
+      "unionBankNo" : "104331000261",
+      "bankName" : "中国银行股份有限公司杭州武林支行"
+    }, {
+      "unionBankNo" : "104331000270",
+      "bankName" : "中国银行股份有限公司杭州世纪新城支行"
+    }, {
+      "unionBankNo" : "104331000288",
+      "bankName" : "中国银行股份有限公司杭州国都支行"
+    }, {
+      "unionBankNo" : "104331000296",
+      "bankName" : "中国银行股份有限公司杭州文一支行"
+    }, {
+      "unionBankNo" : "104331000307",
+      "bankName" : "中国银行股份有限公司杭州中晖支行"
+    }, {
+      "unionBankNo" : "104331000315",
+      "bankName" : "中国银行股份有限公司杭州世贸支行"
+    }, {
+      "unionBankNo" : "104331000323",
+      "bankName" : "中国银行股份有限公司杭州湖墅支行"
+    }, {
+      "unionBankNo" : "104331000331",
+      "bankName" : "中国银行股份有限公司杭州望湖支行"
+    }, {
+      "unionBankNo" : "104331000340",
+      "bankName" : "中国银行股份有限公司杭州德迦支行"
+    }, {
+      "unionBankNo" : "104331000358",
+      "bankName" : "中国银行股份有限公司杭州朝源支行"
+    }, {
+      "unionBankNo" : "104331000366",
+      "bankName" : "中国银行股份有限公司杭州保俶路支行"
+    }, {
+      "unionBankNo" : "104331000399",
+      "bankName" : "中国银行股份有限公司杭州九堡支行"
+    }, {
+      "unionBankNo" : "104331000403",
+      "bankName" : "中国银行股份有限公司杭州出口加工区支行"
+    }, {
+      "unionBankNo" : "104331000411",
+      "bankName" : "中国银行杭州清泰支行"
+    }, {
+      "unionBankNo" : "104331000420",
+      "bankName" : "中国银行股份有限公司杭州近江支行"
+    }, {
+      "unionBankNo" : "104331000438",
+      "bankName" : "中国银行股份有限公司杭州德胜支行"
+    }, {
+      "unionBankNo" : "104331000446",
+      "bankName" : "中国银行股份有限公司杭州解放路支行"
+    }, {
+      "unionBankNo" : "104331000454",
+      "bankName" : "中国银行杭州天元支行"
+    }, {
+      "unionBankNo" : "104331000462",
+      "bankName" : "中国银行股份有限公司杭州新客站支行"
+    }, {
+      "unionBankNo" : "104331000479",
+      "bankName" : "中国银行杭州萧山开发区支行"
+    }, {
+      "unionBankNo" : "104331000487",
+      "bankName" : "中国银行杭州萧山绿都支行"
+    }, {
+      "unionBankNo" : "104331000495",
+      "bankName" : "中国银行杭州萧山瓜沥支行"
+    }, {
+      "unionBankNo" : "104331000500",
+      "bankName" : "中国银行杭州萧山桥南支行"
+    }, {
+      "unionBankNo" : "104331000518",
+      "bankName" : "中国银行杭州萧山衙前支行"
+    }, {
+      "unionBankNo" : "104331000526",
+      "bankName" : "中国银行杭州萧山临浦支行"
+    }, {
+      "unionBankNo" : "104331000534",
+      "bankName" : "中国银行杭州萧山城中支行"
+    }, {
+      "unionBankNo" : "104331000542",
+      "bankName" : "中国银行股份有限公司杭州大江东支行"
+    }, {
+      "unionBankNo" : "104331000559",
+      "bankName" : "中国银行杭州萧山金惠路支行"
+    }, {
+      "unionBankNo" : "104331000567",
+      "bankName" : "中国银行杭州萧山湘湖支行"
+    }, {
+      "unionBankNo" : "104331000575",
+      "bankName" : "中国银行杭州萧山北干支行"
+    }, {
+      "unionBankNo" : "104331000583",
+      "bankName" : "中国银行杭州萧山崇化支行"
+    }, {
+      "unionBankNo" : "104331000591",
+      "bankName" : "中国银行杭州萧山闻堰支行"
+    }, {
+      "unionBankNo" : "104331000614",
+      "bankName" : "中国银行杭州萧山四季花城支行"
+    }, {
+      "unionBankNo" : "104331000639",
+      "bankName" : "中国银行杭州萧山汽车城支行"
+    }, {
+      "unionBankNo" : "104331000698",
+      "bankName" : "中国银行股份有限公司临安城中街支行"
+    }, {
+      "unionBankNo" : "104331000760",
+      "bankName" : "中国银行股份有限公司富阳迎宾北路支行"
+    }, {
+      "unionBankNo" : "104331000786",
+      "bankName" : "中国银行股份有限公司杭州余杭宝塔支行"
+    }, {
+      "unionBankNo" : "104331000794",
+      "bankName" : "中国银行股份有限公司杭州余杭闲林支行"
+    }, {
+      "unionBankNo" : "104331000809",
+      "bankName" : "中国银行股份有限公司杭州余杭塘栖支行"
+    }, {
+      "unionBankNo" : "104331000817",
+      "bankName" : "中国银行股份有限公司杭州余杭瓶窑支行"
+    }, {
+      "unionBankNo" : "104331000825",
+      "bankName" : "中国银行股份有限公司杭州余杭乔司支行"
+    }, {
+      "unionBankNo" : "104331000930",
+      "bankName" : "中国银行股份有限公司建德梅城支行"
+    }, {
+      "unionBankNo" : "104331000948",
+      "bankName" : "中国银行股份有限公司建德寿昌支行"
+    }, {
+      "unionBankNo" : "104331000956",
+      "bankName" : "中国银行股份有限公司建德新安支行"
+    }, {
+      "unionBankNo" : "104331000964",
+      "bankName" : "中国银行股份有限公司建德城东支行"
+    }, {
+      "unionBankNo" : "104331000989",
+      "bankName" : "中国银行股份有限公司建德新广场支行"
+    }, {
+      "unionBankNo" : "104331000997",
+      "bankName" : "中国银行股份有限公司桐庐迎春街支行"
+    }, {
+      "unionBankNo" : "104331001004",
+      "bankName" : "中国银行股份有限公司桐庐分水支行"
+    }, {
+      "unionBankNo" : "104331001012",
+      "bankName" : "中国银行股份有限公司桐庐横村支行"
+    }, {
+      "unionBankNo" : "104331001037",
+      "bankName" : "中国银行股份有限公司桐庐广场路支行"
+    }, {
+      "unionBankNo" : "104331001061",
+      "bankName" : "中国银行股份有限公司杭州紫金港支行"
+    }, {
+      "unionBankNo" : "104331001088",
+      "bankName" : "中国银行股份有限公司杭州复兴支行"
+    }, {
+      "unionBankNo" : "104331001096",
+      "bankName" : "中国银行股份有限公司杭州建北支行"
+    }, {
+      "unionBankNo" : "104331001107",
+      "bankName" : "中国银行股份有限公司杭州西城支行"
+    }, {
+      "unionBankNo" : "104331001115",
+      "bankName" : "中国银行股份有限公司杭州星光大道支行"
+    }, {
+      "unionBankNo" : "104331001123",
+      "bankName" : "中国银行股份有限公司杭州涌金支行"
+    }, {
+      "unionBankNo" : "104331001166",
+      "bankName" : "中国银行股份有限公司杭州白马大厦支行"
+    }, {
+      "unionBankNo" : "104331001174",
+      "bankName" : "中国银行股份有限公司杭州府苑支行"
+    }, {
+      "unionBankNo" : "104331001199",
+      "bankName" : "中国银行股份有限公司杭州彩虹城支行"
+    }, {
+      "unionBankNo" : "104331001203",
+      "bankName" : "中国银行股份有限公司杭州延安路支行"
+    }, {
+      "unionBankNo" : "104331001211",
+      "bankName" : "中国银行股份有限公司杭州冠盛支行"
+    }, {
+      "unionBankNo" : "104331001220",
+      "bankName" : "中国银行股份有限公司杭州大学城支行"
+    }, {
+      "unionBankNo" : "104331001238",
+      "bankName" : "中国银行杭州萧山临江新城支行"
+    }, {
+      "unionBankNo" : "104331001246",
+      "bankName" : "中国银行股份有限公司杭州杭行路支行"
+    }, {
+      "unionBankNo" : "104331001254",
+      "bankName" : "中国银行股份有限公司萧山宁围支行"
+    }, {
+      "unionBankNo" : "104331001287",
+      "bankName" : "中国银行股份有限公司杭州钱江科技城支行"
+    }, {
+      "unionBankNo" : "104331050164",
+      "bankName" : "中国银行股份有限公司杭州滨江支行"
+    }, {
+      "unionBankNo" : "104331050285",
+      "bankName" : "中国银行股份有限公司杭州市城东支行"
+    }, {
+      "unionBankNo" : "104331051296",
+      "bankName" : "中国银行浙江省分行"
+    }, {
+      "unionBankNo" : "104331052772",
+      "bankName" : "中国银行股份有限公司杭州市余杭支行"
+    }, {
+      "unionBankNo" : "104331052828",
+      "bankName" : "中国银行临安支行"
+    }, {
+      "unionBankNo" : "104331052852",
+      "bankName" : "中国银行桐庐支行"
+    }, {
+      "unionBankNo" : "104331052877",
+      "bankName" : "中国银行富阳支行"
+    }, {
+      "unionBankNo" : "104331052908",
+      "bankName" : "中国银行杭州市钱塘支行"
+    }, {
+      "unionBankNo" : "104331052916",
+      "bankName" : "中国银行杭州市萧山支行"
+    }, {
+      "unionBankNo" : "104331052981",
+      "bankName" : "中国银行股份有限公司建德支行"
+    }, {
+      "unionBankNo" : "104331053031",
+      "bankName" : "中国银行淳安支行"
+    }, {
+      "unionBankNo" : "104331053154",
+      "bankName" : "中国银行股份有限公司杭州市开元支行"
+    }, {
+      "unionBankNo" : "104331053162",
+      "bankName" : "中国银行杭州市城北支行"
+    }, {
+      "unionBankNo" : "104331053179",
+      "bankName" : "中国银行杭州市高新技术开发区支行"
+    }, {
+      "unionBankNo" : "104331053314",
+      "bankName" : "中国银行杭州经济技术开发区支行"
+    }, {
+      "unionBankNo" : "104331053865",
+      "bankName" : "中国银行杭州市庆春支行"
+    }, {
+      "unionBankNo" : "104331065354",
+      "bankName" : "中国银行股份有限公司富阳春江支行"
+    } ]
+  }

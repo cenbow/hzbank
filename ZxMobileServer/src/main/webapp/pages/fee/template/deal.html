@@ -1,0 +1,33 @@
+<div class="new2016 Pays">
+     <div class="list disabled mt10">
+        <div class="list-item row">
+            <label class="txt-l">缴费项目</label>
+            <div class="ipt" style="padding-left: 13%";><input type="text" value="杭州市小客车竞价成交款缴款" readonly /></div>
+        </div>
+        <div class="list-item row">
+        	<label class="txt-l">缴款书编号</label>
+            <div class="ipt" style="padding-left: 9%"><input type="text" id="payNo" placeholder="请输入缴款书编号" /></div>
+        </div>
+        <div class="list-item row">
+            <label class="txt-l">付款人全称</label>
+            <div class="ipt" style="padding-left: 9%"><input type="text" id="payName" placeholder="请输入付款人全称" /></div>
+        </div>
+        <div class="list-item row">
+            <label class="txt-l">缴费金额(元)</label>
+            <div class="ipt" style="padding-left: 6%"><input type="text" id="payAmt" placeholder="请输入缴款金额" /></div>
+        </div>
+     </div>
+     <div class="padded mt10">
+        <div class="mb5 fc-9 ft13 lh1_8">
+            <h1 class="fc-orange ft14">温馨提示：</h1>
+            <p>1. 请根据<a id="showJpg">《杭州市小客车增量指标竞价收入缴款通知书》</a>填写缴款通知书编号、付款人全称及金额；</p>
+            <p id="timeSet"></p>
+            <p>3. 缴款日期：以杭州市小客车总量调控竞价系统(www.hzqcjj.com)公布日期为准</p>
+        </div>
+        <div style="display:none" id="imgContainer">
+        	<style type="text/css">.viewer-footer{display:none;}</style>
+    		<img data-original="images/pay/plateFeeNotice.jpg" width="100%" src="images/pay/plateFeeNotice.jpg" alt="plateFeeNotice">
+  		</div>
+        <button class="zen-btn mt15" id="dealNext">下一步</button>
+    </div>
+   </div>

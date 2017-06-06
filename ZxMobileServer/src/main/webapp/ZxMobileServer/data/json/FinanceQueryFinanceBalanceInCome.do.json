@@ -1,0 +1,30 @@
+ {
+    "iBalanceDetail" : [ {
+      "amtDir" : "1",
+      "amtDirName" : "转出",
+      "tranAmt" : "100.00",
+      "transDate" : "20160726",
+      "transTime" : "155301",
+      "tradeStatus" : "",
+      "balance" : "10900.00"
+    }, {
+      "amtDir" : "0",
+      "amtDirName" : "转入",
+      "tranAmt" : "10000.00",
+      "transDate" : "20160725",
+      "transTime" : "145505",
+      "tradeStatus" : "",
+      "balance" : "11000.00"
+    }, {
+      "amtDir" : "0",
+      "amtDirName" : "转入",
+      "tranAmt" : "1000.00",
+      "transDate" : "20160725",
+      "transTime" : "145248",
+      "tradeStatus" : "",
+      "balance" : "1000.00"
+    } ],
+    "turnPageTotalNum" : "3",
+    "turnPageBeginPos" : "1",
+    "turnPageShowNum" : "1000"
+  }

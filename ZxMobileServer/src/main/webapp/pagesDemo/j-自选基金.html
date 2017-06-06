@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+</head>
+
+<body>
+	<div class="new2016 hapFud">
+        <div class="fixed" style="width:100%; z-index:99;">
+            <div class="table">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr class="order">
+                        <th width="50%">名称代码</th>
+                        <th width="24%" class="typ rank-up">最新净值<i></i></th>
+                        <th class="typ">涨跌幅<i></i></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    	<div class="table delOprt" style="padding-top:39px;">
+        	<table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td width="50%">
+                        <h1>华夏沪港通恒生E…</h1>
+                        <h2 class="ft13 fc-9">000948</h2>
+                    </td>
+                    <td width="24%" class="fc-orange ft16">1.0230</td>
+                    <td>
+                        <span class="upBtn">+0.39%</span>
+                        <div class="delWrap"><i class="del"></i></div>    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>华夏沪港通恒生E…</h1>
+                        <h2 class="ft13 fc-9">000948</h2>
+                    </td>
+                    <td class="fc-orange ft16">1.0230</td>
+                    <td>
+                        <span class="upBtn">+0.39%</span>
+                        <div class="delWrap"><i class="del"></i></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>汇富添恒生指数分级</h1>
+                        <h2 class="ft13 fc-9">000948</h2>
+                    </td>
+                    <td class="fc-green ft16">1.0230</td>
+                    <td>
+                        <span class="downBtn">-0.39%</span>
+                        <div class="delWrap"><i class="del"></i></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+	</div> 
+    <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+	<script>
+	$(function(){
+		$('.order .typ').on('click', function (){
+			var cur = $(this);
+			if (cur.hasClass('rank-up')) {
+				cur.removeClass('rank-up').addClass('rank-down');
+			} else if(cur.hasClass('rank-down')) {
+				cur.removeClass('rank-down').addClass('rank-up');
+			} else {
+				var sibs = cur.siblings('.typ');
+				sibs.removeClass('rank-up').removeClass('rank-down');
+				cur.addClass('rank-up')
+			}
+		})
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<style>
+html,body.gray-bg,.ui-view,.ui-view >div{width:100%; height:100%;}
+.ui-view{background:#F8D794 url('images/hongbao/bg.gif') no-repeat; background-attachment:fixed; background-size:100% 100%; font-size:0.28rem; overflow-x:hidden;}
+.detailRule{background:#F8D794 url('images/hongbao/bg.gif') no-repeat; background-size:100% 100%;}
+*{-webkit-box-sizing:border-box; box-sizing:border-box; position:relative;}
+section{width:100%; height:100%; display:block; overflow-x:hidden;}
+section.rank{height:auto; padding:0.4rem 0;}
+.rank .note{width:5.64rem; background-color:#f19212; margin:0 auto; padding:0.18rem 0.16rem; border-radius:0.1rem; box-shadow:0 0.1rem 0 0 #f07c17;}
+.rank .note .pad{background-color:#fff9cd; min-height:4rem; border-radius:0.12rem; padding-top:0.5rem;}
+.rank .note .pad .inner{overflow:auto; -webkit-overflow-scrolling:touch;}
+.rank .note .tab{width:5.26rem; height:0.68rem; position:absolute; top:0; left:0.19rem; display:box; display:-webkit-box; z-index:99;}
+.rank .note .tab >div{width:50%; height:100%; box-flex:1; -webkit-box-flex:1; background:url(images/hongbao/mbtn.png) no-repeat center center; background-size:auto 100%;}
+.rank .note .tab >div.fbtn{background-image:url(images/hongbao/fbtn.png);}
+.rank .note .tab >div.fbtn.active{background-image:url(images/hongbao/fbtn2.png);}
+.rank .note .tab >div.mbtn.active{background-image:url(images/hongbao/mbtn2.png);}
+.rank .note .tab >div.mbtn{background-image:url(images/hongbao/mbtn.png);}
+.pad .total{width:100%; height:3rem; background:url(images/hongbao/rank.png) no-repeat top center; background-size:auto 2.66rem; padding-top:1.48rem; text-align:center; color:#fff; line-height:1.8;}
+.pad .total h2{color:#e40009; font-size:0.38rem; line-height:1rem;}
+.pad .list{padding:0.2rem; font-size:0.26rem; color:#1e1d18;}
+.pad .list .row{display:box; display:-webkit-box; height:0.96rem; line-height:0.56rem; padding:0.2rem 0.26rem 0.2rem 0.2rem; position:relative;}
+.pad .list .row + .row{border-top:1px solid #fee5a2;}
+.pad .list .row .cell{box-flex:1; -webkit-box-flex:1;}
+.pad .list .row .avatar{width:0.56rem; height:0.56rem; overflow:hidden; border-radius:50%; margin:0 0.06rem;}
+.pad .list .row .avatar img{display:block; height:100%; width:100%; border-radius:50%;}
+.pad .list .row .end{text-align:right; position:relative; min-width:1rem; height:0.54rem;}
+.pad .list .row .rzt{line-height:1.2; white-space:nowrap; position:absolute; right:0; top:50%; text-align:center; margin-top:-0.29rem;}
+.pad .list .row .rzt h3{font-size:0.24rem; color:#8f909c;}
+.end a.btn{color:#fff; background-color:#e73b0b; border-radius:0.06rem; padding:0.09rem 0.2rem;}
+.end a.btn:active{background-color:#cd3106;}
+.ui-view,.ui-view >div,section,body{-webkit-overflow-scrolling:touch;}
+</style>
+
+
+<section class="rank">
+	<div class="note">
+		<div class="tab">
+			<div class="mbtn active" ></div>
+			<div class="fbtn" ></div>
+		</div>
+		<!-- 我的红包 -->
+		<div class="pad" id="packetList">
+			<div class="total">
+				<h1>共收到<span id="packetNum"></span>个红包</h1>
+				<h2>共<span id="totalAmt"></span>元</h2>
+			</div>
+			<div class="inner">
+				<div class="list" id="packetInfoList">
+	
+				</div>
+			</div>	
+		</div>
+		<!-- 好友红包 -->
+		<div class="pad" id="rankList" style="display:none;">
+			<div class="total">
+				<h1>共收到<span id="totalAmt2"></span>元</h1>
+				<h2>排在第<span id="rankNum"></span>名</h2>
+			</div>
+			<div class="inner">
+				<div class="list" id="rankInfoList">
+			
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>

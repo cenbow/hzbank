@@ -1,0 +1,24 @@
+
+<div class="new2016">
+	<div class="riskTest">
+		<div class="successTip">
+			<i></i><span id="msg">您已成功买入幸福如金</span>
+		</div>
+		<div class="list">
+			<div class="list-item row">
+				<div class="cell" id="label">买入金额</div>
+				<div class="fc-orange" id="purchaseAmt">0.00</div>
+				<div id="much">元</div>
+			</div>
+			<div class="list-item row">
+				<div class="cell" id="account">付款账户</div>
+				<div><%=Utils.formatAcc(Utils.getEleCard().cardNo)%>(电子账户)</div>
+			</div>
+		</div>
+		<div class="padded">
+			<input type="button" value="立即查看" id="view" class="zen-btn mt20"> <input
+				type="button" value="继续购买" id="rebuy" class="zen-btn hollow mt15">
+		</div>
+		<div id="hongbao" class="mt20" style="display:none"><img src="images/hongbao2/cashRed.png" width="100%" alt=""/></div>
+	</div>
+</div>

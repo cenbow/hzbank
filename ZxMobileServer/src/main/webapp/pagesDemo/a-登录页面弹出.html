@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg">
+<div class="ui-view" data-position="0">
+  <div>
+    <style type="text/css">
+    html,body,.ui-view,.ui-view >div,.content{height:100%;}
+    body.gray-bg .ui-view{background:#FFF; overflow:hidden;}
+    .content{
+      overflow:hidden;
+      position:relative;
+      min-height:480px !important;
+      -webkit-animation-duration:400ms;
+      animation-duration:400ms;
+      -webkit-animation-fill-mode:both;
+      animation-fill-mode:both;
+      -webkit-animation-name:fadeInUp;
+      animation-name:fadeInUp;
+    }
+    .focusState{border-color:#3388FF;}
+    .regist-import{position:absolute;}
+	.zen-magnifier{position:absolute; height:36px; line-height:36px; padding:0 15px; background:rgba(255,35,0,0.64); left:0; top:0; z-index:9; border-radius:4px; color:#FFF; font-size:18px; letter-spacing:2px; -webkit-animation-duration:300ms; animation-duration:300ms; -webkit-animation-fill-mode:both; animation-fill-mode:both; -webkit-animation-name:fadeInUp; animation-name:fadeInUp;}
+	.zen-magnifier:before{content:""; display:block; height:0; width:0; border-style:solid; border-color:transparent transparent rgba(255,35,0,0.64); border-width:6px 5px; position:absolute; left:10px; bottom:36px;}
+    </style>
+    <div class="content">
+      <div class="login-logo"></div>
+      <div class="gap-box">
+        <div class="pt15">
+          <div class="ipt-txt login-user fm-del">
+            <input type="text" value="" id="userId" placeholder="用户名/身份证/手机号">
+            <i style="display:none;"></i>
+            <!--<div class="zen-magnifier" style="left:38px; top:42px;">
+              12345756786787
+            </div>-->
+          </div>
+          <div class="ipt-txt login-pswd fm-del" id="login-pswd">
+            <input type="password" id="pwd" value="" placeholder="登陆密码" readonly>
+            <i style="display:none;"></i>
+          </div>
+          <div class="fm-remind zen-ckbox login-remind">
+            <input id="remember" type="checkbox" checked="">
+            <label class="fm-agr" for="remember">记住用户名</label>
+            <a href="javascript:;" id="forget">忘记密码?</a> 
+          </div>
+          <!--绑定弹框事件-->
+          <input type="button" id="login" value="登录" class="zen-btn mt20">
+        </div>
+      </div>
+      <div class="regist-import">还没有账户？请<a href="javascript:;" id="reg">点击这里</a>注册用户</div>
+    </div>
+  </div>
+</div>
+<script src="../scripts/libs/zepto/zepto.js"></script>
+<script>
+Zepto(function($){
+  function Magnifier(elem, options){
+     this.elem = $(elem);
+	 this.options = options;
+	 this.addMagnifier();
+  };
+  
+  Magnifier.DEFAULTS = {
+	inputTarget: 'input',  
+    left: '10px',
+	top: '42px'	
+  };
+  
+  Magnifier.prototype.addMagnifier = function(){
+	var $this = this; 
+	var magCnt = null; 
+	$this.removeMagnifier();  
+	this.elem.find(this.options.inputTarget).on('keyup', function(){
+	  var iptTxt = $(this).val();
+	  if(iptTxt.length >0){
+	    if(!magCnt){
+		  magCnt = $('<div class="zen-magnifier" style="left:'+$this.options.left+'; top:'+$this.options.top+';"></div>');
+		  magCnt.appendTo($this.elem);
+		 }  	
+	    magCnt.text(iptTxt);
+	  }else{
+	    $this.removeMagnifier();
+		magCnt = null;
+	  }
+	}).on('blur',function(){
+	   $this.removeMagnifier();
+		magCnt = null;
+	})
+  };
+  
+  Magnifier.prototype.removeMagnifier = function(){
+	 this.elem.find('.zen-magnifier').remove(); 
+  }
+  
+  $.fn.textMagnifier = function(option){
+     return this.each(function(){
+	   //var $this = this;
+	   var options = $.extend({}, Magnifier.DEFAULTS, typeof option == 'object' && option);
+	   new Magnifier(this, options);
+	 }) 
+  }
+  
+  $('.login-user').textMagnifier({
+    inputTarget: '#userId',
+	left: '38px',
+	top: '42px'
+  })
+})
+</script>
+</body>
+</html>

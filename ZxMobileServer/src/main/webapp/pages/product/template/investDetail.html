@@ -1,0 +1,152 @@
+<div class="new2016 fdDtlPage">
+		<div class="view">
+        	<h2 id="financeName"><%=financeName%><span class="could-transfer" id="tranflag" style="display:none">持有7天可转</span><span class="risklabel"><%=financeRiskLevel%></span></h2>
+            <div class="rate">
+            	<p>预期年化收益率</p>
+                <h1><b><span id="financePreInterestRate"><%=financePreInterestRate%></span>%</b></h1>
+            </div>
+            <div class="row">
+            	<div class="cell">
+                	<h2>起购金额</h2>
+                    <p class="ft16"><span id="minbuyamt"><%=minbuyamt%></span>元</p>
+                </div>
+                <div class="cell">
+                	<h2>最小追加</h2>
+                    <p class="ft16"><span id="toaddamt"><%=toaddamt%></span>元</p>
+                </div>
+                <div class="cell">
+                	<h2>投资期限</h2>
+                    <p class="ft16"><span id="financePeriod"><%=financePeriod%></span>天</p>
+                </div>
+            </div>
+            <!-- 售罄标签 -->
+            <div class="soldOut" id="tag" style="display:none;"></div>
+        </div>
+        <div class="fudDetail">
+        	<div class="tab row">
+            	<div class="cell active">理财周期</div>
+                <div class="cell">周期详情</div>
+            </div>
+        </div>
+        
+        <div class="tabPoint">
+            <div class="funCycle">
+            	<div class="halfProgressCircle" id="progCircle">
+                	<div class="circleWrap">
+                    	<div class="circle">
+                            <div class="cutter">
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                        <!-- <span class="lbl b" data-percent="50%"></span> -->
+                    </div>
+                    <div class="state">
+                    	<%if(percent=='待发售'){%>
+                    	<p style="color: #0094e8;">待发售 </p>
+                    	<%}else{%>
+                    	<p>已认购 <span class="fc-blue"><span class="percent"><%=percent%></span>%</span></p>
+                    	<%}%>
+                        <p><%=(percent=='待发售'?'总额':'剩余')%> <span class="fc-blue"><%=Utils.formatCurrency(Utils.removeComma(financeUseVol)/10000,2)%></span>万元</p>
+                    </div>
+                </div>
+                <div class="raiseProgressBar" id="raiseBar">
+                	<div class="bar">
+                    	<div class="step1"><i></i></div>
+                        <div class="step2"><i></i></div>
+                        <div class="step3"><i></i></div>
+                        <i class="dot1">
+                        	<div class="mark">
+                            	<h1><%=raisebegindate.substring(5,10)%></h1>
+                                <h2>募集开始</h2>
+                            </div>
+                        </i>
+                        <i class="dot2">
+                        	<div class="mark">
+                            	<h1><%=raiseenddate.substring(5,10)%></h1>
+                                <h2>募集结束</h2>
+                            </div>
+                        </i>
+                        <i class="dot3">
+                        	<div class="mark">
+                            	<h1><%=interestBeginDate.substring(5,10)%></h1>
+                                <h2>起息日</h2>
+                            </div>
+                        </i>
+                        <i class="dot4">
+                        	<div class="mark">
+                            	<h1><%=interestEndDate%></h1>
+                                <h2>到期日</h2>
+                            </div>
+                        	
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class="cycleDetail" style="display:none">
+              	<div class="tbl">	
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td>产品余额/总额</td>
+                        <td><span class="fc-blue"><%=Utils.removeComma(financeUseVol)/10000%>万元</span> / <%=Utils.removeComma(financeTotalAmt)/10000%>万元</td>
+                      </tr>
+                      <tr>
+                        <td>募集开始</td>
+                        <td id="raisebegindate"><%=raisebegindate+" "+raisebegintime.substring(0,2)+":"+raisebegintime.substring(2,4)%></td>
+                      </tr>
+                      <tr>
+                        <td>募集结束</td>
+                        <td id="raiseenddate"><%=raiseenddate+" 24:00"%></td>
+                      </tr>
+                      <tr>
+                        <td>起息日</td>
+                        <td id="interestBeginDate"><%=interestBeginDate%></td>
+                      </tr>
+                      <tr>
+                        <td>到期日</td>
+                        <td id="interestEndDate"><%=interestEndDate%></td>
+                      </tr>
+                      <tr>
+                        <td>投资限额</td>
+                        <%if(limitamount > 0){%>
+                        <td>每人累计<span id="limitamount"><%=limitamount/10000%></span>万元</td>
+                        <%}else{%>
+                        <td>购买无限额</td>
+                        <%}%>
+                      </tr>
+                      <tr>
+                        <td>还款方式</td>
+                        <td>到期一次性还本付息</td>
+                      </tr>
+                      <tr>
+                        <td>其他</td>
+                        <td id="other">可撤单，不能预约，不能转让</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="director">
+        	<div class="list">
+            	<div class="list-item arr">产品信息</div>
+                <div class="cnt">
+                	<div class="para">
+                        本产品属于封闭式非保本型金融产品，对产品的相关介绍，请仔细阅读相关协议和说明书。本产品的购买、兑付、撤单等均无手续费。
+                    </div>
+                </div>
+            </div>
+        	<div class="list">
+            	<div class="list-item arr">风险提示</div>
+                <div class="cnt">
+                	<div class="para">
+                        本产品是中低风险投资产品，预期收益率不代表发行方及其他第三方对产品投资本金和收益的任何承诺和保证。请仔细阅读产品说明书及相关协议，充分认识投资风险，谨慎投资。
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="fixBtn">
+        	<div class="btnGrp">
+                <button class="zen-btn disabled" id="buy" disabled="disabled">立即购买</button>
+            </div>
+        </div>
+	</div>

@@ -1,0 +1,14 @@
+
+  {
+  "repServiceId" : "life_inputOneStopTransfer",
+  "repFlowNo" : "39970739",
+  "cd" : {
+    "totalNum" : "0",
+    "chargeFee" : "0.000000",
+    "isWorkDay" : "",
+    "channelFalg" : null,
+    "sumitTimestamp" : null
+  },
+  "ec" : "0",
+  "em" : ""
+}

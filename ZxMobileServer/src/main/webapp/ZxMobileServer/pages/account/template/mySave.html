@@ -1,0 +1,24 @@
+ <div class="new2016 hpDpt">
+ 	<div class="fudState">
+    	<h1>总资金(元)</h1>
+        <h2><%=Utils.formatCurrency(parseFloat(happySaveAmt), 2)%></h2>
+    </div>
+    <div class="row ctr">
+    	<div class="cell" id="happySaveBuy">购买</div>
+        <div class="cell" id="happySaveCancel">赎回</div>
+    </div>
+    <div class="chart">
+    	<h1 class="ft12 fc-9">幸福乐存利率（％）</h1>
+    	<div class="chartArea" id="barChart"></div>
+    </div>
+    <div class="tbList">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" id="iAccountDetail">
+          <tr id="listHead">
+            <th>子账户</th>
+            <th>可用余额(元)</th>
+            <th>操作</th>
+          </tr>
+        </table>
+        <div class="zen-noData" style="display:none;" id="noData">暂无符合内容</div>
+    </div>
+  </div>	

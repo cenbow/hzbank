@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  	
+  <div class="loanApp new2016">
+  	<div class="progress">
+    	<i data-label="身份认证" class="active">1</i>
+        <i data-label="确认房屋信息" class="active">2</i>
+        <i data-label="申请人信息" class="active">3</i>
+        <i data-label="借款信息">4</i>
+    </div>
+    <!-- Progress 1 start! -->
+    <div class="specBuz">
+       <ul class="liz">
+       		<li class="row">
+            	<div class="tt">申请人姓名：</div>
+            	<div class="cell">马冬梅</div>
+            </li>
+            <li class="row">
+            	<div class="tt">身份证号：</div>
+            	<div class="cell">465689199202036669</div>
+            </li>
+            <li class="row">
+            	<div class="tt">公积金缴存额：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入缴存金额"/></div>
+                <div class="tx">元</div>
+            </li>
+            <li class="row">
+            	<div class="tt">月收入：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入每月收入金额"/></div>
+                <div class="tx">元</div>
+            </li>
+            <li class="row">
+            	<div class="tt">其他贷款月还款额：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入其他还款金额"/></div>
+                <div class="tx">元</div>
+            </li>
+            <li class="row">
+            	<div class="tt">住宅电话：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入住宅电话"/></div>
+            </li>
+            <li class="row">
+            	<div class="tt">手机号码：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入手机号码"/></div>
+            </li>
+            <li class="row select">
+            	<div class="tt">户籍：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请选择" readonly/></div>
+            </li> 
+            <li class="row select" id="maritalStatus">
+            	<div class="tt">婚姻状况：</div>
+            	<div class="cell"><input type="text" value="未婚" readonly/></div>
+            </li>    
+       </ul>
+       <div class="depart" id="spouseIfo" style="display:none">
+       	 <div class="tit">申请人配偶信息</div>
+         <ul class="liz">
+            <li class="row">
+                <div class="tt">姓名：</div>
+                <div class="cell"><input type="text" value="" placeholder="请输入配偶姓名"/></div>
+            </li>
+            <li class="row">
+                <div class="tt">身份证号码：</div>
+                <div class="cell"><input type="text" value="" placeholder="请输入配偶身份证号码"/></div>
+            </li>
+            <li class="row">
+                <div class="tt">公积金缴存额：</div>
+                <div class="cell"><input type="text" value="" placeholder="请输入配偶公积金缴存额"/></div>
+            </li>
+         </ul>
+       </div>
+       
+       <div class="depart">
+       	 <ul class="liz">
+              <li class="row select" id="comRightSign">
+                  <div class="tt">共有权人标识：</div>
+                  <div class="cell"><input type="text" value="否" readonly/></div>
+              </li>
+              <li class="cright" style="display:none" id="crightBox">
+              	 <div class="itm">
+                 	<div class="row">
+                    	<div class="cell">姓名：张健康</div>
+                        <div class="cell">与申请人关系：配偶</div>
+                    </div>
+                    <div class="row">
+                    	<div class="cell">联系电话：13656239889</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">月收入：3000元</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">身份证号：3689198902023366</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">公司名称：杭州宇信易诚网络科技股份有限公司</div>
+                    </div>
+                    <div class="row mdfy">
+                    	<button class="btn">编辑</button>
+                        <button class="btn">删除</button>
+                    </div>
+                 </div>
+                 <div class="itm">
+                 	<div class="row">
+                    	<div class="cell">姓名：张健康</div>
+                        <div class="cell">与申请人关系：配偶</div>
+                    </div>
+                    <div class="row">
+                    	<div class="cell">联系电话：13656239889</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">月收入：3000元</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">身份证号：3689198902023366</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">公司名称：杭州宇信易诚网络科技股份有限公司</div>
+                    </div>
+                 </div>
+              </li>
+              <li class="add" id="addComBtn"><span>添加共有权人信息</span></li>    
+         </ul>
+       </div>
+       
+       <div class="gap-box mt20 mb20">
+       		<button class="zen-btn">提交</button>
+       </div>
+	</div>
+    <!-- Progress 1 end! -->
+ 
+    <!--<div class="selectBox">
+    	<div class="box">
+        	<ul>
+            	<li class="itm">我是选项1</li>
+                <li class="itm">我是选项2</li>
+                <li class="itm">我是选项3</li>
+                <li class="itm">我是选项3</li>
+            </ul>
+            <button class="btn">取消</button>
+        </div>
+    </div>-->
+  </div>	
+   <!-- 添加共有权人信息 start! -->
+   <div class="loanApp new2016" style="display:none;"  id="comRightFill">
+   	 <div class="specBuz">
+       <ul class="liz">
+       		<li class="row">
+            	<div class="tt">姓名：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入"/></div>
+            </li>
+            <li class="row">
+            	<div class="tt">证件号码：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入"/></div>
+            </li>
+            <li class="row">
+            	<div class="tt">工作单位：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入"/></div>
+            </li>
+            <li class="row">
+            	<div class="tt">联系电话：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入"/></div>
+                <div class="tx">元</div>
+            </li> 
+            <li class="row">
+            	<div class="tt">联系电话：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入"/></div>
+            </li>
+             <li class="row">
+            	<div class="tt">与申请人关系：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入"/></div>
+            </li>
+       </ul>
+       <div class="gap-box mt20 mb20">
+       		<button class="zen-btn">添加</button>
+       </div>
+     </div>   
+   </div>
+   
+    <!-- 添加共有权人信息 end! -->
+  <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+	//给jquery扩展一个方法,可作为插件独立使用
+	$.fn.selectDialog = function(opt){
+		var element = $(this);
+		element.on('click', function(){
+			var selbox = $('<div class="selectBox"></div>');
+			var box = $('<div class="box"></div>').appendTo(selbox);
+			function bulid(list, callback){
+				var ul = $('<ul></ul>');
+				for(var i = 0; i < list.length; i++){
+					var data = list[i].split('|');
+					var valstr = '';
+					if(data[1]){
+						valstr = 'data-value="'+ data[1] +'"';
+					}
+					var li = $('<li class="itm" '+ valstr +'>'+ data[0] +'</li>').on('click', function(){
+						if(callback) callback($(this).data('value'), $(this).text());
+						selbox.remove();
+					});
+					li.appendTo(ul);
+				}
+				return ul;
+			}
+			var newul = bulid(opt.list, opt.callback);
+			newul.appendTo(box);
+			var closeBtn = $('<button class="slcbtn">取消</button>').on('click', function(){
+				selbox.remove();
+			})
+			closeBtn.appendTo(box);
+			$('body').append(selbox);
+		})
+	}
+	
+	
+	//方法调用演示
+	$('#maritalStatus').selectDialog({
+		list: ['已婚|1','未婚|0'],
+		callback: function(value, label){
+			$('#maritalStatus').find('input').val(label);
+			value*1 ? $('#spouseIfo').show() : $('#spouseIfo').hide();
+		}
+	});
+	
+	$('#comRightSign').selectDialog({
+		list: ['是|1','否|0'],
+		callback: function(value, label){
+			$('#comRightSign').find('input').val(label);
+			value*1 ? $('#crightBox').show() : $('#crightBox').hide();
+		}
+	});
+	
+	$('#addComBtn').on('click', function(){
+		$('#comRightFill').show().siblings('.loanApp').hide();
+	})
+	
+  })
+  </script> 
+</body>
+</html>

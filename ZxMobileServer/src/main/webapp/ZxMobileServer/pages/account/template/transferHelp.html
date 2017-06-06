@@ -1,0 +1,105 @@
+<body>
+	<div class="new2016 fdDtlPage deEloan">
+		<div class="director">
+        	<div class="list">
+            	<div class="list-item arr">1.我可以转让部分产品么？</div>
+                <div class="cnt">
+                	<div class="para">
+                       	很抱歉！现阶段只支持全额转让，即您需要一次性转让您的所有本金和收益。
+                    </div>
+                </div>
+            </div>
+           	<div class="list">
+            	<div class="list-item arr">2.转让有手续费么？</div>
+                <div class="cnt">
+                	<div class="para">
+                   		发布转让和购买转让产品都没有手续费。
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            	<div class="list-item arr">3.发起转让的时间条件是什么？</div>
+                <div class="cnt">
+                	<div class="para">
+                      	您只要持有某个标记为可转让的产品超过7天就可以发起转让了，而且次数不受限制。但是，距到期日不足15天时，则不再允许转让。
+                    </div>
+                </div>
+            </div> 
+            <div class="list">
+            	<div class="list-item arr">4.交易时间是什么？</div>
+                <div class="cnt">
+                	<div class="para">
+                  		每天的8:00—22:00都可以进行发起转让、购买、撤销等各项交易。
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            	<div class="list-item arr">5.发布转让后的有效期限有几天？</div>
+                <div class="cnt">
+                	<div class="para">
+                   		 发布转让后，该条转让消息的有效期限只有3天（含转让当日），3天后自动失效，而且目前没有短信提醒，请注意额！
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            	<div class="list-item arr">6.什么是买家收益率？</div>
+                <div class="cnt">
+                	<div class="para">
+                      	买家收益率是您发布转让时最重要的参数，是指买家购买时能够获得收益率。一般来说，买家收益率越高，您的收益也就越少，但是转让成功的速度越快。
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            	<div class="list-item arr">7.为什么我的实际收益比自己计算的要少一些呢？</div>
+                <div class="cnt">
+                	<div class="para">
+                       	您的实际收益是根据预期总收益减去您设置的买方收益得到的。您的收益是贴现收益，因此一般会小于收益率乘以持有天数的计算方法得到的收益。收益只在卖方和买方之间流转分配，机构不收取费用。
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            	<div class="list-item arr">8.发布转让后，第二天才有人买，收益会受损么？</div>
+                <div class="cnt">
+                	<div class="para">
+                     	  转让信息发布后，您的本金加收益就是转让价格，随着您持有天数的增加，剩余天数的减少，您的转让价格就会增加，因此，只要没有转让出去，收益就会记在您的名下。
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            	<div class="list-item arr">9.转让当天的收益归谁呢？</div>
+                <div class="cnt">
+                	<div class="para">
+                       	为了鼓励快速转让，买方购买成功当日的收益归买方所有。
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+            	<div class="list-item arr">10.我的转让信息写错了，怎么办？</div>
+                <div class="cnt">
+                	<div class="para">
+                    	 转让信息发布后，不能直接修改转让信息，您可以选择先撤销信息，再重新发布转让。
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+	</div> 
+	<script>
+    $(function(){
+    	$('.director .list-item').on('click', function(){
+			var me = $(this), 
+			    cnt = me.next(), 
+			    setH = cnt.find('.para').get(0).offsetHeight, 
+			    offsetTop = me.offset().top;
+			setTimeout(function() {
+				window.scrollTo(0, offsetTop);
+			}, 200);
+			me.hasClass('spr') ? 
+			me.removeClass('spr') && cnt.css('height',0) : 
+			me.addClass('spr') && cnt.css('height',setH);
+		});
+		
+		
+    })
+    </script> 
+</body>

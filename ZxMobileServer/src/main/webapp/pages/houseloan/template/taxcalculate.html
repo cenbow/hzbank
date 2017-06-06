@@ -1,0 +1,71 @@
+
+  <div class="motPage">
+  	<div class="zen-tab">
+    	<ul class="zen-tab-nav">
+        	<li id="oldhouse" val="1" class="active">二手房</li>
+            <li id="newhouse" val="2" >新房</li>
+        </ul>
+    </div>
+    
+    <div id="houseType" class="list disabled houseTyp">
+    	<div class="list-item">房屋类型</div>
+        <div class="list-item">
+        	<div class="row" id="typeRow">
+            	<div id="normalhouse" val="1" class="cell a active">普通住宅</div>
+                <div id="nonormalhouse"  val="2" class="cell b">非普通住宅</div>
+                <div id="econmichouse" val="3" class="cell c">经济适用房</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="houseareainfo" class="list">
+        <div class="list-item row">
+        	<span>房屋建筑面积</span>
+        	<div class="ipt cell"><input id="housearea" type="number" maxlength="8"  class="fc-blue txt-r"></div>
+            <span class="bit1">平米</span>
+        </div>
+        <div class="list-item row">
+        	<span>房屋总价</span>
+        	<div class="ipt cell"><input type="number" id="houseprice" maxlength="8" class="fc-blue txt-r"></div>
+            <span class="bit1">万元</span>
+        </div> 
+    </div>
+    
+    <div class="list disabled">
+        <div id="housecardyear" class="list-item row">
+        	<span>房产证年限</span>
+        	<div class="cell">
+            	<div id="housecardyear11" class="switch-tab txt-r">
+                	<a val="aa" class="active">年限&lt;2</a>
+                    <a val="bb">2≤年限&lt;5</a>
+                    <a val="cc">年限≥5</a>
+                </div>
+            </div>
+        </div>
+        <div id="firstbuyhouse" class="list-item row">
+        	<div class="cell">买房家庭首次购房</div>
+            <div class="zen-switch-tab">
+                <a val="yes"  class="active">是</a>
+                <a val="no" >否</a>
+            </div>
+        </div>
+        <div id="sellhouse" class="list-item row">
+        	<div class="cell">卖房家庭唯一住房</div>
+            <div class="zen-switch-tab">
+                <a val="yes1" class="active">是</a>
+                <a val="no1" >否</a>
+            </div>
+        </div>
+        <div id="houseyuanjia" class="list-item row" style="display: none">
+        	<span>房屋原价</span>
+        	<div class="ipt cell"><input id="houseyuanjiatax" type="number" maxlength="8" value="" class="fc-blue txt-r"></div>
+            <span class="bit1">万元</span>
+        </div> 
+         <div id="housetips" class="fc-9 ft12 pl10 pt10" style="display: none" >经济适用房必须满五年才可上市交易</div>
+    </div>    
+    
+    <div  class="gap-box mt30 mb30">
+    	<button id="taxcalculate" class="zen-btn ">计算</button>
+    </div>
+  </div>	
+ 

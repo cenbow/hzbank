@@ -1,0 +1,125 @@
+  <div class="holdAst new2016">
+  	<div class="scanView" style="margin:0px">
+    	<div class="mid">
+        	<h4>我的持有总资产（元）</h4>
+            <h2><%=Utils.formatCurrency(ownAmt,2)%></h2>
+            <div class="circle" id="chartCircle"></div>
+            <div class="txt">
+            	<h1>持有资金</h1>
+                <h2><%=Utils.formatCurrency(ownAmt,2)%></h2>
+            </div>
+        </div>
+        <div class="types">
+            <span><i style="background-color:#2196f3"></i>添利</span>
+            <span><i style="background-color:#fb6e52"></i>乐存</span>
+            <span><i style="background-color:#4caf50"></i>结构存款</span>
+            <span><i style="background-color:#ffc107"></i>幸福金禧</span>
+            <span><i style="background-color:#ca3de8"></i>幸福如金</span>
+            <span><i style="background-color:#E50012"></i>幸福基金</span>
+        </div>
+    </div>
+    <div class="fudCard">
+    	<div class="itm">
+        	<div class="tit" id="happyAddProDiv">幸福添利<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b id="financeTotalVol"><%=Utils.formatCurrency(parseFloat(happyAddProAmt), 2)%></b>元</h1>
+                    <h2>本金加收益</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产<span id="haveHappyAddProAmt" style="color:#ffc392">0.00</span>%</h2>
+                    <h2>七日年化收益率<span id="sevenDayAmt">0.00</span>%</h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell" id="happyAddBuy"><span style="color:#2196f3">购买</span></button>
+                <button class="cell" id="happyAddCancel"><span style="color:#2196f3">赎回</span></button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#fb6e52" id="happySaveDiv">幸福乐存<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b><%=Utils.formatCurrency(parseFloat(happySaveAmt), 2)%></b>元</h1>
+                    <h2>本金总计</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产<span id="haveHappySaveAmt" style="color:#ffc392">0.00</span>%</h2>
+                    <h2>1000元起存哦~</h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell" id="happySaveBuy"><span style="color:#2196f3">购买</span></button>
+                <button class="cell"id="happySaveCancel"><span style="color:#2196f3">赎回</span></button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#4caf50" id="designSumDiv">结构性存款<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b><%=Utils.formatCurrency(parseFloat(designSum), 2)%></b>元</h1>
+                    <h2>当前市值</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产<span id="haveDesignSum" style="color:#ffc392">0.00</span>%</h2>
+                    <h2>当前持有<span style="color:#2196f3">（<%=designCount%>支）</span></h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell" id="myDesignList"><span style="color:#2196f3">当前持有</span></button>
+                <button class="cell" id="depositHistoryQuery"><span style="color:#2196f3">历史查询</span></button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#ffc107" id="p2pDiv">幸福金禧<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b><%=Utils.formatCurrency(parseFloat(totalP2P), 2)%></b>元</h1>
+                    <h2>总金额</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产<span id="p2pSum" style="color:#ffc392">0.00</span>%</h2>
+                    <h2>当前持有<span style="color:#2196f3">（<%=p2pCount%>支）</span></h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell" id="myProductBuy"><span style="color:#2196f3">购买</span></button>
+                <button class="cell"><span style="color:#aaa">赎回</span></button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#ca3de8" id="goldDiv">幸福如金<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b><%=Utils.formatCurrency(parseFloat(goldSum), 2)%></b>元</h1>
+                    <h2>总金额</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产<span id="goldSum" style="color:#ffc392">0.00</span>%</h2>
+                    <h2>当前金价<span style="color:#2196f3">（<%=Utils.formatCurrency(App.storage.get("boseGold").fundlastnav*100,2)%>元/克）</span></h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell" id="goldBuy"><span style="color:#2196f3">买入</span></button>
+                <button class="cell" id="goldSale"><span style="color:#2196f3">卖出</span></button>
+            </div>
+        </div>
+        <div class="itm">
+        	<div class="tit" style="border-color:#E50012" id="goFundIndex">幸福基金<i></i></div>
+            <div class="cnt row">
+            	<div class="sts">
+                	<h1><b><%=Utils.formatCurrency(parseFloat(fundTotalMoney), 2)%></b>元</h1>
+                    <h2>总金额</h2>
+                </div>
+            	<div class="cell">
+                	<h2>占持有资产<span id="fundTotalMoney" style="color:#ffc392">0.00</span>%</h2>
+                    <h2>当前持有<span style="color:#2196f3" id="count"></span></h2>
+                </div>
+            </div>
+            <div class="btnGrp row">
+            	<button class="cell" id="goFundBuy"><span style="color:#2196f3">买入</span></button>
+                <button class="cell" id="goFundSale"><span style="color:#2196f3">卖出</span></button>
+            </div>
+        </div>
+    </div>
+  </div>

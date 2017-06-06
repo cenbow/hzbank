@@ -1,0 +1,75 @@
+<style type="text/css">
+    html,body,.ui-view,.ui-view >div,.content{height:100%;}
+    body.gray-bg .ui-view{background:#FFF; overflow:hidden;}
+    .content{
+      overflow:hidden;
+      position:relative;
+      min-height:420px;
+      -webkit-animation-duration:400ms;
+      animation-duration:400ms;
+      -webkit-animation-fill-mode:both;
+      animation-fill-mode:both;
+      -webkit-animation-name:fadeInUp;
+      animation-name:fadeInUp;
+    }
+    .focusState{border-color:#3388FF;}
+    .regist-import{position:absolute;}
+    .zen-btn.reg-btn{box-sizing:border-box; -webkit-box-sizing:border-box; background:none; border:1px solid #0194E8; color:#0194E8;}
+    .zen-btn.reg-btn:not(.disabled):not(:disabled):active{color:#FFF; background:#0194E8;}
+</style>
+<body class="gray-bg"  ontouchstart="">
+  <div class="lgngstPage new2016">
+  	<div class="tab row">
+    	<div class="cell active">我是直销用户</div>
+        <div class="cell">我是新用户</div>
+    </div>
+  	<ul class="swpage">
+    	<li style="display:block">
+        	<div class="login-logo"></div>
+            <div class="gap-box">
+                <div class="pt15">
+                    <div class="ipt-txt login-user fm-del">
+                        <input type="text" value="" id="userId" placeholder="用户名/身份证/手机号"/>
+                    </div>
+                    <div class="ipt-txt login-pswd fm-del" id="login-pswd">
+                        <input type="password" id="pwd" value="" placeholder="登录密码" readonly="readonly"/>
+                    </div>
+                    <div class="valid-code" id="codeImgDiv">
+                        <div class="ipt-txt">
+                          <input type="text" id="validCode" value="" maxlength="4" placeholder="请输入验证码"/>
+                        </div>
+                        <div class="code" id="getCodeImg"><img src="" id="verifyImg"/></div>
+                    </div>
+                    <div class="fm-remind zen-ckbox login-remind">
+                        <input id="remember" type="checkbox" checked />
+                        <label class="fm-agr" for="remember">记住用户名</label>
+                        <a href="javascript:;" id="forget">忘记密码?</a>
+                    </div>
+                    <!--绑定弹框事件-->
+                    <input type="button" id="login" value="登  录" class="zen-btn mt20"/>
+                </div> 
+            </div>    
+        </li>
+        <li>
+        	<div class="specBuz">
+               <div id="identifycheck" class="cardArea"></div>
+               <dl class="warm">
+                    <dt>温馨提示</dt>
+                    <dd>1.请您在周一至周日07:30-19:00进行业务操作。</dd>
+                    <dd>2.请使用二代身份证，并且在有效期内</dd>
+               </dl>
+            </div>
+        </li>
+    </ul>
+	 
+  </div>	
+  <script>
+  Zepto(function($){
+	$('.tab .cell').on('click', function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		var curp = $('.swpage li').eq($(this).index());
+		curp.show().siblings().hide();
+	})
+  })
+  </script> 
+</body>

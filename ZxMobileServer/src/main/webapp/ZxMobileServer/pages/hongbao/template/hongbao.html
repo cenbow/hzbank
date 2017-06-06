@@ -1,0 +1,52 @@
+<style>
+html,body.gray-bg,.ui-view,.ui-view >div{width:100%; height:100%;}
+.ui-view{background:#F8D794 url('images/hongbao/bg.gif') no-repeat; background-attachment:fixed; background-size:100% 100%; font-size:0.28rem; overflow-x:hidden;}
+.detailRule{background:#F8D794 url('images/hongbao/bg.gif') no-repeat; background-size:100% 100%;}
+*{-webkit-box-sizing:border-box; box-sizing:border-box; position:relative;}
+section,.local{width:100%; height:100%; display:block; overflow-x:hidden;}
+section.home{overflow:hidden;}
+.logo{width:3.34rem; height:1.4rem; background:url(images/hongbao/logo.png) center center no-repeat; background-size:2.16rem auto;}
+.myPrize{width:2.24rem; height:1.54rem; background:url(images/hongbao/myprize.png) center top no-repeat; background-size:100% auto; position:fixed; right:0.1rem; top:0; z-index:99;}
+.title{height:2.14rem; width:100%; background:url(images/hongbao/title_3.png) center center no-repeat; background-size:90% auto; margin-top:2%;}
+.open{width:100%; height:7rem; background:url(images/hongbao/open.png?v=20161201) center top no-repeat; background-size:100% auto; position:absolute; left:0; bottom:0; padding-top:0.9rem;}
+.state{width:3.14rem; height:0.84rem; margin:0 auto; background:url(images/hongbao/has.png?v=20161201) center center no-repeat; background-size:100% auto; font-size:0.36rem; font-weight:bold; text-align:center; color:#EB6156; line-height:0.84rem;}
+.openBtn{width:1.9rem; height:2rem; margin:1.04rem auto 0; border-radius:50%;}
+.invFriend{width:3.76rem; height:0.78rem; background:url(images/hongbao/inv.png) no-repeat center center; background-size:100% 100%; margin:0.38rem auto 0;}
+.rule{width:1.18rem; height:0.8rem; background:url(images/hongbao/rule.png) no-repeat center top; background-size:100% auto; margin:0.28rem auto 0;}
+.final{width:100%; height:100%; position:fixed; z-index:999; top:0; background-color:rgba(0,0,0,.4); left:1000%;}
+.final.show{left:0;}
+.detailbox{width:5.21rem; height:6.07rem; background:url(images/hongbao/final.png) center top no-repeat; background-size:100% 100%; position:absolute; margin:-4rem 0 0 -2.6rem; left:50%; top:50%; padding-top:2rem;}
+.final.show .detailbox{-webkit-animation-duration:.75s; animation-duration:.75s; -webkit-animation-name:bounceIn; animation-name:bounceIn;}
+@-webkit-keyframes bounceIn{0%,100%,20%,40%,60%,80%{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes bounceIn{0%,100%,20%,40%,60%,80%{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
+
+.detailbox .num{width:100%; text-align:center; font-size:40px; font-weight:bold; color:#f29219;}
+.detailbox .shareBtn{width:3.22rem; height:0.68rem; margin:1.86rem auto 0;}
+.detailbox .close,.detailRule .close{height:0.72rem; width:0.72rem; display:block; position:absolute; right:0.4rem; top:1.2rem; z-index:99; background:url(images/hongbao/close.png) no-repeat; background-size:100% 100%;}
+.detailRule .close{background-image:url(images/hongbao/closerule.png); top:-0.05rem; right:-0.05rem;}
+.detailRule{padding:0.3rem 0; width:100%; height:100%; overflow:auto; position:fixed; left:0; top:100%; z-index:999; transition:top .3s; -webkit-transition:top .3s;}
+.detailRule.show{top:0;}
+.detailRule .main{width:5.93rem; margin:0 auto;}
+.detailRule .main .tt{width:100%; height:2.5rem; background:url(images/hongbao/rulehead.png) center bottom no-repeat; background-size:100% auto;}
+.detailRule .main .txt{width:100%; background:url(images/hongbao/rulebg.png) center 0 repeat-y; background-size:100% auto; min-height:4rem; padding: 0.4rem 0.2rem;}
+</style>
+<section class="home">
+	<div class="local">
+		<div class="logo"></div>
+		<div class="myPrize" id="myPrize"></div>
+		<div class="title"></div>
+		<div class="open">
+			<div class="state">您还有<span id="number"></span>个红包</div>
+			<div class="openBtn" id="openBtn"></div>
+			<div class="invFriend" id="share"></div>
+			<div class="rule" id="ruleBtn"></div>
+		</div>
+	</div>
+	<div class="final" id="finalPrize">
+		<div class="detailbox">
+			<div class="num"><span id="amt"></span>元</div>
+			<div class="shareBtn" id="shareBtn"></div>
+			<i class="close" id="closePrize"></i>
+		</div>
+	</div>
+</section>
+

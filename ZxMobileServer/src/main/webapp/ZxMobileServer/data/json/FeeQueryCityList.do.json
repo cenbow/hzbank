@@ -1,0 +1,9 @@
+{
+    "iChannelFeeList" : [ {
+      "cityCode" : "3301",
+      "cityName" : "杭州"
+    }, {
+      "cityCode" : "3302",
+      "cityName" : "宁波"
+    } ]
+  }

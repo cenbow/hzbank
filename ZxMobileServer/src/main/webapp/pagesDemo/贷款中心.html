@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+ 
+  <div class="motPage">
+  	<div class="menuGrid">
+    	<ul>
+        	<li class="a">
+            	<h1>贷款申请</h1>
+                <h2>业务在线申请</h2>
+            </li>
+            <li class="b">
+            	<h1>贷款进度查询</h1>
+                <h2>实时跟踪贷款进度</h2>
+            </li>
+            <li class="c">
+            	<h1>房贷计算器</h1>
+                <h2>业务在线申请</h2>
+            </li>
+            <li class="d">
+            	<h1>税费计算器</h1>
+                <h2>实时跟踪贷款进度</h2>
+            </li>
+        </ul>
+    </div>
+    <div class="currentRate">
+   	  <h1>最新房贷利率<span class="fc-9 ft12">（数据已更新至2016年2月17日）</span></h1>
+      <div class="imgr">
+      	<img src="../images/mortgage/opacity.png">
+      		<div class="grid">
+            	<ul class="bar">
+                	<li><i data-label="3.25%"></i></li>
+                    <li><i data-label="4.90%"></i></li>
+                    <li><i data-label="9.5折"></i></li>
+                </ul>
+            </div>
+      </div>
+      <div class="row">
+      	<div class="cell a"><span>杭州公积金</span></div>
+        <div class="cell b"><span>杭州银行折扣</span></div>
+        <div class="cell"><span>杭州银行</span></div>
+      </div>	
+    </div>
+    <div class="prog">
+    	<h1>买房流程</h1>
+        <div class="imgr"><img src="../images/mortgage/how.jpg"></div>
+        <a href="#" class="btn">点击查看买房流程 &gt;</a>
+    </div>
+  </div>	
+  <script type="text/javascript" src="../scripts/libs/zepto/zepto.js"></script>
+  <script>
+  Zepto(function($){
+	$('.bar i').eq(0).css({height: 325/6 +'%'});
+	$('.bar i').eq(1).css({height: 490/6 +'%'});
+	$('.bar i').eq(2).css({height: 950/10 +'%'});
+  })
+  </script> 
+</body>
+</html>

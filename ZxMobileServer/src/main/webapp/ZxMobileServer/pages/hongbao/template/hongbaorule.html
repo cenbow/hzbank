@@ -1,0 +1,56 @@
+<style>
+html,body.gray-bg,.ui-view,.ui-view >div{width:100%; height:100%;}
+.ui-view{background:#F8D794 url('images/hongbao/bg.gif') no-repeat; background-attachment:fixed; background-size:100% 100%; font-size:0.28rem; overflow-x:hidden;}
+.detailRule{background:#F8D794 url('images/hongbao/bg.gif') no-repeat; background-size:100% 100%;}
+*{-webkit-box-sizing:border-box; box-sizing:border-box; position:relative;}
+section,.local{width:100%; height:100%; display:block; overflow-x:hidden;}
+section.home{overflow:hidden;}
+.logo{width:3.34rem; height:1.4rem; background:url(images/hongbao/logo.png) center center no-repeat; background-size:2.16rem auto;}
+.myPrize{width:2.24rem; height:1.54rem; background:url(images/hongbao/myprize.png) center top no-repeat; background-size:100% auto; position:fixed; right:0.1rem; top:0; z-index:99;}
+.title{height:2.14rem; width:100%; background:url(images/hongbao/title_3.png) center center no-repeat; background-size:90% auto; margin-top:2%;}
+.open{width:100%; height:7rem; background:url(images/hongbao/open.png) center top no-repeat; background-size:100% auto; position:absolute; left:0; bottom:0; padding-top:1.2rem;}
+.state{width:3.04rem; height:0.52rem; margin:0 auto; background:url(images/hongbao/has.png) center center no-repeat; background-size:100% auto; padding:0 0.83rem 0 1.27rem; text-align:center; color:#fff; line-height:0.52rem; font-size:0.32rem;}
+.openBtn{width:1.9rem; height:2rem; margin:1.04rem auto 0; border-radius:50%;}
+.invFriend{width:3.76rem; height:0.78rem; background:url(images/hongbao/inv.png) no-repeat center center; background-size:100% 100%; margin:0.38rem auto 0;}
+.rule{width:1.18rem; height:0.8rem; background:url(images/hongbao/rule.png) no-repeat center top; background-size:100% auto; margin:0.28rem auto 0;}
+.final{width:100%; height:100%; position:fixed; z-index:999; top:0; background-color:rgba(0,0,0,.4); left:1000%;}
+.final.show{left:0;}
+.detailbox{width:5.21rem; height:6.07rem; background:url(images/hongbao/final.png) center top no-repeat; background-size:100% 100%; position:absolute; margin:-4rem 0 0 -2.6rem; left:50%; top:50%; padding-top:2rem;}
+.final.show .detailbox{-webkit-animation-duration:.75s; animation-duration:.75s; -webkit-animation-name:bounceIn; animation-name:bounceIn;}
+@-webkit-keyframes bounceIn{0%,100%,20%,40%,60%,80%{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes bounceIn{0%,100%,20%,40%,60%,80%{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
+
+.detailbox .num{width:100%; text-align:center; font-size:40px; font-weight:bold; color:#f29219;}
+.detailbox .shareBtn{width:3.22rem; height:0.68rem; margin:1.86rem auto 0;}
+.detailbox .close,.detailRule .close{height:0.72rem; width:0.72rem; display:block; position:absolute; right:0.4rem; top:1.2rem; z-index:99; background:url(images/hongbao/close.png) no-repeat; background-size:100% 100%;}
+.detailRule .close{background-image:url(images/hongbao/closerule.png); top:-0.05rem; right:-0.05rem;}
+.detailRule{padding:0.3rem 0; width:100%; height:100%; overflow:auto; position:fixed; left:0; top:100%; z-index:999; transition:top .3s; -webkit-transition:top .3s;}
+.detailRule.show{top:0;}
+.detailRule .main{width:5.93rem; margin:0 auto;}
+.detailRule .main .tt{width:100%; height:2.5rem; background:url(images/hongbao/rulehead.png) center bottom no-repeat; background-size:100% auto;}
+.detailRule .main .txt{width:100%; color:#fff; font-size:12px; lin-height:1.6; background:url(images/hongbao/rulebg.png) center 0 repeat-y; background-size:100% auto; min-height:4rem; padding: 0.4rem 0.2rem;}
+.detailRule .main .txt h1{margin:0.18rem 0 0.12rem;}
+.detailRule .main .txt h1 span{color:#E83B38; background-color:#FEFACD; padding:0.08rem 0.2rem; border-radius:0.22rem;}
+.detailRule .main .txt p.li{margin-bottom:0.12rem;}
+.detailRule .main .txt p.li:before{content:attr(data-num); font-size:0.2rem; padding:0.02rem 0.1rem; margin-top:-2px; line-height:1; vertical-align:middle; border-radius:0.16rem; color:#E83B38; background-color:#FEFACD; margin-right:0.08rem;}
+</style>
+<section class="home">
+	<div class="detailRule show" id="rule">
+		<div class="main">
+			<div class="tt"><i class="close" id="closeRuleBtn"></i></div>
+			<div class="txt">
+				<P>活动时间：<%=begainDate%>-<%=endDate%></P>
+				<h1><span>一重礼：新手注册领红包</span></h1>
+				<P>杭银直销新用户注册并激活的用户即可获得最高100元的红包一个。</P>
+				<h1><span>二重礼：邀请好友•红包共享</span></h1>
+				<P>活动期间用户每成功邀请好友注册并激活将获得一个最高100元的红包，上不封顶。</P>
+				<h1><span>活动说明</span></h1>
+				<P class="li" data-num="1">本次活动只面向杭银直销APP的客户，暂不面向网页版客户。</P>
+				<P class="li" data-num="2">请在活动截止日前拆开红包。</P>
+				<P class="li" data-num="3">活动过程中如发现有碍其他用户公平参与本活动或违反活动目的的行为，杭州银行有权取消此行为的用户参与本次活动的资格或因参加活动所获得的红包。</P>
+				<P class="li" data-num="4">红包属性：活动为现金红包，直接充值到用户的直销银行活期账户。红包数量有限，先到先得。</P>
+				<P class="li" data-num="5">邀请好友方式：短信、微信好友、朋友圈、QQ好友。</P>
+			</div>
+		</div>
+	</div>
+</section>
+

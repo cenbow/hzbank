@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name='apple-touch-fullscreen' content='yes'>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">    	
+<title>杭银直销</title>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,header,hgroup,nav,section,article,aside,footer,figure,figcaption,menu,button{margin:0;padding:0;outline:0}body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;line-height:1.5;font-size:14px;color:#000;background-color:#f8f9fa;-webkit-user-select:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(255,255,255,0)}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}li{list-style:none}input,button,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;border:0;background:0;-webkit-appearance:none;outline:0}a,button,input,select,textarea,a:focus,button:focus,input:focus,select:focus,textarea:focus,[onclick]{outline:0;-webkit-tap-highlight-color:rgba(255,255,255,0)}a{-webkit-touch-callout:none;text-decoration:none;color:#00a5e0;outline:0}em,i{font-style:normal}em{color:#f28c48}::-webkit-input-placeholder{color:#999}
+html,body{height:100%;}
+body{font-size:14px; background:#33B0FF;}
+.content{width:100%; height:100%; overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical;}
+footer{color:#FFF; padding:8px; position:absolute; bottom:0; left:0;}
+.cloudGroup{position:relative; width:100%; overflow:hidden; height:260px; position:absolute; left:0; top:0;}
+.cloud{background:url(images/img/normalCloud.png) center center no-repeat; background-size:100% 100%; position:absolute;}
+.c1{height:42px; width:80px; margin-top:-21px; margin-left:-40px; opacity:0.6; top:32px; left:54px;}
+.c2{height:28px; width:57px; margin-top:-14px; margin-left:-29px; opacity:0.5; top:32px; right:46px;}
+.c3{height:20px; width:38px; margin-top:-10px; margin-left:-19px; opacity:0.8; top:58px; left:130px;}
+.c4{height:28px; width:57px; margin-top:-14px; margin-left:-29px; opacity:0.8; top:210px; left:56px;}
+.man{width:182px; height:240px; position:absolute; z-index:9; right:4%; top:40px; background:url(images/img/design.png) no-repeat; background-size:100% auto;}
+.textarea{width:50%; min-width:152px; height:180px; position:absolute; left:10px; top:64px; color:#FFF;}
+.textarea h2{font-size:16px; line-height:24px;}
+h1{font-weight:700; font-size:34px; line-height:40px;}
+.deviceChoice{width:100%; margin:260px auto 83px; -webkit-box-flex:1; box-flex:1; background:url(images/img/midCloud.png) center center no-repeat; background-size:100% 100%; position:relative;}
+.deviceChoice a{height:68px; width:68px; padding:4px; background:#FFE0B2; margin:-58px 0 0 -34px; top:50%; display:block; position:absolute; border-radius:50%;}
+.deviceChoice a.android{left:25%;}
+.deviceChoice a:before,.deviceChoice a:after{content:""; display:block; height:100%; width:100%; background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#FFBD5D), to(#FF8401)); border-radius:50%;}
+.deviceChoice a.android:after{background:url(images/img/Android.png) center center no-repeat; background-size:54% auto; position:absolute; left:0; top:0;}
+.deviceChoice a.ios{right:25%; margin-right:-34px; background:#FFD6C7;}
+.deviceChoice a.ios:before{background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#FF936D), to(#FF4E10));}
+.deviceChoice a.ios:after{background:url(images/img/ios.png) center center no-repeat; background-size:54% auto; position:absolute; left:0; top:0;}
+.deviceChoice a .btn{width:140px; height:36px; background:#FF8603; border-radius:4px; color:#FFF; text-align:center; line-height:36px; font-size:16px; margin-left:-70px; left:50%; position:absolute; top:84px;}
+.deviceChoice a.ios .btn{background:#FF4F12}
+@media screen and (max-width:321px) {
+ .man{right:4px;}
+ .textarea{width:48%;}	
+}
+@media screen and (min-height:640px) and (min-width:320px;) {
+  footer{bottom:10px;}	
+  .deviceChoice a{-webkit-transform:scaleX(1.12) scaleY(1.12);}
+}
+@media screen and (max-height:567px) {
+	header{height:42px; line-height:42px;}
+	.man{top:10px;}
+	.cloudGroup{margin-top:-10px;}
+	.textarea{top:50px;}
+    .man,.cloud{-webkit-transform:scaleX(0.82) scaleY(0.82);}
+	.deviceChoice a{-webkit-transform:scaleX(0.72) scaleY(0.72);}
+	.deviceChoice{margin-top:190px;}
+}
+.mask{width:100%; height:100%; position:absolute; left:0; top:0; background:url(images/market/arrow.png) right top no-repeat; background-size:140px auto; background-color:rgba(0,0,0,0.62); z-index:999;}
+.waitlayer{position:fixed; left:0; top:0; height:100%; width:100%; background:url(images/market/waitlayer.gif) center center no-repeat; background-size:20px auto;}
+</style>
+</head>
+
+<body>
+<div class="content">
+  <div class="cloudGroup">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+  </div>
+  <div class="textarea">
+    <h2>口袋里的</h2>
+    <h1>投资银行</h1>
+    <h3>动动手指就能投资，随时随地查看收益，带您畅享财富新体验！</h3>
+  </div>
+  
+  <div class="man"></div>
+  
+  <div class="deviceChoice">
+	  <script type="text/javascript">
+		function getDate(s,t) {
+			//s Y-m-d H:i:s
+			//t new Date()
+			t=t || new Date();
+			var re=/Y|m|d|H|i|s/g;
+			return s.replace(re,function($1) {
+				switch($1) {
+					case "Y":return t.getFullYear();
+					case "m":return t.getMonth()+1;
+					case "d":return t.getDate();
+					case "H":return t.getHours();
+					case "i":return t.getMinutes();
+					case "s":return t.getSeconds();
+				}
+				return $1;
+			});
+		};
+		var host = location.host,
+		androidUrl = "",
+		iosUrl = "";
+		if(host.indexOf("mbank.hzbank.com.cn")>=0){
+			androidUrl = "http://www.hzbank.com.cn/uploadfiles/HZBANK_financial.apk?v="+getDate("YmdHis");
+			iosUrl = "https://itunes.apple.com/cn/app/hang-zhou-yin-xing-zhi-xiao/id904543241?mt=8";
+		}else{
+			androidUrl = "https://dn-ebank.qbox.me/zxbank_android.apk?v="+getDate("YmdHis");
+			iosUrl = "itms-services://?action=download-manifest&url=https://dn-ebank.qbox.me/zxbank.plist?v="+getDate("YmdHis");
+		}
+	  	
+		document.write('<a href="'+androidUrl+'" class="android"><div class="btn">安卓系统下载</div></a>');
+	  	document.write('<a href="'+iosUrl+'" class="ios"><div class="btn">IOS系统下载</div></a>');
+	  </script>
+  
+	    <!-- <a href="zxbank_android.apk" class="android"><div class="btn">安卓系统下载</div></a>
+	    <a href="itms-services://?action=download-manifest&url=https://dn-ebank.qbox.me/zxbank.plist" class="ios"><div class="btn">IOS系统下载</div></a> -->
+  </div>
+  
+  <footer>温馨提示：安卓用户如果在本页无法安装是，请点击右上角的图案【：】，选择【在浏览器中打开或复制链接】到本地浏览器中打开，即可安装。</footer>
+</div>
+<div class="mask" id="mask" style="display:none;"></div>
+<div class="waitlayer" id="waitlayer" style="display:none;"></div>
+</body>
+<script type="text/javascript">
+	document.getElementById("waitlayer").style.display="";
+	var Terminal = {
+		platform:function()
+		{
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {
+				android:u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+				iPhone:u.indexOf('iPhone') > -1
+			};
+		}()
+	}
+	var isWeiXin = function(){
+		var ua = window.navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	var isQQ = function(){
+		var ua = window.navigator.userAgent.toLowerCase();
+		if(ua.match(/qq/i) == 'qq'){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	function search(){
+		var params = {};
+		var b = location.search.substring(1,location.search.length);
+		if(!b)return "";
+		var p = b.split('&');
+		for(var i=0;i<p.length;i++){
+			var a = p[i].split('=');
+			params[a[0]] = a[1];
+		}
+		
+		return params;
+	}
+	
+	if(isWeiXin() || isQQ()){
+		document.getElementById("mask").style.display="";
+		document.getElementById("waitlayer").style.display="none";
+	}else{
+			var url = "HZBankDirect://openwith"+(location.search||"?index=");
+			var timeout, t = 1000, hasApp = true;  
+		    setTimeout(function () {  
+		    	document.getElementById("waitlayer").style.display="none";
+		        if (hasApp) {  
+		        	//location.href = url;
+		        } else {  
+		        	if(Terminal.platform.android){
+		    		   	location.href = androidUrl;
+		    	   	}else if(Terminal.platform.iPhone){
+		    	   		if(host.indexOf("mbank.hzbank.com.cn")>=0){
+		    	   			location.href = "https://itunes.apple.com/cn/app/hang-zhou-yin-xing-zhi-xiao/id904543241?mt=8";
+		    	   		}else{
+		    	   			location.href = "itms-services://?action=download-manifest&url=https://dn-ebank.qbox.me/zxbank.plist&v="+getDate("YmdHis");
+		    	   		}
+		    	   	}
+		        }  
+		        document.body.removeChild(ifr);  
+		    }, 2000)  
+		  
+		    var t1 = Date.now();  
+		    var ifr = document.createElement("iframe");  
+		    ifr.setAttribute('src', url);  
+		    ifr.setAttribute('style', 'display:none');  
+		    document.body.appendChild(ifr);  
+		    timeout = setTimeout(function () {  
+		         var t2 = Date.now();  
+		         if (!t1 || t2 - t1 < t + 50) {  
+		             hasApp = false;  
+		         }  
+		    }, t);
+		    
+	}
+</script>
+</html>

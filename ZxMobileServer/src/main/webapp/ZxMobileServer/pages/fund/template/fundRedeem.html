@@ -1,0 +1,71 @@
+  <div class="fundBuy">
+	  <div id="fundRedeemPage1">
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box">
+	          <p class="ft16"> 账户基金：<span><%=Utils.formatAcc(cardNo)%></span></p>
+	          <p class="ft14 fc-9"> 基金代码：<span><%=fundCode%></span></p>
+	          <p class="ft14 fc-9"> 基金名称：<span><%=fundName%></span></p>
+	          <p class="ft14 fc-9"> 持有份额：<span><%=Utils.formatAcc(fundVol)%></span></p>
+	          <p class="ft14 fc-9 mb10"> 可用份额：<span><%=Utils.formatAcc(fundUseVol)%></span></p>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="ipt-opr">
+	          <label>赎回份额：</label>
+	          <div class="cell"><input id="tranAmtText" type="number" value="<%=fundUseVol%>" maxlength="10" placeholder="请输入赎回份额"/></div>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="ipt-opr">
+	          <label>遇大额赎回处理方式：</label>
+	          <div class="cell">
+					<select id = "td_confirm_largRedFlag">
+					<option value="0">取消</option>
+					<option value="1">顺延</option>
+					</select>
+				</div>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="ipt-opr">
+	          <label>交易密码：</label>
+			  <div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+	        </div>
+	      </li> 
+	    </ul>
+	    <div class="gap-box"><input id="redeemBtn" type="button" value="下一步" class="zen-btn mt10 disabled" disabled/></div>	    
+    </div>
+    <!----------------------------------------------------------------------------------->
+	<div id="fundRedeemPage2" style="display: none;">
+	    <div class="trs-rzt-success">赎回成功！</div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-8 pt10 pb10 cl">
+	           <p>产品名称：<span ><%=fundName%></span></p>
+	           <p>赎回份额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+	         </div>
+	         <div class="row pt10 pb10">
+	           <p>账户基金：<%=Utils.formatAcc(cardNo)%></p>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+    	<div class="gap-box"><input id="successReturn" type="button" value="确定" class="zen-btn mb10"/></div>
+	</div>
+    <!-----------------------------------购买结果----------------------------------------->
+	<div id="fundRedeemPage3" style="display: none;">
+	    <div class="trs-rzt-fail">赎回失败！</div>
+	    <ul class="zen-list-2">
+	      <li>
+	        <div class="opr-box fc-9 ft13">
+	         <div class="row fc-8 pt10 pb10 cl">
+	           <p>失败原因：<span id="errorMessage"></span></p>
+	         </div>
+	        </div>
+	      </li>
+	    </ul>
+	    <div class="gap-box"><input id="errorReturn" type="button" value="确定" class="zen-btn mb10"/></div>
+    </div>
+  </div>  

@@ -1,0 +1,74 @@
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016 Regs">
+  	<div class="riskTest">
+    	<div class="successTip" style="display: none;"><i></i>您已成功定投</div>
+        <div class="list">
+        	<div class="list-item" id="goFundDetailPage">
+            	<h1 id="fundName">金鹰稳健成长混合 <span class="ft13 fc-9">(002321)</span></h1>
+                <p class="ft13 fc-9" id="cardNo">扣款账户: 中国银行储蓄卡(尾号2091)</p>
+            </div>
+            <div class="list-item row ft13">
+            	<div class="cell">
+                	<p id="totalInvest"><span class="fc-9" >累计定投：</span>00元</p>
+                    <p ><span class="fc-9" id="investDay">每月28日：</span><span class="fc-orange" id="fundAmt">100,000元</span></p>
+                </div>
+                <div class="cell">
+                	<p id="totalTimes"><span class="fc-9" >已投期数：</span>0</p>
+                	<p id="overFlag"><span class="fc-9" >终止模式：</span>到2017-7-7终止</p>
+                </div>
+            </div>
+        </div>    
+        <div class="gap-box mb5 mt5 ft13" id="NextInvestDate">定投记录(<span class="fc-9" >下次扣款：</span>2017-01-04)</div>
+         <div id="wrapper">
+	        	<div>
+	        		<div class="list" id="investRecord"></div>
+       			</div>
+         </div>
+        <div >
+			<div class="zen-noData" id="noData"  style="display:none;box-sizing:border-box;  height:298px; padding-top:210px; background-position:center 140px;" >暂无更多</div>
+		</div>
+<!--         <div class="list"> -->
+<!--         	<div class="list-item emptyList"> -->
+<!--             </div> -->
+<!--         </div> -->
+        <div class="dialog" style="display: none;" id="pwdText">
+	    	<div class="passwordBox">
+	        	<div class="head row">
+	            	<i class="back" id="hidePwdBox"></i>
+	                <div class="cell">请输入您的杭银直销交易密码</div>
+	            </div>
+	            <div class="pswdWrap">
+	        	<div class="pswdAll">
+	                <div class="tradePswd">
+	                    <div class="row" >
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <div class="cell"></div>
+	                        <input type="password"  id="pwd" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" value=""  readOnly/>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div style="height:<%=Device.os=='android'?(pubParam.pwdHeight*0.8):(pubParam.pwdHeight+10)%>px;"></div>
+	        </div>
+    	</div>    
+        <div class="fixBtn">
+        	<div class="btnGrp">
+            	<button class="zen-btn" id="investUpdateBtn">修改</button>
+                <button class="zen-btn white" id="investStopBtn">终止</button>
+            </div>
+        </div>
+    </div>
+  </div>	
+  <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+	
+
+	
+  })
+  </script>
+</body>

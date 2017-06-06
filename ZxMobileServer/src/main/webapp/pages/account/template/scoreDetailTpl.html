@@ -1,0 +1,13 @@
+<%_.each(ScoreIndexBak,function(temp, i){
+	var subTime = temp.SCD_SUBMITTIME;
+	subTime = Format.parseDate(subTime,"yyyyMMddhhmmss");
+	subTime = Format.toDateString(subTime,'yyyy.MM.dd hh:mm');
+%>
+<li>
+	<div class="ac-ctr">
+		<p class="ctr"><%=temp.SCD_BSNCODE%></p>
+		<p class="prc"><%=subTime%></p>
+	</div>
+	<span class="ac-amt"><%=Utils.formatCurrency(temp.SCD_SCORE,2)%></span>
+</li>
+<%});%>

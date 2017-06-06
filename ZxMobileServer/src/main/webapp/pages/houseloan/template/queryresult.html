@@ -1,0 +1,40 @@
+<div class="specBuz loanApp proQuery new2016">
+   
+	 <div class="progress">
+    	<i data-label="身份认证" class="active">1</i>
+        <i data-label="人脸检测"  class="active">2</i>
+        <i data-label="进度查询">3</i>
+    </div>
+
+    <div class="sucState"><%=msg%></div>
+   <ul class="liz tp2">
+   		<li class="row">
+         	<div class="tt">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</div>
+         	<div class="cell" id="userName"><%=userName%></div>
+         </li>
+         <li class="row">
+         	<div class="tt">身份证号：</div>
+         	<div class="cell" id="certNo"><%=certNo%></div>
+         </li>
+         <li class="row">
+         	<div class="tt">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族：</div>
+         	<div class="cell"><%=people%></div>
+         </li> 
+         <li class="row">
+         	<div class="tt">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</div>
+         	<div class="cell"><%=gender%></div>
+         </li> 
+         <li class="row">
+         	<div class="tt">出生日期：</div>
+         	<div class="cell"><%=birth%></div>
+         </li>
+         <li class="row">
+         	<div class="tt">住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</div>
+         	<div class="cell"><%=address%></div>
+         </li>
+   </ul>
+   <div class="gap-box mt20">
+   		<button class="zen-btn" id="next">进入房贷进度查询</button>
+   		<button class="zen-btn" id="back" style="display:none;">重新验证</button>
+   </div>
+</div>

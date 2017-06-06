@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+</head>
+
+<body>
+   <div class="new2016 Pays">
+   	 <div style="width:100%; height:84px;">
+     	<div class="fixed">
+        	<div class="searchWrap">
+                <div class="searchBar">
+                    <input type="text" value="" />
+                    <i class="trigger"></i>
+                    <i class="submit"></i>
+                 </div>
+             </div>	
+             <div class="zen-tab">
+                <ul class="zen-tab-nav">
+                    <li class="active">全部</li>
+                    <li>幼儿园</li>
+                    <li>中小学</li>
+                    <li>大学</li>
+                </ul>
+             </div>
+        </div>
+     </div>	
+   	 
+   	 <div class="list payTuition">
+     	<div class="list-item"><i class="holder"></i>浙江大学</div>
+        <div class="list-item"><i class="holder"></i>浙江大学</div>
+     </div>
+   </div> 
+   <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+	<script>
+    $(function(){
+    	$('.searchBar .trigger').on('click', function(){
+			var ico = $(this);
+			var ipt = ico.prev();	
+			var sub = ico.next();
+			ico.hide();
+			sub.show();
+			ipt.focus();
+			ipt.blur(function(){
+				ipt.val() == "" ? ico.show() && sub.hide() : null;
+			})
+		})
+    })
+    </script> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016">
+  	<div class="bonus">
+    	<div class="list disabled">
+            <div class="list-item row checkInner">
+            	<div class="cell">
+                	<h1>现金分红</h1>
+                	<p class="ft12 fc-9">分红所得资金发放到账户余额</p>
+                </div>
+                <label class="zen-ckbox">
+                  <input type="radio"  name="radio" value="1" id="cashShare" >
+                </label>
+            </div>
+            <div class="list-item row checkInner">
+            	<div class="cell">
+                    <h1>红利再投资</h1>
+                    <p class="ft12 fc-9">分红所得资金直接用于购买该基金，将分红转化为持有基金份额</p>
+                </div>    
+                <label class="zen-ckbox">
+                  <input type="radio" name="radio" value="0" id="divReinvest">
+                </label>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-item row disabled">
+            	<span>交易密码</span>
+                <div class="cell ipt pl10"><input type="password"  id="pwd" value="" placeholder="请输入交易密码" readOnly/></div>
+            </div>
+        </div>
+        <div class="gap-box pt10 fc-9">
+            <input type="button" value="确定" class="zen-btn mt10 mb10 disabled" id="sureModifyDivMode">
+        </div>
+    </div>
+  </div>	
+  <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+</body>

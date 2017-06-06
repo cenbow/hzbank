@@ -1,0 +1,247 @@
+	<div id="outerTransferPage1" class="content">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+					<div class="row pb10">
+						<p class="pay-count">
+							收款银行：<i id="bankNameSpan" class="ico-bnk bnk-zs"></i><span id="recBankText" class="ft12 fc-9"></span>
+						</p>
+						<p class="pay-count">
+							收款账户：<span id="recAccountText"></span> <span id="recNameText" class="ft12 fc-9"></span>
+						</p>
+						<p class="txt-mid fc-9 ft12">收款银行卡为绑定的银行卡</p>
+					</div>
+					<div class="row fc-8 pt10">
+						<p class="fc-8">
+							账户余额：<span id="showBalanceSpan" class="fc-orange"></span> 元
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="opr-box">
+					<div class="row ipt-opr-2">
+						<label>提现金额：</label>
+						<div class="cell">
+							<input id="tranAmtText" type="number" value="" maxlength="12" placeholder="请输入提现金额" /> 
+							<input id="tranAmt" type="hidden" />
+						</div>
+						<a href="javascript:;" id="tranAmtAll" data-value="全额提现"
+							class="full-cash-btn simple"></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box">
+			<input id="inputSubButton" type="button" value="下一步"
+				class="zen-btn mt10" />
+		</div>
+	</div>
+	
+	<div id="outerTransferPage10" class="content" style="display: none">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+					<div class="row pb10">
+						<p class="pay-count">
+							收款银行：<i id="bankNameSpan2" class="ico-bnk bnk-zs"></i><span id="recBankText2" class="ft12 fc-9"></span>
+						</p>
+						<p class="pay-count">
+							收款账户：<span id="recAccountText2"></span> <span id="recNameText2" class="ft12 fc-9"></span>
+						</p>
+						<p class="txt-mid fc-9 ft12">收款银行卡为绑定的银行卡</p>
+					</div>
+					<div class="row fc-8 pt10">
+						<p class="fc-8">
+							账户余额：<span id="showBalanceSpan2" class="fc-orange"></span> 元
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="opr-box">
+					<div class="row ipt-opr-2">
+						<label>开户行：</label>
+						<div class="cell drop-select">
+							<input id="depositBankName2" type="text" value=""
+								placeholder="请选择开户银行" readonly /> <input id="depositBankNo2"
+								type="hidden" value="" /> <input id="depositBankUrl2"
+								type="hidden" value="" />
+						</div>
+					</div>
+					<div class="row ipt-opr-2">
+						<label>开户地：</label>
+						<div class="cell drop-select">
+							<input id="cityName" type="text" value="" placeholder="开户行所在地"
+								readonly /> <input type="hidden" id="cityCode" />
+						</div>
+					</div>
+					<div class="row ipt-opr-2">
+						<label>开户支行：</label>
+						<div class="cell drop-select">
+							<input id="depositBankName3" type="text" value=""
+								placeholder="开户支行" readonly /> <input id="depositBankNo3"
+								type="hidden" value="" />
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box">
+			<input id="nextButton" type="button" value="下一步"
+				class="zen-btn mt10" />
+		</div>
+	</div>
+
+	<div id="outerTransferPage2" class="content" style="display: none">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+					<div class="row pb10">
+						<p class="pay-count">
+							收款银行：<i id="sp_bankNameSpan" class="ico-bnk bnk-zs"></i><span id="sp_recBankText" class="ft12 fc-9"></span>
+						</p>
+						<p class="pay-count">
+							收款账户：<span id="sp_recAccount"></span> <span id="sp_recNameText"
+								class="ft12 fc-9"></span>
+						</p>
+						<p class="txt-mid fc-9 ft12">收款银行卡为绑定的银行卡</p>
+					</div>
+					<div class="row fc-8 pt10">
+<!-- 						<p>
+							<span>付款账户：</span><span id="sp_payAccount"></span><span
+								id="payAccountNameText" class="ft12"></span>
+						</p> -->
+						<p class="fc-8">
+							账户余额：<span id="sp_showBalanceSpan" class="fc-orange"></span> 元
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="opr-box">
+					<div class="row ipt-opr-2">
+						<label>提现金额（元）：</label>
+						<div class="cell">
+							<span id="sp_transferSum"></span>
+						</div>
+					</div>
+					<div class="row ipt-opr-2">
+						<label>金额大写：</label>
+						<div class="cell">
+							<span id="sp_tranAmtChineseSpan"></span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li><div class="opr-box">
+					<div class="row ipt-opr-2">
+						<label>交易密码：</label>
+						<div class="cell">
+							<input id="pwd" type="password" value="" placeholder="请输入交易密码"
+								readOnly="readOnly" />
+						</div>
+					</div>
+				</div></li>
+		</ul>
+		<div style="display: none" class="fm-remind pl10 pr10">
+			<div class="err-rzt">您输入的密码有误</div>
+			<a href="javascript:;">忘记密码?</a>
+		</div>
+		<div class="gap-box">
+			<input id="submitButton" type="button" value="确认提现"
+				class="zen-btn mt10" />
+		</div>
+	</div>
+
+
+	<div id="outerTransferPage3" class="content mt10" style="display: none">
+		<div class="zen-search-panel fix">
+			<div class="zen-search-bar">
+				<input type="text" value="" placeholder="请输入关键字" id="queryBankInput" />
+			</div>
+		</div>
+		<div class="zen-search-list" id="zen-iscroll-wrapper">
+			<ul class="zen-list-3 nobd" id="bankSelect">
+			</ul>
+		</div>
+	</div>
+
+	<div id="outerTransferPage4" class="content mt10" style="display: none">
+			<!-- <div class="zen-search-bar">
+				<input type="text" value="" placeholder="请输入关键字" id="queryCityInput" />
+			</div> -->
+			<div class="zen-search-list" id="zen-iscroll-wrapper">
+				<ul class="zen-list-3 nobd" id="proviceList">
+				</ul>
+			</div>
+	</div>
+
+	<div id="outerTransferPage5" class="content mt10" style="display: none">
+			<!-- 			<div class="zen-search-bar">
+				<input type="text" value="" placeholder="请输入关键字"
+					id="queryBankInput2" />
+			</div> -->
+			<div class="zen-search-list" id="zen-iscroll-wrapper">
+				<ul class="zen-list-3 nobd" id="bankSelect2">
+				</ul>
+				<div class="zen-noData" style="display:none;" id="noData">暂无支行信息</div>	
+			</div>
+	</div>
+
+	<div id="outerTransferPage6" class="content mt10" style="display: none">
+			<!-- <div class="zen-search-bar">
+				<input type="text" value="" placeholder="请输入关键字" id="queryCityInput" />
+			</div> -->
+			<div class="zen-search-list" id="zen-iscroll-wrapper">
+				<ul class="zen-list-3 nobd" id="cityList">
+				</ul>
+			</div>
+	</div>
+
+	<div id="outerTransferPage7" style="display: none">
+		<div class="trs-rzt-success">提现成功！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+					<div class="row pb10">
+						<p class="pay-count">
+							收款银行：<i id="r_bankNameSpan" class="ico-bnk bnk-zs" ></i><span id="r_recBankText" class="ft12 fc-9"></span>
+						</p>
+						<p class="pay-count">
+							收款账户：<span id="r_recAccount" class="fc-9"></span> <span id="r_recNameText"
+								class="ft12 fc-9"></span>
+						</p>
+						<p>
+							<label>提现金额（元）：</label><span id="r_transferSum" class="fc-9"></span>
+						</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box">
+			<input id="successSubmitButton" type="button" value="返回"
+				class="zen-btn" />
+		</div>
+	</div>
+
+	<div class="incnt" id="outerTransferPage8" style="display: none">
+		<div class="rzt-success">
+			<h1>您的交易本行已经受理，稍后请查询交易结果！</h1>
+			<a href="javascript:void(0)" class="pg-bak" id="returnButton">返回</a>
+		</div>
+	</div>
+
+	<div id="outerTransferPage9" style="display: none">
+		<div class="trs-rzt-fail">提现失败！</div>
+		<p class="trs-rzn">
+			错误代码：<span id="errorText"></span>
+		</p>
+		<p class="trs-rzn">
+			错误原因：<span id="errorMessageText"></span>
+		</p>
+		<div class="gap-box">
+			<input id="errorSubmitButton" type="button" value="返回"
+				class="zen-btn" />
+		</div>
+	</div>

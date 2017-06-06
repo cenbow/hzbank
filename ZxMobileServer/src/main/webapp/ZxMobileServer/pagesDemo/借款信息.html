@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  	
+  <div class="loanApp new2016">
+  	<div class="progress">
+    	<i data-label="身份认证" class="active">1</i>
+        <i data-label="确认房屋信息" class="active">2</i>
+        <i data-label="申请人信息" class="active">3</i>
+        <i data-label="借款信息" class="active">4</i>
+    </div>
+    <!-- Progress 1 start! -->
+    <div class="specBuz">
+       <ul class="liz">
+       		<li class="row select" id="loanWay">
+            	<div class="tt bit2">贷款方式：</div>
+            	<div class="cell"><input type="text" value="公积金贷款" readonly/></div>
+            </li>
+            <li class="row">
+            	<div class="tt bit1">商业借款额：</div>
+            	<div class="cell">
+                	<span class="mr5">￥593000</span>
+                </div>
+            </li>
+            <li class="row">
+            	<div class="tt bit2">金额大写：</div>
+            	<div class="cell">
+                	<span><b>伍</b> 拾 <b>玖</b> 万 <b>叁</b> 仟 元整</span>
+                </div>
+            </li>
+            <li class="row">
+            	<div class="tt">公积金借款额：</div>
+            	<div class="cell">
+                	<span class="mr5">￥593000</span>
+                </div>
+            </li>
+            <li class="row">
+            	<div class="tt bit2">金额大写：</div>
+            	<div class="cell">
+                	<span><b>伍</b> 拾 <b>玖</b> 万 <b>叁</b> 仟 元整</span>
+                </div>
+            </li>
+            <li class="row">
+            	<div class="tt bit2">借款期限：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请输入年限"/></div>
+                <div class="tx">年</div>
+            </li>
+            <li class="row select" id="waypayback">
+            	<div class="tt bit2">还款方式：</div>
+            	<div class="cell"><input type="text" value="" placeholder="请选择" readonly/></div>
+            </li>
+       </ul>
+      
+       <div class="gap-box mt20 mb20">
+       		<button class="zen-btn">提交</button>
+       </div>
+	</div>
+    <!-- Progress 1 end! -->
+    
+  </div>	
+  <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+	//给jquery扩展一个方法,可作为插件独立使用
+	$.fn.selectDialog = function(opt){
+		var element = $(this);
+		element.on('click', function(){
+			var selbox = $('<div class="selectBox"></div>');
+			var box = $('<div class="box"></div>').appendTo(selbox);
+			function bulid(list, callback){
+				var ul = $('<ul></ul>');
+				for(var i = 0; i < list.length; i++){
+					var data = list[i].split('|');
+					var valstr = '';
+					if(data[1]){
+						valstr = 'data-value="'+ data[1] +'"';
+					}
+					var li = $('<li class="itm" '+ valstr +'>'+ data[0] +'</li>').on('click', function(){
+						if(callback) callback($(this).data('value'), $(this).text());
+						selbox.remove();
+					});
+					li.appendTo(ul);
+				}
+				return ul;
+			}
+			var newul = bulid(opt.list, opt.callback);
+			newul.appendTo(box);
+			var closeBtn = $('<button class="slcbtn">取消</button>').on('click', function(){
+				selbox.remove();
+			})
+			closeBtn.appendTo(box);
+			$('body').append(selbox);
+		})
+	}
+	
+	
+	//方法调用演示
+	$('#loanWay').selectDialog({
+		list: ['公积金贷款|','信用贷款|'],
+		callback: function(value, label){
+			$('#loanWay').find('input').val(label);
+		}
+	});
+	
+	$('#waypayback').selectDialog({
+		list: ['现金还款|','肉体偿还|','血债血偿|'],
+		callback: function(value, label){
+			$('#waypayback').find('input').val(label);
+		}
+	});
+	
+  })
+  </script> 
+</body>
+</html>

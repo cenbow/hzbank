@@ -1,0 +1,68 @@
+<%_.each(iP2PProList,function(temp, i){%>
+    	<li value="<%=temp.projectNo%>" class="curm" cur1="<%=temp.totalAmt%>" cur2="<%=temp.projectNo%>" cur3="<%=temp.financePreInterestRate%>" cur4="<%=temp.state%>" cur5="<%=temp.tranFlowNo%>">
+        	<div class="row tit">
+            	<div class="cell"><%=temp.projectName%>    
+            		<%if(temp.tranflag == "00"){%>
+                    <i class="could-transfer-2">持有7天可转</i>
+                    <%}else{%>
+                    <%}%>
+            	</div>
+            	 <div class="fc-blue">
+            		<%if(temp.state == "80"){%>      <!-- cur4="<%=temp.orderFlowNo%>" -->
+                    <i>转让中</i>
+                    <%}else if(temp.state == "60"){%>
+                       <%if(temp.bfreFundFlag == "1"){%>
+                       <i>提前到期</i>
+                       <%}else{%>
+                       <i>产品到期</i>
+                       <%}%>
+                     <%}else if(temp.state == "81"){%>
+                    <i>以<%=Utils.formatCurrency(temp.tranRate,2)%>%转出</i>
+                    <%}%>
+                    
+                </div>
+            </div>
+            <div class="row state">
+            	<div class="cell">
+                	<p>投资金额 <span><%=Utils.formatCurrency(parseFloat(temp.totalAmt),2)%>元</span></p>
+                	<%if(temp.state == "60" || temp.state == "81"){%>
+                		<%if(temp.fundType == "0"){%>
+                			<%if(temp.tranflag=="10"){%>
+                				<p>持有期 <span><%=temp.financePeriod%>天</span></p>
+                    		<%}else{%>
+                    			<p>持有期 <span><%=temp.tranHoldDays%>天</span></p>
+                    		 <%}%>
+                    	<%}else{%>
+                    	<p>持有期 <span><%=temp.tranHoldDays%>天</span></p>
+                    	 <%}%>
+                    <%}else if(temp.state == "20" || temp.state == "80"){%>
+                    	<%if(temp.fundType == "0"){%>
+                    		<p>起息日 <span><%=Utils.formatDate(temp.interestBeginDate, "yyyyMMdd", "yyyy-MM-dd")%></span></p>
+                    	 <%}else{%>
+                    	 	<p>购买日<span><%=Utils.formatDate(temp.buyTime, "yyyyMMddHHmmss", "yyyy-MM-dd")%></span></p>
+                    	<%}%>
+                    <!-- <p>起息日 <span><%=Utils.formatDate(temp.interestBeginDate, "yyyyMMdd", "yyyy-MM-dd")%></span></p> -->
+                    <%}%>
+                </div>
+                <div class="txt-r">
+                	<%if(temp.fundType == "0"){%>
+                		<p>预期收益率 <span><%=Utils.formatCurrency(parseFloat(temp.financePreInterestRate),2)%>%</span></p>
+                	<%}else{%>
+                		<p>预期收益率 <span><%=Utils.formatCurrency(parseFloat(temp.rate),2)%>%</span></p>
+                	<%}%>
+                    <%if(temp.state == "60"){%>
+                    	<%if(temp.fundType == "0"){%>
+                    	   <p>实际收益 <span><%=Utils.formatCurrency(temp.payInterestSum,2)%>元</span></p>
+                    	<%}else{%>
+                    		<p>实际收益<span><%=Utils.formatCurrency(parseFloat(temp.shareAmount-temp.totalAmt)+parseFloat(temp.payInterestSum==""?0:temp.payInterestSum),2)%>元</span></p>
+                    	<%}%>
+                    <%}else if(temp.state == "81"){%>
+                    	<p>实际收益 <span><%=Utils.formatCurrency(temp.tranIncome,2)%>元</span></p>
+                    <%}else if(temp.state == "20" || temp.state == "80"){%>
+                    <p>到期日 <span><%=Utils.formatDate(temp.interestEndDate, "yyyyMMdd", "yyyy-MM-dd")%></span></p>
+                    <%}%>
+                </div>
+            </div>
+        </li>
+<%});%>
+	

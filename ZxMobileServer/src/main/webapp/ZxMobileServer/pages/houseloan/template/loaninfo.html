@@ -1,0 +1,106 @@
+  	
+  <div class="loanApp new2016">
+  	<div class="progress">
+    	<i data-label="身份认证" class="active">1</i>
+        <i data-label="确认房屋信息" class="active">2</i>
+        <i data-label="申请人信息" class="active">3</i>
+        <i data-label="借款信息" class="active">4</i>
+    </div>
+    <!-- Progress 1 start! -->
+    <div class="specBuz">
+       <ul class="liz">
+       		<li class="row " id="loanWay">
+            	<div class="tt">贷款方式：</div>
+            	<div class="cell" id="loanType" style="color: gray;"></div>
+            </li>
+            <li id="commercialLoan" class="row" style="display:none">
+            	<div class="tt">商业借款额：</div>
+            	<div class="cell">
+                	<span class="mr5">￥<span  id="commicNum" style="color: gray;"></span>
+                	<span>元</span>
+                	</span>
+                </div>
+                
+            </li>
+            <li class="row" id="commercialBig" style="display: none;">
+            	<div class="tt">金额大写：</div>
+            	<div class="cell">
+                	<span id="commoneybig" style="color: gray;"></span>
+                </div>
+            </li>
+            <li id="fundLoan" class="row">
+            	<div class="tt">公积金借款额：</div>
+            	<div class="cell">
+                	<span class="mr5">￥<span id="ggjNum" style="color: gray;"></span>
+                	<span>元</span></span>
+                </div>
+            </li>
+            <li class="row" id="FundloanBig">
+            	<div class="tt">金额大写：</div>
+            	<div class="cell">
+                	<span id="fundmoneybig" style="color: gray;"></span>
+                </div>
+            </li>
+            <li class="row">
+            	<div class="tt">借款期限：</div>
+            	<div class="cell"><input id="borrowyear" type="tel" maxlength="2" value="" placeholder="请输入年限"/></div>
+                <div class="tx">年</div>
+            </li>
+            <li class="row select" id="waypayback">
+            	<div class="tt">还款方式：</div>
+            	<div class="cell"><input type="text" value="请选择"  readonly/></div>
+            </li>
+       </ul>
+      
+       
+        <div class="depart" id="mixloaninfo" style="display:none">
+       	 <div class="tit">组合贷款其他信息</div>
+         <ul class="liz">
+            <li class="row select" id="localliveyear">
+                <div class="tt">本地入住年份：</div>
+                <div class="cell"><input type="text"  value="请选择"  readonly="readonly"/></div>
+                <div class="tx">年</div>
+            </li>
+            <li class="row select" id="earlistyear">
+                <div class="tt">最早就业年份：</div>
+                <div class="cell"><input type="text"  value="请选择" readonly="readonly"/></div>
+                <div class="tx">年</div>
+            </li>
+            <li class="row select" id="joinyear">
+                <div class="tt">加入现单位年份：</div>
+                <div class="cell"><input type="text"  value="请选择" readonly="readonly"/></div>
+                <div class="tx">年</div>
+            </li>
+            
+            <li class="row select"  id="bankloan">
+            	<div class="tt">是否有银行贷款：</div>
+            	<div class="cell"><input  type="text" value="请选择" readonly/></div>
+            </li> 
+            <li class="row select"  id="personguar">
+            	<div class="tt">是否有对个人担保：</div>
+            	<div class="cell"><input  type="text" value="请选择" readonly/></div>
+            </li> 
+            <li class="row">
+                <div class="tt">拥有房产：</div>
+                <div class="cell"><input type="tel" id="houseNo" value="" maxlength="2" placeholder="请输入房产数"/></div>
+                 <div class="tx">处</div>
+            </li>
+            <li class="row">
+                <div class="tt">拥有车辆：</div>
+                <div class="cell"><input type="tel" id="carNo" value="" maxlength="2" placeholder="请输入车辆数"/></div>
+                 <div class="tx">辆</div>
+            </li>
+            
+         </ul>
+       </div>
+       
+       
+      
+       <div class="gap-box mt20 mb20">
+       		<button id="loancomf" class="zen-btn">提交</button>
+       </div>
+	</div>
+    <!-- Progress 1 end! -->
+    
+  </div>	
+

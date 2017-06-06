@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016 Regs">
+  	<div class="prgBar row">
+    	<div class="cell active" data-label="1">手机验证</div>
+        <div class="cell active" data-label="2">身份验证</div>
+        <div class="active" data-label="3">密码设置</div>
+    </div>
+	<div class="padded fm">
+    	<div class="pswdWrap">
+        	<div class="pswdAll nxt">
+                <div class="tradePswd">
+                    <h2 class="txt-mid">请设置交易密码</h2>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <input type="number" name="number" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" value="" />
+                    </div>
+                </div>
+                <div class="tradePswd">
+                    <h2 class="txt-mid">请再次设置交易密码</h2>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <input type="number" name="number" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="button" value="确认" class="zen-btn mt30">
+    </div>
+  </div>	
+  <script src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+	// 设置密码框动态高度
+	var iptRow = $('.tradePswd .row');
+	var ht = iptRow.width()/6;
+	console.log(ht);
+	iptRow.css({
+		height: ht + 'px',
+		lineHeight: ht + 'px'
+	})
+	  
+	// 交易密码设置
+	var allCell = $('.tradePswd .cell'); 
+	var ipt = $('.tradePswd input'); 
+	var fixL = function(n){
+		n > 6 ? n = 6 : null;
+		for(var i = 0; i<6; i++){
+			i+1 > n ? 
+			allCell.eq(i).removeClass('active') :
+			allCell.eq(i).addClass('active');
+		}
+	} 
+	ipt.on('keyup', function(){
+		var me = $(this);	
+		var s = me.val();
+		s.length > 6 ? s = s.substring(0, 6) : null;
+		//console.log(s);
+		me.val(s);	
+		fixL(s.length);
+	})
+  })
+  </script>
+</body>
+</html>

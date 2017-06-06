@@ -1,0 +1,29 @@
+<style type="text/css">
+.vtPgae{width:100%; height:100%; position:fixed; left:0; top:0; background:#fa5355 url(images/vt/vtbg.gif) no-repeat center 0; background-size:320px auto;}
+.vtPgae .word{color:#FFF; width:100%; text-align:center; padding:22px 0;}
+.vtPgae .word span{position:relative;}
+.vtPgae .word span:after{content:""; display:block; height:18px; width:18px; background:url(images/vt/vtstar.png) center center no-repeat; background-size:auto 100%; position:absolute; left:-24px; top:-6px;}
+.vtPgae .word h4{font-size:20px;}
+.vtPgae .sow{width:302px; height:112px; margin:0 auto; background:url(images/vt/vtsaw.png)0 center repeat-x; background-size:10px auto; text-align:center; color:#fa5355; display:-webkit-flex; display:flex; -webkit-align-items:center; -webkit-box-align:center; align-items:center;}
+.vtPgae .sow >div{width:100%;}
+.vtPgae .sow .num{display:inline-block; vertical-align:baseline;}
+.vtPgae .sow .num b{font-weight:normal; padding:0 5px; background:url(images/vt/vttbg.png) center center no-repeat; background-size:auto 100%; color:#FFF;}
+.vtPgae .vtBtn{width:150px; height:40px; background:#FFF; border-radius:6px; margin:43px auto 0; display:block; color:#fa5355;}
+.vtPgae .vtBtn:active{background-color:#e9e9e9;}
+</style>
+<div class="vtPgae">
+	<div class="word">
+    	<span>恭喜您</span>
+        <h4>升级成功</h4>
+    </div>
+    <div class="sow">
+    	<div>恭喜您，您已经成功完成账户升级<br/>
+        	您的HCE支付限额提升为<div class="num"><b>1</b><b>0</b><b>0</b><b>0</b><b>0</b></div>元
+        </div>
+    </div>
+    <button class="vtBtn">确认</button>
+</div>
+<div class="idc-result" style="display:none;">
+  <div class="rzt pass">升级失败！</div> 
+  <input type="button" class="zen-btn" id="back" value="返回"/>
+</div>

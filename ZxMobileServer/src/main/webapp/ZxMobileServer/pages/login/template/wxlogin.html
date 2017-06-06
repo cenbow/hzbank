@@ -1,0 +1,28 @@
+<style type="text/css">
+    html,body,.ui-view,.ui-view >div,.content{height:100%;}
+    body.gray-bg .ui-view{background:#FFF; overflow:hidden;}
+    .focusState{border-color:#3388FF;}
+    .regist-import{position:absolute;}
+    .zen-btn.reg-btn{box-sizing:border-box; -webkit-box-sizing:border-box; background:none; border:1px solid #0194E8; color:#0194E8;}
+    .zen-btn.reg-btn:not(.disabled):not(:disabled):active{color:#FFF; background:#0194E8;}
+	.get{color:#0094e8;}
+	.get.disabled{color:#ccc;}
+	.row{display:box; display:-webkit-box;}
+    .cell{-webkit-box-flex:1; box-flex:1;}
+</style>
+<div class="content">
+	<div class="login-logo mb10"></div>
+	<div class="gap-box">
+		<div class="pt15">
+			<div class="ipt-txt login-user fm-del">
+				<input type="text" value="" id="mobileNoText" placeholder="请输入您的手机号"  maxlength="11"/>
+			</div>
+			<div class="ipt-txt login-pswd fm-itm row" id=gin-pswd">
+				<div class="ipt cell" style="border-right:1px solid #ddd;"><input id="phonePassInput" type="tel"  maxlength="6" value="" placeholder="请输入短信验证码" /></div>
+            	<div id="btn_sendSMS" class="get pl10 disabled">发送验证码</div>
+			</div>
+			<!--绑定弹框事件-->
+			<input type="button" id="login" value="登  录" class="zen-btn mt30"/>
+		</div>  
+	</div>
+</div>

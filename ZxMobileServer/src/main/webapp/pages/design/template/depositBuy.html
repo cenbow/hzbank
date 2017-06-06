@@ -1,0 +1,116 @@
+<div class="content">
+	<div id="depositBuy1">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+ 					<p class="ft16">产品名称：<span class="ft16" id="financeName"><%=financeName%></span></p>
+					<p class="ft14 fc-9">产品代码：<span class="fc-9" id="financeNo"><%=financeNo%></span></p>
+					<p class="ft14 fc-9">起购金额：<span class="fc-9" id="firstAmt"><%=Utils.formatCurrency(firstAmt)%></span> 元</p>
+					<p class="ft14 fc-9 mb10">账户余额：<span class="fc-orange" id="showBalanceSpan"></span> 元</p>
+				</div>
+			</li>
+ 			<li>
+				<div class="ipt-opr">
+					<label>认购金额：</label>
+					<div class="cell"><input type="number" value="" maxlength="13" placeholder="请输入认购金额" id="fundAmt"/></div>
+				</div>
+			</li>
+			<li>
+				<div class="ipt-opr">
+					<label>交易密码：</label>
+					<div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+				</div>
+			</li>
+			<li>
+				<div class="ipt-opr">
+					<label>经理编号：</label>
+					<div class="cell"><input type="tel" value="" maxlength="6" placeholder="请输入经理编号（选填项）" id="mgrNo"/></div>
+					<span id="mgrName" style="display:none"></span>					
+				</div>
+			</li>
+			<div class="zen-ckbox pl15" id="checkReg1">
+				 <input type="checkbox" id="checkbox1" checked="checked"/>
+				 <span class="fm-agr" ><a href="javascript:;" id="showPage4">《“添金喜”个人结构性存款协议书》</a></span>
+			</div>
+			<div class="zen-ckbox pl15" id="checkReg2"> 
+				<input type="checkbox" id="checkbox2" checked="checked"/>
+<!-- 				<span class="fm-agr" >本人已阅读此 <a href="javascript:;" id="showPage5">《产品说明书》</a> 中条款及相应的风险提示，充分了解并清楚知晓本产品的风险，认可本产品的信息披露方式，愿意承担相关风险。</span>
+ -->			<span class="fm-agr" >本人已充分了解并清楚知晓本产品的风险，认可本产品的信息披露方式，愿意承担相关风险。</span>
+			</div>
+		</ul>
+		<div class="gap-box"><input type="button" value="提交" class="zen-btn mt10 disabled" id="doSubmit" disabled="disabled"/></div>
+	</div>
+	<div id="depositBuy2" style="display: none">
+		<div class="trs-rzt-success">认购成功！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_suc">认购账户：</span> <span id="recAccName_suc"></span></p>
+					<p>认购金额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_suc"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" id="succBackButton" value="返回" class="zen-btn"/></div>
+		<div id="drawLottery" class="mt20" style="display: "><img src="images/rotate/get-change.png" width="100%" alt=""/></div>
+	</div>
+	<!-------------------------------------------------------------------------->
+	<div id="depositBuy3" style="display:none ">
+		<div class="trs-rzt-fail">认购失败！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_err">认购账户：</span> <span id="recAccName_err"></span></p>
+					<p>认购金额：<span class="fc-orange" id="recAmt_err"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_err"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<p class="trs-rzn" id="errorMessageText"></p>
+		<div class="gap-box"><input type="button" id="errorBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+	<div id="depositBuy4" style="display:none">
+		<div class="mb10"></div>
+		<div class="mb10" style="text-align:center">
+			《“添金喜”个人结构性存款协议书》
+		</div>
+		<div class="mb10"></div>
+		<div class="ml10 mr5" style="padding-bottom:70px;">
+	        <p>一、风险提示：</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、本协议书及其约定产品的产品说明书、风险揭示书共同构成客户与银行之间的结构性存款交易合同（以下简称：本合同），客户在认真阅读上述文件后签署本合同。产品说明书、风险揭示书以银行营业网点提供或官方网站发布为准。客户购买“添金喜”个人结构性存款系列产品的，无须再另行签署风险揭示书（已在办理产品适合度评估时签署）。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、客户认购本产品，并授权银行按照本合同约定的挂钩标的和收益支付方式配置衍生金融资产，投资收益和风险完全由客户按照本合同约定方式承担。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、客户签署本协议书则被视为已详细阅读过产品相关销售文件，银行已就产品相关销售文件中的内容向客户进行了详细的说明和解释，客户已不存在任何疑问或异议，并充分理解相关的收益和潜在风险，自愿办理相关交易，并遵守本合同项下的各项规定。</p>
+	        <p>二、双方权利和义务</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、客户保证存款资金来源合法，存款行为符合法律、法规及相关监管部门的规定。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、客户承诺所提供的所有资料真实、完整、合法、有效，如有变更，应及时到乙方原经办机构办理变更手续。若客户未及时办理相关变更手续，由此导致的一切后果由客户自行承担，银行对此不承担任何责任。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、本协议成立后，银行将凭本协议按购买金额冻结客户活期账户内资金相应资金，该账户冻结资金不能被支取和使用。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、客户需在其活期账户中有足额资金，以便银行从客户活期账户中将购买金额足额扣划。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、客户在此同意并授权银行有权根据购买金额对甲方相关资金账户进行资金扣划等相关操作，无须经客户另行同意。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7、存款到期日，银行应按照本协议以及说明书的约定将应支付的购买金额及利息（如有）划入客户活期账户。</p>
+	        <p>三、免责条款</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、如因客户原因（包括但不限于因债权债务纠纷导致客户活期账户被司法机关采取司法强制措施）导致购买金额不能从其活期账户足额划转的，本协议不生效。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、若因司法机关等有权部门采取强制措施导致存款本金部分或全部被扣划，均视客户本人就全部存款本金违约进行了提前支取，本合同自动终止。本合同因此自动终止的，不计付支取日前的存款利息。</p>
+	        <p>四、适用法律与争议解决</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本合同适用中国的法律和行政法规。本合同项下的及与之有关的一切争议，客户与发行银行双方应首先协商解决，协商不成的，应提交产品经办银行所在地人民法院司法裁决（双方另有书面约定的除外）。</p>
+	        <p>五、协议的生效和终止</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、本合同经（1）客户签署本协议书，且（2）银行在本协议书上加盖银行经办行“储蓄业务公章”并由其理财经理加盖个人名章或签字后，于本协议书上载明的签署日期发生法律效力。</p>
+	        <p class="last">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、本协议及说明书项下客户与银行双方权利义务履行完毕之日，本协议自动终止。</p> 
+						
+		</div>
+		<div class="mb10"></div>
+		<div class="buy-btn-wrap">
+	        <div class="btn-double">
+	           <input type="button" value="同意" class="zen-btn" id="agreeBtn1"/>
+	           <input type="button" value="关闭" class="zen-btn btn-fn" id="closeBtn1"/>
+	        </div>
+		</div>
+	</div>
+</div>

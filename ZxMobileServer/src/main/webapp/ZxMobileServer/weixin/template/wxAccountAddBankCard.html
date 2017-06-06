@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>直销银行</title>
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../../css/weixin/css/global.css">
+<link rel="stylesheet" href="../../css/weixin/css/banks.css">
+<link rel="stylesheet" href="../../css/allPicker.css">
+</head>
+<script type="text/javascript">
+
+/*  document.addEventListener('WeixinJSBridgeReady',function onBridgeReady(){
+	WeixinJSBridge.call('hideOptionMenu');  
+  });
+function is_weixn(){  
+    var ua = navigator.userAgent.toLowerCase();  
+    if(ua.match(/MicroMessenger/i)=="micromessenger"&&(  device.os == 'android'|| device.os == 'ios')) {  
+        return true;  
+    } else {  
+        return false;  
+    }  
+}
+
+if(!is_weixn()){
+	location.href="wxAccountErro.html";
+} 
+ */
+  
+</script>
+<body>
+   <div class="guideBar row">
+       <div class="cell active">
+           <i class="ico">1</i>身份验证
+       </div>
+       <div class="ar"></div>
+       <div class="cell active">
+           <i class="ico">2</i>银行卡绑定
+       </div>
+   </div>
+   <div class="list">
+     <div class="itm" style="display:none">
+       <label>姓<i class="bit1"></i>名：</label>
+       <span id="userName"></span>
+     </div>
+     <div class="itm"  style="display:none">
+       <label>身份证：</label>
+       <span id ="certNo" ></span>
+     </div>
+     <div class="itm">
+       <label>银行卡：</label>
+       <div class="ipt"><input id="input_cardNo" type="tel" maxlength="30" value="" placeholder="请输入您的借记卡卡号"/></div>
+     </div>
+     <div class="itm">
+       <label>银<i class="bit1"></i>行：</label>
+             <i id="input_bankUrl"></i>
+           	<input id="input_bank" type="text" value="" data-value="" placeholder="所属开户行" readonly/>
+      </div>
+      <div class="itm arr">
+       <label>职<i class="bit1"></i>业：</label>
+       <div class="ipt" id="showJobPicker"><input id="jobInfo" value="<%=jobInfo_g%>" placeholder="请输入职业信息" readonly="readonly"/></div>
+     </div>
+   </div> 
+   <div class="padded">
+    	<div class="warnNotice">
+        	<div class="fcYellow">温馨提示：</div>
+      		<div class="fc9 lh2">绑定银行卡成功激活后，新客户红包将发放至电子账号</div>
+      		<div class="fc9 lh2">以下银行可以绑卡后直接支付：</div>
+            <ul id="first" >
+          
+      		</ul>
+      		<ul id="second">
+
+                <li class="more" >
+                    <i class="ico-bnk"></i>
+                    <p><span class="bit1"></span>更多<span class="bit1"></span></p>
+                </li>
+      		</ul>
+      	</div>	
+      	
+    
+      <button class="btn disabled" id="submitBtn">提交</button>
+   </div>
+</body>
+<script type="text/javascript" src="../views/device-initialize.js"></script>
+<script src="../../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="../../scripts/libs/jquery/jquery.finger.min.js"></script>
+<script src="../../scripts/weixin/util.js"></script>
+<script type="text/javascript" src="../views/wxAccountAddBankCard.js"></script>
+<script type="text/javascript" src="../views/wx_ajax.js"></script>
+<script src="../../scripts/components/allPicker.js"></script>
+<script type="text/javascript">
+</script>
+
+</html>

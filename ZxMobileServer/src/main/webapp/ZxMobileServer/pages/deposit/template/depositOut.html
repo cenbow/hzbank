@@ -1,0 +1,71 @@
+<div class="content">
+	<div id="depositOutPage1" style="display: ">
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box">
+					<p class="ft16">我的卡号：<span id="cardNo"><%=Utils.formatAcc(cardNo)%></span><span class="ft12 fc-9" id="custName"></span></p>
+					<p class="ft14 fc-9 ">乐存账户：<span class="fc-9" id="accountNo"><%=accountNo%></span></p>
+					<p class="ft14 fc-9 ">开户日期：<span class="fc-9" id="interestBeginDate"><%=interestBeginDate%></span></p>
+					<p class="ft14 fc-9 mb10">存款金额：<span class="fc-9" id="balance"><%=balance%></span> 元</p>
+				</div>
+			</li>
+			<li>
+				<div class="ipt-opr">
+					<label>赎回金额：</label>
+					<div class="cell"><input type="number" value="" maxlength="16" placeholder="请输入金额" id="tranAmtText" /></div>
+				</div>
+			</li>
+			<li>
+				<div class="ipt-opr">
+					<label>交易密码：</label>
+					<div class="cell"><input id="pwd" type="password" value="" readOnly placeholder="请输入交易密码"/></div>
+				</div>
+			</li>
+			<div class="fm-remind pl10 pr10" style="display: none">
+				<div class="err-rzt" id="errorPWD" style = "display:none">您输入的密码有误</div>
+				<a href="javascript:;">忘记密码?</a>
+			</div>
+		</ul>
+		<div class="gap-box"><input type="button" value="提交" class="zen-btn mb10 disabled" id="outBtn" disabled="disabled"/></div>
+	</div>
+	
+	<!-------------------------------------------------------------------------->
+	<div id="depositOutPage2" style="display: none">
+		<div class="trs-rzt-success">赎回成功！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_suc">赎回账户：</span> <span id="recAccName_suc"></span></p>
+					<p>赎回金额：<span class="fc-orange" id="recAmt_suc"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_suc"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<div class="gap-box"><input type="button" id="succBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+		<!-------------------------------------------------------------------------->
+	<div id="depositOutPage3" style="display:none ">
+		<div class="trs-rzt-fail">赎回失败！</div>
+		<ul class="zen-list-2">
+			<li>
+				<div class="opr-box fc-9 ft13">
+				<div class="row fc-6 pt10 pb10">
+					<p><span id="recAcc_err">赎回账户：</span> <span id="recAccName_err"></span></p>
+					<p>赎回金额：<span class="fc-orange" id="recAmt_err"></span> 元</p>
+				</div>
+				<div class="row pt10 pb10">
+					<span id="payAcc_err"></span>
+				</div>
+				</div>
+			</li>
+		</ul>
+		<p class="trs-rzn" id="errorMessageText"></p>
+		<div class="gap-box"><input type="button" id="errorBackButton" value="返回" class="zen-btn"/></div>
+	</div>
+<!-------------------------------------------------------------------------->
+</div>
+

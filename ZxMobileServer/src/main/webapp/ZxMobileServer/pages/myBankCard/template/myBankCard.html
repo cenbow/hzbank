@@ -1,0 +1,69 @@
+  <div class="new2016 Regs">
+	<div class="cardWrap">
+    	<div class="rCard">
+        	<div class="tt"><span>电子账户</span></div>
+            <div class="cnt">
+            	<h1><%=Utils.getFmtAcc(Utils.getEleCard().cardNo)%></h1>
+                <h2>开户行：杭州银行股份有限公司营业部</h2>
+				<h2>余  额：<span id="balance"></span>元</h2>
+            </div>
+        </div>
+    </div>
+    <div class="padded mt5">我的银行卡</div>
+    <div class="manageCard">
+    	<ul id="cardList">
+   <!--      	<li>
+            	<div class="card ar-0002 active">
+                	<i class="ico-bnk-x2"></i>
+                	<h1>中国农业银行 <span class="fc-9">(绑定卡)</span></h1>
+                    <p class="fc-9">6225 2563 **** **** 23</p>
+                    <i class="md">修改绑卡</i>
+                    <i class="del"></i>
+                </div>
+            </li>
+            <li>
+            	<div class="card ar-0001">
+                	<i class="ico-bnk-x2"></i>
+                	<h1>中国农业银行 <span class="fc-9">(绑定卡)</span></h1>
+                    <p class="fc-9">6225 2563 **** **** 23</p>
+                    <i class="del"></i>
+                </div>
+            </li>
+            <li>
+            	<div class="card ar-0077">
+                	<i class="ico-bnk-x2"></i>
+                	<h1>中国农业银行 <span class="fc-9">(绑定卡)</span></h1>
+                    <p class="fc-9">6225 2563 **** **** 23</p>
+                    <i class="del"></i>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+    <div class="padded mt20">
+    	<button id="addCard" class="zen-btn add">添加银行卡</button>
+    </div>
+    <div class="dialog" id="codeInput" style="display:none">
+    	<div class="passwordBox">
+        	<div class="head row">
+            	<i class="back" id="keyBack"></i>
+                <div class="cell">请输入您的杭银直销交易密码</div>
+            </div>
+            <div class="pswdWrap">
+        	<div class="pswdAll">
+                <div class="tradePswd">
+                    <div class="row" style="height: 58.8333px; line-height: 58.8333px;">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <input id="password1" type="password" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" value="" readonly="readonly">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:<%=Device.os=='android'?(pubParam.pwdHeight*0.8):(pubParam.pwdHeight+10)%>px;"></div>
+        </div>
+    </div>
+  </div>

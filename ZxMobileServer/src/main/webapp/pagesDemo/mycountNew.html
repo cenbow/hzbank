@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>myCountNew</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link type="text/css" rel="stylesheet" href="../css/reset.css">
+  <link type="text/css" rel="stylesheet" href="../css/global.css">
+  <link type="text/css" rel="stylesheet" href="../css/common_1.css">
+  <link type="text/css" rel="stylesheet" href="../css/common_2.css">
+  <link type="text/css" rel="stylesheet" href="../css/layouts.css">
+  <link type="text/css" rel="stylesheet" href="../css/index.css">
+  <link type="text/css" rel="stylesheet" href="../css/banks.css">
+  <link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body>
+  <div class="myCount typ2 new2016">
+    <div class="countState txt-mid" id="ownPropertyDiv">
+      <h1>总资产（元）</h1>
+      <h2 id="totalProperty">
+        <%=Utils.formatCurrency(totalProperty,2)%>
+      </h2>
+      <h1 class="pt10">可用余额（元）</h1>
+      <h3 class="ft16" id="balance">
+        <%=Utils.formatCurrency(balance,2)%>
+      </h3>
+      <%if(pubParam.clientVersion>="3.1.1"){%>
+        <div class="info" id="readInfo"></div>
+        <%}%>
+    </div>
+    <div class="row CTR">
+      <div class="cell" id="incomeTransfer">充值</div>
+      <div class="cell" id="outTransfer">提现</div>
+    </div>
+    <div class="FIN">
+      <ul>
+        <li class="a" id="property1">
+          <h1>幸福添利</h1>
+          <h2>
+            <%=Utils.formatCurrency(financeAmt,2)%>
+          </h2>
+        </li>
+        <li class="b" id="property2">
+          <h1>幸福乐存</h1>
+          <h2>
+            <%=Utils.formatCurrency(totalBalanceAvailable,2)%>
+          </h2>
+        </li>
+        <li class="c" id="property3">
+          <h1>幸福金禧</h1>
+          <h2>
+            <%=Utils.formatCurrency(p2pSum,2)%>
+          </h2>
+        </li>
+        <li class="d" id="property4">
+          <h1>结构性存款</h1>
+          <h2>
+            <%=Utils.formatCurrency(designSum,2)%>
+          </h2>
+        </li>
+        <li class="e" id="property5">
+          <h1>幸福如金</h1>
+          <h2>
+            <%=Utils.formatCurrency(goldSum,2)%>
+          </h2>
+        </li>
+        <li class="f" id="property6">
+          <h1>幸福基金</h1>
+          <h2>
+            <%=Utils.formatCurrency(fundTotalMoney,2)%>
+          </h2>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="zen-list-5 mb20">
+      <li class="row arr" id="cardManage">
+        <div class="cell">银行卡</div>
+        <div class="fc-9 ft12" id="cardNum">0</div>
+      </li>
+      <li class="row arr" id="saveAccount" style="display: none;">
+        <div class="cell">存管账户</div>
+        <div class="fc-9 ft12" id="accountNum"></div>
+      </li>
+      <li class="row arr" id="list-detail">
+        <div class="cell">交易记录</div>
+        <div class="fc-9 ft12">查看记录</div>
+      </li>
+      <li class="row arr " id="security">
+        <div class="cell">安全中心</div>
+        <div class="fc-9 ft12">修改密码</div>
+      </li>
+      <li class="row arr mb20" id="toSetCenter">
+        <div class="cell">账户中心</div>
+        <div class="fc-9 ft12" id="disc"></div>
+      </li>
+      <li class="row arr" id="totalScorediv">
+        <div class="cell">余额管理
+          <div class="red-dot"></div>
+        </div>
+        <div class="fc-9 ft12" id="totalScore">
+          转入添利</div>
+      </li>
+      <li class="row arr" id="totalScorediv">
+        <div class="cell">总积分</div>
+        <div class="fc-9 ft12" id="totalScore">
+          <%=totalScore%>分</div>
+      </li>
+      <li class="<%=!MUI.Cache.get('myRedPacketUnNew')?'friend midd-dot':'row arr'%>" id="redPacket">
+        <div class="cell">我的红包</div>
+        <!-- <div class="fc-9 ft12" id="dot"></div> -->
+      </li>
+    </ul>
+    <!-- 详细信息 -->
+    <div class="dialog" style="display:none;">
+      <div class="infoText">
+        <div class="fullTxt">
+          <h1>总资产</h1>
+          <p>总资产 = 可用余额 + 冻结余额 + 产品余额</p>
+          <h1>可用余额</h1>
+          <p>可用余额可用于购买各类产品，实现资产增值。</p>
+          <p>您可以通过以下方式将资金转入余额账户，增加可用余额：</p>
+          <p>通过我的账户下的充值转入余额账户；</p>
+          <p>通过他行网银或手机银行转账转入余额账户。</p>
+          <h1>计息规则</h1>
+          <p>余额资金按照活期利息计息。</p>
+        </div>
+        <i class="close"></i>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

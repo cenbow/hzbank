@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/common_3.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+</head>
+
+<body>
+	<div class="new2016 fdDtlPage hapFud">
+    	<div class="director mb10">
+            <div class="list">
+            	<div class="list-item arr spr">老基金</div>
+                <div class="cnt" style="height:auto">
+                	<div class="para ft13">投资基金（investment funds）是一种利益共享、风险共担的集合投资制度。投资基金集中投资者的资金，由基金托管人委托职业经理人员管理，专从事投资活动。 </div>
+                </div>
+            </div>
+        </div>
+    	<div class="table">
+        	<table cellpadding="0" cellspacing="0" width="100%">
+            	<tr class="filter fc-b">
+                    <th>基金名称</th>
+                    <th>近3年收益率</th>
+                    <th>成立年限</th>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>南方原油(QDII-FOF)</h1>
+                        <h2 class="ft13 fc-9">501018</h2>
+                    </td>
+                    <td class="fc-orange">+14.22%</td>
+                    <td>5.5</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>南方原油(QDII-FOF)</h1>
+                        <h2 class="ft13 fc-9">501018</h2>
+                    </td>
+                    <td class="fc-orange">+14.22%</td>
+                    <td>5.5</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>南方原油(QDII-FOF)</h1>
+                        <h2 class="ft13 fc-9">501018</h2>
+                    </td>
+                    <td class="fc-orange">+14.22%</td>
+                    <td>5.5</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>南方原油(QDII-FOF)</h1>
+                        <h2 class="ft13 fc-9">501018</h2>
+                    </td>
+                    <td class="fc-orange">+14.22%</td>
+                    <td>5.5</td>
+                </tr>
+            </table>
+        </div>
+	</div> 
+    <script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+	<script>
+	$(function(){	
+		var allList = $('.director .list');
+        var allListItem = allList.find('.list-item');
+        var allListCnt = allList.find('.cnt');
+
+    	allListItem.on('click', function(){
+
+			var me = $(this), 
+			    cnt = me.next(), 
+				setH = cnt.find('.para').get(0).offsetHeight;
+
+			if (me.hasClass('spr')) {
+                me.removeClass('spr');
+                cnt.css('height',0);
+            } else {
+                allListItem.removeClass('spr');
+                allListCnt.css('height', 0);
+                me.addClass('spr');
+                cnt.css('height',setH);
+            }
+
+		})
+	})
+	</script>
+</body>
+</html>

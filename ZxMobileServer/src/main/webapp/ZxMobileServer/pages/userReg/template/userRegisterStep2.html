@@ -1,0 +1,37 @@
+<div class="specBuz">
+	<div class="pBar row" style="margin-bottom: 0px;">
+	 	<div class="cell active">① 身份认证</div>
+	    <div class="cell active">② 绑定银行卡</div>
+	    <div class="cell">③ 填写实名信息</div>
+	</div>
+</div>
+<div id ="page1" class="content">
+  <div class="gap-box">
+    <div class="pt15">
+      <h1 class="fm-tit-guide">请使用本人名下借记卡进行绑定</h1>
+      <div class="ipt-txt-2 fm-card fm-del">
+        <input id="input_bindCardNo" type="tel" maxlength="20" value="<%=bindCardNo%>" placeholder="请输入您的储蓄卡卡号"/>
+        <i class="camera"></i>
+      </div>
+      <div class="ipt-txt-2 fm-bank" id="bankList">
+        <i class="<%=bankUrlClass%>" id="input_bankUrl"></i>
+        <input id="input_bank" type="text" value="<%=bankName%>" data-value="<%=bankType%>" placeholder="所属开户行" readonly/>
+      </div>
+      <div class="ipt-txt-2 fm-load-pswd" id="tr_safeInput" style="display:none">
+          <input id="password" type="password" value="" placeholder="请输入取款密码" readonly="readonly"/>
+      </div>
+      <!--绑定弹框事件-->
+      <input id="nextButton2" type="button" value="下一步" class="zen-btn mt20 disabled" disabled/>
+    </div>
+    
+  </div>
+</div>
+<div  id ="page2" class="content" style="display:none">
+ 	 <div class="zen-search-list" id="zen-iscroll-wrapper">
+       <ul class="zen-list-3 nobd" id="all_bankst">
+       <%_.each(bankList,function(temp, i){%>
+		<li data-value="<%=temp.bankName+'|'+temp.orgCode2+'|'+temp.ico%>"><i class="ico-bnk <%=temp.ico%>"></i><%=temp.bankName%></li>
+	<%})%>
+       </ul>
+     </div>
+</div>

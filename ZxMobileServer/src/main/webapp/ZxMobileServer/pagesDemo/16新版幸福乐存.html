@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>直销银行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+<link type="text/css" rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body class="gray-bg"  ontouchstart="">
+  <div class="new2016 hpDpt">
+ 	<div class="fudState">
+    	<h1>总资产(元)</h1>
+        <h2>2,3123.08</h2>
+    </div>
+    <div class="row ctr">
+    	<div class="cell">赎回</div>
+        <div class="cell">购买</div>
+    </div>
+    <div class="chart">
+    	<h1 class="ft12 fc-9">幸福乐存利率（％）</h1>
+    	<div class="chartArea" id="barChart"></div>
+    </div>
+    <div class="tbList">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th>子账户</th>
+            <th>可用余额</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>
+            	<p>3301****898</p>
+                <p class="ft12 fc-9">起息日：2015-01-01</p>
+            </td>
+            <td>
+            	<p>123.01</p>
+            </td>
+            <td>
+            	<p class="fc-orange">收益查询</p>
+            </td>
+          </tr>
+           <tr>
+            <td>
+            	<p>3301****898</p>
+                <p class="ft12 fc-9">起息日：2015-01-01</p>
+            </td>
+            <td>
+            	<p>123.01</p>
+            </td>
+            <td>
+            	<p class="fc-orange">收益查询</p>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </div>	
+  <script  src="../scripts/libs/zepto/zepto.js"></script>
+  <script src="../scripts/libs/echarts-all.js"></script>
+  <script>
+  Zepto(function($){
+	var myBar = echarts.init(document.getElementById('barChart'));  
+	var opt = {
+	   tooltip: {
+			show : true
+		},
+		calculable : false,
+		xAxis : [{
+				axisTick : {show:false},
+				axisLine :{
+					lineStyle:{
+					   color: '#FABA69', 
+					   width: 1, 
+					   type: 'solid'
+					}
+				},
+				splitLine : {
+					show:true,
+					lineStyle:{
+					   color: '#FFE8CC', 
+					   width: 1, 
+					   type: 'dotted'
+					}
+				},
+				axisLabel : {
+					textStyle: { 
+					  color: '#979797',
+					  fontSize: 8
+					}
+				},
+				type : 'category',
+            	data : ['一天','三天','三个月','六个月','一年','两年','三年','五年']
+		}],
+		yAxis : [{
+			axisTick : {show:false},
+			axisLine :{
+				lineStyle:{
+				   color: '#FABA69', 
+				   width: 1, 
+				   type: 'solid'
+				}
+			},
+			splitLine : {
+				show:true,
+				lineStyle:{
+				   color: '#FFE8CC', 
+				   width: 1, 
+				   type: 'dotted'
+				}
+			},
+			axisLabel : {
+				margin : 4,
+				textStyle: { 
+				  color: '#979797',
+				  fontSize: 10
+				},
+				formatter: function(value){
+					return (value + '.00');
+				}
+				
+			}
+		}],
+		grid : {
+		  borderWidth:0,
+		  backgroundColor :'rgba(255,145,0,0.08)',
+		  x:35,
+		  y:10,
+		  x2:15,
+		  y2:36
+		},
+		series : [{
+			
+			barWidth: 15, 
+			itemStyle: {
+				normal: {                   // 系列级个性化，横向渐变填充
+					// barBorderRadius: 3,
+					color : '#FF6C00'
+				}							  
+			},
+			type:'bar',
+			data:[1.134, 2.268, 3.402, 4.014, 4.561, 4.872, 5.103, 5.206],
+			markPoint : {
+				symbol: 'heart',
+				symbolSize: 8,
+                data : [
+                    {type : 'max', name: '最高利率'}
+                ],
+				itemStyle: {
+				  normal: { 
+					color: 'rgba(0,0,0,0)',
+					label : {
+						textStyle: { 
+							  color: '#FF6C00',
+							  baseline: 'bottom'
+							}
+						}
+					}
+				 }
+            }
+		}]
+	};
+	myBar.setOption(opt);
+  })
+  </script> 
+</body>
+</html>

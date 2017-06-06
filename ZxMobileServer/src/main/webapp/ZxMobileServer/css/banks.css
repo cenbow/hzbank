@@ -1,0 +1,207 @@
+/*
+ *      Icons For All Banks Update
+ *          Upadate 2016.09.26
+ *
+ */
+
+/*== Normal Size ==*/
+.ico-bnk{background:url(../images/bank.png) 0 -860px no-repeat; background-size:20px auto; display:block; height:20px; width:20px;}
+.bnk-0003{background-position:0 0;}/*招行*/
+.bnk-0002{background-position:0 -20px;}/*农行*/
+.bnk-0011{background-position:0 -40px;}/*浦发*/
+.bnk-0015{background-position:0 -60px;}/*北京*/
+.bnk-0001{background-position:0 -80px;}/*工商*/
+.bnk-0008{background-position:0 -100px;}/*光大*/
+.bnk-0110{background-position:0 -120px;}/*杭州*/
+.bnk-0004{background-position:0 -140px;}/*建设*/
+.bnk-0014{background-position:0 -160px;}/*交通*/
+.bnk-0077{background-position:0 -180px;}/*平安*/
+.bnk-0024{background-position:0 -200px;}/*上海*/
+.bnk-0006{background-position:0 -220px;}/*邮政*/
+.bnk-0009{background-position:0 -240px;}/*中国*/
+.bnk-0005{background-position:0 -260px;}/*中信*/
+.bnk-0007{background-position:0 -280px;}/*兴业*/
+.bnk-0016{background-position:0 -300px;}/*华夏*/
+.bnk-0013{background-position:0 -320px;}/*民生*/
+.bnk-0022{background-position:0 -340px;}/*广发*/
+.bnk-0067{background-position:0 -360px;}/*宁波*/
+.bnk-0118{background-position:0 -380px;}/*江苏农信*/
+.bnk-0151,
+.bnk-0081{background-position:0 -400px;}/*通用农信*/
+.bnk-0055{background-position:0 -420px;}/*嘉兴*/
+.bnk-0092{background-position:0 -440px;}/*成都农商*/
+.bnk-0119{background-position:0 -460px;}/*江苏*/
+.bnk-0134{background-position:0 -480px;}/*深圳农商*/
+.bnk-0202{background-position:0 -500px;}/*绍兴*/
+.bnk-0170{background-position:0 -520px;}/*重庆农商*/
+.bnk-0129{background-position:0 -540px;}/*浙商*/
+.bnk-0019{background-position:0 -560px;}/*渤海*/
+.bnk-0090{background-position:0 -580px;}/*徽商*/
+.bnk-0131{background-position:0 -600px;}/*泰隆*/
+.bnk-0007{background-position:0 -620px;}/*兴业*/
+.bnk-0091{background-position:0 -640px;}/*恒丰*/
+.bnk-0201{background-position:0 -660px;}/*湖州*/
+.bnk-0017{background-position:0 -680px;}/*温州*/
+.bnk-0068{background-position:0 -700px;}/*安徽*/
+.bnk-0132{background-position:0 -720px;}/*稠州*/
+.bnk-0066{background-position:0 -740px;}/*鄞州农社*/
+.bnk-0052{background-position:0 -760px;}/*哈尔滨*/
+.bnk-0044{background-position:0 -780px;}/*南京*/
+.bnk-0012{background-position:0 -800px;}/*北京农商*/
+.bnk-0175{background-position:0 -820px;}/*金华*/
+.bnk-0130{background-position:0 -840px;}/*民泰*/
+
+/*搜索列表专用尺寸*/
+.zen-search-panel .bnk-0003{background-position:0 0;}/*招行*/
+.zen-search-panel .bnk-0002{background-position:0 -24px;}/*农行*/
+.zen-search-panel .bnk-0011{background-position:0 -48px;}/*浦发*/
+.zen-search-panel .bnk-0015{background-position:0 -72px;}/*北京*/
+.zen-search-panel .bnk-0001{background-position:0 -96px;}/*工商*/
+.zen-search-panel .bnk-0008{background-position:0 -120px;}/*光大*/
+.zen-search-panel .bnk-0110{background-position:0 -144px;}/*杭州*/
+.zen-search-panel .bnk-0004{background-position:0 -168px;}/*建设*/
+.zen-search-panel .bnk-0014{background-position:0 -192px;}/*交通*/
+.zen-search-panel .bnk-0077{background-position:0 -216px;}/*平安*/
+.zen-search-panel .bnk-0024{background-position:0 -240px;}/*上海*/
+.zen-search-panel .bnk-0006{background-position:0 -264px;}/*邮政*/
+.zen-search-panel .bnk-0009{background-position:0 -288px;}/*中国*/
+.zen-search-panel .bnk-0005{background-position:0 -312px;}/*中信*/
+.zen-search-panel .bnk-0007{background-position:0 -336px;}/*兴业*/
+.zen-search-panel .bnk-0016{background-position:0 -360px;}/*华夏*/
+.zen-search-panel .bnk-0013{background-position:0 -384px;}/*民生*/
+.zen-search-panel .bnk-0022{background-position:0 -408px;}/*广发*/
+.zen-search-panel .bnk-0067{background-position:0 -432px;}/*宁波*/
+.zen-search-panel .bnk-0118{background-position:0 -456px;}/*江苏农信*/
+.zen-search-panel .bnk-0151,
+.zen-search-panel .bnk-0081{background-position:0 -480px;}/*通用农信*/
+.zen-search-panel .bnk-0055{background-position:0 -504px;}/*嘉兴*/
+.zen-search-panel .bnk-0092{background-position:0 -528px;}/*成都农商*/
+.zen-search-panel .bnk-0119{background-position:0 -552px;}/*江苏*/
+.zen-search-panel .bnk-0134{background-position:0 -576px;}/*深圳农商*/
+.zen-search-panel .bnk-0202{background-position:0 -600px;}/*绍兴*/
+.zen-search-panel .bnk-0170{background-position:0 -624px;}/*重庆农商*/
+.zen-search-panel .bnk-0129{background-position:0 -648px;}/*浙商*/
+.zen-search-panel .bnk-0019{background-position:0 -672px;}/*渤海*/
+.zen-search-panel .bnk-0090{background-position:0 -696px;}/*徽商*/
+.zen-search-panel .bnk-0131{background-position:0 -720px;}/*泰隆*/
+.zen-search-panel .bnk-0007{background-position:0 -744px;}/*兴业*/
+.zen-search-panel .bnk-0091{background-position:0 -768px;}/*恒丰*/
+.zen-search-panel .bnk-0201{background-position:0 -792px;}/*湖州*/
+.zen-search-panel .bnk-0017{background-position:0 -816px;}/*温州*/
+.zen-search-panel .bnk-0068{background-position:0 -840px;}/*安徽*/
+.zen-search-panel .bnk-0132{background-position:0 -864px;}/*稠州*/
+.zen-search-panel .bnk-0066{background-position:0 -888px;}/*鄞州农社*/
+.zen-search-panel .bnk-0052{background-position:0 -912px;}/*哈尔滨*/
+.zen-search-panel .bnk-0044{background-position:0 -936px;}/*南京*/
+.zen-search-panel .bnk-0012{background-position:0 -960px;}/*北京农商*/
+.zen-search-panel .bnk-0175{background-position:0 -980px;}/*金华*/
+.zen-search-panel .bnk-0130{background-position:0 -1004px;}/*民泰*/
+
+/*== Medium Size ==*/
+.ico-bnk-x2{background:url(../images/bank-x2.png) 0 -1720px no-repeat; height:40px; width:40px; background-size:40px auto; display:block;}
+.bnk-x2-0003,.ar-0003 .ico-bnk-x2{background-position:0 0;}
+.bnk-x2-0002,.ar-0002 .ico-bnk-x2{background-position:0 -40px;}
+.bnk-x2-0011,.ar-0011 .ico-bnk-x2{background-position:0 -80px;}
+.bnk-x2-0015,.ar-0015 .ico-bnk-x2{background-position:0 -120px;}
+.bnk-x2-0001,.ar-0001 .ico-bnk-x2{background-position:0 -160px;}
+.bnk-x2-0008,.ar-0008 .ico-bnk-x2{background-position:0 -200px;}
+.bnk-x2-0110,.ar-0110 .ico-bnk-x2{background-position:0 -240px;}
+.bnk-x2-0004,.ar-0004 .ico-bnk-x2{background-position:0 -280px;}
+.bnk-x2-0014,.ar-0014 .ico-bnk-x2{background-position:0 -320px;}
+.bnk-x2-0077,.ar-0077 .ico-bnk-x2{background-position:0 -360px;}
+.bnk-x2-0024,.ar-0024 .ico-bnk-x2{background-position:0 -400px;}
+.bnk-x2-0006,.ar-0006 .ico-bnk-x2{background-position:0 -440px;}
+.bnk-x2-0009,.ar-0009 .ico-bnk-x2{background-position:0 -480px;}
+.bnk-x2-0005,.ar-0005 .ico-bnk-x2{background-position:0 -520px;}
+.bnk-x2-0007,.ar-0007 .ico-bnk-x2{background-position:0 -560px;}
+.bnk-x2-0016,.ar-0016 .ico-bnk-x2{background-position:0 -600px;}
+.bnk-x2-0013,.ar-0013 .ico-bnk-x2{background-position:0 -640px;}
+.bnk-x2-0022,.ar-0022 .ico-bnk-x2{background-position:0 -680px;}
+.bnk-x2-0067,.ar-0067 .ico-bnk-x2{background-position:0 -720px;}
+.bnk-x2-0118,.ar-0118 .ico-bnk-x2{background-position:0 -760px;}
+.bnk-x2-0151,.ar-0151 .ico-bnk-x2,
+.bnk-x2-0081,.ar-0081 .ico-bnk-x2{background-position:0 -800px;}
+.bnk-x2-0055,.ar-0055 .ico-bnk-x2{background-position:0 -840px;}
+.bnk-x2-0092,.ar-0092 .ico-bnk-x2{background-position:0 -880px;}
+.bnk-x2-0119,.ar-0119 .ico-bnk-x2{background-position:0 -920px;}
+.bnk-x2-0134,.ar-0134 .ico-bnk-x2{background-position:0 -960px;}
+.bnk-x2-0202,.ar-0202 .ico-bnk-x2{background-position:0 -1000px;}
+.bnk-x2-0170,.ar-0170 .ico-bnk-x2{background-position:0 -1040px;}
+.bnk-x2-0129,.ar-0129 .ico-bnk-x2{background-position:0 -1080px;}
+.bnk-x2-0019,.ar-0019 .ico-bnk-x2{background-position:0 -1120px;}
+.bnk-x2-0090,.ar-0090 .ico-bnk-x2{background-position:0 -1160px;}
+.bnk-x2-0131,.ar-0131 .ico-bnk-x2{background-position:0 -1200px;}
+.bnk-x2-0007,.ar-0007 .ico-bnk-x2{background-position:0 -1240px;}
+.bnk-x2-0091,.ar-0091 .ico-bnk-x2{background-position:0 -1280px;}
+.bnk-x2-0201,.ar-0201 .ico-bnk-x2{background-position:0 -1320px;}
+.bnk-x2-0017,.ar-0017 .ico-bnk-x2{background-position:0 -1360px;}
+.bnk-x2-0068,.ar-0068 .ico-bnk-x2{background-position:0 -1400px;}
+.bnk-x2-0132,.ar-0132 .ico-bnk-x2{background-position:0 -1440px;}
+.bnk-x2-0066,.ar-0066 .ico-bnk-x2{background-position:0 -1480px;}
+.bnk-x2-0052,.ar-0052 .ico-bnk-x2{background-position:0 -1520px;}
+.bnk-x2-0044,.ar-0044 .ico-bnk-x2{background-position:0 -1560px;}
+.bnk-x2-0012,.ar-0012 .ico-bnk-x2{background-position:0 -1600px;}
+.bnk-x2-0175,.ar-0175 .ico-bnk-x2{background-position:0 -1640px;}
+.bnk-x2-0130,.ar-0130 .ico-bnk-x2{background-position:0 -1680px;}
+
+/*== Area Specail ==*/
+.area:after{content:""; display:block; position:absolute; width:100%; height:100%; background:right bottom no-repeat; background-size:auto 100%;}
+.area{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#c8e8fb), to(#039df4)); border:none; position:relative; border:none; position:relative;}
+
+.ar-0024,.ar-0011,.ar-0014,.ar-0004,.ar-0052{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#E2E1FE), to(#3E3C93));}
+
+.ar-0003,.ar-0009,.ar-0015,.ar-0077,.ar-0008,.ar-0005,.ar-0001,.ar-0067,.ar-0131,.ar-0175{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#FCC373), to(#DA481A));}
+
+.ar-0006,.ar-0002,.ar-0151,.ar-0092,.ar-0081{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#D8EAE0), to(#1C9E56));}
+
+.ar-0118,.ar-0170,.ar-0129,.ar-0090,.ar-0022,.ar-0201,.ar-0016,.ar-0068,.ar-0132,.ar-0044,.ar-0012,.ar-0130{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#f1bdbf), to(#e42634));}
+
+.ar-0055,.ar-0119,.ar-0134,.ar-0202,.ar-0019,.ar-0007,.ar-0091,.ar-0013{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#b7cfe1), to(#066ab5));}
+
+.ar-0017,.ar-0066{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#e8d8b9), to(#febd3b));}
+
+.area:not(.card-placeholder):after{background-image:url(../images/ar-default.png);}
+.area.ar-0003:after{background-image:url(../images/ar-0003.png);}
+.area.ar-0024:after{background-image:url(../images/ar-0024.png);}
+.area.ar-0009:after{background-image:url(../images/ar-0009.png);}
+.area.ar-0077:after{background:url(../images/ar-0077.png) right center no-repeat; background-size:auto 80%;}
+.area.ar-0015:after{background-image:url(../images/ar-0015.png);}
+.area.ar-0011:after{background-image:url(../images/ar-0011.png);}
+.area.ar-0014:after{background-image:url(../images/ar-0014.png);}
+.area.ar-0008:after{background-image:url(../images/ar-0008.png);}
+.area.ar-0005:after{background-image:url(../images/ar-0005.png);}
+.area.ar-0006:after{background-image:url(../images/ar-0006.png);}
+.area.ar-0004:after{background-image:url(../images/ar-0004.png);}
+.area.ar-0002:after{background-image:url(../images/ar-0002.png);}
+.area.ar-0001:after{background-image:url(../images/ar-0001.png);}
+.area.ar-0110{background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#8EE7E4), to(#45A5EE));}
+.area.ar-0110:after{background-image:url(../images/ar-0110.png);}
+.area.ar-0118:after{background-image:url(../images/ar-0118.png);}
+.area.ar-0151:after,
+.area.ar-0081:after{background-image:url(../images/ar-0151.png);}
+.area.ar-0055:after{background-image:url(../images/ar-0055.png);}
+.area.ar-0092:after{background-image:url(../images/ar-0092.png);}
+.area.ar-0119:after{background-image:url(../images/ar-0119.png);}
+.area.ar-0134:after{background-image:url(../images/ar-0134.png);}
+.area.ar-0202:after{background-image:url(../images/ar-0202.png);}
+.area.ar-0170:after{background-image:url(../images/ar-0170.png);}
+.area.ar-0129:after{background-image:url(../images/ar-0129.png);}
+.area.ar-0019:after{background-image:url(../images/ar-0019.png);}
+.area.ar-0090:after{background-image:url(../images/ar-0090.png);}
+.area.ar-0131:after{background-image:url(../images/ar-0131.png);}
+.area.ar-0007:after{background-image:url(../images/ar-0007.png);}
+.area.ar-0022:after{background-image:url(../images/ar-0022.png);}
+.area.ar-0067:after{background-image:url(../images/ar-0067.png);}
+.area.ar-0091:after{background-image:url(../images/ar-0091.png);}
+.area.ar-0201:after{background-image:url(../images/ar-0201.png);}
+.area.ar-0017:after{background-image:url(../images/ar-0017.png);}
+.area.ar-0013:after{background-image:url(../images/ar-0013.png);}
+.area.ar-0016:after{background-image:url(../images/ar-0016.png);}
+.area.ar-0068:after{background-image:url(../images/ar-0068.png);}
+.area.ar-0132:after{background-image:url(../images/ar-0132.png);}
+.area.ar-0066:after{background-image:url(../images/ar-0066.png);}
+.area.ar-0052:after{background-image:url(../images/ar-0052.png);}
+.area.ar-0044:after{background-image:url(../images/ar-0044.png);}
+.area.ar-0012:after{background-image:url(../images/ar-0012.png);}
+.area.ar-0175:after{background-image:url(../images/ar-0175.png);}
+.area.ar-0130:after{background-image:url(../images/ar-0130.png);}

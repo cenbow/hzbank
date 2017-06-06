@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<title>表单&amp;&amp;组件</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+<link type="text/css" rel="stylesheet" href="../css/reset.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/common_1.css">
+<link type="text/css" rel="stylesheet" href="../css/common_2.css">
+<link type="text/css" rel="stylesheet" href="../css/layouts.css">
+<link type="text/css" rel="stylesheet" href="../css/index.css">
+<link type="text/css" rel="stylesheet" href="../css/banks.css">
+</head>
+
+<body  ontouchstart="">
+  <div class="content">
+    <div class="gap-box">
+      <p class="zen-para-center pt15">已向您的139***5656的号码发送了短信，<br/>请输入短信验证码完成注册</p>
+      <div class="pt15">
+        <div class="ipt-txt">
+          <input type="text" value="" placeholder="请输入用户名"/>
+        </div>
+        <div class="ipt-txt fm-cellphone">
+          <input type="text" value="" placeholder="请输入您的手机号码"/>
+        </div>
+        <div class="ipt-txt fm-sms-ver">
+          <input type="text" value="" placeholder="短信验证码"/>
+          <label class="ver-timeout">重发（60）</label>
+        </div>
+        <div class="ipt-txt fm-pswd">
+          <input type="password" value="" placeholder="设置登陆密码"/>
+          <i></i>
+        </div>
+        <div class="valid-code">
+        	<div class="ipt-txt">
+              <input type="text" value="" placeholder="请输入对应验证码"/>
+            </div>
+            <div class="code"><img src="../images/phone_logo.png"/></div>
+        </div>
+        <p class="zen-tips mb15">我们不会在任何地方泄露您的号码</p>
+        <div class="ipt-txt-2">
+          <input type="text" value="" placeholder="请输入您的手机号码"/>
+        </div>
+        <div class="zen-get-code">
+          <div class="ipt-txt-2">
+            <input type="text" value="" placeholder="请输入短信验证码"/>
+          </div>
+          <input type="button" value="立即获取" class="get-btn"/>
+        </div>
+        <!------------------------- 输入密码 ------------------------->
+        <p class="ft-big txt-mid">13989***562</p>
+        
+        <div class="ipt-txt fm-load-pswd">
+          <input type="password" value="" placeholder="输入登录密码"/>
+        </div>
+        <div class="fm-remind">
+          <div class="err-rzt">您输入的密码有误</div>
+          <a href="#">忘记密码?</a>
+        </div>
+        <input type="button" value="下一步" disabled class="zen-btn disabled mt20"/>
+        <!----------------------------------------------------------><br>
+        <h1 class="fm-tit-guide txt-mid">购买理财产品必须进行实名认证</h1>
+        <div class="ipt-txt-2 fm-realname">
+          <input type="text" value="" placeholder="请填写您的真实姓名"/>
+        </div>
+        <div class="ipt-txt-2 fm-email">
+          <input type="text" value="" placeholder="请填写您的邮箱地址"/>
+        </div>
+        <div class="ipt-txt-2 fm-docnum">
+          <input type="text" value="" placeholder="请填写您的证件号码"/>
+        </div>
+        <h1 class="fm-tit-guide">购买理财产品需要本人银行卡，申购金额尽可赎回至付款银行卡</h1>
+        <div class="ipt-txt-2 fm-card fm-del">
+          <input type="text" value="" placeholder="请输入您的储蓄卡卡号"/>
+          <i></i>
+        </div>
+        <div class="ipt-txt-2 fm-bank fm-drop-down">
+          <input type="text" value="" placeholder="请选择开户行" readonly/>
+        </div>
+        <div class="select-options">
+          <div class="ipt-txt">
+            <i class="ico-bnk bnk-0003"></i>
+            <input type="text" value="招商银行" placeholder="" readonly/>
+          </div>
+          <div class="ipt-txt-2 fm-drop-down">
+            <input type="text" value="" placeholder="请选择开户银行所在省份" readonly/>
+          </div>
+          <div class="ipt-txt-2 fm-drop-down">
+            <input type="text" value="" placeholder="请选择开户银行所在城市" readonly/>
+          </div>
+        </div>
+        <!---------------------------------------------------------->
+        <h1 class="fm-tit-guide mt20">感谢您 使用杭州银行直销银行，欢迎您向我们反馈在使用过程中的任何意见和建议。</h1>
+        <div class="zen-feedback"><textarea rows="5" placeholder="请输入反馈信息"></textarea></div> 
+        <p class="zen-tips txt-r">您还可以输入150字</p>
+        <!---------------------------------------------------------->
+        <div class="ipt-txt-2 fm-ivcode">
+          <input type="text" value="" placeholder="请输入邀请码"/>
+          <label class="fm-border-r">邀请码</label>
+        </div>
+        <label class="zen-ckbox pl15">
+          <input type="checkbox" checked />
+          <span class="fm-agr">我已阅读并同意<a href="javascript:;">《注册协议》</a></span>
+        </label>
+        <!--绑定弹框事件-->
+        <input type="button" value="下一步" class="zen-btn mt20"/>
+        <input type="button" value="下一步" disabled class="zen-btn disabled mt20"/>
+        
+        <div class="btn-double">
+           <input type="button" value="下一步" class="zen-btn"/>
+           <input type="button" value="上一步" class="zen-btn btn-fn"/>
+        </div>
+        
+        <div class="btn-double">
+           <input type="button" value="下一步" class="zen-btn"/>
+           <input type="button" value="上一步" disabled class="zen-btn disabled"/>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>

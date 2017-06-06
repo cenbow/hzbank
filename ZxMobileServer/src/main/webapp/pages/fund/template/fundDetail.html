@@ -1,0 +1,121 @@
+<div class="fund-detail">
+  <ul class="zen-list-2">
+    <li>
+      <div class="indexNum">
+        <%  var fundNameClass = 'ft16';
+            var fundNameLen = fundName.length;
+            if(fundNameLen > 17){
+            	fundNameClass = 'ft15';
+            }               
+		%>      
+        <h1 class="<%=fundNameClass%>"><%=fundName%></h1>
+        <div class="tbl">
+          <table width="100%" border="0">
+            <tr class="valRose">
+              <td>
+                <h2>最新净值</h2>
+                <p><%=fundlastnav%></p>
+              </td>
+              <td>
+                <h2>近三月涨幅</h2>
+                <%  var threemonthRisePerClass = '';
+                    var val = threemonthRisePer.replace('%','');
+                    if(val == '--'){
+                    }else if(val > 0){
+	                	threemonthRisePerClass = 'up';
+	                }else if(val < 0){
+	                	threemonthRisePerClass = 'down';
+	                }               
+				%>
+                <p><span class="<%=threemonthRisePerClass%>"><%=threemonthRisePer%></span></p>
+              </td>
+            </tr>
+            <tr class="typeState">
+              <td><span class="tt"><%=fundType%></span></td>
+              <td><span><%=fundlastnavdate%></span> 更新</td>
+            </tr>
+            <tr class="pram">
+              <td>
+                <h3>累计净值:<b><%=fundtotalnav%></b>元</h3>
+                <h3>起购金额:<b><%=Utils.formatCurrency(minbuyamt,2)%></b>元</h3>
+              </td>
+              <td>
+                <h3>日涨幅:<b><%=dayRisePer%></b></h3>
+                <h3>追加金额:<b><%=Utils.formatCurrency(toaddamt,2)%></b>元</h3>
+              </td>
+            </tr>
+          </table>
+        </div>  
+      </div>
+    </li>
+    <li>
+      <div class="roseBft">
+        <h1>涨幅收益</h1>
+        <div class="bftTbl">
+          <table width="100%" border="0">
+            <tr>
+              <td>
+                <%  var dayRisePerClass = '';
+                    var dayRisePerVal = dayRisePer.replace('%','');
+                    if(dayRisePerVal == '--'){
+                    }else if(dayRisePerVal > 0){
+	                	dayRisePerClass = 'fc-orange';
+	                }else if(dayRisePerVal < 0){
+	                	dayRisePerClass = 'fc-green';
+	                }               
+				%>
+                <h2 class="<%=dayRisePerClass%>"><%=dayRisePer%></h2>
+                <h3>日涨幅</h3>
+              </td>
+              <td>
+                <%  var threemonthRisePerClass = '';
+                    var threemonthRisePerVal = threemonthRisePer.replace('%','');
+                    if(threemonthRisePerVal == '--'){
+                    }else if(threemonthRisePerVal > 0){
+	                	threemonthRisePerClass = 'fc-orange';
+	                }else if(threemonthRisePerVal < 0){
+	                	threemonthRisePerClass = 'fc-green';
+	                }               
+				%>
+                <h2 class="<%=threemonthRisePerClass%>"><%=threemonthRisePer%></h2>
+                <h3>近三月涨幅</h3>
+              </td>
+              <td>
+                <%  var yearRisePerClass = '';
+                    var yearRisePerVal = yearRisePer.replace('%','');
+                    if(yearRisePerVal == '--'){
+                    }else if(yearRisePerVal > 0){
+	                	yearRisePerClass = 'fc-orange';
+	                }else if(yearRisePerVal < 0){
+	                	yearRisePerClass = 'fc-green';
+	                }               
+				%>
+                <h2 class="<%=yearRisePerClass%>"><%=yearRisePer%></h2>
+                <h3>近一年涨幅</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2><%=sevenyield%></h2>
+                <h3>七日年化收益</h3>
+              </td>
+              <td>
+                <h2><%=yearYield%></h2>
+                <h3>近一年年化收益</h3>
+              </td>
+              <td>
+                <h2><%=fundIncome%></h2>
+                <h3>每万份净收益</h3>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="ifo-box">
+    <p>基金详情请到杭州银行官网或者基金公司官网查看。</p>
+    <p>涨幅收益数据仅供参考，实际数据以基金公司公布为准。</p>
+  </div>
+  <div class="buyBtn"><input type="button" id="buyBtn" value="购买" class="zen-btn btn-fn"/></div>
+</div>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>注册赢惊喜</title>
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,header,hgroup,nav,section,article,aside,footer,figure,figcaption,menu,button{margin:0;padding:0;outline:0}body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;line-height:1.5;color:#666;background-color:#fff;-webkit-user-select:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(255,255,255,0)}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}li{list-style:none}input,button,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;border:0;background:0;-webkit-appearance:none;outline:0}a,button,input,select,textarea,a:focus,button:focus,input:focus,select:focus,textarea:focus,[onclick]{outline:0;-webkit-tap-highlight-color:rgba(255,255,255,0)}a{-webkit-touch-callout:none;text-decoration:none;color:#00a5e0;outline:0}em,i{font-style:normal}em{color:#f28c48}::-webkit-input-placeholder{color:#999}i,b{font-style:normal; font-weight:normal;}
+html,body{height:100%; width:100%;}
+body{background:#FBEBBA url('../images/hongbao/bg1.jpg') no-repeat; background-attachment:fixed; background-size:100% auto; font-size:0.28rem; overflow-x:hidden;}
+*{-webkit-box-sizing:border-box; box-sizing:border-box; position:relative;}
+section{width:100%; height:100%; display:block; overflow:hidden; min-height:10.08rem;}
+.up{padding-top:4rem; width:100%; background:url(../images/hongbao/ic.png) center 1rem no-repeat; background-size:4rem auto;}
+.up h1{text-align:center; font-size:0.46rem; color:#f18a0a; font-weight:700; line-height:1.8;}
+.down{width:100%; padding:0 0 1.65rem; background:url(../images/hongbao/bg2.gif) center bottom no-repeat; background-size:100% auto; position:absolute; left:0; bottom:0;}
+.up .panel{padding:0 1rem; margin-top:0.6rem;}
+.up h2{color:#ef6d1d; font-size:0.3rem; font-weight:700;}
+.up .btn{width:3.5rem; height:0.68rem; margin:0 auto; background:url(../images/hongbao/btn.png); background-size:100% 100%; margin-bottom:0.1rem;}
+.up .btn.disabled{background-image:url(../images/hongbao/btn_s.png);}
+.up .tip{text-align:center; font-size:13px; color:#FF5500; height:0.6rem; line-height:0.6rem;}
+.up .tip.hide{visibility:hidden;}
+.up .tip i{display:inline-block; vertical-align:middle; height:16px; width:16px; background:url(../images/hongbao/i.png) no-repeat; background-size:100% 100%; margin-top:-2px; margin-right:5px;}
+.phone{height:0.5rem; display:box; display:-webkit-box; background-color:#fff; margin:0.1rem 0 0;}
+.phone .area{height:100%; line-height:0.5rem; width:1.14rem; text-align:center; color:#e95c41; background:url(../images/hongbao/area.png) no-repeat; background-size:100% 100%;}
+.phone .num{box-flex:1; -webkit-box-flex:1; padding:0 0.2rem;}
+.phone .num input{width:100%; line-height:0.5rem; font-size:0.24rem;}
+.down h2{text-align:center; color:#f19300; font-size:0.24rem; text-align:center;}
+.mask{width:100%; height:20%; position:absolute; left:0; top:0; background:url(images/arrow.png) right top no-repeat; background-size:100px auto;  z-index:999;}
+.waitlayer{position:fixed; left:0; top:0; height:100%; width:100%; background:url(../images/market/waitlayer.gif) center center no-repeat; background-size:20px auto;}
+</style>
+<script type="text/javascript" src="../scripts/libs/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../scripts/components/base64.js"></script>
+</head>
+
+<body>
+<section>
+	<div class="up">
+		<h1><span id="invaite"></span>邀您注册杭银直销</h1>
+		<h2 style="color: #f19300;font-size: 0.24rem;text-align: center;" id="mrgCode"></h2>
+		<div class="panel">
+			<h2>• 手机号码</h2>
+			<div class="phone">
+				<div class="area">+86</div>
+				<div class="num">
+					<input type="tel" id="mobile" value="" maxlength="11" onKeyUp="keyup()" placeholder="请正确输入您的手机号码" />
+				</div>
+			</div>
+			<div class="tip" id="resuletTip"><i></i><span id="tipData"></span></div>
+			<!-- 隐藏tip挂载hide样式 -->
+			<div class="btn disabled" onclick="download()" id="Btn"></div>
+		</div>
+	</div>
+	<div class="down">
+		<h2>下载杭银直销手机App，注册激活，更多惊喜等着您</h2>
+	</div>
+</section>
+<div class="mask" id="mask" style="display:none;"></div>
+<div class="waitlayer" id="waitlayer" style="display:none;"></div>
+<script type="text/javascript">
+// rem 适配处理，设备宽高初始化
+(function(d,w){
+	var doc = d.documentElement,
+	    rz = "orientationchange" in window ? "orientationchange" : "resize";
+		w.clientHeight = doc.clientHeight;
+		var g = doc.clientWidth;
+		var f = 100*(g/640);
+		w.rootSize = f;
+	set = function(){
+		doc.style.fontSize = f + "px"
+	};
+	if(!d.addEventListener){
+		return
+	}
+	w.addEventListener(rz, set, false);
+	d.addEventListener("DOMContentLoaded", set, false)
+	
+	if(location.href.indexOf("type=mask")>=0){
+		document.getElementById("mask").style.display="";
+	}
+	$('#mask').on('click', function(){
+		$(this).hide();
+		location.href = location.href.replace("&type=mask", "");
+	});
+})(document,window);
+
+function getDate(s,t) {
+	//s Y-m-d H:i:s
+	//t new Date()
+	t=t || new Date();
+	var re=/Y|m|d|H|i|s/g;
+	return s.replace(re,function($1) {
+		switch($1) {
+			case "Y":return t.getFullYear();
+			case "m":return t.getMonth()+1;
+			case "d":return t.getDate();
+			case "H":return t.getHours();
+			case "i":return t.getMinutes();
+			case "s":return t.getSeconds();
+		}
+		return $1;
+	});
+};
+
+function search(){
+	var params = {};
+	var b = location.href.split("?")[1];
+	if(!b)return "";
+	var p = b.split('&');
+	if(b.indexOf("code")<0){
+		if(p.length>=1){
+			b = p[0];
+		}
+		b = Base64.decode(b);
+		p = b.split('&');
+	}
+	for(var i=0;i<p.length;i++){
+		var a = p[i].split('=');
+		params[a[0]] = a[1];
+	}
+	
+	return params;
+};
+
+var userName = search().name;
+if(userName==null||userName==''||userName=='undefined'){
+	userName="杭州银行";
+	document.getElementById("mrgCode").innerHTML = "（邀请工号："+search().code+"）";
+};
+document.getElementById("invaite").innerHTML = userName;
+
+var phone = search().phone;
+$("#resuletTip").addClass("hide");
+var checkBtn = false; 
+
+function checkMobileNum(mobile){
+	var mobileReg = /^(13[0-9]|147|15[0-3]|15[5-9]|170|17[6-8]|173|18[0-9])\d{8}$/;
+	return mobileReg.test(mobile);
+};
+function showMask() {
+	if(isWeiXin() || isQQ()){
+		document.getElementById("mask").style.display="";
+	}else{
+		init();
+	}
+};
+
+var Terminal = {
+		platform:function()
+		{
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {
+				android:u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+				iPhone:u.indexOf('iPhone') > -1
+			};
+		}()
+};
+var isWeiXin = function(){
+	var ua = window.navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+		return true;
+	}else{
+		return false;
+	}
+};
+
+var isQQ = function(){
+	var ua = window.navigator.userAgent.toLowerCase();
+	if(ua.match(/qq/i) == 'qq'){
+		return true;
+	}else{
+		return false;
+	}
+};
+
+function appDownload(){
+	
+	location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.yt.hz.financial#rd";
+	
+};
+function sendJson(mobile) {  
+    
+    var request = {   
+   		        	"mobileNo": mobile,
+   		            "inviteCode": search().code
+    };  
+    var jsonStr = JSON.stringify(request);
+    
+    $.ajax({  
+        url : "../redPacket/createInviterelation",  
+        type : 'POST',  
+        data : jsonStr,  
+        dataType : 'json',  
+        contentType : 'application/json;charset=UTF-8',  
+        success : function(data, status, xhr) { 
+        	if(!data.errorCode){
+        		//alert("seccess");
+        		appDownload();
+        	}else{
+        		$("#tipData").html(data.errorMessage);
+        		$("#resuletTip").removeClass("hide");
+        	}
+        	
+        },  
+        Error : function(xhr, error, exception) {  
+            alert(exception.toString());  
+        }  
+    });  
+};
+
+function keyup(){
+	var mobile = document.getElementById("mobile").value;
+	if(checkMobileNum(mobile)){
+		checkBtn = true;
+		$('.up .btn').removeClass('disabled');
+	}else{
+		$('.up .btn').addClass('disabled');
+		$("#resuletTip").addClass("hide");
+		checkBtn = false;
+	}
+};
+
+function download(){
+	if(checkBtn){
+		var mobile = document.getElementById("mobile").value;
+		sendJson(mobile);
+	}
+
+};
+
+var mobile = document.getElementById("mobile").value;
+if(checkMobileNum(mobile)){
+	checkBtn = true;
+	$('.up .btn').removeClass('disabled');
+}else{
+	$('.up .btn').addClass('disabled');
+	$("#resuletTip").addClass("hide");
+	checkBtn = false;
+}
+
+if(phone){
+	document.getElementById("mobile").value = phone;
+	appDownload();
+}
+
+</script>
+</body>
+</html>

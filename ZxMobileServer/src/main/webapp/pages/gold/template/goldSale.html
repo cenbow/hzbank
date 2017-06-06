@@ -1,0 +1,47 @@
+<div class="new2016">
+	<div class="deEloan">
+		<div class="gap-box ft12 fc-9 mt10">收款账号</div>
+		<div class="list">
+			<div class="list-item">
+				<span>收款账户</span> <span class="pl10"><%=Utils.formatAcc(Utils.getEleCard().cardNo)%></span>
+			</div>
+			<div class="list-item row">
+				<div>账户余额</div>
+				<div class="cell fc-yellow pl10" id="showBalanceSpan">0.00</div>
+				<div>元</div>
+			</div>
+		</div>
+		<div class="gap-box ft12 fc-9 mt10">卖出份额</div>
+		<div class="list">
+			<div class="list-item">
+				<span>可卖克数</span> <span class="pl10 fc-yellow">当前可卖<span id="amount" >0.00</span>克</span>
+			</div>
+			<div class="list-item row disabled">
+				<div>卖出克数</div>
+				<div class="cell ipt pl10">
+					<input type="number" value="" id="purchaseAmt" placeholder="请输入卖出克数" />
+				</div>
+				<span class="fc-blue" id="max">全部</span>
+			</div>
+			<div class="list-item">
+				<span>预估金额</span> <span class="pl10"> <i class="fc-yellow" id="kg">0.00</i>
+					元；手续费 <i class="fc-yellow" id="fee">0.00</i> 元
+				</span>
+			</div>
+			<div class="list-item row disabled">
+				<span>交易密码</span>
+				<div class="cell ipt pl10">
+					<input type="password" id="pwd" value="" placeholder="请输入交易密码" readonly/>
+				</div>
+			</div>
+		</div>
+		<div class="gap-box pt10 fc-9">
+			<input type="button" id="submit" value="确定" class="zen-btn mt10 mb10 disabled">
+			<ul class="itemTips">
+				<li>交易日15:00前卖出，按当日金价成交，下个交易日确认成交金额。</li>
+				<li>交易日15:00后卖出，按下个交易日金价成交，第二个交易日确认成交金额。</li>
+				<li>预估卖出克数按前一日金价估算。</li>
+			</ul>
+		</div>
+	</div>
+</div>
