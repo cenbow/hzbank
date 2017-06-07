@@ -86,10 +86,10 @@
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
- <!--  <resource-ref id="ResourceRef_1146628296200">
+ <resource-ref id="ResourceRef_1146628296200">
 		<res-ref-name>jdbc/zxmb_db</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Application</res-auth>
 		<res-sharing-scope>Shareable</res-sharing-scope>	
-  </resource-ref> -->
+  </resource-ref>
 </web-app>

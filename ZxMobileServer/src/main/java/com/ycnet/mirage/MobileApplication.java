@@ -28,7 +28,7 @@ import com.ynet.ifp.integration.config.EnableGateway;
  * @author caoduo
  *
  */
-//@Configuration
+@Configuration
 @ComponentScan
 @EnableScheduling
 @EnableAutoConfiguration(exclude = {JmsTemplateAutoConfiguration.class})
