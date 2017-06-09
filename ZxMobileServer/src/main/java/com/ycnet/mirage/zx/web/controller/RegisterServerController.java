@@ -52,17 +52,6 @@ public class RegisterServerController extends SpecificalMirageController{
 		return registerService.registerStep2(detail);
 	}
 	
-	/**
-	 *  注册第三步
-	 * @param detail
-	 * @return
-	 * @throws Exception
-	 */
-	@RequestMapping(value = "/registerStep3", method = RequestMethod.POST)
-	public Map<String, Object> registerStep3(@RequestBody UserRegisterInputDetail detail) throws Exception
-	{
-		return registerService.registerStep3(detail);
-	}
 	
 	/**
 	 *  查询邀请码
