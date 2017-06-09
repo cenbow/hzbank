@@ -12,7 +12,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.ycnet.mirage.context.MirageException;
 import com.ycnet.mirage.zx.annotation.MirageLog;
+import com.ycnet.mirage.zx.config.MobileApplicationErrorCode;
 import com.ycnet.mirage.zx.detail.SessionTokenDetail;
 import com.ycnet.mirage.zx.detail.UserSignInDetail;
 import com.ycnet.mirage.zx.service.UserSignService;
@@ -32,11 +34,17 @@ public class UserSignServiceImpl implements UserSignService{
 	public Map<String, Object> userSignIn(UserSignInDetail detail)
 			throws Exception {
 		logger.info("直销用户登录功能开始");
-		
 				
 		Calendar calendar = Calendar.getInstance();
-		
-	
+		String customerId = detail.getCustomerId();
+		String password = detail.getPassword();
+		if(customerId == null || "".equals(customerId)
+				|| password == null || "".equals(password))
+		{
+			logger.info("客户号或密码不能为空");
+			
+			throw new MirageException(MobileApplicationErrorCode.TRAN_FAIL_ERROR, "用户名与密码不能为空");
+		}
 			
 			Map<String, Object> sessionMap = new HashMap<String, Object>();
 			
